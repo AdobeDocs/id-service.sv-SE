@@ -6,7 +6,7 @@ seo-title: Versionsinformation 2019
 title: Versionsinformation 2019
 uuid: a5a59410-7f85-48f9-a30a-fef1c2e2b558
 translation-type: tm+mt
-source-git-commit: 25a9af7a28462bc0bd26cf4a5a58203e76a83366
+source-git-commit: 8ece066545f4ca4a7bd1eca67c8f02dcd2a88369
 
 ---
 
@@ -17,12 +17,12 @@ Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity S
 
 ## Version 4.4.1
 
-Lägg till kryssrutan för godkännande före anmälan för medieanalys i ECID Launch Extension (CORE-33185)
+Lägg till kryssrutan för godkännande före anmälan för medieanalys i ECID Launch Extension.
 
 **Korrigeringar**
 
-* Problem med ECID-starttillägg för parsning av indatasträngen preOptInApprovals (CORE-34041)
-* Prestandafall när trackingServer används (CORE-32387)
+* Problem med att ECID-starttillägget preOptInApprovals tolkar indatasträngen.
+* Prestandafall när trackingServer används.
 
 ## Version 4.4 {#version-4point4}
 
@@ -32,11 +32,11 @@ Lägg till kryssrutan för godkännande före anmälan för medieanalys i ECID L
 
 **Korrigeringar, förbättringar, förbättringar**
 
-* Vi har gjort en konfigurationsuppdatering till `cookieDomain`. ECID-biblioteket filtrerar nu bort den tomma strängen `cookieDomain` i `initConfig` och använder cookie-domänen på den översta nivån, som returneras av metoden getDomain. (CORE-29223)
-* Vi har åtgärdat ett fel relaterat till `getVisitorValues` i `localVisitor`. (CORE-31287)
-* Vi har åtgärdat ett fel där det fanns en inkonsekvens för MCOPTOUT-värdet i webbläsaren Safari, som returnerades av `getVisitorValue` metoden. (CORE-29719)
+* Vi har gjort en konfigurationsuppdatering till `cookieDomain`. ECID-biblioteket filtrerar nu bort den tomma strängen `cookieDomain` i `initConfig` och använder cookie-domänen på den översta nivån, som returneras av metoden getDomain.
+* Vi har åtgärdat ett fel relaterat till `getVisitorValues` i `localVisitor`.
+* Vi har åtgärdat ett fel där det fanns en inkonsekvens för MCOPTOUT-värdet i webbläsaren Safari, som returnerades av `getVisitorValue` metoden.
 * Vi uppdaterade avanmälningsbiblioteket genom `optIn.off` att lägga till för att avbryta prenumerationen på händelser.
-* Vi har åtgärdat ett fel som är relaterat till funktionen setTimeout, där `setTimeout` Content Security Policy (CSP) har överträtts på vissa kundsajter. (CORE-30623)
+* Vi har åtgärdat ett fel som är relaterat till funktionen setTimeout, där `setTimeout` Content Security Policy (CSP) har överträtts på vissa kundsajter.
 
 ## Version 4.3 {#version-4point3}
 
@@ -46,7 +46,7 @@ Lägg till kryssrutan för godkännande före anmälan för medieanalys i ECID L
 
 ## Version 4.1
 
-Uppdatera `publishDestinations` per ny API-ändring. Med den här uppdateringen kan sidans referensinformation visas under ID - synkronisera om så önskas. (CORE-23693)
+Uppdatera `publishDestinations` per ny API-ändring. Med den här uppdateringen kan sidans referensinformation visas under ID - synkronisera om så önskas.
 
 ## Version 4.2
 
@@ -54,9 +54,9 @@ Stöd för plugin-programmet Audience Manager för IAB TCF, tillgängligt via EC
 
 **Korrigeringar**
 
-* IAB + OptIn får inte MID för att besöka kunder (CORE-26022)
-* Korrigerat fel vid konfiguration av opt-in doesOptInApply i DTM (DTM-12958)
-* Avanmäl dig från ECID och inaktivera ID-synk (CORE-23814)
+* IAB + OptIn får inte MID för att besöka kunder.
+* Korrigerat fel vid konfiguration av opt-in doesOptInApply i DTM.
+* Avanmäl dig från ECID inaktiverar ID-synkronisering.
 
 ## Version 4.0 {#section-51a4be943bbe41558f196ef2654513e2}
 
