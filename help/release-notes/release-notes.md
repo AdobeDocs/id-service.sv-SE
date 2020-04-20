@@ -5,7 +5,7 @@ seo-description: Funktionsreleaser, uppdateringar eller ändringar av Experience
 seo-title: Versionsinformation 2020
 title: Versionsinformation 2020
 translation-type: tm+mt
-source-git-commit: a958ea783bbe602f52635bbf2b315c85a8de57a7
+source-git-commit: c4da0f3da99a96d2be7421f49e0e88286d0505e0
 
 ---
 
@@ -14,7 +14,13 @@ source-git-commit: a958ea783bbe602f52635bbf2b315c85a8de57a7
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service (ECID).
 
+## Version 4.6
+
+* Flagga `loadSSL` aktiverad som standard. Alla anrop till identitetstjänsten är aktiverade `https` som standard.  Kunderna kan ställa in det på false om de vill anropa Identity Services på http från sina `non-ssl` sidor.
+* Funktionen som används för att identifiera `Internet-Explorer (IE)` version har uppdaterats för att åtgärda ett problem som rapporterats av `ESLint`.
+Åtgärda prestandaproblem när ECID ges optIn `Internet-Explorer (IE) 11` `pre-approval` och uppdateras senare.
+
 ## Version 4.5
 
-* Från och med version 4.5 avvisar ECID alla tomma ID:n som skickas till `setCustomerIDs` metoden. (CORE-38828)
-* Ett problem som uppstod när anmälan konfigurerades som `doesOptInApply=false` och `isIabContext=true.` (CORE-38351) har korrigerats
+* Från och med version 4.5 avvisar ECID alla tomma ID:n som skickas till `setCustomerIDs` metoden.
+* Korrigerade ett problem som uppstod när anmälan konfigurerades som `doesOptInApply=false` och `isIabContext=true`.
