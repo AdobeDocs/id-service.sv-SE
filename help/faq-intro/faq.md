@@ -6,7 +6,7 @@ seo-title: Vanliga frågor om ID-tjänster
 title: Vanliga frågor om ID-tjänster
 uuid: e8d8f819-3d73-4fa2-864c-4867071c14ee
 translation-type: tm+mt
-source-git-commit: c4c0b791230422f17292b72fd45ba5689a60adae
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -35,7 +35,7 @@ Du kan få problem om du har VisitorAPI.js som värd för en lokal fil i mobilap
 
 Placera VisitorAPI.js-biblioteket överst på sidan i `<head>` kodavsnittet. Detta bidrar till att säkerställa att anropet för ett ID skickas innan sidans brödtext börjar läsas in och maximerar chanserna för att ett ID returneras korrekt.
 
-ID-tjänstanropet är asynkront och är det enda anropet till domänen [](https://marketing.adobe.com/resources/help/en_US/aam/demdex-calls.html)demdex.net. Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
+ID-tjänstanropet är asynkront och är det enda anropet till domänen [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html)demdex.net. Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
 
 För [!DNL Target] kunder kan det öka chanserna att spärra ett `<body>` samtal genom att placera ID-tjänstkoden på [!DNL Target] sidan. Om du måste placera ID-tjänstkoden i sidans brödtext bör den placeras efter den öppna `<body>` -taggen.
 
@@ -69,7 +69,7 @@ Resursbegäranden med CORS är vanligtvis mer att föredra än med JSONP. Med JS
 
 See [CORS Support in the Experience Cloud Identity Service](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758).
 
-## Säkerhet {#section-b176b8492fbe4acfb79ebb30ec902f98}
+## Dokumentskydd {#section-b176b8492fbe4acfb79ebb30ec902f98}
 
 **Stöder ID-tjänsten CORS?**
 
