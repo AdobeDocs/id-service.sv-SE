@@ -6,7 +6,7 @@ seo-title: Förstå ID-synkronisering och matchningsfrekvenser
 title: Förstå ID-synkronisering och matchningsfrekvenser
 uuid: 31bd655f-2b9e-4f8d-9a1f-e81a6110eda8
 translation-type: tm+mt
-source-git-commit: c4c0b791230422f17292b72fd45ba5689a60adae
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -37,9 +37,9 @@ När en besökare kommer till webbplatsen och läser in en sida gör funktionen 
 
 **Steg 2: Läs in iFrame**
 
-Medan sidans brödtext läses in läser ID-tjänsten in en iFrame som kallas för *`Destination Publishing iFrame`*. Inläsningen [!UICONTROL Destination Publishing iFrame] görs i en annan domän än den överordnade sidan. Den här designen hjälper till att säkerställa sidprestanda och förbättrar säkerheten eftersom iFrame:
+Medan sidans brödtext läses in läser ID-tjänsten in en iFrame som kallas för *`Destination Publishing iFrame`*. iFrame [!UICONTROL för] målpublicering läses in i en annan domän än den överordnade sidan. Den här designen hjälper till att säkerställa sidprestanda och förbättrar säkerheten eftersom iFrame:
 
-* Läser in asynkront i relation till överordnad sida. Det innebär att den överordnade sidan kan läsas in oberoende av [!UICONTROL Destination Publishing iFrame]. Inläsning av iFrame och inläsning av ID-synkroniseringspixlar inifrån iFrame påverkar inte den överordnade sidan eller användarupplevelsen.
+* Läser in asynkront i relation till överordnad sida. Det innebär att den överordnade sidan kan läsas in oberoende av iFrame för [!UICONTROL målpublicering]. Inläsning av iFrame och inläsning av ID-synkroniseringspixlar inifrån iFrame påverkar inte den överordnade sidan eller användarupplevelsen.
 * Läser in så snabbt som möjligt. Om detta är för snabbt kan du läsa in iFrame efter fönstrets load-händelse (rekommenderas inte). Mer information finns i [idSyncAttachIframeOnWindowLoad](../library/function-vars/idsyncattachiframeonwindowload.md#reference-b86b7112e0814a4c82c4e24c158508f4) .
 * Förhindrar att kod i iFrame får åtkomst till eller påverkar den överordnade sidan.
 
@@ -51,11 +51,11 @@ ID-synkroniseringen är en URL som utlöses i iFrame för målpublicering. Som v
 
 `http://abc.com?partner_id=abc&sync_id=123&redir=http://dpm.demdex.net/ibs:dpid=<ADOBE_PARTNER_ID>&dpuuid=<PARTNER_UUID>`
 
-Se även [ID-synkronisering för inkommande dataöverföringar](https://marketing.adobe.com/resources/help/en_US/aam/c_id_sync_in.html).
+Se även [ID-synkronisering för inkommande dataöverföringar](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/sending-audience-data/batch-data-transfer-process/id-sync-http.html).
 
 **Steg 4: Lagra-ID**
 
-Synkroniserade ID:n lagras på [edge- och core data-servrarna](https://marketing.adobe.com/resources/help/en_US/aam/c_compedge.html).
+Synkroniserade ID:n lagras på [edge- och core data-servrarna](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/system-components/components-edge.html).
 
 ## Synkroniseringstjänster hanterar ID-synkronisering {#section-cd5784d7ad404a24aa28ad4816a0119a}
 
@@ -68,11 +68,11 @@ Termen *`Sync Services`* avser interna [!DNL Experience Cloud] tekniker som ansv
 * Tredjeparts- [!DNL Experience Cloud] cookie-ID:n till tredjeparts dataleverantör och målplattforms-ID:n. Detta omfattar tjänster och plattformar som dataleverantörer, efterfrågeplattformar och/eller plattformar på utbudssidan, annonsnätverk, utbyten osv.
 * Första parts- [!DNL Experience Cloud] cookie-ID till partner-ID:n mellan enheter.
 
-## ID-synkronisering med Adobe Media Optimizer {#section-642c885ea65d45ffb761f78838735016}
+## ID-synkronisering med Adobe Advertising Cloud {#section-642c885ea65d45ffb761f78838735016}
 
-[!DNL Adobe Media Optimizer] är ett undantag från den iFrame-baserade ID-synkroniseringsprocessen. Eftersom [!DNL Media Optimizer] är en betrodd domän synkroniseras ID från den överordnade sidan i stället för från [!UICONTROL Destination Publishing iFrame]. Under synkroniseringen anropar ID-tjänsten [!DNL Media Optimizer] på `cm.eversttech.net`, vilket är ett äldre domännamn som används av [!DNL Media Optimizer] innan det förvärvas av Adobe. Att skicka data för att [!DNL Media Optimizer] förbättra matchningsfrekvensen och är automatiskt för ID-tjänstkunder som använder version 2.0 (eller senare). Se även [Media Optimizer Cookies](https://marketing.adobe.com/resources/help/en_US/whitepapers/cookies/cookies_media_optimizer.html).
+[!DNL Adobe Advertising Cloud] (som tidigare kallats [!DNL Adobe Media Optimizer]) är ett undantag till den iFrame-baserade ID-synkroniseringsprocessen. Eftersom [!DNL Advertising Cloud] är en betrodd domän synkroniseras ID från den överordnade sidan i stället för iFrame för [!UICONTROL målpublicering]. Under synkroniseringen anropar ID-tjänsten [!DNL Advertising Cloud] på `cm.eversttech.net`, vilket är ett äldre domännamn som används av [!DNL Advertising Cloud] innan det förvärvas av Adobe. Att skicka data för att [!DNL Advertising Cloud] förbättra matchningsfrekvensen och är automatiskt för ID-tjänstkunder som använder version 2.0 (eller senare). Se även [Advertising Cloud Cookies](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-advertising-cloud.html).
 
 >[!MORELIKETHIS]
 >
->* [Förstå anrop till Demdex-domänen](https://marketing.adobe.com/resources/help/en_US/aam/demdex-calls.html)
+>* [Förstå anrop till Demdex-domänen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html)
 
