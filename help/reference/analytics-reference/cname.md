@@ -6,7 +6,7 @@ seo-title: CNAME för datainsamling och spårning mellan domäner
 title: CNAME för datainsamling och spårning mellan domäner
 uuid: ba42c822-b677-4139-b1ed-4d98d3320fd0
 translation-type: tm+mt
-source-git-commit: 8f4175b942ed4228ccd1f96791aa668be8aff95d
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -23,7 +23,7 @@ Med cookie-filen demdex.net kan besökar-ID-tjänsten tillhandahålla samma niv�
 
 ## CNAME för datainsamling {#section-48fd186d376a48079769d12c4bd9f317}
 
-När Analytics-cookien angavs av datainsamlingsservern har många kunder konfigurerat datainsamlingsserverns CNAME-poster som en del av en [förstahandsimplementering](https://marketing.adobe.com/resources/help/en_US/whitepapers/first_party_cookies/) för att undvika problem med webbläsare som avvisar cookies från tredje part. Den här processen konfigurerar din datainsamlingsserverdomän så att den matchar din webbplatsdomän så att cookien för besökar-ID anges som en cookie för en första part.
+När Analytics-cookien angavs av datainsamlingsservern har många kunder konfigurerat datainsamlingsserverns CNAME-poster som en del av en [förstahandsimplementering](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) för att undvika problem med webbläsare som avvisar cookies från tredje part. Den här processen konfigurerar din datainsamlingsserverdomän så att den matchar din webbplatsdomän så att cookien för besökar-ID anges som en cookie för en första part.
 
 Eftersom besökar-ID-tjänsten ställer in besökarens cookie direkt på domänen för den aktuella webbplatsen med JavaScript behövs inte längre den här konfigurationen för att ställa in cookies från första part.
 
