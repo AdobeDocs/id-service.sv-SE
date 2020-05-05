@@ -6,7 +6,7 @@ seo-title: Hur Experience Cloud Identity Service begär och ställer in ID:n
 title: Hur Experience Cloud Identity Service begär och ställer in ID:n
 uuid: ff7f5b7e-e959-4391-b75c-b7a36286e0ea
 translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -32,7 +32,7 @@ I följande exempel visas hur ID-tjänsten begär och tar emot besökar-ID:t fö
 I det här exemplet kommer en ny besökare till pizzabiten som hanteras av Food Company. The Food Company har ID-tjänstkod på pizzans webbplats. När pizzabiten läses in söker ID-tjänstkoden efter AMCV-cookien i pizzabdomänen.
 
 * Om AMCV-cookien är inställd har besökaren ett Experience Cloud-ID. I det här fallet spårar cookien besökaren och delar data med andra Experience Cloud-lösningar.
-* Om AMCV-cookien inte är inställd anropar ID-tjänstkoden en regional [datainsamlingsserver](https://marketing.adobe.com/resources/help/en_US/aam/?f=c_compcollect.html) (DCS) på `dpm.demdex.net/id` (se även [Förstå anrop till Demdex-domänen](https://marketing.adobe.com/resources/help/en_US/aam/demdex-calls.html)). I samtalet ingår organisations-ID för Food Company. Organisations-ID anges i ID-tjänstkodens funktion `Visitor.getInstance` .
+* Om AMCV-cookien inte är inställd anropar ID-tjänstkoden en regional [datainsamlingsserver](https://docs.adobe.com/content/help/en/analytics/technotes/rdc/regional-data-collection.html) (DCS) på `dpm.demdex.net/id` (se även [Förstå anrop till Demdex-domänen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html)). I samtalet ingår organisations-ID för Food Company. Organisations-ID anges i ID-tjänstkodens funktion `Visitor.getInstance` .
 
 ![](assets/request1.png)
 
