@@ -6,7 +6,7 @@ seo-title: Cookies och Experience Cloud Identity Service
 title: Cookies och Experience Cloud Identity Service
 uuid: c5cbd235-37ee-4605-8792-b1a991e190ad
 translation-type: tm+mt
-source-git-commit: 7d7ecdf65cca67539b1b63c8811a0bad04c694c3
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -114,7 +114,7 @@ I följande tabell listas och definieras några viktiga attribut i demodex-cooki
  </tbody> 
 </table>
 
-Mer information finns i [Förstå anrop till Demdex-domänen](https://marketing.adobe.com/resources/help/en_US/aam/demdex-calls.html).
+Mer information finns i [Förstå anrop till Demdex-domänen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html).
 
 ## Generera Experience Cloud-ID {#section-15f69c0bac394b4b9966a23fbc586d17}
 
