@@ -6,7 +6,7 @@ seo-title: whitelistParentDomain och whitelistIframeDomains
 title: whitelistParentDomain och whitelistIframeDomains
 uuid: 6b66a4d0-fea2-4d98-963e-0c4f4ab1efb6
 translation-type: tm+mt
-source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -50,7 +50,7 @@ Båda konfigurationselementen krävs när du använder den här koden.
 
 ## Kodexempel {#section-09d0049fe88a473baa69d404c50bf8ae}
 
-Den konfigurerade [!UICONTROL ID service] koden kan se ut ungefär som i det här exemplet.
+Koden för den konfigurerade [!UICONTROL ID-tjänsten] kan se ut ungefär som i det här exemplet.
 
 ```js
 //Instantiate Visitor 
@@ -73,7 +73,7 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
 
 >[!TIP]
 >
->Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [videopulsslag](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
+>Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [videopulsslag](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
 
 **Användningsfall 1: Webbläsaren blockerar cookies från tredje part och ID-tjänsten implementeras på iFrame- och överordnad sida**
 
