@@ -6,16 +6,16 @@ seo-title: Versionsinformation 2017
 title: Versionsinformation 2017
 uuid: 79452df0-49db-42b8-96fe-01aa7629fbb5
 translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
 
-# Versionsinformation 2017 {#release-notes}
+# 2017 Release Notes {#release-notes}
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2017.
 
-Dessa ändringar registreras också i versionsinformationen [för](https://marketing.adobe.com/resources/help/en_US/whatsnew/)Experience Cloud. Information om äldre ID-tjänst finns i [föregående versionsinformation](https://marketing.adobe.com/resources/help/en_US/whatsnew/?f=c_legacy_releases.html) eller länkarna längst ned på den här sidan.
+Dessa ändringar registreras också i versionsinformationen [för](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)Experience Cloud.
 
 >[!NOTE]
 >
@@ -192,11 +192,11 @@ Korrigerade ett fel som gjorde att ID-tjänsten gjorde redundanta serveranrop f�
 
 **Ny dokumentation**
 
-[Använda DNS-förhämtning med olika Experience Cloud-lösningar och -tjänster `Learn how to use DNS prefetch to help reduce page load times.`](https://marketing.adobe.com/resources/help/en_US/mcloud/dns-prefetch.html)
+[Använda DNS-förhämtning med olika Experience Cloud-lösningar och -tjänster](https://docs.adobe.com/content/help/en/core-services/interface/more-resources/dns-prefetch.html)
 
 ## Version 2.0 {#section-0ceac6007c1241b58ad607e2b76b2b7e}
 
-Januari 2017
+Januari 2016
 
 >[!IMPORTANT]
 >
