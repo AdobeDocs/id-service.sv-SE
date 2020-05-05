@@ -6,7 +6,7 @@ seo-title: Implementera Experience Cloud Identity Service för Target
 title: Implementera Experience Cloud Identity Service för Target
 uuid: cb3581fa-4c4b-43aa-bb8e-8db85a6a1ef2
 translation-type: tm+mt
-source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -25,7 +25,7 @@ Dessa instruktioner är till för målkunder som vill använda Experience Cloud 
 
 ## Steg 1: Hämta ID-tjänstkoden {#section-b32ba0548aa546a79dd38be59832a53e}
 
-Kodbiblioteket [!UICONTROL ID Service] kräver `VisitorAPI.js` kodbiblioteket. Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få den här koden.
+ID- [!UICONTROL tjänsten] kräver `VisitorAPI.js` kodbiblioteket. Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få den här koden.
 
 ## Steg 2: Lägg till funktionen Visitor.getInstance i ID-tjänstkoden {#section-287ef2958e9f43858fe9d630ae519e22}
 
@@ -54,7 +54,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE")
 
 ## Steg 3: Lägg till ditt Experience Cloud-organisations-ID i Visitor.getInstance {#section-522b1877be9243c39b222859b821f0ce}
 
-Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://marketing.adobe.com/resources/help/en_US/mcloud/admin_getting_started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg");`
 
