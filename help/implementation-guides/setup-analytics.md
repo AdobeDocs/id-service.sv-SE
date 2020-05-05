@@ -6,7 +6,7 @@ seo-title: Implementera Experience Cloud Identity Service för Analytics
 title: Implementera Experience Cloud Identity Service för Analytics
 uuid: 7fbd6fa0-1713-4232-8680-500ed62709d5
 translation-type: tm+mt
-source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -36,10 +36,10 @@ Så här implementerar du ID-tjänsten för Adobe Analytics:
 
 ## Steg 1: Hämta ID-tjänstkoden {#section-ead9403a6b7e45b887f9ac959ef89f7f}
 
-Kodbiblioteket [!UICONTROL ID Service] kräver `VisitorAPI.js` kodbiblioteket. Så här hämtar du det här kodbiblioteket:
+ID- [!UICONTROL tjänsten] kräver `VisitorAPI.js` kodbiblioteket. Så här hämtar du det här kodbiblioteket:
 
-1. Gå till **[!UICONTROL Admin]** > **[!UICONTROL Code Manager]**.
-1. Klicka [!UICONTROL Code Manager]på antingen **[!UICONTROL JavaScript (New)]** eller **[!UICONTROL JavaScript (Legacy)]**.
+1. Gå till **[!UICONTROL Admin]** > **[!UICONTROL Kodhanteraren]**.
+1. I [!UICONTROL Kodhanteraren]klickar du antingen på **[!UICONTROL JavaScript (Nytt)]** eller **[!UICONTROL JavaScript (äldre)]**.
 
    Detta hämtar komprimerade kodbibliotek.
 
@@ -96,7 +96,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 
 ## Steg 3: Lägg till ditt Experience Cloud-organisations-ID i Visitor.getInstance {#section-7b8a6e76dc124d0e9ab1ce96ab2ffb0e}
 
-Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://marketing.adobe.com/resources/help/en_US/mcloud/admin_getting_started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg", { ...`
 
@@ -184,7 +184,7 @@ Du behöver en respitperiod om du skickar data till ett internt system från en 
 
 Avbryt respitperioden efter att dataöverföringsprocessen kan använda kolumnerna `post_visid_high` och `post_visid_low` .
 
-Se [Referens för](https://marketing.adobe.com/resources/help/en_US/sc/clickstream/datafeeds_reference.html)Clickstream-datakolumnen.
+Se [Referens för](https://docs.adobe.com/content/help/en/analytics/export/analytics-data-feed/data-feed-overview.html)Clickstream-datakolumnen.
 
 **Inmatning av data i Clickstream**
 
@@ -197,7 +197,7 @@ Du kan testa och distribuera enligt följande.
 Om du vill testa implementeringen av din ID-tjänst ska du kontrollera följande:
 
 * [AMCV-cookie](../introduction/cookies.md) i domänen där sidan finns.
-* MID-värde i [!DNL Analytics] bildbegäran med [Adobes felsökningsverktyg](https://marketing.adobe.com/resources/help/en_US/sc/implement/debugger.html).
+* MID-värde i [!DNL Analytics] bildbegäran med [Adobes felsökningsverktyg](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html).
 
 Se, [testa och verifiera Experience Cloud Identity Service](../implementation-guides/test-verify.md).
 
