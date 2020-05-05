@@ -6,7 +6,7 @@ seo-title: getAnalyticsVisitorID
 title: getAnalyticsVisitorID
 uuid: 6bb8ddfc-9fc1-4105-b377-d9b4d247a0f8
 translation-type: tm+mt
-source-git-commit: c4c0b791230422f17292b72fd45ba5689a60adae
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: c4c0b791230422f17292b72fd45ba5689a60adae
 
 Returnerar det eventuella äldre analys-ID som lagrats i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
 
-**Syntax**`var analyticsID = visitor.getAnalyticsVisitorID()`
+**Syntax** `var analyticsID = visitor.getAnalyticsVisitorID()`
 
 Den här funktionen används vanligtvis med anpassade lösningar som kräver att besökar-ID läses. Den används inte av en standardimplementering. `getAnalyticsVisitorID` fungerar även med callback-funktioner för att läsa ID: [!DNL Analytics] n och föra in dem i ditt system eller program.
 
@@ -44,7 +44,7 @@ Parametern visas i en frågesträng under två olika villkorsuppsättningar. `ai
 Parametern visas i en frågesträng när: `aid`
 
 * ID- [!DNL Experience Cloud] tjänsten har distribuerats korrekt.
-* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics] ID lagrat i sin [s_vi-cookie](https://marketing.adobe.com/resources/help/en_US/whitepapers/cookies/?f=cookies_analytics.html).
+* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics] ID lagrat i sin [s_vi-cookie](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-analytics.html#section-5d50a078de444d12b7d927d68ff3b679).
 
 **Fall 2**
 
@@ -52,5 +52,5 @@ Parametern visas i en frågesträng när din organisation använder en `aid` res
 
 >[!MORELIKETHIS]
 >
->* [Analytics-cookies](https://marketing.adobe.com/resources/help/en_US/whitepapers/cookies/cookies_analytics.html)
+>* [Analytics-cookies](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-privacy.html)
 
