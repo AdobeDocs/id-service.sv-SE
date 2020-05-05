@@ -6,7 +6,7 @@ seo-title: Policy för innehållssäkerhet och Experience Cloud Identity Service
 title: Policy för innehållssäkerhet och Experience Cloud Identity Service
 uuid: 7399edf3-01c1-4730-834e-e2dd2c5791ff
 translation-type: tm+mt
-source-git-commit: 7255228470a59a537251c3a3eec686f52a2b76ec
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -59,7 +59,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje lista med Experien
    <li>img-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>script-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>frame-src 'self' <code>https://*.demdex.net;</code></li>
-   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan över domäner.</li></ul></p> <p>Anrop till domänen <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local"> cookies och identitetstjänsten</a> i Experience Cloud samt för ID-synkroniseringar. Se även Förstå anrop till Demdex-domänen <a href="https://marketing.adobe.com/resources/help/en_US/aam/demdex-calls.html" format="https" scope="external"></a>. </p> </td> </tr> 
+   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan över domäner.</li></ul></p> <p>Anrop till domänen <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local"> cookies och identitetstjänsten</a> i Experience Cloud samt för ID-synkroniseringar. Se även Förstå anrop till Demdex-domänen <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"></a>. </p> </td> </tr> 
  <tr>
  <td colname="col1"> <p> <b>Insticksprogram för aktivitetskarta</b> </p> </td> 
  <td colname="col2"> <p>Ändra din CSP så att den inkluderar *.adobe.com. **Obs**: Om du redan hade en aktivitetskarta installerad före januari 2020 kommer webbläsaren fortfarande att se en första begäran till *.omniture.com, men den kommer att omdirigeras till *.adobe.com. </p></td> 
