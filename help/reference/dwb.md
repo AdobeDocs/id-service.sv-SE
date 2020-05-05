@@ -6,7 +6,7 @@ seo-title: Data Workbench och Experience Cloud Identity Service
 title: Data Workbench och Experience Cloud Identity Service
 uuid: 9448abc8-04fb-47d2-be08-1dfbddb0764e
 translation-type: tm+mt
-source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -15,11 +15,11 @@ source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
 
 Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Data Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket ger bättre integrering med andra produkter i Adobe Experience Cloud och förbättrar besökarspårningen.
 
-Så här uppdaterar du [Data Workbench](https://marketing.adobe.com/resources/help/en_US/insight/) så att ID-tjänsten används:
+Så här uppdaterar du [Data Workbench](https://docs.adobe.com/content/help/en/data-workbench/using/home.html) så att ID-tjänsten används:
 
-1. Leta reda på den aktuella [konfigurationsfilen för avkodargruppen](https://marketing.adobe.com/resources/help/en_US/insight/dataset/c_text_file_dec_groups.html) .
+1. Leta reda på den aktuella [konfigurationsfilen för avkodargruppen](https://docs.adobe.com/content/help/en/data-workbench/using/dataset/dataset-include-files/types-dataset-inc-files/c-text-file-dec-groups.html) .
 
-   Vanligtvis [!DNL Decoder Group] finns den i en [!UICONTROL Profile Manager] av följande sökvägar: `Dataset\Log Processing\Decoding Instructions.cfg`. 1. Kopiera det aktuella avkodningsformatet från konfigurationsfilen.
+   Vanligtvis [!DNL Decoder Group] finns filen i en [!UICONTROL profilhanterare] på den här sökvägen: `Dataset\Log Processing\Decoding Instructions.cfg`. 1. Kopiera det aktuella avkodningsformatet från konfigurationsfilen.
 1. Klistra in avkodningsformatet under originalet.
 1. Öppna avkodningsformatet och lägg till följande nya fältpositioner i slutet av listan:
 
