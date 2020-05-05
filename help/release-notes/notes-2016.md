@@ -6,16 +6,16 @@ seo-title: Versionsinformation 2016
 title: Versionsinformation 2016
 uuid: 7a5a314a-3ff8-4561-9c64-6c10d2223887
 translation-type: tm+mt
-source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
 
-# Versionsinformation 2016 {#release-notes}
+# 2016 Release Notes {#release-notes}
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2016.
 
-Dessa ändringar registreras också i versionsinformationen [för](https://marketing.adobe.com/resources/help/en_US/whatsnew/)Experience Cloud. I [föregående versionsinformation](https://marketing.adobe.com/resources/help/en_US/whatsnew/?f=c_legacy_releases.html) finns äldre [!DNL Experience Cloud] meddelanden.
+Dessa ändringar registreras också i versionsinformationen [för](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)Experience Cloud.
 
 ## Version 1.10 {#section-7d719b3213344a46858835042e0214ed}
 
@@ -53,7 +53,7 @@ Oktober 2016
 
 **Ny och reviderad dokumentation**
 
-**Nytt:** Hämta region- och användar-ID [från AMCV Cookie](../reference/regions.md#concept-15b2c8c894b846a48f1f61a353cfdf4e)
+**Nytt:** [Hämta region- och användar-ID från AMCV Cookie](../reference/regions.md#concept-15b2c8c894b846a48f1f61a353cfdf4e)
 
 ## Version 1.8.0 {#section-69f2eb5b246b4c7aafe116b7a2a5448a}
 
@@ -81,7 +81,7 @@ Revised: [Requirements for the Experience Cloud Identity Service](../reference/r
 
 **Kända fel**
 
-Kunder som använder [!DNL Audience Manager] DIL-kod och besökarAPI.js-kod på samma sida bör ange DIL-variabeln `secureDataCollection= false`. Se [secureDataCollection](https://marketing.adobe.com/resources/help/en_US/aam/?f=dil-secure-data-collection.html).
+Kunder som använder [!DNL Audience Manager] DIL-kod och besökarAPI.js-kod på samma sida bör ange DIL-variabeln `secureDataCollection= false`. Se [secureDataCollection](https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Version 1.6.0 {#section-3faaa14bf3934c6a99b8f79ee06fc0d2}
 
