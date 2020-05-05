@@ -6,7 +6,7 @@ seo-title: isCoopSafe
 title: isCoopSafe
 uuid: 4dfa1f35-0a88-48d1-9484-d88cb53ad461
 translation-type: tm+mt
-source-git-commit: c4c0b791230422f17292b72fd45ba5689a60adae
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -30,7 +30,7 @@ Innehåll:
 För att kunna använda `isCoopSafe` måste du:
 
 * Använd ID-tjänstkoden version 2.4 eller senare.
-* Delta i [Experience Cloud Device Co-op](https://marketing.adobe.com/resources/help/en_US/mcdc/). Medlemmar som arbetar med potentiella partners bör också granska denna dokumentation för att avgöra om `isCoopSafe` möjliga frågor om hur data används för att skapa enhetsgrafen tas upp.
+* Delta i [Experience Cloud Device Co-op](https://docs.adobe.com/content/help/en/device-co-op/using/about/overview.html). Medlemmar som arbetar med potentiella partners bör också granska denna dokumentation för att avgöra om `isCoopSafe` möjliga frågor om hur data används för att skapa enhetsgrafen tas upp.
 
 * Samarbeta med din [!DNL Adobe] konsult för att ange en vitlistefärg eller svartlistningsflagga på ditt Device Co-op-konto. Det finns ingen självbetjäningsväg för att aktivera dessa flaggor.
 
@@ -139,5 +139,5 @@ Wiki page https://wiki.corp.adobe.com/x/RCfFTg
 
 >[!MORELIKETHIS]
 >
->* [DIL isCoopSafe](https://marketing.adobe.com/resources/help/en_US/aam/dil-coopsafe.html)
+>* [DIL isCoopSafe](https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/class-level-dil-methods/dil-coopsafe.html)
 
