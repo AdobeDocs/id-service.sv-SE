@@ -6,7 +6,7 @@ seo-title: getLocationHint
 title: getLocationHint
 uuid: cdc312b7-d270-4a5c-a2bb-0fbb37f1e2f4
 translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -17,7 +17,7 @@ Returnerar region-ID för Experience Cloud Identity Service. Ett region-ID (elle
 
 **Syntax:** ` var *`variabelnamn`* = visitor.getLocationHint()`
 
-En lista med region-ID:n och motsvarande platser finns i [DCS-regions-ID:n, platser och värdnamn](https://marketing.adobe.com/resources/help/en_US/aam/dcs-regions.html).
+En lista med region-ID:n och motsvarande platser finns i [DCS-regions-ID:n, platser och värdnamn](https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
 
 **Kodexempel**
 
