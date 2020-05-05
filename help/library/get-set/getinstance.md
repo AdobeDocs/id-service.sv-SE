@@ -6,7 +6,7 @@ seo-title: getInstance
 title: getInstance
 uuid: 259b88a6-e3d0-4aab-b935-566099bdab98
 translation-type: tm+mt
-source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -33,7 +33,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 
 >[!CAUTION]
 >
->*Instansiera inte* Visitor-funktionen med `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js] kodbibliotek v3.0 eller senare.
+>*Instansiera inte* Visitor-funktionen med `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js] -kodbiblioteket v3.0 eller senare.
 
 **ActionScript/Flash**
 
@@ -51,7 +51,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 });
 ```
 
-Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Detta liknar den [ i `s_gi()` . ](https://marketing.adobe.com/resources/help/en_US/sc/implement/?f=function_s_gi.html) Funktionen [!DNL AppMeasurement]i.
+Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Detta liknar den [ i `s_gi()` . ](https://docs.adobe.com/content/help/en/analytics/implementation/vars/functions/s-gi.html) Funktionen [!DNL AppMeasurement]i.
 
 **Vanlig användning**
 
