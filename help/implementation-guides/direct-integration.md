@@ -6,7 +6,7 @@ seo-title: Direktintegrering med Experience Cloud Identity Service
 title: Direktintegrering med Experience Cloud Identity Service
 uuid: de502f7e-cffd-4130-b3ca-7d6b9a9caae9
 translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -21,7 +21,7 @@ Enheter som inte kan använda kodbiblioteken VisitorAPI.js eller SDK kan anropa 
 
 ![](assets/directSyntax.png)
 
-I det här syntaxexemplet identifierar `d_` prefixet nyckelvärdepar i anropet som en systemnivåvariabel. Du kan skicka flera `d_` parametrar till ID-tjänsten, men fokusera på nyckelvärdepar enligt koden ovan. Mer information om andra variabler finns i [Attribut som stöds för DCS API-anrop](https://marketing.adobe.com/resources/help/en_US/aam/dcs-keys.html).
+I det här syntaxexemplet identifierar `d_` prefixet nyckelvärdepar i anropet som en systemnivåvariabel. Du kan skicka flera `d_` parametrar till ID-tjänsten, men fokusera på nyckelvärdepar enligt koden ovan. Mer information om andra variabler finns i [Attribut som stöds för DCS API-anrop](https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-keys.html).
 
 ID-tjänsten stöder HTTP- och HTTPS-anrop. Använd HTTPS för att skicka data från en säker sida.
 
@@ -46,7 +46,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
 
 ## Parametrar för begäran och svar har definierats {#section-4a9912b545364dc4acad4f1ea5ec641d}
 
-**Begärandeparametrar**
+**Parametrar för begäran**
 
 <table id="table_C8FFA89AB74E4E31A6926CDE5CD54217"> 
  <thead> 
@@ -58,7 +58,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> dpm.demdex.net</span> </p> </td> 
-   <td colname="col2"> <p>En äldre domän som styrs av <span class="keyword"> Adobe</span>. Se <a href="https://marketing.adobe.com/resources/help/en_US/aam/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> 
+   <td colname="col2"> <p>En äldre domän som styrs av <span class="keyword"> Adobe</span>. Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_mitt</span> </p> </td> 
@@ -88,7 +88,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> dcs_region</span> </p> </td> 
-   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. Se <a href="https://marketing.adobe.com/resources/help/en_US/aam/dcs-regions.html" format="https" scope="external"> DCS-regions-ID, -platser och -värdnamn</a>. </p> </td> 
+   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> DCS-regions-ID, -platser och -värdnamn</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_cb</span> </p> </td> 
