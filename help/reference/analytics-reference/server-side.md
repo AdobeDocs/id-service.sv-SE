@@ -6,7 +6,7 @@ seo-title: Implementering på serversidan blandad med JavaScript
 title: Implementering på serversidan blandad med JavaScript
 uuid: 256ea0e7-1eb4-4c92-9a7e-f61cb1ed13c7
 translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -29,7 +29,7 @@ Inkludera Analytics-besökar-ID (om det är angivet) i `<visitorID>` -elementet.
 
 Inkludera besökar-ID:t för Experience Cloud i `<marketingCloudVisitorID>` elementet.
 
-Se [XML-märkord](https://marketing.adobe.com/developer/en_US/documentation/data-insertion/r-supported-tags)som stöds.
+Se [XML-märkord](https://www.adobe.io)som stöds.
 
 ## AppMeasurement för Java {#section-d664b94934924d048300d9c2b6560085}
 
