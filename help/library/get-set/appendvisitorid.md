@@ -6,7 +6,7 @@ seo-title: appendVisitorIDsTo (spårning mellan domäner)
 title: appendVisitorIDsTo (spårning mellan domäner)
 uuid: 06b453ee-73c5-4625-82d9-877ad2b4f702
 translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 ---
 
@@ -78,8 +78,8 @@ var destinationURLWithVisitorIDs = visitor.appendVisitorIDsTo(destinationURL);
    <td colname="col1"> <p> <b>SDK</b> </p> </td> 
    <td colname="col2"> 
     <ul id="ul_9D7933FF68EE4C71BAE999B3747F8398"> 
-     <li id="li_9036C76AAECC4E639C23020C0C9F2AF8"> <a href="https://marketing.adobe.com/resources/help/en_US/mobile/android/mc_methods.html" format="https" scope="external"> Android ID-tjänstmetoder </a> </li> 
-     <li id="li_E49D357905584674BFDFE348345B3849"> <a href="https://marketing.adobe.com/resources/help/en_US/mobile/ios/mc_methods.html" format="https" scope="external"> iOS ID-tjänstmetoder </a> </li> 
+     <li id="li_9036C76AAECC4E639C23020C0C9F2AF8"> <a href="https://docs.adobe.com/content/help/en/mobile-services/android/experience-cloud-android/mc-methods.html" format="https" scope="external"> Android ID-tjänstmetoder </a> </li> 
+     <li id="li_E49D357905584674BFDFE348345B3849"> <a href="https://docs.adobe.com/content/help/en/mobile-services/ios/exp-cloud-ios/mc-methods.html" format="https" scope="external"> iOS ID-tjänstmetoder </a> </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
