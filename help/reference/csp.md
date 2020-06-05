@@ -6,7 +6,10 @@ seo-title: Policy för innehållssäkerhet och Experience Cloud Identity Service
 title: Policy för innehållssäkerhet och Experience Cloud Identity Service
 uuid: 7399edf3-01c1-4730-834e-e2dd2c5791ff
 translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+source-git-commit: acf10dd734132662698791e473c1f3f4dda85d67
+workflow-type: tm+mt
+source-wordcount: '619'
+ht-degree: 0%
 
 ---
 
@@ -63,6 +66,10 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje lista med Experien
  <tr>
  <td colname="col1"> <p> <b>Insticksprogram för aktivitetskarta</b> </p> </td> 
  <td colname="col2"> <p>Ändra din CSP så att den inkluderar *.adobe.com. **Obs**: Om du redan hade en aktivitetskarta installerad före januari 2020 kommer webbläsaren fortfarande att se en första begäran till *.omniture.com, men den kommer att omdirigeras till *.adobe.com. </p></td> 
+ </tr>
+ <tr>
+ <td colname="col1"> <p> <b>Advertising Analytics</b> </p> </td> 
+ <td colname="col2"> <p>Om du har kontroller för frågesträngsparametrar måste du se till att vitlista parametrarna "s_kwcid" och "ef_id". Tekniskt sett använder Advertising Analytics bara s_kwcid, men om du hämtar Ad Cloud Search eller DSP använder den också ef_id. Dessa frågesträngsparametrar är alfanumeriska. Parametern "s_kwcid" använder "!" och parametern "ef_id" använder tecknet ":". Om du blockerar "!" i URL:en måste du vitlista den också.</p></td> 
  </tr>
  </tbody> 
 </table>
