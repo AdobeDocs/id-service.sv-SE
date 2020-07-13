@@ -6,7 +6,10 @@ seo-title: Kund-ID:n och autentiseringstillstånd
 title: Kund-ID:n och autentiseringstillstånd
 uuid: 643df363-224a-463e-a332-be59926b47e7
 translation-type: tm+mt
-source-git-commit: ee07ec0fd83932ab5006dcdbece61608f4e4606e
+source-git-commit: ddff95876722b981f22c7e3196ff2ce9b696010e
+workflow-type: tm+mt
+source-wordcount: '656'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +20,7 @@ Tillsammans med besökar-ID:t för Experience Cloud kan du koppla ytterligare ku
 
 ## Autentiseringstillstånd {#section-68ad4065dfaa437d9070832d6e2bf85c}
 
-Metoden accepterar flera kund-ID:n för samma besökare `setCustomerIDs` . Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/attributes.html) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
+Metoden accepterar flera kund-ID:n för samma besökare `setCustomerIDs` . Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://docs.adobe.com/content/help/sv-SE/core-services/interface/customer-attributes/attributes.html) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
 
 >[!IMPORTANT]
 >
@@ -42,7 +45,7 @@ Från och med Experience Cloud Identity Service v1.5+, `setCustomerIDs` ingår d
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.AUTHENTICATED </span> </p> </td> 
    <td colname="col2"> <p> <span class="codeph"> 1 </span> </p> </td> 
-   <td colname="col3"> <p>Autentiserad för en viss instans, sida eller app. </p> <p> <p>Obs!  För att kundattributen för <span class="keyword"> Target ska fungera på rätt sätt </span> krävs den här statusen. </p> </p> </td> 
+   <td colname="col3"> <p>Autentiserad för en viss instans, sida eller app. </p> <p> <p>Obs!  För att kundattributen för <span class="keyword"> Target ska fungera på rätt sätt </span> krävs denna status. </p> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.LOGGED_OUT </span> </p> </td> 
@@ -60,7 +63,7 @@ Du kan tilldela autentiseringstillstånd till dina användare, beroende på vilk
  <thead> 
   <tr> 
    <th colname="col1" class="entry"> Autentiseringsstatus </th> 
-   <th colname="col2" class="entry"> Användningsfall </th> 
+   <th colname="col2" class="entry"> Användningsexempel </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -93,8 +96,6 @@ Kund-ID:n kan innehålla kombinationer av ID:n och autentiserade tillstånd som 
 >* Använd bara okodade värden för dina ID:n.
 >* Kund-ID:n och autentiseringstillstånd lagras inte i cookien för besökar-ID. De måste anges för varje sida eller programkontext.
 >* Du bör inte inkludera någon personligt identifierbar information (PII) i kund-ID:n. Om du använder PII för att identifiera en besökare (till exempel en e-postadress) rekommenderar vi att du lagrar en hashad eller krypterad version av informationen i stället. ECID-biblioteket har stöd för att hash-koda användaridentifierare. Se [SHA256 Hashing Support för setCustomerID](/help/reference/hashing-support.md).
->
-
 
 
 ```js
@@ -215,9 +216,9 @@ Object customerIDs = visitor.getCustomerIDs();
 
 ID- [!DNL Experience Cloud] tjänsten stöder kund-ID:n och autentiseringstillstånd i Android- och iOS SDK-koden. Se följande kodbibliotek:
 
-* [Android SDK-metoder](https://docs.adobe.com/content/help/en/mobile-services/android/overview.html)
-* [iOS SDK-metoder](https://docs.adobe.com/content/help/en/mobile-services/ios/overview.html)
+* [Android SDK-metoder](https://docs.adobe.com/content/help/sv-SE/mobile-services/android/overview.html)
+* [iOS SDK-metoder](https://docs.adobe.com/content/help/sv-SE/mobile-services/ios/overview.html)
 
-## Meddelande till kunder som arbetar med analys och målgruppshantering {#section-3a8e9d51e71c4c6e865184b81ed9d99b}
+## Meddelande till Analytics- och Audience Manager-kunder {#section-3a8e9d51e71c4c6e865184b81ed9d99b}
 
 Om du skickar deklarerade ID:n till [!DNL Audience Manager]måste `userid` objektet matcha integrationskoden som är associerad med en datakälla. Mer information finns i avsnittet [!UICONTROL Visitor ID Service] i dokumentationen [Konfigurera kod](https://docs.adobe.com/help/en/audience-manager/user-guide/features/profile-merge-rules/merge-rules-start.html#configure-merge-rule-code) för kopplingsregler.
