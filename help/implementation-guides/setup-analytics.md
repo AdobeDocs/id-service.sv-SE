@@ -2,16 +2,19 @@
 description: De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID Service
 seo-description: De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
-seo-title: Implementera Experience Cloud Identity Service för Analytics
-title: Implementera Experience Cloud Identity Service för Analytics
+seo-title: Implementera identitetstjänsten Experience Cloud för Analytics
+title: Implementera identitetstjänsten Experience Cloud för Analytics
 uuid: 7fbd6fa0-1713-4232-8680-500ed62709d5
 translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+source-git-commit: ddff95876722b981f22c7e3196ff2ce9b696010e
+workflow-type: tm+mt
+source-wordcount: '1076'
+ht-degree: 1%
 
 ---
 
 
-# Implementera Experience Cloud Identity Service för Analytics {#implement-the-experience-cloud-id-service-for-analytics}
+# Implementera identitetstjänsten Experience Cloud för Analytics {#implement-the-experience-cloud-id-service-for-analytics}
 
 De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
@@ -19,15 +22,13 @@ De här instruktionerna är till för Analytics-kunder som vill använda Experie
 >
 >* [Läs kraven](../reference/requirements.md) innan du börjar.
 >* Konfigurera och testa koden i en utvecklingsmiljö innan den implementeras i produktionen.
->
-
 
 
 Så här implementerar du ID-tjänsten för Adobe Analytics:
 
 1. [Hämta ID-tjänstkoden](../implementation-guides/setup-analytics.md#section-ead9403a6b7e45b887f9ac959ef89f7f)
 1. [Lägg till funktionen Visitor.getInstance i ID-tjänstkoden](../implementation-guides/setup-analytics.md#section-6053a6b7c16c466a9f9fdbf9cb9db3df)
-1. [Lägg till ditt Experience Cloud-organisations-ID i Visitor.getInstance](../implementation-guides/setup-analytics.md#section-7b8a6e76dc124d0e9ab1ce96ab2ffb0e)
+1. [Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance](../implementation-guides/setup-analytics.md#section-7b8a6e76dc124d0e9ab1ce96ab2ffb0e)
 1. [Lägg till dina spårningsservrar i Visitor.getInstance](../implementation-guides/setup-analytics.md#section-70ec9ebff47940d8ab520be5ec4728c5)
 1. [Uppdatera filen AppMeasurement.js eller s_code.js](../implementation-guides/setup-analytics.md#section-b53113aea1bd4de896e0e4e9a7edee19)
 1. [Lägg till API-kod för besökare på sidan](../implementation-guides/setup-analytics.md#section-d46d6aa324c842f2931d901e38d6db1d)
@@ -36,10 +37,10 @@ Så här implementerar du ID-tjänsten för Adobe Analytics:
 
 ## Steg 1: Hämta ID-tjänstkoden {#section-ead9403a6b7e45b887f9ac959ef89f7f}
 
-ID- [!UICONTROL tjänsten] kräver `VisitorAPI.js` kodbiblioteket. Så här hämtar du det här kodbiblioteket:
+Kodbiblioteket [!UICONTROL ID Service] kräver `VisitorAPI.js` kodbiblioteket. Så här hämtar du det här kodbiblioteket:
 
-1. Gå till **[!UICONTROL Admin]** > **[!UICONTROL Kodhanteraren]**.
-1. I [!UICONTROL Kodhanteraren]klickar du antingen på **[!UICONTROL JavaScript (Nytt)]** eller **[!UICONTROL JavaScript (äldre)]**.
+1. Gå till **[!UICONTROL Admin]** > **[!UICONTROL Code Manager]**.
+1. Klicka [!UICONTROL Code Manager]på antingen **[!UICONTROL JavaScript (New)]** eller **[!UICONTROL JavaScript (Legacy)]**.
 
    Detta hämtar komprimerade kodbibliotek.
 
@@ -51,8 +52,6 @@ ID- [!UICONTROL tjänsten] kräver `VisitorAPI.js` kodbiblioteket. Så här häm
 >
 >* I tidigare versioner av ID-tjänstens API placerades den här funktionen på en annan plats och en annan syntax krävdes. Om du migrerar från en version som är tidigare än [version 1.4](../release-notes/notes-2015.md#section-f5c596f355b14da28f45c798df513572)bör du notera den nya placeringen och syntaxen som beskrivs här.
 >* Kod i ALL CAPS är en platshållare för faktiska värden. Ersätt den här texten med ditt företags-ID, URL för spårningsserver eller annat namngivet värde.
->
-
 
 
 **Del 1: Kopiera funktionen Visitor.getInstance nedan**
@@ -94,9 +93,9 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 }); 
 ```
 
-## Steg 3: Lägg till ditt Experience Cloud-organisations-ID i Visitor.getInstance {#section-7b8a6e76dc124d0e9ab1ce96ab2ffb0e}
+## Steg 3: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-7b8a6e76dc124d0e9ab1ce96ab2ffb0e}
 
-Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://docs.adobe.com/content/help/sv-SE/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg", { ...`
 
@@ -127,11 +126,10 @@ Så här tar du reda på vilka spårningsservervariabler som ska användas:
 
 >[!NOTE]
 >
->Om det används matchar du [!DNL Experience Cloud] serverns URL:er till deras motsvarande URL:er för spårningsservern så här: >
+>Om det används matchar du [!DNL Experience Cloud] serverns URL:er till deras motsvarande URL:er för spårningsservern så här:
+>
 >* [!DNL Experience Cloud] server-URL = URL för spårningsserver
 >* [!DNL Experience Cloud] säker URL för server = spårningsserverns säkra URL
->
-
 
 
 Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Korrekt fylla i variablerna](https://helpx.adobe.com/analytics/kb/determining-data-center.html#)trackingServer och trackingServerSecure.
@@ -199,7 +197,7 @@ Om du vill testa implementeringen av din ID-tjänst ska du kontrollera följande
 * [AMCV-cookie](../introduction/cookies.md) i domänen där sidan finns.
 * MID-värde i [!DNL Analytics] bildbegäran med [Adobes felsökningsverktyg](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html).
 
-Se, [testa och verifiera Experience Cloud Identity Service](../implementation-guides/test-verify.md).
+Se, [testa och verifiera identitetstjänsten](../implementation-guides/test-verify.md)i Experience Cloud.
 
 **Distribuera kod**
 
