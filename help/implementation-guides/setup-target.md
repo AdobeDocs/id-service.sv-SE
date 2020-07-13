@@ -1,31 +1,32 @@
 ---
-description: Dessa instruktioner är till för målkunder som vill använda Experience Cloud Identity Service och inte använder dynamisk tagghantering (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+description: De här instruktionerna är till för Target-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID Service
-seo-description: Dessa instruktioner är till för målkunder som vill använda Experience Cloud Identity Service och inte använder dynamisk tagghantering (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
-seo-title: Implementera Experience Cloud Identity Service för Target
-title: Implementera Experience Cloud Identity Service för Target
+seo-description: De här instruktionerna är till för Target-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+seo-title: Implementera identitetstjänsten Experience Cloud för Target
+title: Implementera identitetstjänsten Experience Cloud för Target
 uuid: cb3581fa-4c4b-43aa-bb8e-8db85a6a1ef2
 translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+source-git-commit: ddff95876722b981f22c7e3196ff2ce9b696010e
+workflow-type: tm+mt
+source-wordcount: '457'
+ht-degree: 2%
 
 ---
 
 
-# Implementera Experience Cloud Identity Service för Target{#implement-the-experience-cloud-id-service-for-target}
+# Implementera identitetstjänsten Experience Cloud för Target{#implement-the-experience-cloud-id-service-for-target}
 
-Dessa instruktioner är till för målkunder som vill använda Experience Cloud Identity Service och inte använder dynamisk tagghantering (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna är till för Target-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
 >* [Läs kraven](../reference/requirements.md) innan du börjar.
 >* Konfigurera och testa koden i en utvecklingsmiljö innan den implementeras i produktionen.
->
-
 
 
 ## Steg 1: Hämta ID-tjänstkoden {#section-b32ba0548aa546a79dd38be59832a53e}
 
-ID- [!UICONTROL tjänsten] kräver `VisitorAPI.js` kodbiblioteket. Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få den här koden.
+Kodbiblioteket [!UICONTROL ID Service] kräver `VisitorAPI.js` kodbiblioteket. Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få den här koden.
 
 ## Steg 2: Lägg till funktionen Visitor.getInstance i ID-tjänstkoden {#section-287ef2958e9f43858fe9d630ae519e22}
 
@@ -52,9 +53,9 @@ Version and copyright section
 var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE");
 ```
 
-## Steg 3: Lägg till ditt Experience Cloud-organisations-ID i Visitor.getInstance {#section-522b1877be9243c39b222859b821f0ce}
+## Steg 3: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-522b1877be9243c39b222859b821f0ce}
 
-Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `Visitor.getInstance` med ditt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` organisations-ID i [!DNL Experience Cloud] funktionen. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssidan. Se även [Administration - bastjänster](https://docs.adobe.com/content/help/sv-SE/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg");`
 
