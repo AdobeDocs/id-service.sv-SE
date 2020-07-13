@@ -4,7 +4,10 @@ seo-title: ECID-biblioteksmetoder i en Safari ITP-värld
 description: Dokumentation för Adobe ECID-bibliotek (ID Service).
 seo-description: Dokumentation för Adobe ECID-bibliotek (ID Service).
 translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+source-git-commit: ddff95876722b981f22c7e3196ff2ce9b696010e
+workflow-type: tm+mt
+source-wordcount: '1090'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ AMCV-cookien är för närvarande beroende av API:t document.cookie och ställs 
 
 ITP:s regler fokuserar på att ge utvecklarna kontroll. Implementeringar via CNAME-certifikat kan inte göras enbart via JavaScript. Adobes CNAME-certifieringsprogram (spårning på serversidan) är i linje med ITP och har varit en del av Adobes strategi i många år. ECID-biblioteket frigör metoder som fokuserar på att flytta ECID-biblioteksfunktioner till en CNAME-implementering.
 
-**Varför fokuserar Adobe på ECID-biblioteket när andra metoder för att spåra besökare i Analytics används med CNAME idag?**
+**Varför fokuserar Adobe på ECID-biblioteket när andra Analytics metoder för besöksspårning används med CNAME idag?**
 
 ECID-biblioteket, AMCV cookie och ECID (även MID) började som en metod för att integrera alla Adobe-lösningar med ett ID. Detta ID fortsätter att vara det prioriterade cookie-nivå-ID:t i Adobes produktutvecklingskarta och är standardcookie-ID:t för Adobe Experience Platform.
 
@@ -39,15 +42,17 @@ Fler vanliga frågor och svar kommer att läggas till här när ytterligare ITP-
 
 När ytterligare metoder skapas för spårning i Safari läggs de till som referens till den här sidan.
 
->[!NOTE] *ECID* = *MID* = *MCID* i all dokumentation nedan.
+>[!NOTE]
+>
+>*ECID* = *MID* = *MCID* i all dokumentation nedan.
 
 Nedan finns information om insatser för användning av ITP- och ECID-bibliotek.
 
 ## Använd ECID-bibliotek och CNAME-spårning för att förlänga giltigheten för besökar-ID
 
-ITP 2.1 förhindrar möjligheten att skriva cookies på klientsidan, vilket försämrar möjligheten att ge kunderna korrekt besöksspårningsinformation. En ändring införs i Adobes CNAME-spårningsservrar för att lagra besökarens Experience Cloud ID (ECID) i en cookie från en första part.
+ITP 2.1 förhindrar möjligheten att skriva cookies på klientsidan, vilket försämrar möjligheten att ge kunderna korrekt besöksspårningsinformation. En förändring införs i Adobes CNAME-spårningsservrar för att lagra besökarens Experience Cloud ID (ECID) i en cookie från en första part.
 
-Den här ändringen är bara användbar för ECID-kunder som använder en CNAME från Analytics i förstahandskontext. Om du är en analyskund som för närvarande inte använder CNAME, eller till och med en icke-analyskund, är du fortfarande berättigad till en CNAME-post. Kontakta kundtjänst eller din kontorepresentant för att starta registreringen av en [CNAME](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html).
+Den här förändringen är bara användbar för ECID-kunder som använder en Analytics CNAME i förstahandskontext. Om du är en Analytics-kund som för närvarande inte använder CNAME, eller till och med en kund som inte är Analytics, är du ändå berättigad till en CNAME-post. Kontakta kundtjänst eller din kontorepresentant för att starta registreringen av en [CNAME](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html).
 
 Uppgradera till ECID-bibliotek v. 4.3.0 + för att utnyttja denna förändring.
 
@@ -57,9 +62,9 @@ När en ID-begäran har gjorts i demdex.net och ett ECID har hämtats görs en I
 
 Denna nya `s_ecid` cookie följer samma avanmälningsstatus som AMCV-cookien. Om e-id:t läses från `s_ecid` cookien anropas alltid demdex omedelbart för att hämta den senaste avanmälningsstatusen för det ID:t och lagras i AMCV-cookien.
 
-Om din konsument dessutom har avanmält sig från Analytics-spårning via den här [metoden](https://docs.adobe.com/content/help/en/analytics/implementation/js/opt-out.html)kommer denna `s_ecid` cookie att tas bort.
+Om din konsument har avanmält sig från Analytics-spårning via den här [metoden](https://docs.adobe.com/content/help/en/analytics/implementation/js/opt-out.html)kommer denna `s_ecid` cookie att tas bort.
 
-Spårningsservernamnet måste anges till VisitorJS-biblioteket när biblioteket initieras med trackingServer eller trackingServerSecure. Detta bör matcha konfigurationen trackingServer i Analytics-konfigurationerna.
+Spårningsservernamnet ska anges till VisitorJS-biblioteket när biblioteket initieras med trackingServer eller trackingServerSecure. Detta bör matcha konfigurationen trackingServer i Analytics-konfigurationerna.
 
 Om du väljer att inte utnyttja den här metoden lägger du till följande konfiguration i implementeringen av ECID-biblioteket: discardtrackingServerECID. När den här konfigurationen är true läser Visitor-biblioteket inte det MID som angetts av spårningsservern för första part.
 
