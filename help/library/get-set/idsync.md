@@ -6,7 +6,10 @@ seo-title: ID-synkronisering efter URL eller datakälla
 title: ID-synkronisering efter URL eller datakälla
 uuid: ff83d910-8375-4295-9f2a-e14c15eee09a
 translation-type: tm+mt
-source-git-commit: c4c0b791230422f17292b72fd45ba5689a60adae
+source-git-commit: 6e77622817d9881efd9039d9073ba4ae14e8e14e
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 10%
 
 ---
 
@@ -29,14 +32,11 @@ Med ID-tjänstfunktionerna idSyncByURL och idSyncByDataSource kan du manuellt im
  <tbody> 
   <tr valign="top"> 
    <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByURL(); </span> </p> </td> 
-   <td colname="col2"> <p>Mellan olika datapartners och <span class="keyword"> Audience Manager </span> med en anpassad URL för ID-synkronisering. </p> </td> 
+   <td colname="col2"> <p>Mellan olika datapartner och <span class="keyword"> Audience Manager </span> med hjälp av en anpassad URL för ID-synkronisering. </p> </td> 
   </tr> 
   <tr valign="top"> 
    <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByDataSource(); </span> </p> </td> 
-   <td colname="col2"> <p>När du redan känner till DPID och DPUID och vill skicka det till <span class="keyword"> Audience Manager </span> i standardformatet för ID-synkroniserings-URL. </p> <p> 
-     <draft-comment>
-       När du redan känner till användar-ID:t och vill skicka det till Audience Manager. 
-     </draft-comment> </p> </td> 
+   <td colname="col2"> <p>När du redan känner till DPID och DPUID och vill skicka det till <span class="keyword"> Audience Manager </span> i standardformatet för ID-synkronisering. </p> <p></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -66,7 +66,7 @@ I följande tabell visas och definieras de egenskaper som är tillgängliga för
   </tr> 
   <tr valign="top"> 
    <td colname="col1"> <span class="codeph"> minutesToLive </span> </td> 
-   <td colname="col2"> Nummer </td> 
+   <td colname="col2"> Siffra </td> 
    <td colname="col3"> <p> <i>(Valfritt)</i> Anger förfallotid för cookie. Måste vara ett heltal. Standardvärdet är 2 0160 minuter (14 dagar). </p> </td> 
   </tr> 
   <tr valign="top"> 
