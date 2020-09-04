@@ -1,19 +1,22 @@
 ---
-description: Granska det här avsnittet för att kontrollera att du använder rätt lösningar, tjänster och kodversioner som krävs av Experience Cloud Identity Service.
+description: Granska det här avsnittet för att kontrollera att du använder rätt lösningar, tjänster och kodversioner som krävs av Experience Cloud identitetstjänst.
 keywords: ID Service
-seo-description: Granska det här avsnittet för att kontrollera att du använder rätt lösningar, tjänster och kodversioner som krävs av Experience Cloud Identity Service.
+seo-description: Granska det här avsnittet för att kontrollera att du använder rätt lösningar, tjänster och kodversioner som krävs av Experience Cloud identitetstjänst.
 seo-title: Krav för Experience Cloud Identity Service
 title: Krav för Experience Cloud Identity Service
 uuid: 608b1082-6e9e-4101-b6cb-60027950109b
 translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+source-git-commit: 6e77622817d9881efd9039d9073ba4ae14e8e14e
+workflow-type: tm+mt
+source-wordcount: '781'
+ht-degree: 5%
 
 ---
 
 
 # Requirements for the Experience Cloud Identity Service {#requirements-for-the-experience-cloud-id-service}
 
-Granska det här avsnittet för att kontrollera att du använder rätt lösningar, tjänster och kodversioner som krävs av Experience Cloud Identity Service.
+Granska det här avsnittet för att kontrollera att du använder rätt lösningar, tjänster och kodversioner som krävs av Experience Cloud identitetstjänst.
 
 ## Krav för att säkerställa att implementeringen lyckas och stöds {#section-15e54a9e9ad2443cb9dc950b4a78f1f1}
 
@@ -58,22 +61,22 @@ Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL 
 <table id="table_6C74B676EB094C568D2439FDCC9A7830"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Experience Cloud-status </th> 
+   <th colname="col1" class="entry"> Status för Experience Cloud </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <b>Aktiverad</b> </p> </td> 
-   <td colname="col2"> <p>Om ditt företag är aktiverat för <span class="keyword"> Experience Cloud</span> men du inte har ditt företags-ID, se Organisations-ID <a href="https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/organizations.html" format="https" scope="external"> (rulla ned till avsnittet</a> Hitta ditt företags-ID <i></i>). </p> </td> 
+   <td colname="col2"> <p>Om ditt företag är aktiverat för <span class="keyword"> Experience Cloud</span> men du inte har ditt organisations-ID läser du <a href="https://docs.adobe.com/content/help/sv-SE/core-services/interface/manage-users-and-products/organizations.html" format="https" scope="external"> Organisations-ID</a> (rulla ned till avsnittet <i>Hitta ditt företags-ID</i>). </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Osäker</b> </p> </td> 
-   <td colname="col2"> <p> Om du inte känner till ditt företags <span class="keyword"> Experience Cloud</span> -status kan du fråga vem som hanterar ditt Adobe-konto om medlemmar i ditt företag kan logga in på <a href="https://experiencecloud.adobe.com" format="https" scope="external"> marketing.adobe.com</a> med ett Adobe-ID. Om du kan det är du aktiverad och en administratör kan visa ditt organisations-ID. Information om organisation-ID finns i avsnittet Administrationssida i <a href="https://docs.adobe.com/help/en/core-services/interface/experience-cloud.html" format="https" scope="external"> Experience Cloud-administration</a>. </p> </td> 
+   <td colname="col2"> <p> Om du inte känner till ditt företags <span class="keyword"> Experience Cloud</span> -status kan du fråga vem som hanterar ditt Adobe-konto om medlemmar i ditt företag kan logga in på <a href="https://experiencecloud.adobe.com" format="https" scope="external"> marketing.adobe.com</a> med hjälp av en Adobe ID. Om du kan det är du aktiverad och en administratör kan visa ditt organisations-ID. Information om organisation-ID finns i avsnittet Administrationssida i <a href="https://docs.adobe.com/help/sv-SE/core-services/interface/experience-cloud.html" format="https" scope="external"> Administrationssida</a>för Experience Cloud. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Ej aktiverad</b> </p> </td> 
-   <td colname="col2"> <p> Om ditt företag inte har aktiverats för Experience Cloud läser du <a href="https://docs.adobe.com/content/help/en/core-services/interface/about-core-services/core-services.html" format="https" scope="external"> Core Services - Aktivera dina lösningar</a> för att komma igång. </p> </td> 
+   <td colname="col2"> <p> Om ditt företag inte är aktiverat för Experience Cloud kan du läsa <a href="https://docs.adobe.com/content/help/en/core-services/interface/about-core-services/core-services.html" format="https" scope="external"> Core Services - Enabling Your Solutions</a> to get started. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -95,7 +98,7 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
 <table id="table_8E773F76DBCB4797A0C117080CA8707C"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Experience Cloud-lösning </th> 
+   <th colname="col1" class="entry"> Experience Cloud Solution </th> 
    <th colname="col3" class="entry"> Kodbibliotek </th> 
    <th colname="col4" class="entry"> Versionskrav </th> 
   </tr> 
@@ -107,7 +110,7 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
    <td colname="col4"> <p>2.0 eller senare </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1" morerows="2"> <p> <b> <span class="keyword"> Analyser </span> </b> </p> </td> 
+   <td colname="col1" morerows="2"> <p> <b><span class="keyword">Analytics</span> </b> </p> </td> 
    <td colname="col3"> <p> <span class="codeph"> AppMeasurement.js</span> </p> <p>Se <a href="https://docs.adobe.com/content/help/en/analytics/implementation/js/overview.html" format="https" scope="external"> AppMeasurement for JavaScript </a>. </p> </td> 
    <td colname="col4"> <p>1.6.4 eller senare. </p> </td> 
   </tr> 
@@ -116,19 +119,16 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
    <td colname="col4"> <p>H.27 </p> <p> <p>Obs!  <span class="keyword"> Analytics</span> s_code version H.27 stöds inte längre i ID-tjänstversion 1.6.0. Uppgradera koden till den senaste versionen av AppMeasurement. </p> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col3"> <p>Videopulsslag </p> <p>Se <a href="https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html" format="https" scope="external"> Video Heartbeat 2.x för JavaScript</a>. </p> </td> 
+   <td colname="col3"> <p>Videopulsslag </p> <p>Se <a href="https://docs.adobe.com/content/help/sv-SE/media-analytics/using/media-overview.html" format="https" scope="external"> Video Heartbeat 2.x för JavaScript</a>. </p> </td> 
    <td colname="col4"> <p>2.0 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b> <span class="keyword"> Audience Manager </span> </b> </p> </td> 
-   <td colname="col3"> <p> <span class="codeph"> dil.js</span> </p> <p> Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/dil-overview.html" format="https" scope="external"> Dataintegreringsbibliotek</a> (DIL). </p> </td> 
-   <td colname="col4"> <p>5.0 </p> <p> 
-     <draft-comment>
-       uppdaterat från 4.9 
-     </draft-comment> </p> </td> 
+   <td colname="col3"> <p> <span class="codeph"> dil.js</span> </p> <p> See <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/dil-overview.html" format="https" scope="external"> Data Integration Library</a> (DIL). </p> </td> 
+   <td colname="col4"> <p>5.0 </p></td> 
   </tr> 
   <tr> 
-   <td colname="col1" morerows="1"> <p> <b> <span class="keyword"> Mål </span> </b> </p> </td> 
+   <td colname="col1" morerows="1"> <p> <b> <span class="keyword"> Målgrupp </span> </b> </p> </td> 
    <td colname="col3"> <p> <span class="codeph"> mbox.js</span> </p> <p>Se <a href="https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-technical.html" format="https" scope="external"> Mbox Code</a>. </p> </td> 
    <td colname="col4"> <p>61 </p> </td> 
   </tr> 
