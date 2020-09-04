@@ -6,7 +6,10 @@ seo-title: appendVisitorIDsTo (spårning mellan domäner)
 title: appendVisitorIDsTo (spårning mellan domäner)
 uuid: 06b453ee-73c5-4625-82d9-877ad2b4f702
 translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+source-git-commit: 6e77622817d9881efd9039d9073ba4ae14e8e14e
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
@@ -18,12 +21,12 @@ Med den här funktionen kan du dela en besökares Experience Cloud-ID över dom�
 Innehåll:
 
 <ul class="simplelist"> 
- <li> <a href="../../library/get-set/appendvisitorid.md#section-7251d88befd440b4b79520e33c5aa44a" format="dita" scope="local"> Spåra besökare i olika domäner när webbläsare blockerar cookies från tredje part </a> </li> 
+ <li> <a href="../../library/get-set/appendvisitorid.md#section-7251d88befd440b4b79520e33c5aa44a" format="dita" scope="local"> Spåra besökare över domäner när webbläsare blockerar cookies från tredje part </a> </li> 
  <li> <a href="../../library/get-set/appendvisitorid.md#section-62d55f7f986542b0b9238e483d50d7b0" format="dita" scope="local"> Lägg till exempel på besökar-ID-kod </a> </li> 
  <li> <a href="../../library/get-set/appendvisitorid.md#section-168e313df6054af0a7e27b9fa0d69640" format="dita" scope="local"> Stöd för dynamisk tagghantering (DTM) och SDK </a> </li> 
 </ul>
 
-## Spåra besökare i olika domäner när webbläsare blockerar cookies från tredje part {#section-7251d88befd440b4b79520e33c5aa44a}
+## Spåra besökare över domäner när webbläsare blockerar cookies från tredje part {#section-7251d88befd440b4b79520e33c5aa44a}
 
 ID-tjänsten skriver en cookie från första och tredje part till webbläsaren när en person besöker din webbplats (se [Cookies och Experience Cloud Identity Service](../../introduction/cookies.md) ). Den första partens cookie innehåller MID, ett unikt ID för den besökaren. Cookien från tredje part innehåller ett annat ID som används av ID-tjänsten för att generera MID. När en webbläsare blockerar denna cookie från tredje part kan ID-tjänsten inte:
 
@@ -33,7 +36,7 @@ ID-tjänsten skriver en cookie från första och tredje part till webbläsaren n
 Implementera ` Visitor.appendVisitorIDsTo( *`url`*)`som hjälp att lösa problemet. Med den här egenskapen kan ID-tjänsten spåra webbplatsbesökare i flera domäner även när deras webbläsare blockerar cookies från tredje part. Så här fungerar det:
 
 * När en besökare bläddrar till dina andra domäner lägger ` Visitor.appendVisitorIDsTo( *`URL:en`*)` till MID:t som en frågeparameter i URL-omdirigeringen från den ursprungliga domänen till måldomänen.
-* ID-tjänstkoden på måldomänen extraherar MID från URL:en i stället för att skicka en begäran till Adobe om besökarens ID. Denna begäran innehåller cookie-ID från tredje part, som inte är tillgängligt i det här fallet.
+* ID-tjänstkoden på måldomänen extraherar MID från URL:en i stället för att skicka en begäran till Adobe för besökarens ID. Denna begäran innehåller cookie-ID från tredje part, som inte är tillgängligt i det här fallet.
 * ID-tjänstkoden på målsidan använder det MID som skickades för att spåra besökaren.
 
 Mer information finns i kodexemplet.
@@ -52,11 +55,7 @@ var visitor = Visitor.getInstance(...);
 //Append visitor IDs to the destination URL 
 var destinationURLWithVisitorIDs = visitor.appendVisitorIDsTo(destinationURL); 
      //Result of appendVisitorIDsTo includes destination URL, Experience Cloud ID (MCMID), and Analytics ID (MCAID) 
-     "www.destination.com?adobe_mc=MCMID=1234|MCAID=5678 
-<draft-comment>
-  |TS=123675879 
-</draft-comment>" 
- 
+     "www.destination.com?adobe_mc=MCMID=1234|MCAID=5678"
 //Redirect to the destination
 ```
 
