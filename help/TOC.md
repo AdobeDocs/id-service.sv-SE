@@ -3,13 +3,14 @@ cloud: platform-cloud
 product: ID Service
 audience: end-user
 user-guide-title: Hjälp om Experience Cloud Identity Service
+breadcrumb-title: Identity Service Guide
 user-guide-description: The ID service provides a universal, persistent ID that identifies your visitors across all the solutions in the Experience Cloud. It can replace ID generation code for services such as Analytics, Audience Manager, Target, and other Experience Cloud solutions or features.
 user-guide-url: /content/help/en/id-service/using/home.html
 translation-type: tm+mt
-source-git-commit: 238135b08f66a3a10d6439bba558819e4aa5a7e5
+source-git-commit: 8c84d217219e76e0635bbfe9d73d11612643e8e2
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -30,8 +31,8 @@ ht-degree: 6%
    + [Implementering med DTM](implementation-guides/standard.md)
    + [Implementering för Analytics](implementation-guides/setup-analytics.md)
    + [Implementera för mål](implementation-guides/setup-target.md)
-   + [Implementera för Analytics och Audience Manager](implementation-guides/setup-aam-analytics.md)
-   + [Implementera för Analytics, Audience Manager och Target](implementation-guides/setup-aam-analytics-target.md)
+   + [Implementering för Analytics och Audience Manager](implementation-guides/setup-aam-analytics.md)
+   + [Implementering för Analytics, Audience Manager och Target](implementation-guides/setup-aam-analytics-target.md)
    + [Använda ID-tjänsten med A4T och en implementering på serversidan av Target](implementation-guides/ecid-a4t-target.md)
    + [Direktintegrering med ID-tjänsten](implementation-guides/direct-integration.md)
    + [Användningsexempel för direktintegrering](implementation-guides/direct-integration-examples.md)
@@ -102,13 +103,13 @@ ht-degree: 6%
    + [Hämta region- och användar-ID från AMCV Cookie eller ID-tjänsten](reference/regions.md)
    + [Krav för ID-tjänsten](reference/requirements.md)
    + [Videopulsslag och ID-tjänst](reference/heartbeat.md)
-   + [Data Workbench och ID-tjänsten](reference/dwb.md)
+   + [Data Workbench och ID-tjänst](reference/dwb.md)
    + [SHA256 Hash-stöd för setCustomerIDs](reference/hashing-support.md)
-+ FAQs {#faqs}
++ Vanliga frågor och svar {#faqs}
    + [Frågor och svar - översikt](faq-intro/faq-intro.md)
    + [Vanliga frågor om ID-tjänster](faq-intro/faq.md)
    + [Vanliga frågor om analys och ID-tjänster](faq-intro/analytics-faq.md)
-   + [Vanliga frågor om andra Experience Cloud-lösningar](faq-intro/other-faq.md)
+   + [Frågor och svar för andra Experience Cloud-lösningar](faq-intro/other-faq.md)
 + Versionsinformation för ID-tjänst {#release-notes}
    + [Versionsinformation 2020](release-notes/release-notes.md)
    + [Versionsinformation 2019](release-notes/notes-2019.md)
