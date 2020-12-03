@@ -7,6 +7,9 @@ title: Versionsinformation 2016
 uuid: 7a5a314a-3ff8-4561-9c64-6c10d2223887
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '1161'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2016.
 
-Dessa ändringar registreras också i versionsinformationen [för](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)Experience Cloud.
+De här ändringarna visas även i versionsinformationen [för](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html)Experience Cloud.
 
 ## Version 1.10 {#section-7d719b3213344a46858835042e0214ed}
 
@@ -24,13 +27,13 @@ November 2016
 >[!IMPORTANT]
 >
 >* Version 1.10 kräver [!UICONTROL AppMeasurement] 1.8.0.
->* Med Experience Cloud Identity Service Library 2.0.0+ börjar ID-synkroniseringen för Adobe Media Optimizer som standard. Se [Förstå ID-synkronisering och Matchningsfrekvens](/help/introduction/match-rates.md).
+>* Med Experience Cloud Identity Service Library 2.0.0+ startar ID-synkroniseringen för Adobe Media Optimizer som standard. Se [Förstå ID-synkronisering och Matchningsfrekvens](/help/introduction/match-rates.md).
 
 
 **Korrigeringar och förbättringar**
 
 * Lagt till instruktioner om hur ID-tjänsten ska implementeras i en serversidesmiljö.
-* Dessutom `Visitor.overwriteCrossDomainMCIDAndAID`är det en boolesk funktion som gör att du kan skriva över Experience Cloud- och Analytics-ID:n i andra domäner som du äger. Se [Skriv över besökar-ID](../library/function-vars/overwrite-visitor-id.md#reference-9db13d637ce44fb6a8d519de5743ccde).
+* Dessutom `Visitor.overwriteCrossDomainMCIDAndAID`är det en boolesk funktion som gör att du kan skriva över Experience Cloud och analys-ID:n i andra domäner som du äger. Se [Skriv över besökar-ID](../library/function-vars/overwrite-visitor-id.md#reference-9db13d637ce44fb6a8d519de5743ccde).
 
 * Tidsstämpel har lagts till som en egenskap för `TS = UTC` `visitor.appendVisitorIDsTo`funktionen. ID-tjänsten använder tidsstämpeln för att avgöra om ID:n i omdirigerings-URL:en ska användas baserat på ett 5-minuters åldersintervall. Se [Lägg till besökar-ID-funktion](../library/get-set/appendvisitorid.md#reference-ff167ef19e37433fb08ac2b5a86229ce).
 
@@ -39,7 +42,7 @@ November 2016
 * Två funktioner har lagts till `idSyncByURL` och `idSyncByDataSource`två som gör att du manuellt kan implementera en ID-synkronisering i iFrame för målpublicering. See [ID Synchronization by URL or Data Source](../library/get-set/idsync.md#reference-b01b88c083434cf8abbeabd3c6956c48).
 
 * Korrigerade ett fel som blockerade AppMeasurement-spårningsanropet om `disableThirdPartyCalls:true`.
-* Ett fel som gjorde att ID-tjänsten inte kunde skicka Experience Cloud ID (MID) över olika domäner har korrigerats.
+* Ett fel som gjorde att ID-tjänsten inte kunde skicka Experience Cloud-ID (MID) över olika domäner har korrigerats.
 
 ## Version 1.9.0 {#section-04e1b4d4b10d40468f2116b8119998e7}
 
@@ -47,9 +50,9 @@ Oktober 2016
 
 **Korrigeringar och förbättringar**
 
-* Korrigerade ett fel som skickade unika användar-ID:n (AAMUID) för Audience Manager som Experience Cloud-ID:n till ID-tjänsten.
-* Om TTL (time-to-live) för en AMCV-cookie har gått ut, returnerar ID-tjänsten den informationen till servern så länge cookien innehåller ett Experience Cloud-ID. Efter det här anropet gör ID-tjänsten ett asynkront anrop för att uppdatera cookien. Detta förbättrar prestandan eftersom ID-tjänsten inte behöver vänta på ett serversvar. Den kan använda befintliga AMCV-cookie-värden och sedan begära en uppdatering.
-* ID-tjänsten synkroniserar automatiskt Experience Cloud ID:n (MID:n) med Adobe Media Optimizer och andra interna Adobe-domäner direkt på sidan. Automatisk synkronisering är aktiverat för alla befintliga och nya konton. Detta förbättrar matchningsfrekvensen för Media Optimizer. Gäller VisitorAPI.js version 1.8 eller senare. Se även [Förstå ID-synkronisering och Matchningsfrekvens](../introduction/match-rates.md#concept-e55cf228b90c457fbee8c3cb06b195ab).
+* Korrigerade ett fel som skickade unika användar-ID:n (AAMUID) i Audience Manager som Experience Cloud ID:n till ID-tjänsten.
+* Om TTL (time-to-live) för en AMCV-cookie har gått ut, returnerar ID-tjänsten den informationen till servern så länge som cookien innehåller ett Experience Cloud-ID. Efter det här anropet gör ID-tjänsten ett asynkront anrop för att uppdatera cookien. Detta förbättrar prestandan eftersom ID-tjänsten inte behöver vänta på ett serversvar. Den kan använda befintliga AMCV-cookie-värden och sedan begära en uppdatering.
+* ID-tjänsten synkroniserar automatiskt Experience Cloud ID:n (MID) med Adobe Media Optimizer och andra interna Adobe-domäner direkt på sidan. Automatisk synkronisering är aktiverat för alla befintliga och nya konton. Detta förbättrar matchningsfrekvensen för Media Optimizer. Gäller VisitorAPI.js version 1.8 eller senare. Se även [Förstå ID-synkronisering och Matchningsfrekvens](../introduction/match-rates.md#concept-e55cf228b90c457fbee8c3cb06b195ab).
 
 **Ny och reviderad dokumentation**
 
@@ -81,7 +84,7 @@ Revised: [Requirements for the Experience Cloud Identity Service](../reference/r
 
 **Kända fel**
 
-Kunder som använder [!DNL Audience Manager] DIL-kod och besökarAPI.js-kod på samma sida bör ange DIL-variabeln `secureDataCollection= false`. Se [secureDataCollection](https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/dil-overview.html).
+Kunder som använder [!DNL Audience Manager] DIL-kod och besökarAPI.js-kod på samma sida bör ange variabeln DIL `secureDataCollection= false`. Se [secureDataCollection](https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Version 1.6.0 {#section-3faaa14bf3934c6a99b8f79ee06fc0d2}
 
@@ -123,8 +126,8 @@ Juli 2016
 
 **Nytt**
 
-* [Implementera Experience Cloud Identity Service för Analytics](../implementation-guides/setup-analytics.md#concept-9ebbea85cb844a15b557be572cd142fd)
-* [Implementera Experience Cloud Identity Service för analyser, Audience Manager och Target](../implementation-guides/setup-aam-analytics-target.md#concept-e7e2dc0d0bbe481db93328b5604b4673)
+* [Implementera Experience Cloud Identity Service för analys](../implementation-guides/setup-analytics.md#concept-9ebbea85cb844a15b557be572cd142fd)
+* [Implementera identitetstjänsten Experience Cloud för Analytics, Audience Manager och Target](../implementation-guides/setup-aam-analytics-target.md#concept-e7e2dc0d0bbe481db93328b5604b4673)
 
 **Reviderad**
 
@@ -148,7 +151,7 @@ Juni 2016
    <td colname="col2"> <p>iFrame är nu inställt så att <span class="codeph"> iframe.sandbox='allow-scripts allow-same-origin'; </span>. </p> <p>Genom att endast tillåta dessa två tokens blir säkerheten bättre och ID-tjänsten får den grundläggande funktionalitet som krävs för synkronisering av ID. </p> <p>Attributet sandbox stöds inte i Internet Explorer version 9 eller tidigare. Mer information finns i avsnittet Attribut i den här <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" format="https" scope="external"> iFrame-dokumentationen </a>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>Kodning av Experience Cloud ID (MID) </p> </td> 
+   <td colname="col1"> <p>Kodning av Experience Cloud-ID (MID) </p> </td> 
    <td colname="col2"> <p>ID-tjänsten kodar det MID-värde som returneras från servern eller när det anges av <span class="codeph"> funktionen visitor.setMarketingCloudVisitorID() </span> . Mer information om MID finns i <a href="../introduction/cookies.md" format="dita" scope="local"> Cookies och Experience Cloud ID </a>. </p> </td> 
   </tr> 
  </tbody> 
@@ -174,7 +177,7 @@ April, 2016
 
 **Dokumentationsuppdateringar**
 
-[Implementera Experience Cloud Identity Service för Target](../implementation-guides/setup-target.md#concept-9b5a802132574e1181927ddd00e5c5af)
+[Implementera identitetstjänsten Experience Cloud för Target](../implementation-guides/setup-target.md#concept-9b5a802132574e1181927ddd00e5c5af)
 
 ## Version 1.5.4 {#section-1a44ba147fb3440ea7dec551faee3528}
 
@@ -190,20 +193,20 @@ Mars 2016
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Stöd för avanmälan </p> </td> 
-   <td colname="col2"> <p>Tjänsten <span class="keyword"> Experience Cloud </span> ID har stöd för begäran om att avanmäla besökare. </p> </td> 
+   <td colname="col2"> <p>Tjänsten <span class="keyword"> Experience Cloud </span> ID har stöd för avanmälningsbegäranden från besökare. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> Ändra ID-synkroniseringsintervall </p> </td> 
-   <td colname="col2"> <p>Experience <span class="keyword"> Cloud ID- </span> tjänsten gör nu ID-synkroniseringsanrop till alla anrop till datainsamlingsservrarna. Tidigare gjorde ID-tjänsten endast en begäran vid första anropet för att få ett <span class="keyword"> Experience Cloud </span> ID. </p> </td> 
+   <td colname="col2"> <p>Experience Cloud ID-synkroniseringsanrop görs nu av <span class="keyword"> ID- </span> tjänsten för varje anrop till datainsamlingsservrarna. Tidigare gjorde ID-tjänsten endast en begäran vid det första anropet för att få ett <span class="keyword"> Experience Cloud- </span> ID. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 **Dokumentationsuppdateringar**
 
-* [Implementera identitetstjänsten i Experience Cloud för analyser](../implementation-guides/setup-analytics.md#concept-9ebbea85cb844a15b557be572cd142fd) : Ny procedur som beskriver hur du konfigurerar ID-tjänsten med [!DNL Analytics].
+* [Implementera Experience Cloud Identity Service för analys](../implementation-guides/setup-analytics.md#concept-9ebbea85cb844a15b557be572cd142fd) : Ny procedur som beskriver hur du konfigurerar ID-tjänsten med [!DNL Analytics].
 
-* [Beslutspunkter](../reference/analytics-reference/migration-decisions.md#concept-ba44803eea3c4cc185232a510cec0257) för migrering av identitetstjänsten i Experience Cloud: Reviderad text för tydlighet. Att arbeta med en enda domän innebär att du kan migrera bort från en datainsamling med CNAME om du inte längre vill hantera den. Du behöver dock inte ändra om CNAME fungerar.
+* [Beslutspunkter](../reference/analytics-reference/migration-decisions.md#concept-ba44803eea3c4cc185232a510cec0257) för migrering av identitetstjänst från Experience Cloud: Reviderad text för tydlighet. Att arbeta med en enda domän innebär att du kan migrera bort från en datainsamling med CNAME om du inte längre vill hantera den. Du behöver dock inte ändra om CNAME fungerar.
 
 ## Version 1.5.3 {#section-7c09ba2832bd4644a1ccc3aa83abe66a}
 
@@ -214,7 +217,7 @@ Januari 2016
 <table id="table_C1A5DBED6B104C0FBA54EC663D3B0E86"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Ämne </th> 
+   <th colname="col1" class="entry"> Hjälpavsnitt </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
