@@ -1,7 +1,7 @@
 ---
-description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till Adobe-domänerna som listas här i dina CSP-vitlistor.
+description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
 keywords: ID Service
-seo-description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till Adobe-domänerna som listas här i dina CSP-vitlistor.
+seo-description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
 seo-title: Skyddsprofiler för innehåll och Experience Cloud Identity Service
 title: Skyddsprofiler för innehåll och Experience Cloud Identity Service
 uuid: 7399edf3-01c1-4730-834e-e2dd2c5791ff
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skyddsprofiler för innehåll och Experience Cloud Identity Service {#content-security-policies-and-the-experience-cloud-id-service}
 
-En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till Adobe-domänerna som listas här i dina CSP-vitlistor.
+En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
 
 ## CSP-granskning {#section-5fde5c00a678455c914b8307a8caab82}
 
@@ -69,7 +69,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje listlösning eller
  </tr>
  <tr>
  <td colname="col1"> <p> <b>Advertising Analytics</b> </p> </td> 
- <td colname="col2"> <p>Om du har kontroller för frågesträngsparametrar måste du se till att vitlista parametrarna "s_kwcid" och "ef_id". I praktiken använder Advertising Analytics bara s_kwcid, men om du hämtar Ad Cloud Search eller DSP använder den också ef_id. Dessa frågesträngsparametrar är alfanumeriska. Parametern "s_kwcid" använder "!" och parametern "ef_id" använder tecknet ":". Om du blockerar "!" i URL:en måste du vitlista den också.</p></td> 
+ <td colname="col2"> <p>Om du har kontroller för frågesträngsparametrar måste du se till att vitlista parametrarna "s_kwcid" och "ef_id". Tekniskt sett använder Advertising Analytics endast "s_kwcid", men om du hämtar Ad Cloud Search eller DSP använder det också "ef_id". Dessa frågesträngsparametrar är alfanumeriska. Parametern "s_kwcid" använder "!" och parametern "ef_id" använder tecknet ":". Om du blockerar "!" i URL:en måste du vitlista den också.</p></td> 
  </tr>
  </tbody> 
 </table>
