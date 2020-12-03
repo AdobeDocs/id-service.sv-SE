@@ -1,19 +1,22 @@
 ---
-description: Ändra standarddomännamnet som används av anrop till Experience Cloud Identity Service till ditt eget underdomännamn med dessa konfigurationer.
+description: Ändra det standarddomännamn som används av anrop till Experience Cloud Identity Service till ditt eget underdomännamn med dessa konfigurationer.
 keywords: ID Service
-seo-description: Ändra standarddomännamnet som används av anrop till Experience Cloud Identity Service till ditt eget underdomännamn med dessa konfigurationer.
+seo-description: Ändra det standarddomännamn som används av anrop till Experience Cloud Identity Service till ditt eget underdomännamn med dessa konfigurationer.
 seo-title: auditionManagerServer och auditionManagerServerSecure
 title: auditionManagerServer och auditionManagerServerSecure
 uuid: e21cacbf-5151-4d34-b0f7-9e90275f4c7c
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 1%
 
 ---
 
 
 # auditionManagerServer och auditionManagerServerSecure{#audiencemanagerserver-and-audiencemanagerserversecure}
 
-Ändra standarddomännamnet som används av anrop till Experience Cloud Identity Service till ditt eget underdomännamn med dessa konfigurationer.
+Ändra det standarddomännamn som används av anrop till Experience Cloud Identity Service till ditt eget underdomännamn med dessa konfigurationer.
 
 **Syntax:**
 
@@ -29,10 +32,10 @@ Vanligtvis gör ID- [!DNL Experience Cloud] tjänsten anrop till [!DNL Adobe] p�
 Dessa konfigurationer kräver att du använder:
 
 * Postens [!DNL Audience Manager] underdomännamn för ditt företag. Bekräfta eller hämta det här namnet från din konsult.
-* Underdomännamnet som är associerat med ditt [!UICONTROL organisations-ID].
+* Det underdomännamn som är associerat med din [!UICONTROL Organization ID].
 * *Båda* konfigurationsparametrarna med samma underdomännamn.
 
-**Kodexempel**
+**Exempel på kod**
 
 Låt oss i det här exemplet säga att vi har ett mediespelarföretag som har uttryckt rättsliga farhågor när det gäller att ringa till `dpm.demdex.net`. I [!DNL Audience Manager]det här fallet är företagets underdomännamn Musik1. I följande kodexempel visas hur ID-tjänstanropet varumärkesprofileras med det här kundspecifika underdomännamnet.
 
