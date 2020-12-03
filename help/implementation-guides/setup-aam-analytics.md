@@ -1,9 +1,9 @@
 ---
-description: Dessa instruktioner är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud identitetstjänst och inte använder dynamisk tagghantering (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+description: De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID Service
-seo-description: Dessa instruktioner är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud identitetstjänst och inte använder dynamisk tagghantering (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
-seo-title: Implementera identitetstjänsten Experience Cloud för Analytics och Audience Manager
-title: Implementera identitetstjänsten Experience Cloud för Analytics och Audience Manager
+seo-description: De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+seo-title: Implementera identitetstjänsten Experience Cloud för analys och Audience Manager
+title: Implementera identitetstjänsten Experience Cloud för analys och Audience Manager
 uuid: d46050ae-87de-46cc-911b-d6346c7fd511
 translation-type: tm+mt
 source-git-commit: ddff95876722b981f22c7e3196ff2ce9b696010e
@@ -14,9 +14,9 @@ ht-degree: 0%
 ---
 
 
-# Implementera identitetstjänsten Experience Cloud för Analytics och Audience Manager{#implement-the-experience-cloud-id-service-for-analytics-and-audience-manager}
+# Implementera identitetstjänsten Experience Cloud för analys och Audience Manager{#implement-the-experience-cloud-id-service-for-analytics-and-audience-manager}
 
-Dessa instruktioner är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud identitetstjänst och inte använder dynamisk tagghantering (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
@@ -27,9 +27,9 @@ Dessa instruktioner är till för Analytics- och Audience Manager-kunder som vil
 
 ## Steg 1: Planera för vidarebefordran på serversidan {#section-880797cc992d4755b29cada7b831f1fc}
 
-Utöver de steg som beskrivs här, bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] bör migrera till vidarebefordran på serversidan. Med vidarebefordran på serversidan kan du ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i dokumentationen [för vidarebefordran på](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html) serversidan.
+Utöver de steg som beskrivs här, bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] bör migrera till vidarebefordran på serversidan. Med hjälp av vidarebefordran på serversidan kan du ta bort DIL (Audience Manager datainsamlingskod) och ersätta den med [Audience Management Module](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i dokumentationen [för vidarebefordran på](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html) serversidan.
 
-Migrering till vidarebefordran på serversidan kräver planering och samordning. Detta innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas ut tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
+Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas ut tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
 
 1. Arbeta med dina [!DNL Analytics] och [!DNL Audience Manager] kontakters kontaktpersoner för att planera migreringen av din ID-tjänst och vidarebefordran på serversidan. Gör det viktigt att välja en spårningsserver i den här planen.
 
@@ -146,7 +146,7 @@ Lägg till den `Visitor.getInstance` funktion som visas nedan i `AppMeasurement.
 >
 >Nu bör du ta bort [!DNL Audience Manager] DIL-koden och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html) på serversidan.
 
-***(Valfritt, men rekommenderas)*Skapa en anpassad förinställning **
+***(Valfritt, men rekommenderas)* Skapa en anpassad propp **
 
 Ange en anpassad propp i `AppMeasurement.js` för att mäta täckning. Lägg till den här anpassade proppen till `doPlugins` funktionen för din `AppMeasurement.js` fil:
 
@@ -208,6 +208,6 @@ Distribuera koden när den har testats.
 
 Om du aktiverade en respitperiod:
 
-* Kontrollera att Analytics-id (AID) och MID finns i bildbegäran.
+* Kontrollera att Analytics ID (AID) och MID finns i bildbegäran.
 * Kom ihåg att inaktivera fristen när du uppfyller villkoren för att avbryta prenumerationen.
 
