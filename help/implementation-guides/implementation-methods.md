@@ -8,7 +8,7 @@ uuid: d41250e2-09f4-4a8b-8ade-54d43e9281c9
 translation-type: tm+mt
 source-git-commit: 63de22a29ebd8a504800d1045a69ea7eec05077a
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Du kan välja en standardimplementeringsmetod med [!DNL Experience Cloud ID Serv
 
 ## Standardimplementering {#section-ea1e5270f2184f85a2e85214a6ac60cb}
 
-Adobe rekommenderar att du använder [[!DNL Experience Platform Launch]](https://docs.adobe.com/content/help/en/launch/using/implement/solutions/idservice-save.html) för att implementera ID-tjänsten. Den här metoden säkerställer integrering med andra [!DNL Experience Cloud] lösningar, effektiviserar implementeringsarbetsflöden och garanterar automatiskt korrekt kodplacering och sekvensering.
+Adobe rekommenderar starkt [[!DNL Experience Platform Launch]](https://docs.adobe.com/content/help/en/launch/using/implement/solutions/idservice-save.html) att du använder för att implementera ID-tjänsten. Den här metoden säkerställer integrering med andra [!DNL Experience Cloud] lösningar, effektiviserar implementeringsarbetsflöden och garanterar automatiskt korrekt kodplacering och sekvensering.
 
 ## Implementeringar som inte är standard {#section-2c4f2db1f9704315a7cccab6d2e07113}
 
