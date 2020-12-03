@@ -7,11 +7,14 @@ title: Versionsinformation 2015
 uuid: 49423699-1e0f-49e4-9135-2ae84b4f92df
 translation-type: tm+mt
 source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation 2015 {#release-notes}
+# 2015 Release Notes {#release-notes}
 
 Versionsinformation och uppdateringar för 2015.
 
@@ -38,7 +41,7 @@ Augusti 2015
    Detta påverkade bara ett fåtal klienter som uppfyllde *alla* följande kriterier:
 
    * Använda ID-tjänsten.
-   * Aktiverade en [respitperiod](../reference/analytics-reference/grace-period.md)*eller *använder cookies från första part och användare blockerar cookies från tredje part.
+   * Aktiverade en [respitperiod ](../reference/analytics-reference/grace-period.md)*eller* använder cookies från första part och användare blockerar cookies från tredje part.
 
    * Har sidor med flerdelade toppnivådomäner.
 
@@ -73,7 +76,7 @@ Se [Experience Cloud](../implementation-guides/setup-analytics.md#concept-9ebbea
 
 Februari 2015
 
-Hanteringen av timeout för begäranden om AAM-blob och platstips har korrigerats. Efter en timeout lämnas fälten tomma för den aktuella sidan och alla återanrop görs. Timeout-värdet behandlas som ett feltillstånd, så det kommer att försöka igen på nästa sida. (AN-94473, AN-94474)
+Korrigerade hanteringen av timeout för begäranden om AAM och platstips. Efter en timeout lämnas fälten tomma för den aktuella sidan och alla återanrop görs. Timeout-värdet behandlas som ett feltillstånd, så det kommer att försöka igen på nästa sida. (AN-94473, AN-94474)
 
 ## Version 1.3.4 {#section-bca4a3e7c05546b7af1c9ec47fdb3331}
 
