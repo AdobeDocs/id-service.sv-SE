@@ -7,6 +7,9 @@ title: Vanliga frågor om analys- och identitetstjänster
 uuid: 35ed79a9-eccc-4b54-8451-606f091c73b7
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '989'
+ht-degree: 1%
 
 ---
 
@@ -35,11 +38,11 @@ Ingenting ändras för användare som redan har identifierats av identitetstjän
 
 Om du har en huvudwebbplats där kunder kan identifieras innan de besöker andra domäner kan en CNAME aktivera spårning av korsdomäner i webbläsare som inte accepterar cookies från tredje part (som Safari).
 
-I webbläsare som accepterar cookies från tredje part anges en cookie i domänen [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html) demdex.net under begäran om hämtning av ett besökar-ID. Denna cookie gör att identitetstjänsten kan returnera samma Experience Cloud-besökar-ID på alla domäner som har konfigurerats med samma organisations-ID. I webbläsare som avvisar cookies från tredje part tilldelas varje domän ett nytt besökar-ID för Experience Cloud.
+I webbläsare som accepterar cookies från tredje part anges en cookie i domänen [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html) demdex.net under begäran om hämtning av ett besökar-ID. Denna cookie gör att identitetstjänsten kan returnera samma besökar-ID för Experience Cloud på alla domäner som har konfigurerats med samma organisations-ID. I webbläsare som avvisar cookies från tredje part tilldelas varje domän ett nytt besökar-ID för Experience Cloud.
 
 Även när en CNAME är konfigurerad identifieras besökare annorlunda på den sekundära webbplatsen och huvudwebbplatsen i webbläsare som inte accepterar cookies från tredje part om huvudstartwebbplatsen inte besöks först.
 
-**Varför ingår inte parametern Experience Cloud ID (MID) i Analytics-begäran?**
+**Varför finns inte Experience Cloud ID-parametern (MID) i Analytics-begäran?**
 
 Om identitetstjänsten returnerar information korrekt, men du inte ser parametern, kontrollerar du att du har uppgraderat till en version av AppMeasurement som stöds. `MID`
 
@@ -55,7 +58,7 @@ Se [giltighetsperioden](../reference/analytics-reference/grace-period.md) för i
 
 **Varför måste jag migrera till datainsamling i realtid (RDC) för att kunna använda identitetstjänsten?**
 
-RDC ger globala prestandafördelar och krävs för att säkerställa att implementeringen är klar för kommande funktioner som utnyttjar Adobes globala nätverk av edge notes. Se [Analyskrav: Regional datainsamling (RDC)](../reference/requirements.md#section-7d04bb013bc84a25bae3b148bc0ca25f).
+RDC ger globala prestandafördelar och krävs för att säkerställa att implementeringen är klar för kommande funktioner som utnyttjar det globala nätverket av edge notes. Se [Analyskrav: Regional datainsamling (RDC)](../reference/requirements.md#section-7d04bb013bc84a25bae3b148bc0ca25f).
 
 ## Rapportering {#section-123cd55a32e54a45a23beb140becfa8f}
 
