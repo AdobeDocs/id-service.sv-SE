@@ -1,18 +1,21 @@
 ---
-description: Experience Cloud ID Service (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n. Detta är en valfri JavaScript-metod för att skicka hash-kodade identifierare till Experience Cloud. Du kan fortsätta att använda dina egna metoder för hashning innan du skickar kund-ID:n.
+description: Experience Cloud ID-tjänsten (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n. Detta är en valfri JavaScript-metod för att skicka hash-kodade identifierare till Experience Cloud. Du kan fortsätta att använda dina egna metoder för hashning innan du skickar kund-ID:n.
 keywords: ID Service
-seo-description: Experience Cloud ID Service (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n. Detta är en valfri JavaScript-metod för att skicka hash-kodade identifierare till Experience Cloud. Du kan fortsätta att använda dina egna metoder för hashning innan du skickar kund-ID:n.
+seo-description: Experience Cloud ID-tjänsten (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n. Detta är en valfri JavaScript-metod för att skicka hash-kodade identifierare till Experience Cloud. Du kan fortsätta att använda dina egna metoder för hashning innan du skickar kund-ID:n.
 seo-title: SHA256 Hash-stöd för setCustomerIDs
 title: SHA256 Hash-stöd för setCustomerIDs
 translation-type: tm+mt
 source-git-commit: ac1131be75fd04b51cd1d646086e1802a43afb18
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 4%
 
 ---
 
 
-# SHA256 Hash-stöd för `setCustomerIDs`{#hashing-support}
+# SHA256 Hash-stöd för `setCustomerIDs` {#hashing-support}
 
-Experience Cloud ID Service (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n. Detta är en valfri JavaScript-metod för att skicka hash-kodade identifierare till Experience Cloud. Du kan fortsätta att använda dina egna metoder för hashning innan du skickar kund-ID:n.
+Experience Cloud ID-tjänsten (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n. Detta är en valfri JavaScript-metod för att skicka hash-kodade identifierare till Experience Cloud. Du kan fortsätta att använda dina egna metoder för hashning innan du skickar kund-ID:n.
 Det finns två sätt att implementera hash-stöd med setCustomerID, vilket beskrivs i avsnitten nedan:
 
 * [Använd metoden setCustomerIDs i ECID](/help/reference/hashing-support.md#use-setcustomerids-method)
@@ -35,7 +38,7 @@ visitor.setCustomerIDs({email: {id: "ecid@adobe.com", authState: 1}}, "SHA-256")
 
 Tillsammans med besökar-ID:t för Experience Cloud kan du koppla ytterligare kund-ID:n, autentiseringsstatus och hash-typ (SHA-256) till varje besökare. Om du inte anger någon hash-typ betraktas den som ingen hash.
 
-Metoden accepterar flera kund-ID:n för samma besökare `setCustomerIDs` . Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/attributes.html) till Experience Cloud och få tillgång till dessa data via olika lösningar.
+Metoden accepterar flera kund-ID:n för samma besökare `setCustomerIDs` . Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://docs.adobe.com/content/help/sv-SE/core-services/interface/customer-attributes/attributes.html) till Experience Cloud och få tillgång till dessa data via olika lösningar.
 
 Kund-ID, autentiserade tillstånd och hash-typ *lagras inte* i en cookie som kan användas senare. I stället ska Kund-ID, autentiserade tillstånd och hash-typ lagras i en instansvariabel som ska hämtas med [`getCustomerIDs`](/help/library/get-set/getcustomerids.md)enligt nedan:
 
@@ -48,7 +51,7 @@ Kund-ID, autentiserade tillstånd och hash-typ *lagras inte* i en cookie som kan
 
 <br> 
 
-Om du använder `setCustomerIDs` metoden anropas till Experience Cloud ID-tjänsten, `dpm.demdex.net`med tillägg av `d_cid_ic` frågeparametern, som innehåller det hashas-ID:t. Ett exempelanrop kan se ut som det nedan. Radbrytningar lades till för tydlighet.
+Om du använder `setCustomerIDs` metoden anropas till Experience Cloud ID-tjänsten `dpm.demdex.net`med tillägget av `d_cid_ic` query-parametern, som innehåller det hashas-ID:t. Ett exempelanrop kan se ut som det nedan. Radbrytningar lades till för tydlighet.
 
 ```
 http://dpm.demdex.net/id?d_visid_ver=4.4.0&d_fieldgroup=AAM&d_rtbd=json&d_ver=2&
@@ -99,4 +102,4 @@ setCustomerIDs(Ingeration code: {
 });
 ```
 
-På samma sätt som den `setCustomerIDs` metod som beskrivs i det första avsnittet, resulterar detta i ett anrop till Experience Cloud ID-tjänsten, med tillägg av `d_cid_ic` frågeparametern.
+På samma sätt som den metod som beskrivs i det första avsnittet, resulterar detta i ett anrop till Experience Cloud ID-tjänsten, med tillägg av `setCustomerIDs` `d_cid_ic` frågeparametern.
