@@ -7,6 +7,9 @@ title: Använda ID-tjänsten med A4T och en implementering på serversidan av Ta
 uuid: debbc5ca-7f8b-4331-923e-0e6339057de2
 translation-type: tm+mt
 source-git-commit: c4c0b791230422f17292b72fd45ba5689a60adae
+workflow-type: tm+mt
+source-wordcount: '909'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ Därefter måste du skapa en server *`payload request`* till ID-tjänsten. En ny
 >
 >Den här metoden begär en enda mbox från [!DNL Target]. Om du behöver begära flera mbox i ett enda anrop, se [generateBatchPayload](https://www.npmjs.com/package/@adobe-mcid/visitor-js-server#generatebatchpayload).
 
-Nyttolastbegäran ska se ut som i följande kodexempel. I kodexemplet är `visitor.setCustomerIDs` funktionen valfri. Mer information finns i [Kund-ID:n och autentiseringstillstånd](../reference/authenticated-state.md) .
+Nyttolastbegäran ska se ut så här: I kodexemplet är `visitor.setCustomerIDs` funktionen valfri. Mer information finns i [Kund-ID:n och autentiseringstillstånd](../reference/authenticated-state.md) .
 
 ```js
 //Import the ID service server package 
@@ -124,7 +127,7 @@ När servern har tagit emot nyttolastdata från ID-tjänsten måste du initiera 
 
 ## Steg 4: Hämta servertillstånd för ID-tjänsten {#section-8ebfd177d42941c1893bfdde6e514280}
 
-Serverstatusdata innehåller information om arbete som har utförts på servern. Tjänstkoden för klient-ID kräver den här informationen. Kunder som har implementerat ID-tjänsten via [!DNL Dynamic Tag Manager] (DTM) kan konfigurera DTM så att servertillståndsdata skickas via det verktyget. Om du har konfigurerat ID-tjänsten via en icke-standardprocess måste du returnera servertillståndet med din egen kod. Klientsidans ID-tjänst och [!DNL Analytics] kod skickar tillståndsdata till Adobe när sidan läses in.
+Serverstatusdata innehåller information om arbete som har utförts på servern. Tjänstkoden för klient-ID kräver den här informationen. Kunder som har implementerat ID-tjänsten via [!DNL Dynamic Tag Manager] (DTM) kan konfigurera DTM så att servertillståndsdata skickas via det verktyget. Om du har konfigurerat ID-tjänsten via en icke-standardprocess måste du returnera servertillståndet med din egen kod. Klientsidans ID-tjänst och [!DNL Analytics] kod skickar lägesdata till Adobe när sidan läses in.
 
 **Hämta servertillstånd via DTM**
 
@@ -189,7 +192,7 @@ Response.send("
 ...
 ```
 
-## Steg 5: Servera en sida och returnera Experience Cloud-data {#section-4b5631a0d75a41febd6f43f8c214c263}
+## Steg 5: Servera en sida och returnera Experience Cloud data {#section-4b5631a0d75a41febd6f43f8c214c263}
 
 Nu skickar webbservern sidinnehåll till besökarens webbläsare. Från och med nu gör webbläsaren (inte servern) alla återstående ID-tjänster och [!DNL Analytics] anrop. I webbläsaren:
 
