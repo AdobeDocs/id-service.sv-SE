@@ -6,6 +6,9 @@ title: Anmälningsreferens
 uuid: d5023a34-2f3e-464d-b21f-579b2f416ce6
 translation-type: tm+mt
 source-git-commit: 4fbfefddcf36855f32f2a4047e19ef0b22fc508c
+workflow-type: tm+mt
+source-wordcount: '897'
+ht-degree: 0%
 
 ---
 
@@ -27,13 +30,13 @@ adobe.OptInCategories = {
 
 ## Parametrar för Opt-in-konfiguration {#section-d66018342baf401389f248bb381becbf}
 
-I det här avsnittet beskrivs hur du använder API för att konfigurera anmälan. En stor del av konfigurationen och implementeringen kan göras med Experience Platform Launch-tillägget.
+I det här avsnittet beskrivs hur du använder API för att konfigurera anmälan. En stor del av konfigurationen och implementeringen kan göras med tillägget Experience Platform Launch.
 
 Opt-in-konfigurationer finns i JavaScript- `getInstance()` funktionen för Visitor som instansierar det globala `adobe` objektet. Nedan visas JS-konfigurationer för besökare som är relaterade till Opt-in-tjänsten.
 
 **`doesOptInApply (boolean or function that evaluates to a boolean)`**:
 
-Om värdet är false behöver besökarna inte välja. Resultat i Experience Cloud när du skapar cookies oavsett vilka kategorier som har valts in eller ut. Den här konfigurationen aktiverar eller inaktiverar deltagande på ett övergripande sätt.
+Om värdet är false behöver besökarna inte välja. Gör att du kan skapa cookies i Experience Cloud oavsett vilken kategori du har valt in eller ut. Den här konfigurationen aktiverar eller inaktiverar deltagande på ett övergripande sätt.
 
 **`preOptInApprovals (Object <adobe.OptInCategories enum: boolean>)`**
 
@@ -133,7 +136,8 @@ Sant eller falskt beroende på statusvärdet. Opt-in kan rapportera false för d
 
 **`approve(categories, shouldWaitForComplete)`**
 
-**`categories`**: En eller flera kategorier att godkänna. Till exempel: `adobe.optIn.approve([adobe.OptInCategories.AAM, adobe.OptInCategories.ECID])`**`shouldWaitForComplete`**: (valfritt) boolesk parameter, false som standard. Om du skickar true slutförs inte godkännandeprocessen förrän du ringer `adobe.optIn.complete()`. Den här processen liknar ett arbetsflöde.
+**`categories`**: En eller flera kategorier att godkänna. Till exempel: `adobe.optIn.approve([adobe.OptInCategories.AAM, adobe.OptInCategories.ECID])`
+**`shouldWaitForComplete`**: (valfritt) boolesk parameter, false som standard. Om du skickar true slutförs inte godkännandeprocessen förrän du ringer `adobe.optIn.complete()`. Den här processen liknar ett arbetsflöde.
 
 ```
 <codeblock>
@@ -158,7 +162,7 @@ Kontrollera om en eller flera kategorier har godkänts i förväg av kunden. (Om
 
 **`fetchPermissions(callback, shouldAutoSubscribe)`**
 
-Async API för att hämta listan över behörigheter. Återanropet anropas med listan över behörigheter när processen för att bevilja/neka behörigheter är slutförd. **`shouldAutoSubscribe`:**Ett hjälpverktyg som automatiskt prenumererar på återanropet för alla framtida händelser. Betydelse som återanropet anropas varje gång en godkännanderutlösare eller en avvisare i Opt In anropas. På så sätt uppdateras du alltid utan att du själv behöver prenumerera på händelserna.
+Async API för att hämta listan över behörigheter. Återanropet anropas med listan över behörigheter när processen för att bevilja/neka behörigheter är slutförd. **`shouldAutoSubscribe`:** Ett hjälpverktyg som automatiskt prenumererar på återanropet för alla framtida händelser. Betydelse som återanropet anropas varje gång en godkännanderutlösare eller en avvisare i Opt In anropas. På så sätt uppdateras du alltid utan att du själv behöver prenumerera på händelserna.
 
 **Exempel**
 
