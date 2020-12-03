@@ -7,6 +7,9 @@ title: resetState
 uuid: ed7be76d-a7ee-4e51-b26c-456ff85fd096
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '398'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
 
 Den här funktionen är främst avsedd för A4T-kunder för att hjälpa till att lösa problem som rör arbete med ID:n på enstaka sidor/skärmar eller appar.
 
-## Användningsexempel {#section-840b88a5cdb042488b340cad5d7b22a5}
+## Användningsfall {#section-840b88a5cdb042488b340cad5d7b22a5}
 
 Som A4T-kund som använder ID-tjänsten kanske du vill använda `visitor.resetState()` funktionen när du behöver:
 
