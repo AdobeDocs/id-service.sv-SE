@@ -7,6 +7,9 @@ title: whitelistParentDomain och whitelistIframeDomains
 uuid: 6b66a4d0-fea2-4d98-963e-0c4f4ab1efb6
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '930'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +22,7 @@ Innehåll:
 
 <ul class="simplelist"> 
  <li> <a href="../../library/function-vars/whitelistdomain.md#section-f645198bbaba4fba8961acb6e88d1470" format="dita" scope="local"> Syntax </a> </li> 
- <li> <a href="../../library/function-vars/whitelistdomain.md#section-09d0049fe88a473baa69d404c50bf8ae" format="dita" scope="local"> Kodexempel </a> </li> 
+ <li> <a href="../../library/function-vars/whitelistdomain.md#section-09d0049fe88a473baa69d404c50bf8ae" format="dita" scope="local"> Exempel på kod </a> </li> 
  <li> <a href="../../library/function-vars/whitelistdomain.md#section-fc2eeb93546b406fae3b102dbcd11de7" format="dita" scope="local"> Användningsexempel </a> </li> 
  <li> <a href="../../library/function-vars/whitelistdomain.md#section-2b1ce31fab034e1ca0f6b1c3cc57a6e2" format="dita" scope="local"> Säkerhet och säkerhet för konfiguration </a> </li> 
  <li> <a href="../../library/function-vars/whitelistdomain.md#section-30c6a9f4dcdc4265a1149260b97cc057" format="dita" scope="local"> API-metoder för besökare som stöds </a> </li> 
@@ -48,9 +51,9 @@ Båda konfigurationselementen krävs när du använder den här koden.
  </tbody> 
 </table>
 
-## Kodexempel {#section-09d0049fe88a473baa69d404c50bf8ae}
+## Exempel på kod {#section-09d0049fe88a473baa69d404c50bf8ae}
 
-Koden för den konfigurerade [!UICONTROL ID-tjänsten] kan se ut ungefär som i det här exemplet.
+Den konfigurerade [!UICONTROL ID service] koden kan se ut ungefär som i det här exemplet.
 
 ```js
 //Instantiate Visitor 
@@ -64,7 +67,7 @@ var visitor = Visitor.getInstance("Insert Experience Cloud Organization ID here"
 );
 ```
 
-## Användningsexempel {#section-fc2eeb93546b406fae3b102dbcd11de7}
+## Use Cases {#section-fc2eeb93546b406fae3b102dbcd11de7}
 
 Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en cookie för en ID-tjänst och tilldela ett besökar-ID när webbläsare blockerar cookies från tredje part och om något av dessa villkor gäller:
 
@@ -73,14 +76,14 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
 
 >[!TIP]
 >
->Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [videopulsslag](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
+>Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [videopulsslag](https://docs.adobe.com/content/help/sv-SE/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
 
 **Användningsfall 1: Webbläsaren blockerar cookies från tredje part och ID-tjänsten implementeras på iFrame- och överordnad sida**
 
 <table id="table_B479AA96DBE64685A253A6DF98D81B31"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Använd skiftlägeselement </th> 
+   <th colname="col1" class="entry"> Element i användningsexempel </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
@@ -115,7 +118,7 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
 <table id="table_1F21710F9D5F493BA6BA5974F2966DF4"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Använd skiftlägeselement </th> 
+   <th colname="col1" class="entry"> Element i användningsexempel </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
