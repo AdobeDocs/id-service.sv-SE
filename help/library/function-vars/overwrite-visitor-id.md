@@ -7,6 +7,9 @@ title: overwriteCrossDomainMCIDAndAID
 uuid: 8e48127a-ac62-4ea0-9756-2a27b20ecbcf
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +20,7 @@ Den här egenskapen skriver över en besökares Experience Cloud- och Analytics-
 
 **Syntax:** `Visitor.overwriteCrossDomainMCIDAndAID: true|false` (standard är `false`)
 
-**Kodexempel**
+**Exempel på kod**
 
 JavaScript-koden kan se ut ungefär som i följande exempel.
 
