@@ -1,19 +1,22 @@
 ---
-description: Med den här konfigurationen kan du rensa överblivna eller inaktuella Experience Cloud ID:n (ECID) baserat på den ID-tjänstversion som uppdateras.
+description: Med den här konfigurationen kan du rensa överblivna eller inaktuella Experience Cloud-ID:n (ECID) baserat på den ID-tjänstversion som uppdateras.
 keywords: ID Service
-seo-description: Med den här konfigurationen kan du rensa överblivna eller inaktuella Experience Cloud ID:n (ECID) baserat på den ID-tjänstversion som uppdateras.
+seo-description: Med den här konfigurationen kan du rensa överblivna eller inaktuella Experience Cloud-ID:n (ECID) baserat på den ID-tjänstversion som uppdateras.
 seo-title: resetBeforeVersion
 title: resetBeforeVersion
 uuid: b00d18b8-6720-42f9-9c83-bd306184cc0c
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 1%
 
 ---
 
 
 # resetBeforeVersion{#resetbeforeversion}
 
-Med den här konfigurationen kan du rensa överblivna eller inaktuella Experience Cloud ID:n (ECID) baserat på den ID-tjänstversion som uppdateras.
+Med den här konfigurationen kan du rensa överblivna eller inaktuella Experience Cloud-ID:n (ECID) baserat på den ID-tjänstversion som uppdateras.
 
 Om du anger din ID-tjänstversion som värde för `resetBeforeVersion` variabeln rensas inaktuella ECID:n från klientsidans ID:n.
 
@@ -23,7 +26,7 @@ För besökare som har Demdex-cookies från tredje part i sin webbläsare kontro
 
 **Syntax:** `resetBeforeVersion = "3.3"`
 
-**Kodexempel**
+**Exempel på kod**
 
 ```js
 //Call the ID service 
