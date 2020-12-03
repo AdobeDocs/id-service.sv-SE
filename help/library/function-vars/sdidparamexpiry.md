@@ -7,6 +7,9 @@ title: sdidParamExpiry
 uuid: cdaf7e2d-b196-4c70-936d-8a98191cbb85
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '355'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ Med den här konfigurationen kan du åsidosätta standardintervallet för SDID (
 
 Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` i `Visitor.getInstance` funktionen med följande syntax:
 
-**Syntax:** tid i ` sdidParamExpiry: *`sekunder`*`
+**Syntax:** ` sdidParamExpiry: *`tid i sekunder`*`
 
-**Kodexempel**
+**Exempel på kod**
 
 När den är konfigurerad kan ID-tjänstkoden se ut ungefär som i det här exemplet. I det här exemplet anges SDID-tidsgränsen till 15 sekunder. Den här konfigurationen fungerar med hjälpmetoden [appendSupplementalDataIDTo](../../library/get-set/appendsupplementaldataidto.md#reference-65d09de6fde0418f8c62fa79304a755d) .
 
