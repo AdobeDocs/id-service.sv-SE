@@ -8,6 +8,9 @@ title: Implementeringsguider
 uuid: null
 translation-type: tm+mt
 source-git-commit: e75a448a2fa1c384c88f00648a6f868a886c6569
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -22,18 +25,18 @@ Instruktioner och kodexempel för standardimplementeringar och icke-standardimpl
 
 ## Standardimplementering
 
-En standardimplementering använder [Adobe Experience Platform Launch](https://docs.adobelaunch.com/) för att hjälpa er att komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
+En standardimplementering använder Launch [för](https://docs.adobelaunch.com/) Adobe Experience Platform för att hjälpa dig att komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
 
 ## Implementeringsresurser
 
 * [Implementeringsmetoder](implementation-methods.md)
 * [Implementera med Experience Platform Launch](ecid-implement-with-launch.md)
 * [Implementering med dynamisk tagghantering](standard.md)
-* [Implementera Experience Cloud Identity Service för Analytics](setup-analytics.md)
-* [Implementera Experience Cloud Identity Service för Target](setup-target.md)
-* [Implementera Experience Cloud Identity Service för analys och Audience Manager](setup-aam-analytics.md)
-* [Implementera Experience Cloud Identity Service för analyser, Audience Manager och Target](setup-aam-analytics-target.md)
-* [Använda Experience Cloud Identity Service med A4T och en implementering på serversidan av Target](ecid-a4t-target.md)
+* [Implementera Experience Cloud Identity Service för analys](setup-analytics.md)
+* [Implementera identitetstjänsten Experience Cloud för Target](setup-target.md)
+* [Implementera identitetstjänsten Experience Cloud för analys och Audience Manager](setup-aam-analytics.md)
+* [Implementera identitetstjänsten Experience Cloud för Analytics, Audience Manager och Target](setup-aam-analytics-target.md)
+* [Använda identitetstjänsten Experience Cloud med A4T och en implementering på serversidan av Target](ecid-a4t-target.md)
 * [Direktintegrering med Experience Cloud Identity Service](direct-integration.md)
 * [Användningsexempel för direktintegrering](direct-integration-examples.md)
 * [Testa och verifiera Experience Cloud Identity Service](test-verify.md)
