@@ -7,6 +7,9 @@ title: Åtgärdsordning för analys-ID:n
 uuid: cb1d136e-093f-43b0-a7e1-96f1e61fdad0
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '329'
+ht-degree: 0%
 
 ---
 
