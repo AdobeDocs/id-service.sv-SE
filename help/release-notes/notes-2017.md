@@ -7,6 +7,9 @@ title: Versionsinformation 2017
 uuid: 79452df0-49db-42b8-96fe-01aa7629fbb5
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '760'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2017.
 
-Dessa ändringar registreras också i versionsinformationen [för](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)Experience Cloud.
+De här ändringarna visas även i versionsinformationen [för](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html)Experience Cloud.
 
 >[!NOTE]
 >
@@ -104,7 +107,7 @@ Juli 2017
 * Korrigerade ett fel i VisitorAPI.js v2.2 som förhindrade ID-tjänsten och Target från att fungera tillsammans i Internet Explorer.
 * Reviderad kod som förbättrar hur ID-tjänsten skickar data till iFrame för målpublicering. Detta minskar processoranvändningen.
 
-## Version 2.2 {#section-b7dee2495c29470e9b3a3132ec1fd951}
+## Version 4.2 {#section-b7dee2495c29470e9b3a3132ec1fd951}
 
 Releasedatum: Juni 2017
 
@@ -128,13 +131,13 @@ Releasedatum: Juni 2017
 <table id="table_CD031A716A694E8FA89695C9B614BC91"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Ämne </th> 
+   <th colname="col1" class="entry"> Hjälpavsnitt </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <a href="../faq-intro/faq.md" format="dita" scope="local"> Vanliga frågor </a> </p> </td> 
+   <td colname="col1"> <p> <a href="../faq-intro/faq.md" format="dita" scope="local">Vanliga frågor och svar </a> </p> </td> 
    <td colname="col2"> <p>Avsnittet <span class="keyword"> Analytics</span> har uppdaterats med information om hur du söker efter serverinformation för spårning. </p> </td> 
   </tr> 
  </tbody> 
@@ -145,7 +148,7 @@ Releasedatum: Juni 2017
 <table id="table_ADC2636240654C69B8B6A45849024540"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Ämne </th> 
+   <th colname="col1" class="entry"> Hjälpavsnitt </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
@@ -177,7 +180,7 @@ Releasedatum: Februari 2017
  <tbody> 
   <tr> 
    <td colname="col1"> <p> API-egenskap för ID-tjänst, <span class="codeph"> idSyncContainerID</span></p> </td> 
-   <td colname="col2"> <p>Den här egenskapen anger det behållar-ID som används av <span class="keyword"> Audience Manager</span> för ID-synkroniseringar. Se <a href="/help/library/function-vars/idsyncontainerid.md" format="https" scope="external"> idSyncContainerID</a>. </p> </td> 
+   <td colname="col2"> <p>Den här egenskapen anger behållar-ID:t som används av <span class="keyword"> Audience Manager</span> för ID-synkroniseringar. Se <a href="/help/library/function-vars/idsyncontainerid.md" format="https" scope="external"> idSyncContainerID</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID-tjänst-API-metod, <span class="codeph">appendSupplementalDataIDTo(<span class="varname"> URL</span>,<span class="varname"> SDID</span>)</span></p> </td> 
@@ -196,7 +199,7 @@ Korrigerade ett fel som gjorde att ID-tjänsten gjorde redundanta serveranrop f�
 
 ## Version 2.0 {#section-0ceac6007c1241b58ad607e2b76b2b7e}
 
-Januari 2016
+Januari 2017
 
 >[!IMPORTANT]
 >
