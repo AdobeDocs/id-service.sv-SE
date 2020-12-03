@@ -7,6 +7,9 @@ title: Ställa ID:n för Analytics och Experience Cloud
 uuid: 421cf597-a3e0-4ca3-8ce8-d0c80cbb6aca
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '972'
+ht-degree: 1%
 
 ---
 
@@ -15,9 +18,9 @@ source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
 
 Experience Cloud Identity Service ersätter de gamla ID-metoderna för Analytics-besökare.
 
-När ID-tjänsten har implementerats körs den här koden före AppMeasurement. ID-tjänsten hämtar Experience Cloud- och Analytics-ID:n så att dessa värden är klara när AppMeasurement läses in.
+När ID-tjänsten har implementerats körs den här koden före AppMeasurement. ID-tjänsten hämtar Experience Cloud och analys-ID:n så att dessa värden är klara när AppMeasurement läses in.
 
-När AppMeasurement läses in begärs Experience Cloud- och Analytics-ID:n från ID-tjänsten och skickas till datainsamling för varje serveranrop. Eftersom ID-tjänsten avgör besökar-ID:t och skickar det till AppMeasurement, måste ID-tjänsten inkluderas och implementeras på varje sida före din AppMeasurement JavaScript-fil.
+När AppMeasurement läses in begärs ID-värdena för Experience Cloud och analys från ID-tjänsten och skickas till datainsamlingen med varje serveranrop. Eftersom ID-tjänsten avgör besökar-ID:t och skickar det till AppMeasurement, måste ID-tjänsten inkluderas och implementeras på varje sida före din AppMeasurement JavaScript-fil.
 
 ## Ändringar i analys-ID-processen {#section-79bb86ae63f546419bb1a7ef5e710462}
 
@@ -27,7 +30,7 @@ Den största förändringen när du migrerar till [!DNL Experience Cloud] ID-tj�
 
 Ett HTTP-svar från en webbserver anger cookies i en webbläsare. Så här är `s_vi` kakan inställd. Cookien identifierar `s_vi` besökare från Analytics. När en cookie har angetts skickas den med alla efterföljande HTTP-begäranden till den servern.
 
-När en begäran skickas till Adobe datainsamlingsserver kontrolleras rubriken för `s_vi` cookie-filen. Om denna cookie finns i begäran används den för att identifiera besökaren. Om cookien inte finns i begäran genererar servern ett unikt [!DNL Experience Cloud] ID, anger den som en cookie i HTTP-svarshuvudet och skickar tillbaka den med begäran. Cookien lagras i webbläsaren och skickas tillbaka till datainsamlingsservern vid efterföljande besök på webbplatsen. På så sätt kan besökaren identifieras vid olika besök.
+När en begäran skickas till datainsamlingsservern i Adobe kontrolleras om det finns en cookie-fil i sidhuvudet `s_vi` . Om denna cookie finns i begäran används den för att identifiera besökaren. Om cookien inte finns i begäran genererar servern ett unikt [!DNL Experience Cloud] ID, anger den som en cookie i HTTP-svarshuvudet och skickar tillbaka den med begäran. Cookien lagras i webbläsaren och skickas tillbaka till datainsamlingsservern vid efterföljande besök på webbplatsen. På så sätt kan besökaren identifieras vid olika besök.
 
 Vissa webbläsare, till exempel Apple Safari, accepterar dock inte cookies från tredje part. Detta är cookies som anges i webbläsaren från andra domäner än den aktuella webbplatsen. Dessutom blockerar Safari cookies i tredjepartsdomäner om en besökare inte har varit i den domänen tidigare. Om du till exempel är på `mysite.com` och datainsamlingsservern är `mysite.omtrdc.net`det kan den cookie som returneras i HTTP-huvudet från `mysite.omtrdc.net` avvisas av webbläsaren.
 
@@ -70,7 +73,7 @@ När du har distribuerat besökar-ID-tjänsten finns det fem sätt som en besök
   </tr> 
   <tr> 
    <td colname="col1"> <p> <img id="image_0A950B1A6B004387AFEE8EED882739CB" src="assets/step3_icon.png" /> </p> </td> 
-   <td colname="col2"> <p>mitten (AMCV_ cookie inställd av besökar-ID-tjänsten i Experience Cloud) </p> </td> 
+   <td colname="col2"> <p>mitten (AMCV_ cookie inställd av Experience Cloud besökar-ID-tjänst) </p> </td> 
    <td colname="col3"> <p>Besökarens webbläsare accepterar cookies från första part </p> </td> 
   </tr> 
   <tr> 
