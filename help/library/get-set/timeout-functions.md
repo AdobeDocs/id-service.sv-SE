@@ -1,19 +1,22 @@
 ---
-description: Anropa dessa ID-tjänstfunktioner för att fastställa tidsgränsen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
+description: Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
 keywords: ID Service
-seo-description: Anropa dessa ID-tjänstfunktioner för att fastställa tidsgränsen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
+seo-description: Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
 seo-title: callTimeOut-metoder
 title: callTimeOut-metoder
 uuid: e5047498-11db-4945-b356-c92b7d447573
 translation-type: tm+mt
 source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 2%
 
 ---
 
 
 # callTimeOut-metoder{#calltimeout-methods}
 
-Anropa dessa ID-tjänstfunktioner för att fastställa tidsgränsen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
+Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
 
 ## Timeout-funktioner {#section-e08228ef5f9b45c9a84139bbb763164a}
 
@@ -30,7 +33,7 @@ Anropa dessa ID-tjänstfunktioner för att fastställa tidsgränsen för en Expe
    <td colname="col2"> <p> <span class="codeph">var <span class="varname"> variableName</span> = visitor.MCIDCallTimedOut()</span> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="keyword"> Analyser</span> </p> </td> 
+   <td colname="col1"> <p> <span class="keyword">Analytics</span>  </p> </td> 
    <td colname="col2"> <p> <span class="codeph">var <span class="varname"> variableName</span> = visitor.AnalyticsIDCallTimedOut()</span> </p> </td> 
   </tr> 
   <tr> 
