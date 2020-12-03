@@ -45,7 +45,7 @@ Från och med Experience Cloud Identity Service v1.5+, `setCustomerIDs` ingår d
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.AUTHENTICATED </span> </p> </td> 
    <td colname="col2"> <p> <span class="codeph"> 1 </span> </p> </td> 
-   <td colname="col3"> <p>Autentiserad för en viss instans, sida eller app. </p> <p> <p>Obs!  För att kundattributen för <span class="keyword"> Target ska fungera på rätt sätt </span> krävs denna status. </p> </p> </td> 
+   <td colname="col3"> <p>Autentiserad för en viss instans, sida eller app. </p> <p> <p>Obs!  För att kundattributen för <span class="keyword"> Target ska fungera på rätt sätt </span> krävs den här statusen. </p> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.LOGGED_OUT </span> </p> </td> 
@@ -63,7 +63,7 @@ Du kan tilldela autentiseringstillstånd till dina användare, beroende på vilk
  <thead> 
   <tr> 
    <th colname="col1" class="entry"> Autentiseringsstatus </th> 
-   <th colname="col2" class="entry"> Användningsexempel </th> 
+   <th colname="col2" class="entry"> Användningsfall </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -81,7 +81,7 @@ Du kan tilldela autentiseringstillstånd till dina användare, beroende på vilk
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.LOGGED_OUT </span> </p> </td> 
-   <td colname="col2"> <p>Användaren autentiserades men loggades aktivt ut. Användaren avsåg att koppla från det autentiserade läget. Användaren vill inte längre behandlas som autentiserad. </p> </td> 
+   <td colname="col2"> <p>Användaren autentiserades men loggades aktivt ut. Användaren avsåg att koppla från det autentiserade tillståndet. Användaren vill inte längre behandlas som autentiserad. </p> </td> 
   </tr> 
  </tbody> 
 </table>
