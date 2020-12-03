@@ -56,7 +56,7 @@ De flesta Adobe-produkter har redan rätt flaggor för cookies. Undantaget är a
 
 Adobe har kontroll över uppdateringen av cookies, men Adobe kan inte tvinga sina partner att göra nödvändiga ändringar. Cookie-matchning kan minska för Audience Manager-kunder som använder målpartners eller marknadspartners som inte har gjort dessa uppdateringar.
 
-**Analysvänlig cookies från tredje part (endast`s_vi`cookies för analyser)**
+**Analysvänlig cookies från tredje part (endast `s_vi` cookies för analyser)**
 
 Vissa analysimplementeringar använder ett CNAME-alias för Analytics för att göra det möjligt att skapa `s_vi` cookien i domänen för CNAME. Om CNAME finns i samma domän som din webbplats, kommer detta att anges som en cookie för första part. Om du däremot äger flera domäner och använder samma CNAME för datainsamling i alla dina domäner, kommer det att anges som en cookie från tredje part i dessa andra domäner.
 
