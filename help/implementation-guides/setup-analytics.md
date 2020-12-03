@@ -2,8 +2,8 @@
 description: De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID Service
 seo-description: De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
-seo-title: Implementera identitetstjänsten Experience Cloud för Analytics
-title: Implementera identitetstjänsten Experience Cloud för Analytics
+seo-title: Implementera Experience Cloud Identity Service för analys
+title: Implementera Experience Cloud Identity Service för analys
 uuid: 7fbd6fa0-1713-4232-8680-500ed62709d5
 translation-type: tm+mt
 source-git-commit: ddff95876722b981f22c7e3196ff2ce9b696010e
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Implementera identitetstjänsten Experience Cloud för Analytics {#implement-the-experience-cloud-id-service-for-analytics}
+# Implementera Experience Cloud Identity Service för analys {#implement-the-experience-cloud-id-service-for-analytics}
 
 De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
@@ -142,7 +142,7 @@ Lägg till den här funktionen i din `AppMeasurement.js` eller `s_code.js` fil:
 
 Placera koden i samma avsnitt som innehåller konfigurationer som `linkInternalFilters`, `charSet`, `trackDownloads`osv.
 
-***(Valfritt men rekommenderas)*Skapa ett anpassat utkast **
+***(Valfritt men rekommenderas)* Skapa ett anpassat utkast **
 
 Ange en anpassad svällning `AppMeasurement.js` eller `s_code.js` för att mäta täckningen. Lägg till den här anpassade proppen till `doPlugins` funktionen för dina `AppMeasurement.js` eller `s_code.js` filerna:
 
@@ -195,7 +195,7 @@ Du kan testa och distribuera enligt följande.
 Om du vill testa implementeringen av din ID-tjänst ska du kontrollera följande:
 
 * [AMCV-cookie](../introduction/cookies.md) i domänen där sidan finns.
-* MID-värde i [!DNL Analytics] bildbegäran med [Adobes felsökningsverktyg](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html).
+* MID-värde i [!DNL Analytics] bildbegäran med [felsökningsverktyget](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html)i Adobe.
 
 Se, [testa och verifiera identitetstjänsten](../implementation-guides/test-verify.md)i Experience Cloud.
 
