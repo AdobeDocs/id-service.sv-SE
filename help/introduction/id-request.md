@@ -1,29 +1,32 @@
 ---
-description: En översikt över ID-begäran och svarsprocessen. De här exemplen omfattar ID-tilldelning på enskilda webbplatser, på olika webbplatser och för webbplatser som hanteras av olika Experience Cloud-kunder med deras egna organisations-ID:n.
+description: En översikt över ID-begäran och svarsprocessen. De här exemplen omfattar ID-tilldelning på enskilda webbplatser, på olika webbplatser och för webbplatser som hanteras av olika Experience Cloud-kunder med egna företags-ID:n.
 keywords: ID Service
-seo-description: En översikt över ID-begäran och svarsprocessen. De här exemplen omfattar ID-tilldelning på enskilda webbplatser, på olika webbplatser och för webbplatser som hanteras av olika Experience Cloud-kunder med deras egna organisations-ID:n.
-seo-title: Hur Experience Cloud Identity Service begär och ställer in ID:n
-title: Hur Experience Cloud Identity Service begär och ställer in ID:n
+seo-description: En översikt över ID-begäran och svarsprocessen. De här exemplen omfattar ID-tilldelning på enskilda webbplatser, på olika webbplatser och för webbplatser som hanteras av olika Experience Cloud-kunder med egna företags-ID:n.
+seo-title: Så här begär och anger Experience Cloud Identity Service ID:n
+title: Så här begär och anger Experience Cloud Identity Service ID:n
 uuid: ff7f5b7e-e959-4391-b75c-b7a36286e0ea
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 0%
 
 ---
 
 
-# Hur Experience Cloud Identity Service begär och ställer in ID:n{#how-the-experience-cloud-id-service-requests-and-sets-ids}
+# Så här begär och anger Experience Cloud Identity Service ID:n{#how-the-experience-cloud-id-service-requests-and-sets-ids}
 
-En översikt över ID-begäran och svarsprocessen. De här exemplen omfattar ID-tilldelning på enskilda webbplatser, på olika webbplatser och för webbplatser som hanteras av olika Experience Cloud-kunder med deras egna organisations-ID:n.
+En översikt över ID-begäran och svarsprocessen. De här exemplen omfattar ID-tilldelning på enskilda webbplatser, på olika webbplatser och för webbplatser som hanteras av olika Experience Cloud-kunder med egna företags-ID:n.
 
 >[!NOTE]
 >
->Om du inte är bekant med hur Experience Cloud Identity Service skapar besökar-ID:t kan du titta närmare på [Experience Cloud](../introduction/cookies.md).
+>Om du inte är van vid hur Experience Cloud Identity Service skapar besökar-ID:t kan du titta närmare på [Experience Cloud](../introduction/cookies.md).
 
 **Tips:** Se även vår [ID-tjänstvideo om domänövergripande spårning](https://helpx.adobe.com/marketing-cloud-core/kb/MCID/CrossDomain.html).
 
 ## Begär ett Experience Cloud-ID {#section-0b5e261fbd0547d9b9a1680e5ce536cc}
 
-I följande exempel visas hur ID-tjänsten begär och tar emot besökar-ID:t för Experience Cloud. I dessa exempel används två fiktiva företag, Food Company och Sports Company, för att visa dataflöden för ID-förfrågningar och -svar. Varje företag har ett unikt Experience Cloud-organisations-ID och har implementerat ID-tjänstkoden på alla sina webbplatser. De här användningsexemplen representerar dataflöden för en allmän ID-tjänstimplementering utan analyser, äldre ID:n eller webbläsare som blockerar cookies från tredje part.
+I följande exempel visas hur ID-tjänsten begär och tar emot besökar-ID:t för Experience Cloud. I dessa exempel används två fiktiva företag, Food Company och Sports Company, för att visa dataflöden för ID-förfrågningar och -svar. Varje företag har ett unikt Experience Cloud-organisations-ID och har implementerat ID-tjänstkoden på alla sina platser. De här användningsexemplen representerar dataflöden för en allmän ID-tjänstimplementering utan analyser, äldre ID:n eller webbläsare som blockerar cookies från tredje part.
 
 ![](assets/sample_sites.png)
 
