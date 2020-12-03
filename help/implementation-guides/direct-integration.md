@@ -2,16 +2,19 @@
 description: Den här implementeringen gör att kunder kan använda ID-tjänsten på enheter som inte kan acceptera eller arbeta med vår JavaScript- eller SDK-kod. Detta omfattar enheter som spelkonsoler, smarta TV-apparater eller andra internetanslutna enheter. I det här avsnittet finns syntax, kodexempel och definitioner.
 keywords: ID Service
 seo-description: Den här implementeringen gör att kunder kan använda ID-tjänsten på enheter som inte kan acceptera eller arbeta med vår JavaScript- eller SDK-kod. Detta omfattar enheter som spelkonsoler, smarta TV-apparater eller andra internetanslutna enheter. I det här avsnittet finns syntax, kodexempel och definitioner.
-seo-title: Direktintegrering med Experience Cloud Identity Service
-title: Direktintegrering med Experience Cloud Identity Service
+seo-title: Direkt integrering med Experience Cloud Identity Service
+title: Direkt integrering med Experience Cloud Identity Service
 uuid: de502f7e-cffd-4130-b3ca-7d6b9a9caae9
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 1%
 
 ---
 
 
-# Direktintegrering med Experience Cloud Identity Service {#direct-integration-with-the-experience-cloud-id-service}
+# Direkt integrering med Experience Cloud Identity Service {#direct-integration-with-the-experience-cloud-id-service}
 
 Den här implementeringen gör att kunder kan använda ID-tjänsten på enheter som inte kan acceptera eller arbeta med vår JavaScript- eller SDK-kod. Detta omfattar enheter som spelkonsoler, smarta TV-apparater eller andra internetanslutna enheter. I det här avsnittet finns syntax, kodexempel och definitioner.
 
@@ -58,7 +61,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> dpm.demdex.net</span> </p> </td> 
-   <td colname="col2"> <p>En äldre domän som styrs av <span class="keyword"> Adobe</span>. Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> 
+   <td colname="col2"> <p>En äldre domän som styrs av <span class="keyword"> Adobe</span>. Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external">Förstå anrop till Demdex-domänen</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_mitt</span> </p> </td> 
@@ -66,7 +69,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_orgid</span> </p> </td> 
-   <td colname="col2"> <p>Ditt Experience Cloud-organisations-ID. Mer information om hur du hittar det här ID:t finns i <a href="../reference/requirements.md" format="dita" scope="local"> Krav för Experience Cloud Identity Service</a>. </p> </td> 
+   <td colname="col2"> <p>Organisations-ID för Experience Cloud. Mer information om hur du hittar det här ID:t finns i <a href="../reference/requirements.md" format="dita" scope="local"> Krav för Experience Cloud Identity Service</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_cid</span> </p> </td> 
@@ -88,7 +91,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> dcs_region</span> </p> </td> 
-   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> DCS-regions-ID, -platser och -värdnamn</a>. </p> </td> 
+   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. See <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> DCS Region IDs, Locations, and Host Names</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_cb</span> </p> </td> 
