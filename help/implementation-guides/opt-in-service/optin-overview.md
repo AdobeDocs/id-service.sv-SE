@@ -6,6 +6,9 @@ title: Anmälningstjänst
 uuid: aebd72ad-4118-471b-9755-d08a72caa0fd
 translation-type: tm+mt
 source-git-commit: 4fbfefddcf36855f32f2a4047e19ef0b22fc508c
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 4fbfefddcf36855f32f2a4047e19ef0b22fc508c
 
 Med anmälningstjänsten kan du konfigurera protokoll för besökaren för att avgöra om du kan ange en cookie på användarens enhet eller webbläsare när du besöker webbplatsen.
 
-Opt-in-tjänsten är ett tillägg till Experience Cloud ID (ECID), som är utformat för att du ska kunna kontrollera om och vilka Experience Cloud-lösningar som kan skapa cookies på webbsidor för besökare innan användaren ger sitt samtycke. Med hjälp av Opt-in-tjänsten kan du också ange protokoll som ska integreras med CMP (Consent Management Platform) och befintliga system som en del av din större design.
+Opt-in-tjänsten är ett tillägg till Experience Cloud ID (ECID), som är utformat för att du ska kunna kontrollera om och vilka Experience Cloud-lösningar som kan skapa cookies på webbsidor för besökare innan de ger sitt samtycke. Med hjälp av Opt-in-tjänsten kan du också ange protokoll som ska integreras med CMP (Consent Management Platform) och befintliga system som en del av din större design.
 
-Med hjälp av anmälningstjänsten kan du ange om en besökare kan välja Adobe-lösningar samtidigt eller presentera lösningar i sekvens för tillstånd. När godkännandeprocessen är klar och inspelad av kunden kan ni hämta CMP-godkännandena från alla Adobe-lösningar.
+Med hjälp av anmälningstjänsten kan du ange om en besökare kan välja att gå med i Adobe-lösningar samtidigt eller presentera lösningar i ordningsföljd för behörigheter. När godkännandeprocessen är klar och registrerad av kunden kan ni hämta CMP-besökarnas godkännanden från alla Adobe-lösningar.
 
 Opt-in-tjänsten implementeras och konfigureras enkelt med [Adobe Experience Platform Launch](https://docs.adobelaunch.com/) med [Opt-in-tillägget](../../implementation-guides/opt-in-service/launch.md). Den kan också implementeras och konfigureras med [DTM](../../implementation-guides/opt-in-service/optin-dtm.md).
 
@@ -24,17 +27,17 @@ Se [Konfigurera anmälningstjänsten](../../implementation-guides/opt-in-service
 
 >[!NOTE]
 >
->Med anmälningstjänsten kan du konfigurera ett system för att endast godkänna eller neka nedladdning av Adobe-cookies. Det har inte stöd för att samla in användarens medgivandeinställningar, och det är inte heller en databas för inställningar.
+>Med anmälningstjänsten kan du konfigurera ett system för att endast godkänna eller neka hämtning av Adobe-cookies. Det har inte stöd för att samla in användarens medgivandeinställningar, och det är inte heller en databas för inställningar.
 
 >[!IMPORTANT]
 >
 >Innehållet i detta dokument är inte juridisk rådgivning och är inte avsett att ersätta juridisk rådgivning. Kontakta företagets juridiska avdelning för råd om samtycke och rutiner när du väljer implementering.
 
-## Anmäl dig till Experience Cloud-lösningar {#section-053e6224505542cf961896f0ca869e52}
+## Anmäl dig till olika Experience Cloud-lösningar {#section-053e6224505542cf961896f0ca869e52}
 
 Opt-in-tjänsten är ett verktyg för att skapa ett medgivande i arbetsflöde efter dina egna behov, vilket gör att du kan utforma ett arbetsflöde för att reagera (brandmärken) innan och efter det att användaren eller den som har gett sitt medgivande har gett det.
 
-Med tjänsten Opt-In kan ni ange rutiner för samtyckeshantering för Adobes lösningar för att
+Med tjänsten Opt-In kan ni ange rutiner för samtyckeshantering för Adobe-lösningar för att:
 
 * Ange om kraven för insamling av samtycke gäller i allmänhet för en användare.
 * Ange vilka lösningar som tillåts generera cookies.
@@ -45,4 +48,4 @@ Med hjälp av anmälningstjänsterna kan du konfigurera din webbplats så att vi
 
 ![](assets/Opt-in-approval.png)
 
-Adobes lösningar kan sedan kontrollera om taggen är godkänd, prenumerera på ändringar och sedan hämta alla kunder som har anmält sig. Med en anmälningstjänst kan du få behörigheter direkt via JavaScript-bibliotek i lösningen eller via ECID om det implementeras.
+Adobe lösningar kan sedan kontrollera om taggen är godkänd, prenumerera på ändringar och sedan hämta alla Opt-in-kunder. Med en anmälningstjänst kan du få behörigheter direkt via JavaScript-bibliotek i lösningen eller via ECID om det implementeras.
