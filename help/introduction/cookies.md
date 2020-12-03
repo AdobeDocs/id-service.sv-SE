@@ -1,19 +1,22 @@
 ---
-description: ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och aktivera datadelning mellan olika Experience Cloud-lösningar.
+description: ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och möjliggöra datadelning mellan olika Experience Cloud-lösningar.
 keywords: playstation;ID Service
-seo-description: ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och aktivera datadelning mellan olika Experience Cloud-lösningar.
+seo-description: ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och möjliggöra datadelning mellan olika Experience Cloud-lösningar.
 seo-title: Cookies och Experience Cloud Identity Service
 title: Cookies och Experience Cloud Identity Service
 uuid: c5cbd235-37ee-4605-8792-b1a991e190ad
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '994'
+ht-degree: 1%
 
 ---
 
 
 # Cookies and the Experience Cloud Identity Service{#cookies-and-the-experience-cloud-id-service}
 
-ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och aktivera datadelning mellan olika Experience Cloud-lösningar.
+ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och möjliggöra datadelning mellan olika Experience Cloud-lösningar.
 
 ## Om cookies i ID-tjänsten {#section-f438168beaec409ab8b2cc58bd021e26}
 
@@ -39,7 +42,7 @@ Följande attribut för cookien som angetts av ID-tjänsten.
 
 **Namn**
 
-AMCV-cookie-namnet följer syntaxen `AMCV_<variable name>@AdobeOrg`. I namnet är elementen platshållare för `<variable name>` en del av ditt Experience Cloud-organisations-ID. Detta ID skickas till DCS av `Visitor.getInstance` funktionen i ID-tjänstkoden.
+AMCV-cookie-namnet följer syntaxen `AMCV_<variable name>@AdobeOrg`. I namnet är elementen platshållare `<variable name>` för en del av ditt företags-ID från Experience Cloud. Detta ID skickas till DCS av `Visitor.getInstance` funktionen i ID-tjänstkoden.
 
 Ett fullständigt cookie-namn ser ut ungefär så här:
 
@@ -49,7 +52,7 @@ AMCV_1FD6776A524453CC0A490D44%40AdobeOrg
 
 **Innehåll**
 
-AMCV-cookien innehåller besökar-ID:t eller MID:t för Experience Cloud. MID:t lagras i ett nyckelvärdepar som följer den här syntaxen `mid|<Experience Cloud ID>`.
+AMCV-cookien innehåller Experience Cloud besökar-ID eller MID. MID:t lagras i ett nyckelvärdepar som följer den här syntaxen `mid|<Experience Cloud ID>`.
 
 Ett nyckelvärdepar med helt format ser ut ungefär så här:
 
@@ -116,9 +119,9 @@ I följande tabell listas och definieras några viktiga attribut i demodex-cooki
 
 Mer information finns i [Förstå anrop till Demdex-domänen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html).
 
-## Generera Experience Cloud-ID {#section-15f69c0bac394b4b9966a23fbc586d17}
+## Generating the Experience Cloud ID {#section-15f69c0bac394b4b9966a23fbc586d17}
 
-Experience Cloud ID (MID) hämtas matematiskt från ditt organisations-ID och demdex-ID. Så länge dessa ID:n är konstanta är det helt enkelt ett viktigt problem att generera rätt MID för en viss användare. Med samma organisations-ID och demdex-ID får du samma MID-värde varje gång. Detta gör att ID-tjänsten kan spåra besökare över domäner som du kontrollerar och har konfigurerat med ID-tjänstkoden.
+Experience Cloud ID (MID) härleds matematiskt från ditt företags-ID och demdex-ID. Så länge dessa ID:n är konstanta är det helt enkelt ett viktigt problem att generera rätt MID för en viss användare. Med samma organisations-ID och demdex-ID får du samma MID-värde varje gång. Detta gör att ID-tjänsten kan spåra besökare över domäner som du kontrollerar och har konfigurerat med ID-tjänstkoden.
 
 ID-tjänsten börjar skapa ett MID när sidan läses in. Under den här processen skickar koden som tillhandahålls av `visitorAPI.js` kodbiblioteket ditt organisations-ID i ett händelseanrop till ID-tjänsten. ID-tjänsten skapar och returnerar MID och ett demdex-ID i AMCV- respektive demdex-cookies.
 
@@ -132,7 +135,7 @@ I följande tabell beskrivs flaggorna för Experience Cloud Cookies:
 | AMCV (Javascript) | Nej | Konfigurerbar | Ta bort (standard är Lax) |
 | AMCVS (Javascript) | Nej | Konfigurerbar | Ta bort (standard är Lax) |
 
-*Obs! Information om hur du konfigurerar AMCV- och AMCVS-cookie med säkra attribut finns i avsnittet om[secureCookie](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/configurations/securecookie.html).*
+*Obs! Information om hur du konfigurerar AMCV- och AMCVS-cookie med säkra attribut finns i avsnittet om [secureCookie](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/configurations/securecookie.html).*
 
 ## Nästa steg {#section-8db1727a63bc4ff68b495f270315d453}
 
