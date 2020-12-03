@@ -6,6 +6,9 @@ title: Användningsexempel
 uuid: d75a44d5-b713-43d1-b5b6-95d1d0d213a7
 translation-type: tm+mt
 source-git-commit: 0c300aa92991c0dec2ccdeeb34f9d886dcac7671
+workflow-type: tm+mt
+source-wordcount: '437'
+ht-degree: 0%
 
 ---
 
@@ -41,12 +44,12 @@ De här användningsexemplen är exempel på hur du använder Opt-in-tjänsten.
   <tr> 
    <td colname="col1"> <p>Första parts mätning är bra att samla in i förhandstillstånd. Alla andra typer av dataanvändning förhindras tills samtycke erhålls. </p> </td> 
    <td colname="col2"> <p>Använd Opt-in för att aktivera Analytics + ECID-bibliotek i förhandstillstånd. </p> <p>Lägg till konfigurationen"disablethirdpartycookies" i ECID-biblioteket för att blockera cookie-filer från tredje part + ID-synk i förhandstillstånd </p> </td> 
-   <td colname="col3"> <p>Adobe Demdex-anrop kommer att utlösa ECID-hämtning, men ingen Demdex-cookie, annan cookie eller synk för ID från tredje part kommer att finnas. </p> <p>Behåller en konsekvent besökare i pre-/post-medgivande-läge för Analytics. Insamling i förhandstillstånd är knuten till datainsamling efter samtycke. </p> </td> 
+   <td colname="col3"> <p>Adobe Demdex-anrop kommer att utlösas för ECID-hämtning, men ingen Demdex-cookie, annan cookie från tredje part eller ID-synk kommer att finnas. </p> <p>Behåller en konsekvent besökare i pre-/post-medgivande-läge för Analytics. Insamling i förhandstillstånd är knuten till datainsamling efter samtycke. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Mätning från första part plus målgruppsanpassning är acceptabelt i ett förhandstillstånd. Alla andra typer av dataanvändning förhindras tills samtycke erhålls. </p> </td> 
    <td colname="col2"> <p>Använd Opt-in för att aktivera Analytics + ECID + Target Libraries i förhandstillstånd. </p> <p>Lägg till konfigurationen för <span class="codeph"> inaktiveringsbar cookies</span> i ECID-biblioteket för att blockera cookie-filer från tredje part + ID-synk i förhandstillstånd. Ta bort flagga i tillstånd efter samtycke. </p> </td> 
-   <td colname="col3"> <p>Adobe Demdex-anrop kommer att utlösa ECID-hämtning, men ingen Demdex-cookie, annan cookie eller synk för ID från tredje part kommer att finnas. </p> <p>Behåller en konsekvent besökare i pre-/post-medgivande-läge för förstahandslösningar. Insamling i förhandstillstånd är knuten till datainsamling efter samtycke. </p> </td> 
+   <td colname="col3"> <p>Adobe Demdex-anropet utlöses för ECID-hämtning, men ingen Demdex-cookie, annan cookie från tredje part eller ID-synk kommer att finnas. </p> <p>Behåller en konsekvent besökare i pre-/post-medgivande-läge för förstahandslösningar. Insamling i förhandstillstånd är knuten till datainsamling efter samtycke. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Inga cookies får anges i ett förhandsmedgivande </p> </td> 
