@@ -7,6 +7,9 @@ title: Metoder
 uuid: 184d0a62-0c8d-481b-9afe-b7a67bdafdce
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 13%
 
 ---
 
