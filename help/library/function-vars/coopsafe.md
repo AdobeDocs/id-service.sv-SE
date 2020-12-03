@@ -7,6 +7,9 @@ title: isCoopSafe
 uuid: 4dfa1f35-0a88-48d1-9484-d88cb53ad461
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '604'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ Innehåll:
  <li> <a href="../../library/function-vars/coopsafe.md#section-4883eda6beb8437182bcc82bb58fae41" format="dita" scope="local"> Krav </a> </li> 
  <li> <a href="../../library/function-vars/coopsafe.md#section-d18af2b903f248e18ae8108aaf0a8ebb" format="dita" scope="local"> Användningsexempel </a> </li> 
  <li> <a href="../../library/function-vars/coopsafe.md#section-952f56724a2b4d349340e26fbaf33ddd" format="dita" scope="local"> Exempel på syntax och kod </a> </li> 
- <li> <a href="../../library/function-vars/coopsafe.md#section-fcd441933506493faefaa6b51f194a17" format="dita" scope="local"> POST-parametrar för händelseanrop </a> </li> 
+ <li> <a href="../../library/function-vars/coopsafe.md#section-fcd441933506493faefaa6b51f194a17" format="dita" scope="local"> Parametrar för POST av händelseanrop </a> </li> 
  <li> <a href="../../library/function-vars/coopsafe.md#section-9281c39c8b6249d7864100b5cbca7dc6" format="dita" scope="local"> API:er efter instansiering </a> </li> 
 </ul>
 
@@ -34,7 +37,7 @@ För att kunna använda `isCoopSafe` måste du:
 
 * Samarbeta med din [!DNL Adobe] konsult för att ange en vitlistefärg eller svartlistningsflagga på ditt Device Co-op-konto. Det finns ingen självbetjäningsväg för att aktivera dessa flaggor.
 
-## Användningsexempel {#section-d18af2b903f248e18ae8108aaf0a8ebb}
+## Use Cases {#section-d18af2b903f248e18ae8108aaf0a8ebb}
 
 `isCoopSafe` hjälper till att lösa 2 användningsfall som rör datainsamling av aktuella eller potentiella medlemmar i Device Co-op. De här användningsexemplen gäller hur besöksdata för webbplatsen skickas vidare till Device co-op för att hjälpa till att skapa enhetsdiagrammet. I följande tabell beskrivs hur `isCoopSafe` fungerar med dessa användningsfall för att blockera eller skicka data till enhetsdiagrammet
 
@@ -71,7 +74,7 @@ De booleska alternativen avgör hur kunddata används eller inte används av Dev
 
 * `isCoopSafe: false`: Besöksdata som samlats in av en mobil SDK eller webbplats *kan inte* användas för att skapa enhetsgrafen.
 
-**Kodexempel**
+**Exempel på kod**
 
 Ange detta när ID-tjänstkoden instansieras:
 
@@ -82,14 +85,14 @@ var visitor = Visitor.getInstance("Insert Experience Cloud organization ID here"
 });
 ```
 
-## POST-parametrar för händelseanrop {#section-fcd441933506493faefaa6b51f194a17}
+## Parametrar för POST av händelseanrop {#section-fcd441933506493faefaa6b51f194a17}
 
 Beroende på vilken flagga du anger ( `true` eller `false`) översätts ID-tjänsten `isCoopSafe` till dessa POST-parametrar och skickar dem till [!DNL Adobe] i ett händelseanrop:
 
 * `d_coop_safe=1`
 * `d_coop_unsafe=1`
 
-POST-parametrarna anger för Device Co-op om det kan eller inte kan inkludera användardata i enhetsdiagrammet. [!DNL Experience Cloud] Tabellen nedan definierar relationen mellan de `isCoopSafe` booleska flaggorna och POST-parametrarna som skickas i ett händelseanrop. Om du inte använder `isCoopSafe`det skickas ingen av dessa i ett händelseanrop.
+Enhetsparametrarna talar om för Device Co-op om det kan eller inte kan inkludera användardata i enhetsdiagrammet. [!DNL Experience Cloud] Tabellen nedan definierar relationen mellan de `isCoopSafe` booleska flaggorna och de POST-parametrar som skickas i ett händelseanrop. Om du inte använder `isCoopSafe`det skickas ingen av dessa i ett händelseanrop.
 
 <table id="table_0A544534CA904F4D9836A34B8C1EACBB"> 
  <thead> 
