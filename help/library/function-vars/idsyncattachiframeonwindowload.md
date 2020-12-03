@@ -1,25 +1,28 @@
 ---
-description: En valfri boolesk flagga som styr hur Experience Cloud Identity Service läser in iFrame för synkronisering av ID.
+description: En valfri boolesk flagga som styr hur Experience Cloud Identity Service läser in iFrame för ID-synkronisering.
 keywords: ID Service
-seo-description: En valfri boolesk flagga som styr hur Experience Cloud Identity Service läser in iFrame för synkronisering av ID.
+seo-description: En valfri boolesk flagga som styr hur Experience Cloud Identity Service läser in iFrame för ID-synkronisering.
 seo-title: idSyncAttachIframeOnWindowLoad
 title: idSyncAttachIframeOnWindowLoad
 uuid: aa2c2fa4-2cab-4e08-8d35-729a6c3e459a
 translation-type: tm+mt
 source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+workflow-type: tm+mt
+source-wordcount: '93'
+ht-degree: 2%
 
 ---
 
 
 # idSyncAttachIframeOnWindowLoad{#idsyncattachiframeonwindowload}
 
-En valfri boolesk flagga som styr hur Experience Cloud Identity Service läser in iFrame för synkronisering av ID.
+En valfri boolesk flagga som styr hur Experience Cloud Identity Service läser in iFrame för ID-synkronisering.
 
 **Syntax:** ` `idSyncAttachIframeOnWindowLoad= true|false&quot;(standard är `false`.)
 
 När `idSyncAttachIframeOnWindowLoad: true` ID-tjänsten läser in iFrame för synkronisering av ID vid inläsning av fönster. Som standard läser ID-tjänsten in iFrame för ID-synkronisering så snabbt som möjligt i stället för vid inläsning av fönster.
 
-**Kodexempel**
+**Exempel på kod**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 
