@@ -7,11 +7,14 @@ title: Versionsinformation 2019
 uuid: a5a59410-7f85-48f9-a30a-fef1c2e2b558
 translation-type: tm+mt
 source-git-commit: 8ece066545f4ca4a7bd1eca67c8f02dcd2a88369
+workflow-type: tm+mt
+source-wordcount: '422'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Experience Cloud - 2019 {#release-notes}
+# Experience Cloud release notes - 2019 {#release-notes}
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service.
 
@@ -28,7 +31,7 @@ Lägg till kryssrutan för godkännande före anmälan för medieanalys i ECID L
 
 **Ny funktion**
 
-[SHA256 Hash-stöd för setCustomerID](/help/reference/hashing-support.md). Experience Cloud ID Service (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n.
+[SHA256 Hash-stöd för setCustomerID](/help/reference/hashing-support.md). Experience Cloud ID-tjänsten (ECID) stöder SHA-256-algoritmen som gör att du kan skicka in kund-ID:n eller e-postadresser och skicka ut hash-kodade ID:n.
 
 **Korrigeringar, förbättringar, förbättringar**
 
@@ -60,7 +63,7 @@ Stöd för plugin-programmet Audience Manager för IAB TCF, tillgängligt via EC
 
 ## Version 4.0 {#section-51a4be943bbe41558f196ef2654513e2}
 
-**Anmälningstjänst**. Opt-in är ett tillägg till Experience Cloud ID (ECID) som gör att du kan kontrollera om (och sedan vilka) Experience Cloud-bibliotek kan skapa cookies på webbsidor för besökare. Med hjälp av [Experience Platform Launch](https://docs.adobelaunch.com/)kan ni förenkla insamling av besökares godkännande av deltagande för Experience Cloud-lösning genom att aktivera Analytics, Target, Audience Manager och andra eller alla utvalda Experience Cloud-lösningar för att anmäla sig till ert system för samtyckeshantering.
+**Anmälningstjänst**. Opt-in är ett tillägg till Experience Cloud ID (ECID) som gör att du kan kontrollera om (och sedan vilka) Experience Cloud-bibliotek kan skapa cookies på webbsidor för besökare. Med [Experience Platform Launch](https://docs.adobelaunch.com/)kan ni förenkla insamlandet av besökares deltagande i Experience Cloud-lösningar genom att aktivera Analytics, Target, Audience Manager och andra eller alla utvalda Experience Cloud-lösningar för att utnyttja ert system för samtyckeshantering.
 
 ## Version 3.4 {#section-046ce29b43af47cc849d4091098f5927}
 
