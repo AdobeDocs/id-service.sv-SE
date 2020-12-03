@@ -7,6 +7,9 @@ title: appendSupplementalDataIDTo
 uuid: f3504d82-8da3-4971-818b-3df57df4ec2d
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '410'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ Innehåll:
 
 **Syntax:** ` appendSupplementalDataIDTo( *``*, *`URLSDID`*)`
 
-**Kodexempel**
+**Exempel på kod**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 
@@ -54,9 +57,9 @@ Med konfigurationen [sdidParamExpiry](../../library/function-vars/sdidparamexpir
 
 Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` i `Visitor.getInstance` funktionen med följande syntax:
 
-**Syntax:** tid i ` sdidParamExpiry: *`sekunder`*`
+**Syntax:** ` sdidParamExpiry: *`tid i sekunder`*`
 
-**Kodexempel**
+**Exempel på kod**
 
 När din ID-tjänstkod är konfigurerad kan den se ut ungefär som i det här exemplet. I det här exemplet anges SDID-tidsgränsen till 15 sekunder.
 
