@@ -2,16 +2,19 @@
 description: Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av andra Experience Cloud-lösningar med ID-tjänsten.
 keywords: ID Service
 seo-description: Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av andra Experience Cloud-lösningar med ID-tjänsten.
-seo-title: Vanliga frågor om andra Experience Cloud-lösningar
-title: Vanliga frågor om andra Experience Cloud-lösningar
+seo-title: Frågor och svar för andra Experience Cloud-lösningar
+title: Frågor och svar för andra Experience Cloud-lösningar
 uuid: 7d848663-6cbb-4d80-ab06-7b6d2dc20e2b
 translation-type: tm+mt
 source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+workflow-type: tm+mt
+source-wordcount: '209'
+ht-degree: 1%
 
 ---
 
 
-# Vanliga frågor om andra Experience Cloud-lösningar{#faqs-for-other-experience-cloud-solutions}
+# Frågor och svar för andra Experience Cloud-lösningar{#faqs-for-other-experience-cloud-solutions}
 
 Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av andra Experience Cloud-lösningar med ID-tjänsten.
 
@@ -23,9 +26,9 @@ Ja, det här är det rekommenderade och rekommenderade distributionsalternativet
 
 Se [Standardimplementering med DTM](../implementation-guides/standard.md#concept-89cd0199a9634fc48644f2d61e3d2445).
 
-## Analytics och Audience Manager {#section-b3dd206d497041acb04554c6fb1c912a}
+## Analyser och Audience Manager {#section-b3dd206d497041acb04554c6fb1c912a}
 
-**Kommer besökshistoriken för en användare att exporteras från[!DNL Adobe Analytics]till[!DNL Audience Manager]efter att jag har implementerat Experience Cloud Identity Service?**
+**Kommer besökshistoriken för en användare att exporteras från [!DNL Adobe Analytics] till [!DNL Audience Manager] efter att jag har implementerat Experience Cloud Identity Service?**
 
 Det finns två alternativ här:
 
