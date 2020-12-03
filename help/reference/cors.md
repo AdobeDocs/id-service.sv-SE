@@ -1,19 +1,22 @@
 ---
-description: Webbläsare använder Cross Origin Resource Sharing (CORS) för att begära resurser från en annan domän än den aktuella domänen. Experience Cloud Identity Service har stöd för CORS-standarder som möjliggör dessa resursbegäranden på klientsidan. ID-tjänsten återgår till JSONP-begäranden i äldre webbläsare eller webbläsare som inte stöder CORS.
+description: Webbläsare använder Cross Origin Resource Sharing (CORS) för att begära resurser från en annan domän än den aktuella domänen. Experience Cloud Identity Service stöder CORS-standarder som möjliggör dessa serverförfrågningar på klientsidan. ID-tjänsten återgår till JSONP-begäranden i äldre webbläsare eller webbläsare som inte stöder CORS.
 keywords: ID Service
-seo-description: Webbläsare använder Cross Origin Resource Sharing (CORS) för att begära resurser från en annan domän än den aktuella domänen. Experience Cloud Identity Service har stöd för CORS-standarder som möjliggör dessa resursbegäranden på klientsidan. ID-tjänsten återgår till JSONP-begäranden i äldre webbläsare eller webbläsare som inte stöder CORS.
+seo-description: Webbläsare använder Cross Origin Resource Sharing (CORS) för att begära resurser från en annan domän än den aktuella domänen. Experience Cloud Identity Service stöder CORS-standarder som möjliggör dessa serverförfrågningar på klientsidan. ID-tjänsten återgår till JSONP-begäranden i äldre webbläsare eller webbläsare som inte stöder CORS.
 seo-title: CORS-stöd i Experience Cloud Identity Service
 title: CORS-stöd i Experience Cloud Identity Service
 uuid: e656b573-72a8-4312-a7d5-5cc3818f0a9e
 translation-type: tm+mt
 source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
 
 # CORS Support in the Experience Cloud Identity Service {#cors-support-in-the-experience-cloud-id-service}
 
-Webbläsare använder Cross Origin Resource Sharing (CORS) för att begära resurser från en annan domän än den aktuella domänen. Experience Cloud Identity Service har stöd för CORS-standarder som möjliggör dessa resursbegäranden på klientsidan. ID-tjänsten återgår till JSONP-begäranden i äldre webbläsare eller webbläsare som inte stöder CORS.
+Webbläsare använder Cross Origin Resource Sharing (CORS) för att begära resurser från en annan domän än den aktuella domänen. Experience Cloud Identity Service stöder CORS-standarder som möjliggör dessa serverförfrågningar på klientsidan. ID-tjänsten återgår till JSONP-begäranden i äldre webbläsare eller webbläsare som inte stöder CORS.
 
 ## Problem med samma ursprung-principer och ID-serviceförfrågningar {#section-6608cf46d27143eeaeabacaa6aa14e8e}
 
@@ -64,12 +67,12 @@ Se även [användCORSOnly](../library/function-vars/use-cors-only.md#reference-8
 
 ## Andra fördelar med att använda CORS {#section-6f44f30694c44f95bf9854b8a2af8449}
 
-Tabellen nedan beskriver några av fördelarna som CORS ger kunder som använder ID-tjänsten.
+Tabellen nedan beskriver några av de fördelar CORS ger kunder som använder ID-tjänsten.
 
 <table id="table_AEB51A263D454F90B66E8C8D0513CF79"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Fördelar </th> 
+   <th colname="col1" class="entry"> Fördel </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr>
  </thead>
