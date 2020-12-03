@@ -7,6 +7,9 @@ title: useCORSOnly
 uuid: 607dc035-dffc-4f4d-be51-08ef6c0a8fad
 translation-type: tm+mt
 source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+workflow-type: tm+mt
+source-wordcount: '161'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ När inställningen är `false`aktiverad utför webbläsaren resurskontroller me
 >
 >`Set useCORSOnly: true` om du har strikta säkerhetskrav. Du bör bara aktivera det här läget om du är säker på att alla besökare använder webbläsare som stöder CORS. Användarupplevelsen påverkas inte av webbläsare som inte stöder CORS. Webbläsare utan CORS-stöd kan dock inte begära resurser eller utbyta data med [!DNL Adobe Experience Cloud].
 
-**Kodexempel**
+**Exempel på kod**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 
