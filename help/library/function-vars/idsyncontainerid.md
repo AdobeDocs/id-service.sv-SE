@@ -7,6 +7,9 @@ title: idSyncContainerID
 uuid: e35dc48b-1aa1-41e3-91c1-ef1e9d2d8b90
 translation-type: tm+mt
 source-git-commit: f7f23d89649a888f5e9d8c94526b550fbda7045b
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 1%
 
 ---
 
@@ -25,9 +28,9 @@ Innehåll:
 
 ## Exempel på syntax och kod {#section-b0c50732b1c84bed8616e82e8e83d58c}
 
-**Syntax:** ID-värde för ` idSyncContainerID: *`behållare`*`
+**Syntax:** ` idSyncContainerID: *`behållar-ID-värde`*`
 
-**Kodexempel:**
+**Exempel på kod:**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 
@@ -64,7 +67,7 @@ Beroende på din situation kan du behöva lägga till den här konfigurationen i
    <td colname="col1"> <p> <b>Behövs inte</b> </p> </td> 
    <td colname="col2"> <p>Du behöver inte använda den här konfigurationen om: </p> <p> 
      <ul id="ul_4D6F794CD65C43D0BEFBA6F5DE420C2E"> 
-      <li id="li_0F048A6AC7BE4450AFA1B20B1AC25808">Du använder ID-tjänsten med valfri <span class="keyword"> Experience Cloud- </span> lösning och utför inte ID-synkroniseringar med andra datakällor. I det här fallet har ditt konto en standardbehållare med ID 0 och ingen åtgärd krävs. </li> 
+      <li id="li_0F048A6AC7BE4450AFA1B20B1AC25808">Du använder ID-tjänsten med någon <span class="keyword"> Experience Cloud- </span> lösning och utför inte ID-synkronisering med andra datakällor. I det här fallet har ditt konto en standardbehållare med ID 0 och ingen åtgärd krävs. </li> 
       <li id="li_5657D64D9406407D9B4DB7D8BE4F8EE4">Alla datakällor finns i en enda behållare. </li> 
      </ul> </p> </td> 
   </tr> 
@@ -82,8 +85,8 @@ Beroende på din situation kan du behöva lägga till den här konfigurationen i
 
 ## Ange behållar-ID när du använder DIL och VisitorAPI.js {#section-f283cb69c8de4348b5316cc4e02a3e9e}
 
-Om du har distribuerat [!UICONTROL DIL]*och *VisitorAPI.js på samma sida:
+Om du har distribuerat [!UICONTROL DIL]*och* VisitorAPI.js på samma sida:
 
-* Tjänstkoden för besökar-ID har företräde framför DIL för ID-synk.
+* Tjänstkoden för besökar-ID har företräde framför DIL för ID-synkroniseringar.
 * Ange endast konfigurationen i ID-tjänstkoden `idSyncContainerID` .
 
