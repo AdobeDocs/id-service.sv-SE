@@ -6,6 +6,9 @@ title: Validerar anmälningstjänst
 uuid: 1743360a-d757-4e50-8697-0fa92b302cbc
 translation-type: tm+mt
 source-git-commit: 0c300aa92991c0dec2ccdeeb34f9d886dcac7671
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +29,13 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 
 Rensa cacheminnet och cookies innan du läser in sidan.
 
-Högerklicka på webbsidan i Chrome och välj Inspektera. På samma sätt som i skärmbilden ovan väljer du fliken *Nätverk* för att visa de begäranden som gjorts i webbläsaren.
+Högerklicka på webbsidan i Chrome och välj Inspect. På samma sätt som i skärmbilden ovan väljer du fliken *Nätverk* för att visa de begäranden som gjorts i webbläsaren.
 
-I exemplet ovan har vi följande Adobe JS-taggar installerade på sidan: ECID, AAM, Analytics and Target.
+I exemplet ovan har följande Adobe JS-taggar installerats på sidan: ECID, AAM, Analytics och Target.
 
 **Hur man bevisar att Opt-in fungerar som väntat:**
 
-Du ska inte se några förfrågningar till Adobes servrar:
+Du ska inte se några begäranden till Adobe-servrar:
 
 * demdex.net/id
 * demdex.net/event
@@ -44,7 +47,7 @@ Du ska inte se några förfrågningar till Adobes servrar:
 >
 >Du kan se ett anrop till `http://dpm.demdex.net/optOutStatus`, som är en skrivskyddad slutpunkt som används för att hämta besökarens avanmälningsstatus. Den här slutpunkten resulterar inte i att några cookies från tredje part skapas, och ingen information samlas in från sidan.
 
-Du bör inte se några cookies som har skapats med Adobe-taggar: (AMCV_{{YOUR_ORG_ID}}, mbox, demdex, s_cc, s_sq, everest_g_v2, everest_session_v2)
+Du bör inte se några cookies som har skapats med Adobe-taggarna: (AMCV_{{YOUR_ORG_ID}}, mbox, demdex, s_cc, s_sq, everest_g_v2, everest_session_v2)
 
 Gå till fliken *Program* i Chrome, expandera avsnittet *Cookies* under *Storage* och välj domännamnet för din webbplats:
 
@@ -59,7 +62,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 });
 ```
 
-Den enda skillnaden i användningsfall 2 är att du kommer att se *en ny cookie* som kommer att innehålla de behörigheter för anmälan som din besökare ger: adobeujs- **optin**
+Den enda skillnaden i användningsfall 2 är att du kommer att se *en ny cookie* som kommer att innehålla de behörigheter för anmälan som din besökare ger: **adobeujs-optin**
 
 ## Användningsfall 3: Aktivera deltagande och förgodkänn Adobe Analytics {#section-257fe582b425496cbf986d0ec12d3692}
 
@@ -73,7 +76,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 });
 ```
 
-Eftersom Adobe Analytics är förberett för godkännande ser du förfrågningar på fliken Nätverk till din spårningsserver:
+Eftersom Adobe Analytics har godkänts i förväg kommer du att se förfrågningar på fliken Nätverk till din spårningsserver:
 
 ![](assets/use_case_3_1.png)
 
@@ -102,15 +105,15 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
   
 ```
 
-Här visas ett exempel på utdata när syften 1, 2 och 5 godkänns och Audience Manager-leverantörs-ID godkänns:
+Här visas ett exempel på utdata när syften 1, 2 och 5 godkänns och Audience Manager leverantörs-ID godkänns:
 
 * demdex.net/id: Det här anropet bevisar att ECID har begärt ett ID från demdex.net
-* demdex.net/event: Det här anropet visar att DIL-datainsamlingsanropet fungerar som förväntat.
+* demdex.net/event: Anropet visar att datainsamlingsanropet från DIL fungerar som förväntat.
 * demdex.net/dest5.html: Det här anropet visar att ID-synkronisering aktiveras.
 
 ![](assets/use_case_4_1.png)
 
-Om något av följande inte är giltigt kommer du inte att se några förfrågningar till Adobes servrar och inga Adobe-cookies:
+Om något av följande inte är giltigt visas inga begäranden till Adobe-servrar och inga Adobe-cookies:
 
 * Syfte 1, 2 ELLER 5 godkänns inte.
 * Audience Manager-leverantörs-ID:t har inte godkänts.
