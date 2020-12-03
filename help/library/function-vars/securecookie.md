@@ -7,6 +7,9 @@ title: secureCookie
 uuid: 995d19f6-9c9d-4493-9c9c-545b0b5696b0
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Det här konfigurationsattributet är tillgängligt i `visitorAPI`, version 3.3.
 
 **Syntax:** `secureCookie: true | false` (standard)
 
-**Kodexempel**
+**Exempel på kod**
 
 ```js
 var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ID-HERE",{ 
