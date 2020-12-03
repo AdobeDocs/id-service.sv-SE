@@ -7,28 +7,32 @@ title: Användningsexempel vid direkt integration
 uuid: 6de1eb8b-4783-4545-8a64-ab6b9ef93432
 translation-type: tm+mt
 source-git-commit: ec67177fc6491e4c8cea835d198574c9fdb4b01f
+workflow-type: tm+mt
+source-wordcount: '473'
+ht-degree: 2%
 
 ---
 
 
 # Användningsexempel vid direkt integration {#direct-integration-use-cases}
 
-Exemplen omfattar två vanliga användningsfall som rör direkt integrering och Experience Cloud ID (ECID eller MID). Detta ID är ett unikt, beständigt ID för webbplatsbesökarna.
+Exemplen omfattar två vanliga användningsområden som rör direkt integrering och Experience Cloud ID (ECID eller MID). Detta ID är ett unikt, beständigt ID för webbplatsbesökarna.
 
 >[!TIP]
 >
 >* Granska och förstå [kodsyntaxen och variablerna](../implementation-guides/direct-integration.md#concept-4cd3206a84bb4687af0b312ae09648b9) innan du dykar upp i användningsexemplen.
 >* Mer information om MID finns i [Cookies och Experience Cloud Identity Service](../introduction/cookies.md).
+
 >
 
 
 
-## Användningsfall 1: Jag har ett Experience Cloud ID (MID) men vill skicka mina besökar-ID:n och ange ett autentiseringstillstånd {#section-a67d89a343754d1286d03cf08d34b806}
+## Användningsfall 1: Jag har ett Experience Cloud-ID (MID) men vill skicka mina besökar-ID:n och ange ett autentiseringstillstånd {#section-a67d89a343754d1286d03cf08d34b806}
 
 <table id="table_DA8840FCB51541109FE6DF20430E8924"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Använd skiftlägeselement </th> 
+   <th colname="col1" class="entry"> Element i användningsexempel </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
@@ -70,7 +74,7 @@ Exemplen omfattar två vanliga användningsfall som rör direkt integrering och 
 <table id="table_666A92693F8A413096DF6A64770C1141"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Använd skiftlägeselement </th> 
+   <th colname="col1" class="entry"> Element i användningsexempel </th> 
    <th colname="col2" class="entry"> Beskrivning </th> 
   </tr> 
  </thead>
