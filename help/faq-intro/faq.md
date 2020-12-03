@@ -7,6 +7,9 @@ title: Vanliga frågor om ID-tjänster
 uuid: e8d8f819-3d73-4fa2-864c-4867071c14ee
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Vanliga frågor och svar om funktioner, funktioner och problem i samband med anv
 
 Se [Översikt](../introduction/overview.md).
 
-**Varför gör inte ID-tjänsten ett anrop för att hämta Experience Cloud-ID:t?**
+**Varför gör ID-tjänsten inget anrop för att hämta Experience Cloud-ID?**
 
 Detta kan vara svårt att diagnostisera. En sak som du kan kontrollera är rubrikerna för skyddsprofiler på din webbplats. Om du har en strikt säkerhetsprincip kan dessa inställningar blockera tredjepartssamtal som görs av ID-tjänsten. Se [Principer för innehållssäkerhet och Experience Cloud Identity Service](../reference/csp.md#concept-968c423a7392479db0a0d821ae9783e3).
 
@@ -59,7 +62,7 @@ Det är svårt att katalogisera alla möjliga villkor. Miljoner kunder ansluter 
 
 Till exempel, trådgenerering. Vi har introducerat trådgenerering om flera ID-synkroniseringsbegäranden skulle göras. Vi har observerat från labbrapporter att användargränssnittet skulle blockeras för kunder som utför flera ID-synkroniseringar på grund av att en mängd kontinuerliga CPU-beräkningar sker. Därför introducerade vi trådar som separerar begäranden om ID-synkronisering med 100 msek vardera.
 
-Den här ändringen förbättrar prestanda för kunder som använder Visitor 2.3.0+ och DIL 6.10+. Förbättringarna av sidinläsningstiderna visas i bilden nedan:
+Den här förändringen förbättrar prestanda för kunder som använder Visitor 2.3.0+ och DIL 6.10+. Förbättringarna av sidinläsningstiderna visas i bilden nedan:
 
 ![](assets/id_sync_improvements_copy.png)
 
@@ -69,7 +72,7 @@ Resursbegäranden med CORS är vanligtvis mer att föredra än med JSONP. Med JS
 
 See [CORS Support in the Experience Cloud Identity Service](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758).
 
-## Dokumentskydd {#section-b176b8492fbe4acfb79ebb30ec902f98}
+## Säkerhet {#section-b176b8492fbe4acfb79ebb30ec902f98}
 
 **Stöder ID-tjänsten CORS?**
 
