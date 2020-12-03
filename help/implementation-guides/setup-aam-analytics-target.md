@@ -1,7 +1,7 @@
 ---
-description: De här instruktionerna är till för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+description: Dessa instruktioner är till för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID Service
-seo-description: De här instruktionerna är till för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+seo-description: Dessa instruktioner är till för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 seo-title: Implementera identitetstjänsten Experience Cloud för Analytics, Audience Manager och Target
 title: Implementera identitetstjänsten Experience Cloud för Analytics, Audience Manager och Target
 uuid: 9d446b77-ca62-4325-8bb0-ff43a52313c0
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Implementera identitetstjänsten Experience Cloud för Analytics, Audience Manager och Target {#implement-the-experience-cloud-id-service-for-analytics-audience-manager-and-target}
 
-De här instruktionerna är till för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+Dessa instruktioner är till för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
@@ -28,9 +28,9 @@ De här instruktionerna är till för Analytics-, Audience Manager- och Target-k
 
 ## Steg 1: Planera för vidarebefordran på serversidan {#section-880797cc992d4755b29cada7b831f1fc}
 
-Utöver de steg som beskrivs här, bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] bör migrera till vidarebefordran på serversidan. Med vidarebefordran på serversidan kan du ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i dokumentationen [för vidarebefordran på](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html) serversidan.
+Utöver de steg som beskrivs här, bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] bör migrera till vidarebefordran på serversidan. Med hjälp av vidarebefordran på serversidan kan du ta bort DIL (Audience Manager datainsamlingskod) och ersätta den med [Audience Management Module](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i dokumentationen [för vidarebefordran på](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html) serversidan.
 
-Migrering till vidarebefordran på serversidan kräver planering och samordning. Detta innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas ut tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
+Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas ut tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
 
 1. Arbeta med dina [!DNL Analytics] och [!DNL Audience Manager] kontakters kontaktpersoner för att planera migreringen av din ID-tjänst och vidarebefordran på serversidan. Gör det viktigt att välja en spårningsserver i den här planen.
 
@@ -146,7 +146,7 @@ Lägg till den `Visitor.getInstance` funktion som visas nedan i `AppMeasurement.
 >
 >Nu bör du ta bort [!DNL Audience Manager] DIL-koden och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html) på serversidan.
 
-***(Valfritt, men rekommenderas)*Skapa en anpassad förinställning **
+***(Valfritt, men rekommenderas)* Skapa en anpassad propp **
 
 Ange en anpassad propp i `AppMeasurement.js` för att mäta täckning. Lägg till den här anpassade proppen till `doPlugins` funktionen för din `AppMeasurement.js` fil:
 
@@ -194,7 +194,7 @@ Lösningarna i den här implementeringen returnerar ID:n i form av nyckelvärdep
 
 >[!TIP]
 >
->Du kan använda [Adobe Debugger](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html) eller [Charles HTTP-proxy](https://www.charlesproxy.com/) för att söka efter dessa lösningsspecifika ID:n. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
+>Du kan använda felsökaren [i](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html) Adobe eller HTTP-proxyn [i](https://www.charlesproxy.com/) Charles för att söka efter dessa lösningsspecifika ID:n. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
 
 **Alla lösningar**
 
@@ -205,7 +205,7 @@ Sök efter:
 
 Ytterligare kontroller som hjälper dig att avgöra om ID-tjänsten fungerar som den ska finns i [Testa och verifiera identitetstjänsten](../implementation-guides/test-verify.md)i Experience Cloud.
 
-**Analyser**
+**Analytics** 
 
 Sök efter SDID-identifieraren i JavaScript-begäran. Analytics SDID ska matcha Target mboxMCSDID.
 
@@ -242,6 +242,6 @@ Distribuera koden när den har testats.
 
 Om du aktiverade en respitperiod:
 
-* Kontrollera att Analytics-id (AID) och MID finns i bildbegäran.
+* Kontrollera att Analytics ID (AID) och MID finns i bildbegäran.
 * Kom ihåg att inaktivera fristen när du uppfyller [villkoren för att avbryta](../implementation-guides/setup-aam-analytics-target.md#section-aceacdb7d5794f25ac6ff46f82e148e1)den.
 
