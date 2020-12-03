@@ -7,11 +7,14 @@ title: Versionsinformation 2018
 uuid: 771b5b11-a8e3-464c-b65e-b15135584ace
 translation-type: tm+mt
 source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+workflow-type: tm+mt
+source-wordcount: '489'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation 2018 {#release-notes}
+# 2018 Release Notes {#release-notes}
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2018.
 
@@ -52,7 +55,7 @@ Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity S
   </tr> 
   <tr> 
    <td colname="col1"> ECID JS är tillgängligt i Git-rapporten </td> 
-   <td colname="col2"> ECID JS finns nu i Public Git-rapporten för alla Experience Cloud-kunder på https://github.com/Adobe-Marketing-Cloud/id-service/releases. </td> 
+   <td colname="col2"> ECID JS finns nu i Git-rapporten för alla Experience Cloud-kunder på https://github.com/Adobe-Marketing-Cloud/id-service/releases. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -69,7 +72,7 @@ Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity S
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Orealistisk topp i det unika besökarantalet </p> </td> 
-   <td colname="col2"> <p>I och med lanseringen av Experience Cloud Identity Service 3.1.0 hittade vi ett problem som skapade en orealistisk topp i det unika besökarantalet när den här versionen implementerades. Detta beteende visas endast med den senaste versionen av ECID, v3.1.0, och om en användare har valt alternativet"Tillåt endast från aktuell webbplats" i sekretessinställningarna för en Safari. Version 3.1.2 åtgärdar det här problemet. </p> </td> 
+   <td colname="col2"> <p>I och med lanseringen av Experience Cloud Identity Service 3.1.0 har vi hittat ett problem som skapade en orealistisk topp i det unika besökarantalet när den här versionen implementerades. Detta beteende visas endast med den senaste versionen av ECID, v3.1.0, och om en användare har valt alternativet"Tillåt endast från aktuell webbplats" i sekretessinställningarna för en Safari. Version 3.1.2 åtgärdar det här problemet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -111,7 +114,7 @@ Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity S
   </tr> 
   <tr> 
    <td colname="col1"> Lagt till möjlighet att inaktivera tredjepartssamtal </td> 
-   <td colname="col2"> <p><b>JavaScript - 3.0.0</b> </p> <p>Adobe har ändrat namn på följande konfigurationer så att tredjepartssynkroniseringsanrop kan inaktiveras. </p> <p>idSyncDisableSyncs till disableIdSyncs </p> <p>idSyncDisable3rdPartySyncing to disableThirdPartyCookies </p> </td> 
+   <td colname="col2"> <p><b>JavaScript - 3.0.0</b> </p> <p>Adobe har bytt namn på följande konfigurationer så att tredjepartssynkroniseringsanrop kan inaktiveras. </p> <p>idSyncDisableSyncs till disableIdSyncs </p> <p>idSyncDisable3rdPartySyncing to disableThirdPartyCookies </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Stöd för Internet Explorer </p> </td> 
