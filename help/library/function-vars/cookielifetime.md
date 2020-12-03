@@ -7,6 +7,9 @@ title: cookieLifetime
 uuid: cd945db3-429a-4625-ac3f-69ac259377a3
 translation-type: tm+mt
 source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 8%
 
 ---
 
@@ -17,9 +20,9 @@ Med den här variabeln kan du åsidosätta standardintervallet för livstid för
 
 Som standard upphör cookies i ID-tjänster att gälla efter 24 månader. [!DNL Experience Cloud] Ange tidsintervallet i sekunder.
 
-**Syntax:** livstid i ` cookieLifetime: *`sekunder`*`
+**Syntax:** ` cookieLifetime: *`livstid i sekunder`*`
 
-**Kodexempel**
+**Exempel på kod**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 
