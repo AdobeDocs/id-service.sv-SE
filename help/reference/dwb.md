@@ -1,7 +1,7 @@
 ---
-description: Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket möjliggör bättre integrering med andra produkter i Adobe Experience Cloud och ger förbättrad besöksspårning.
+description: Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket ger bättre integrering med andra produkter i Adobe Experience Cloud och förbättrar besökarspårningen.
 keywords: ID Service
-seo-description: Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket möjliggör bättre integrering med andra produkter i Adobe Experience Cloud och ger förbättrad besöksspårning.
+seo-description: Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket ger bättre integrering med andra produkter i Adobe Experience Cloud och förbättrar besökarspårningen.
 seo-title: Data Workbench och Experience Cloud Identity Service
 title: Data Workbench och Experience Cloud Identity Service
 uuid: 9448abc8-04fb-47d2-be08-1dfbddb0764e
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 # Data Workbench och Experience Cloud Identity Service {#data-workbench-and-the-experience-cloud-id-service}
 
-Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket möjliggör bättre integrering med andra produkter i Adobe Experience Cloud och ger förbättrad besöksspårning.
+Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket ger bättre integrering med andra produkter i Adobe Experience Cloud och förbättrar besökarspårningen.
 
 Så här uppdaterar du [Data Workbench](https://docs.adobe.com/content/help/en/data-workbench/using/home.html) för att använda ID-tjänsten:
 
@@ -28,6 +28,7 @@ Så här uppdaterar du [Data Workbench](https://docs.adobe.com/content/help/en/d
 
    * `x-mcvisid`
    * `x-tnt-action`
+
    Lämna fälten tomma om du inte är redo att använda eller definiera dem.  **Avkodningsinstruktioner**
 
 Se det fullständiga avkodningsinnehållet nedan, inklusive de nya fälten ovan.
