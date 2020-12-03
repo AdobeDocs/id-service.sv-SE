@@ -7,6 +7,9 @@ title: CNAME för datainsamling och spårning mellan domäner
 uuid: ba42c822-b677-4139-b1ed-4d98d3320fd0
 translation-type: tm+mt
 source-git-commit: 9fe63cf3983a2ed6642837b02a3c3441ef745d70
+workflow-type: tm+mt
+source-wordcount: '602'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 9fe63cf3983a2ed6642837b02a3c3441ef745d70
 
 Om du har en huvudwebbplats där kunder kan identifieras innan de besöker andra domäner kan en CNAME aktivera spårning av korsdomäner i webbläsare som inte accepterar cookies från tredje part (som Safari).
 
-I webbläsare som accepterar cookies från tredje part anges en cookie av datainsamlingsservrarna under begäran om ett besökar-ID. Denna cookie gör det möjligt för besökar-ID-tjänsten att returnera samma Experience Cloud-besökar-ID på alla domäner som har konfigurerats med samma Experience Cloud Org-ID.
+I webbläsare som accepterar cookies från tredje part anges en cookie av datainsamlingsservrarna under begäran om ett besökar-ID. Denna cookie gör att besökar-ID-tjänsten kan returnera samma Experience Cloud-besökar-ID på alla domäner som har konfigurerats med samma Experience Cloud Org-ID.
 
 I webbläsare som avvisar cookies från tredje part tilldelas varje domän ett nytt besökar-ID för Experience Cloud.
 
