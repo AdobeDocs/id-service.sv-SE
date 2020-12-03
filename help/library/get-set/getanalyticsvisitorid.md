@@ -1,19 +1,22 @@
 ---
-description: Returnerar det eventuella äldre analys-ID som lagrats i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
+description: Returnerar det eventuella gamla analys-ID:t som sparades i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
 keywords: ID Service
-seo-description: Returnerar det eventuella äldre analys-ID som lagrats i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
+seo-description: Returnerar det eventuella gamla analys-ID:t som sparades i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
 seo-title: getAnalyticsVisitorID
 title: getAnalyticsVisitorID
 uuid: 6bb8ddfc-9fc1-4105-b377-d9b4d247a0f8
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '338'
+ht-degree: 2%
 
 ---
 
 
 # getAnalyticsVisitorID{#getanalyticsvisitorid}
 
-Returnerar det eventuella äldre analys-ID som lagrats i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
+Returnerar det eventuella gamla analys-ID:t som sparades i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
 
 **Syntax** `var analyticsID = visitor.getAnalyticsVisitorID()`
 
@@ -52,5 +55,5 @@ Parametern visas i en frågesträng när din organisation använder en `aid` res
 
 >[!MORELIKETHIS]
 >
->* [Analytics-cookies](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-privacy.html)
+>* [Analytics-cookies](https://docs.adobe.com/content/help/sv-SE/core-services/interface/ec-cookies/cookies-privacy.html)
 
