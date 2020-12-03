@@ -1,19 +1,22 @@
 ---
-description: getInstance returnerar ett besökar-ID-objekt för angivet Experience Cloud-organisations-ID. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
+description: getInstance returnerar ett besökar-ID-objekt för det angivna Experience Cloud-organisations-ID:t. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
 keywords: ID Service
-seo-description: getInstance returnerar ett besökar-ID-objekt för angivet Experience Cloud-organisations-ID. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
+seo-description: getInstance returnerar ett besökar-ID-objekt för det angivna Experience Cloud-organisations-ID:t. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
 seo-title: getInstance
 title: getInstance
 uuid: 259b88a6-e3d0-4aab-b935-566099bdab98
 translation-type: tm+mt
 source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
 # getInstance{#getinstance}
 
-getInstance returnerar ett besökar-ID-objekt för angivet Experience Cloud-organisations-ID. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
+getInstance returnerar ett besökar-ID-objekt för det angivna Experience Cloud-organisations-ID:t. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
 
 **Syntax**
 
@@ -33,9 +36,9 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 
 >[!CAUTION]
 >
->*Instansiera inte* Visitor-funktionen med `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js] -kodbiblioteket v3.0 eller senare.
+>*Instansiera inte* Visitor-funktionen med `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js] kodbibliotek v3.0 eller senare.
 
-**ActionScript/Flash**
+**ActionScript / Flash**
 
 ```js
 import com.adobe.mc.Visitor; 
@@ -51,7 +54,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 });
 ```
 
-Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Detta liknar den [ i `s_gi()` . ](https://docs.adobe.com/content/help/en/analytics/implementation/vars/functions/s-gi.html) Funktionen [!DNL AppMeasurement]i.
+Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Det liknar den [ i `s_gi()` .. ](https://docs.adobe.com/content/help/en/analytics/implementation/vars/functions/s-gi.html) funktionen [!DNL AppMeasurement].
 
 **Vanlig användning**
 
