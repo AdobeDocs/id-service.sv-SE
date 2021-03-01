@@ -10,12 +10,12 @@ translation-type: tm+mt
 source-git-commit: 0bf1464a7caf3f2a8a06178ed5c2d2525e79cfd6
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
 
-# Hjälp om Experience Cloud Identity Service {#using}
+# Hjälp om Experience Cloud identitetstjänst {#using}
 
 + [Hjälp om ID-tjänst](home.md)
 + Översikt {#intro}
@@ -37,7 +37,7 @@ ht-degree: 7%
    + [Direktintegrering med ID-tjänsten](implementation-guides/direct-integration.md)
    + [Användningsexempel för direktintegrering](implementation-guides/direct-integration-examples.md)
    + [Testa och verifiera ID-tjänsten](implementation-guides/test-verify.md)
-   + Anmälningstjänst {#opt-in-service}
+   + Opt-in-tjänst {#opt-in-service}
       + [Översikt över anmälningstjänsten](implementation-guides/opt-in-service/optin-overview.md)
       + [Konfigurera anmälningstjänst](implementation-guides/opt-in-service/getting-started.md)
       + [Validerar anmälningstjänst](implementation-guides/opt-in-service/testing-optin-and-iab-plugin.md)
@@ -112,7 +112,7 @@ ht-degree: 7%
    + [Vanliga frågor om ID-tjänster](faq-intro/faq.md)
    + [Vanliga frågor om analys och ID-tjänster](faq-intro/analytics-faq.md)
    + [Frågor och svar för andra Experience Cloud-lösningar](faq-intro/other-faq.md)
-+ Versionsinformation för ID-tjänst {#release-notes}
++ Versionsinformation för ID-tjänsten {#release-notes}
    + [Versionsinformation 2020](release-notes/release-notes.md)
    + [Versionsinformation 2019](release-notes/notes-2019.md)
    + [Versionsinformation 2018](release-notes/notes-2018.md)
