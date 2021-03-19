@@ -1,14 +1,14 @@
 ---
 description: Funktioner för ID-tjänster eller funktioner som är unika för Adobe Analytics.
-keywords: ID Service
+keywords: ID-tjänst
 seo-description: Funktioner för ID-tjänster eller funktioner som är unika för Adobe Analytics.
 seo-title: Analysreferens
 title: Analysreferens
 uuid: 215f0394-a436-4f0c-9a52-3b387048e40e
 translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+source-git-commit: 73465dcdab8b8316e0e9d41c5780ff0231270058
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '76'
 ht-degree: 7%
 
 ---
@@ -23,6 +23,6 @@ Funktioner för ID-tjänster eller funktioner som är unika för Adobe Analytics
 + [Beslutspunkter för migrering av identitetstjänst från Experience Cloud](migration-decisions.md)
 + [Migreringsscenarier för Experience Cloud Identity Service](migration-scenarios.md)
 + [Begäranden om analyser och Experience Cloud ID](legacy-analytics.md)
-+ [CNAME för datainsamling och spårning mellan domäner](cname.md)
 + [Implementering på serversidan blandad med JavaScript](server-side.md)
 + [Giltighetsperioden för ID-tjänsten](grace-period.md)
+<!--+ [Data Collection CNAMEs and Cross-Domain Tracking](cname.md)-->
