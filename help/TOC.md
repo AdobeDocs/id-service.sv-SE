@@ -1,13 +1,12 @@
 ---
 cloud: platform-cloud
-product: ID Service
 audience: end-user
 user-guide-title: Hjälp om Experience Cloud Identity Service
 breadcrumb-title: Handbok för identitetstjänst
 user-guide-description: ID-tjänsten tillhandahåller ett universellt, beständigt ID som identifierar besökarna över alla lösningar i Experience Cloud. Den kan ersätta ID-genereringskoden för tjänster som Analytics, Audience Manager, Target och andra lösningar eller funktioner från Experience Cloud.
 user-guide-url: /content/help/en/id-service/using/home.html
 translation-type: tm+mt
-source-git-commit: 560fbedd698c569b82992c54b8c9cfe176424b4f
+source-git-commit: 6fa0d2eafa06878d8d4778ac7d45f7737b86d5a4
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 8%
