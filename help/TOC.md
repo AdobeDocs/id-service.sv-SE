@@ -6,9 +6,9 @@ breadcrumb-title: Handbok för identitetstjänst
 user-guide-description: ID-tjänsten tillhandahåller ett universellt, beständigt ID som identifierar besökarna över alla lösningar i Experience Cloud. Den kan ersätta ID-genereringskoden för tjänster som Analytics, Audience Manager, Target och andra lösningar eller funktioner från Experience Cloud.
 user-guide-url: /content/help/en/id-service/using/home.html
 translation-type: tm+mt
-source-git-commit: 6fa0d2eafa06878d8d4778ac7d45f7737b86d5a4
+source-git-commit: 01d50f9def8916b45fac846de235363836ba0429
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '397'
 ht-degree: 8%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 8%
    + [Referensöversikt](reference/reference.md)
    + Analysreferens {#analytics-reference}
       + [Analysreferensöversikt](reference/analytics-reference/analytics-reference.md)
+      + [CNAME-implementering - översikt](reference/analytics-reference/cname.md)
       + [Ställa ID:n för Analytics och Experience Cloud](reference/analytics-reference/analytics-ids.md)
       + [Åtgärdsordning för analys-ID:n](reference/analytics-reference/analytics-order-of-operations.md)
       + [Beslutspunkter för migrering av ID-tjänst](reference/analytics-reference/migration-decisions.md)
