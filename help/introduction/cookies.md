@@ -6,9 +6,9 @@ seo-title: Cookies och Experience Cloud Identity Service
 title: Cookies och Experience Cloud Identity Service
 uuid: c5cbd235-37ee-4605-8792-b1a991e190ad
 exl-id: 727c6381-56b9-44b8-8e59-355d072769be
-source-git-commit: d2bc28329c68c54a85dcf714083b3fcb5afc5a14
+source-git-commit: b907ffcbfbb8851ce6279b614dc58c22f2ce9907
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -116,7 +116,7 @@ I följande tabell listas och definieras några viktiga attribut i demodex-cooki
  </tbody> 
 </table>
 
-Mer information finns i [Förstå anrop till Demdex-domänen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html).
+Mer information finns i [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=en).
 
 ## Genererar Experience Cloud-ID {#section-15f69c0bac394b4b9966a23fbc586d17}
 
@@ -134,7 +134,7 @@ I följande tabell beskrivs flaggorna för Experience Cloud Cookies:
 | AMCV (Javascript) | Nej | Konfigurerbar | Ta bort (standard är Lax) |
 | AMCVS (Javascript) | Nej | Konfigurerbar | Ta bort (standard är Lax) |
 
-*Obs! Information om hur du konfigurerar AMCV- och AMCVS-cookie med säkra attribut finns i avsnittet om  [secureCookie](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/configurations/securecookie.html).*
+*Obs! Information om hur du konfigurerar AMCV- och AMCVS-cookie med säkra attribut finns i avsnittet om  [secureCookie](../library/function-vars/securecookie.md).*
 
 ## Nästa steg {#section-8db1727a63bc4ff68b495f270315d453}
 
