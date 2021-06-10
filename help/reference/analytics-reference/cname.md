@@ -1,14 +1,10 @@
 ---
 description: Om du har en huvudwebbplats där kunder kan identifieras innan de besöker andra domäner kan en CNAME aktivera spårning av korsdomäner i webbläsare som inte accepterar cookies från tredje part (som Safari).
 keywords: operationsordning;ID-tjänst
-seo-description: Om du har en huvudwebbplats där kunder kan identifieras innan de besöker andra domäner kan en CNAME aktivera spårning av korsdomäner i webbläsare som inte accepterar cookies från tredje part (som Safari).
-seo-title: CNAME - implementeringsöversikt
 title: CNAME - implementeringsöversikt
-uuid: ba42c822-b677-4139-b1ed-4d98d3320fd0
-translation-type: tm+mt
-source-git-commit: ebeca9e285af71872c05d58ba252ca65bde24f3d
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
