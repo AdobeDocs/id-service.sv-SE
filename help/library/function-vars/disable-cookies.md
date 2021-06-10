@@ -1,18 +1,14 @@
 ---
 description: En valfri boolesk flagga som förhindrar att Experience Cloud Identity Service returnerar cookie-filen från tredje part, demdex.net.
-keywords: ID Service
-seo-description: En valfri boolesk flagga som förhindrar att Experience Cloud Identity Service returnerar cookie-filen från tredje part, demdex.net.
-seo-title: disableThirdPartyCookies
+keywords: ID-tjänst
 title: disableThirdPartyCookies
-uuid: 7ed5aa16-44ca-4702-878a-1a208ca95270
-translation-type: tm+mt
-source-git-commit: 584b6240c3e0286111689499ca5df5d98aa9fab2
+exl-id: 19d12822-0e17-4a1c-8e9c-25a22e20a4a8
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '139'
 ht-degree: 1%
 
 ---
-
 
 # disableThirdPartyCookies{#disablethirdpartycookies}
 
@@ -20,11 +16,11 @@ En valfri boolesk flagga som förhindrar att Experience Cloud Identity Service r
 
 >[!NOTE]
 >
->Den här konfigurationen har fått `idSyncDisable3rdPartySyncing` ett nytt namn `disableThirdPartyCookies` i version 3.0 från 18 januari 2018.
+>Den här konfigurationen var `idSyncDisable3rdPartySyncing` och döptes om till `disableThirdPartyCookies` i versionen från 18 januari 2018 av v3.0.
 
-**Syntax:** `disableThirdPartyCookies: true|false` (standard är `false`.) För `VisitorAPI.js` v3.0.0 eller senare.
+**Syntax:** `disableThirdPartyCookies: true|false` (default is  `false`.) För `VisitorAPI.js` v3.0.0 eller senare.
 
-När `disableThirdPartyCookies: true`ID-tjänsten inte returnerar någon cookie för dedex.net (se [Cookies och Experience Cloud Identity Service](../../introduction/cookies.md) ). Om en besökare redan har denna cookie i sin webbläsare kommer ID-tjänsten inte att använda den för att skapa ett nytt Experience Cloud-ID (MID) eller returnera ett befintligt ID. I stället skapar ID-tjänsten en ny slumpmässig MID i cookie-filen för första part. När du har aktiverat det kan du samla in data med ID-tjänsten och dela dem mellan olika Experience Cloud-lösningar.
+När `disableThirdPartyCookies: true` returnerar ID-tjänsten inte någon cookie för tredje part, demdex.net (se [Cookies och Experience Cloud Identity Service](../../introduction/cookies.md) ). Om en besökare redan har denna cookie i sin webbläsare kommer ID-tjänsten inte att använda den för att skapa ett nytt Experience Cloud-ID (MID) eller returnera ett befintligt ID. I stället skapar ID-tjänsten en ny slumpmässig MID i cookie-filen för första part. När du har aktiverat det kan du samla in data med ID-tjänsten och dela dem mellan olika Experience Cloud-lösningar.
 
 **Exempel på kod**
 
@@ -41,4 +37,3 @@ var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here
    disableThirdPartyCookies: true 
 });
 ```
-
