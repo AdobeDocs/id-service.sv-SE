@@ -1,18 +1,14 @@
 ---
 description: Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller platstips) är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. Du måste ange region-ID för att kunna göra API-anrop på serversidan till Audience Manager.
-keywords: ID Service
-seo-description: Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller platstips) är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. Du måste ange region-ID för att kunna göra API-anrop på serversidan till Audience Manager.
-seo-title: getLocationHint
+keywords: ID-tjänst
 title: getLocationHint
-uuid: cdc312b7-d270-4a5c-a2bb-0fbb37f1e2f4
-translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+exl-id: 0213f828-a985-4201-8a38-0a4b170ed057
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 0%
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
-
 
 # getLocationHint{#getlocationhint}
 
@@ -20,7 +16,7 @@ Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller 
 
 **Syntax:** ` var *`variabelnamn`* = visitor.getLocationHint()`
 
-En lista med region-ID:n och motsvarande platser finns i [DCS-regions-ID:n, platser och värdnamn](https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
+En lista över region-ID:n och motsvarande platser finns i [DCS Region-ID:n, platser och värdnamn](https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
 
 **Exempel på kod**
 
@@ -36,4 +32,3 @@ var callback = function (
 //Get the region ID 
 visitor.getLocationHint(callback, true); 
 ```
-
