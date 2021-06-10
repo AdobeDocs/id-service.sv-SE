@@ -1,23 +1,19 @@
 ---
 description: Implementera anmälningstjänsten som den enda referenspunkt som används av Experience Cloud-lösningar (kallas kategorier i anmälan) för att avgöra om cookies ska skapas på en besökares enhet eller inte.
-seo-description: Implementera anmälningstjänsten som den enda referenspunkt som används av Experience Cloud-lösningar (kallas kategorier i anmälan) för att avgöra om cookies ska skapas på en besökares enhet eller inte.
-seo-title: Konfigurera anmälningstjänst
 title: Konfigurera anmälningstjänst
-uuid: f1c27139-cef2-4122-af12-c839cfc82e6e
-translation-type: tm+mt
-source-git-commit: 7d0df419c4af7f8a58ffa56b1176bf638bc0045b
+exl-id: 6e8a6531-9924-4523-a842-cb4614a7a7a0
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurera anmälningstjänst{#setting-up-opt-in-service}
+# Konfigurerar anmälningstjänst{#setting-up-opt-in-service}
 
 Implementera anmälningstjänsten som den enda referenspunkt som används av Experience Cloud-lösningar (kallas kategorier i anmälan) för att avgöra om cookies ska skapas på en besökares enhet eller inte.
 
-Opt-in-tjänsten är ett JavaScript-bibliotek som paketerats med Experience Cloud ID (ECID) och finns i Visitor JS i det globala `adobe` objektet som `adobe.optIn` objekt. Med den installerade Opt-in-tjänsten kan du ange om en besökare kan välja att gå med i Adobe-lösningar samtidigt eller att presentera lösningar i följd för respektive behörighet. Med funktionen för hantering av tjänstgodkännande kan du implementera med olika konfigurationer för dina specifika sekretesskrav.
+Opt-in-tjänsten är ett JavaScript-bibliotek som paketerats med Experience Cloud ID (ECID) och finns i Visitor JS i det globala `adobe`-objektet som `adobe.optIn`-objektet. Med den installerade Opt-in-tjänsten kan du ange om en besökare kan välja att gå med i Adobe-lösningar samtidigt eller att presentera lösningar i följd för respektive behörighet. Med funktionen för hantering av tjänstgodkännande kan du implementera med olika konfigurationer för dina specifika sekretesskrav.
 
 Med anmälningstjänsten kan du ange om en besökare kan välja att använda Adobe-lösningar samtidigt eller att presentera lösningar i ordning för respektive behörighet. När godkännandeprocessen är slutförd och inspelad av kunden kan CMP-besökarnas godkännanden hämtas av alla Adobe-lösningar för att svara på sambandsanrop.
 
@@ -25,7 +21,7 @@ Med anmälningstjänsten kan du ange om en besökare kan välja att använda Ado
 
 1. ECID version 4.0.
 
-   [Ladda ned](https://github.com/Adobe-Marketing-Cloud/id-service/releases) den senaste ECID-versionen.
+   [Ladda ](https://github.com/Adobe-Marketing-Cloud/id-service/releases) ned den senaste ECID-versionen.
 
 1. Stödbibliotek:
 
@@ -45,11 +41,11 @@ Med anmälningstjänsten kan du ange om en besökare kan välja att använda Ado
 
 1. Ditt företags sekretesskrav är specifika för hur du väljer att följa GDPR. Observera vilka bibliotek ditt företags sekretessteam kan använda i ett förhandstillstånd.
 
-Om du använder [Adobe Launch](https://docs.adobelaunch.com/)kan du utnyttja [Opt-in-tillägget](../../implementation-guides/opt-in-service/launch.md) för att konfigurera Opt-in-tjänsten.
+Om du använder [Adobe Launch](https://experienceleague.adobe.com/docs/launch/using/home.html) kan du utnyttja [Opt-in-tillägget](../../implementation-guides/opt-in-service/launch.md) för att konfigurera Opt-in-tjänsten.
 
-## Anmälningskategorier {#section-9ab0492ab4414f0ca16dc08d3a905f47}
+## Opt-in-kategorier {#section-9ab0492ab4414f0ca16dc08d3a905f47}
 
-Inställningarna för besökarens deltagande är relativa till en Adobe Experience Cloud-lösning, där varje lösning representeras som en kategori. Kategorier tillhandahålls av objektet där `adobe.OptInCategories` till exempel ECID-komponenten kallas `adobe.OptInCategories`. `ECID`. Här följer en definition av `adobe.OptInCategories`:
+Inställningarna för besökarens deltagande är relativa till en Adobe Experience Cloud-lösning, där varje lösning representeras som en kategori. Kategorier anges av objektet `adobe.OptInCategories` där till exempel ECID-komponenten kallas `adobe.OptInCategories`. `ECID`. Här följer en definition av `adobe.OptInCategories`:
 
 Inställningarna för deltagande upprätthålls per kategori, där varje Experience Cloud-lösning representeras av en kategori:
 
@@ -64,11 +60,11 @@ adobe.OptInCategories = {
 ```
 
 Med anmälningstjänsten kan du ange besökarnas behörigheter för varje Adobe-lösning som används på webbplatsen. Det innehåller ett bibliotek där besökarens inställningar sparas per godkänd kategori och ett sekventiellt flöde där godkännandeprocessen får inställningarna&quot;bekräfta&quot; eller&quot;avvisa&quot; för varje kategori ett i taget. Du kan ange att lösningar/kategorier ska ingå som en helhet eller som enskilda lösningar.
-Alla Adobe-lösningars klientbibliotek är beroende av anmälningstjänsten och kommer inte att generera cookies om inte lösningen har beviljats tillstånd. Opt-in stöder olika metoder för att tillhandahålla och uppdatera medgivandeinställningarna för den aktuella besökaren. I det här avsnittet finns exempel på hur du anger inställningar för Opt-in-tjänster. En fullständig lista över funktioner och parametrar finns i API-referensen [för](../../implementation-guides/opt-in-service/api.md#reference-4f30152333dd4990ab10c1b8b82fc867) deltagande.
+Alla Adobe-lösningars klientbibliotek är beroende av anmälningstjänsten och kommer inte att generera cookies om inte lösningen har beviljats tillstånd. Opt-in stöder olika metoder för att tillhandahålla och uppdatera medgivandeinställningarna för den aktuella besökaren. I det här avsnittet finns exempel på hur du anger inställningar för Opt-in-tjänster. En fullständig lista över funktioner och parametrar finns i [Opt-in API Reference](../../implementation-guides/opt-in-service/api.md#reference-4f30152333dd4990ab10c1b8b82fc867).
 
-Tjänstkonfigurationer för deltagande tillhandahålls i JS- `getInstance()` funktionen för besökare som initierar det globala `adobe` objektet. Nedan visas JS- [konfigurationsinställningarna](../../implementation-guides/opt-in-service/api.md#section-d66018342baf401389f248bb381becbf) för besökare för Opt-in-tjänsten.
+Opt-in-tjänstkonfigurationer finns i JS-funktionen för besökare `getInstance()` som instansierar det globala `adobe`-objektet. Nedan visas JS-konfigurationsinställningarna för besökare [för Opt-in-tjänsten.](../../implementation-guides/opt-in-service/api.md#section-d66018342baf401389f248bb381becbf)
 
-**Exempel på konfiguration för deltagande i initiering av det globala `Visitor` objektet**
+**Exempel på konfiguration för deltagande i initiering av det globala  `Visitor` objektet**
 
 ```
 // FORMAT: Object<adobe.OptInCategories enum: boolean> 
@@ -93,15 +89,15 @@ Visitor.getInstance("YOUR_ORG_ID", {
 
 **Hantera ändringar av samtycke**
 
-När som helst under besökarens upplevelse på webbplatsen kan de göra inställningar för första gången eller ändra sina inställningar med hjälp av din CMP. När JS för besökare har initierats med initiala inställningar kan besökarens behörigheter ändras. Se [Ändringar av samtycke](../../implementation-guides/opt-in-service/api.md#section-c3d85403ff0d4394bd775c39f3d001fc) för en lista över hur du hanterar godkännandefunktioner.
+När som helst under besökarens upplevelse på webbplatsen kan de göra inställningar för första gången eller ändra sina inställningar med hjälp av din CMP. När JS för besökare har initierats med initiala inställningar kan besökarens behörigheter ändras. Se [Ändringar av samtycke](../../implementation-guides/opt-in-service/api.md#section-c3d85403ff0d4394bd775c39f3d001fc) för en lista över hur du hanterar medgivandefunktioner.
 
 <!--
 <p> *** <b>sample code block </b>*** </p>
 -->
 
-## Arbetsflöden för deltagande {#section-70cd243dec834c8ea096488640ae20a5}
+## Anmäl dig till arbetsflöden {#section-70cd243dec834c8ea096488640ae20a5}
 
-Opt-in-tjänsten stöder ett arbetsflöde där behörigheter kan samlas in över mer än en begärandecykel och inställningarna anges en åt gången. Med hjälp av följande funktioner och med *true* för `shouldWaitForComplete`kan din lösning samla in samtycke för en eller en delmängd av de totala kategorierna och sedan samla in samtycke för nästa eller en delmängd av kategorierna. Från och med det första anropet är `adobe.optIn.status` egenskapen *väntande* tills `adobe.optIn.complete()` anropas i slutet av flödet. När du har anropat statusen är den *fullständig*.
+Opt-in-tjänsten stöder ett arbetsflöde där behörigheter kan samlas in över mer än en begärandecykel och inställningarna anges en åt gången. Med hjälp av följande funktioner och som ger *true* för `shouldWaitForComplete` kan din lösning samla in samtycke för en eller en delmängd av den totala kategorin och sedan samla in samtycke för nästa eller en delmängd av kategorierna. Från och med det första anropet är egenskapen `adobe.optIn.status` *väntande* tills `adobe.optIn.complete()` anropas i slutet av flödet. När den anropats ställs statusen in på *complete*.
 
 ```
 adobe.optIn.approve(['AAM', 'ECID'], true); 
@@ -109,11 +105,11 @@ adobe.optIn.deny(['ANALYTICS'], true);
 adobe.optIn.complete();
 ```
 
-Se [Konfigurationsinställningar](../../implementation-guides/opt-in-service/api.md#section-2c5adfa5459c4e72b96d2693123a53c2)för arbetsflöde.
+Se [Inställningar för arbetsflödeskonfiguration](../../implementation-guides/opt-in-service/api.md#section-2c5adfa5459c4e72b96d2693123a53c2).
 
 ## Inspect din besökares behörigheter {#section-f136a9024e054d84881e6667fb7c94eb}
 
-När besökarna ändrar sina behörigheter måste ni få insikter i vilka behörigheter som krävs för att synkronisera ert godkännandearkiv med ändringar som gjorts i anmälningstjänsten. Inspect dina besökares inställningar med [behörighetsfunktionerna](../../implementation-guides/opt-in-service/api.md#section-7fe57279b5b44b4f8fe47e336df60155), till exempel:
+När besökarna ändrar sina behörigheter måste ni få insikter i vilka behörigheter som krävs för att synkronisera ert godkännandearkiv med ändringar som gjorts i anmälningstjänsten. Inspect dina besökares inställningar med hjälp av [behörighetsfunktionerna](../../implementation-guides/opt-in-service/api.md#section-7fe57279b5b44b4f8fe47e336df60155), till exempel:
 
 **hämtaBehörighetsexempel**
 
@@ -137,14 +133,13 @@ function callback() {
 optIn.fetchPermissions(callback, true);
 ```
 
-Mer information om dessa funktioner, egenskaper och konfigurationer finns i [API-dokumentationen](../../implementation-guides/opt-in-service/api.md#reference-4f30152333dd4990ab10c1b8b82fc867) .
+Se [API-dokumentation](../../implementation-guides/opt-in-service/api.md#reference-4f30152333dd4990ab10c1b8b82fc867) för mer information om dessa funktioner, egenskaper och konfigurationer som nämns i det här dokumentet.
 
 ## Lagra besökarinställningar {#section-ef2884ae67e34879bf7c7c3372706c9f}
 
-Med anmälningstjänsten kan du lagra medgivandeinställningar som är anpassade till en dev-miljö eller en miljö där det inte är möjligt att använda en CRM. Om du anger konfigurationsegenskapen `isOptInStorageEnabled` som *true* utlöses tjänsten Opt-in för att skapa en cookie i besökarens system i din domän.
+Med anmälningstjänsten kan du lagra medgivandeinställningar som är anpassade till en dev-miljö eller en miljö där det inte är möjligt att använda en CRM. Om du anger konfigurationsegenskapen `isOptInStorageEnabled` som *true* utlöses en Opt-in-tjänst för att skapa en cookie i besökarens system i din domän.
 
-Objektet är `adobe.optIn` tillståndslöst och har ingen lagringsmekanism. I stället ska du hantera inställningarna för medgivande från Adobe i din befintliga CMP-plattform (Consent Management Platform) om det tillåter lagring av anpassade data. Eller så kan du lagra besökarinställningar i en cookie i besökarens webbläsare. Det finns två alternativ för att ange användarens inställningar för tjänsten för anmälan:
+Objektet `adobe.optIn` är tillståndslöst och har ingen lagringsmekanism. I stället ska du hantera inställningarna för medgivande från Adobe i din befintliga CMP-plattform (Consent Management Platform) om det tillåter lagring av anpassade data. Eller så kan du lagra besökarinställningar i en cookie i besökarens webbläsare. Det finns två alternativ för att ange användarens inställningar för tjänsten för anmälan:
 
 * Om din lösning för samtyckesbeständighet, oavsett om det är en CMP eller en cookie i besökarens webbläsare, tillåter snabb hämtning av besökarens inställningar, kan du tillhandahålla inställningarna till Opt-in-tjänsten när besökaren initieras.
-* Om hämtningen kan vara en långdragen process eller på annat sätt fungerar bäst som en asynkron process, kan du använda tjänstens funktion för att ange dessa inställningar när de har lästs in. `approve()`
-
+* Om hämtningen kan vara en långdragen process eller på annat sätt fungerar bäst som en asynkron process, kan du använda tjänstens `approve()`-funktion för att ange de inställningarna när de har lästs in.
