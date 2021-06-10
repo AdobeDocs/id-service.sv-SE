@@ -1,18 +1,14 @@
 ---
 description: Innan du distribuerar Experience Cloud Identity Service bör du förstå hur den här tjänsten påverkar besöksspårning på flera domäner och eventuella problem om du samlar in data med olika metoder eller via JavaScript-filer.
 keywords: ID-tjänst
-seo-description: Innan du distribuerar Experience Cloud Identity Service bör du förstå hur den här tjänsten påverkar besöksspårning på flera domäner och eventuella problem om du samlar in data med olika metoder eller via JavaScript-filer.
-seo-title: Beslutspunkter för migrering av identitetstjänst från Experience Cloud
 title: Beslutspunkter för migrering av identitetstjänst från Experience Cloud
-uuid: ee56b5de-fcf3-4cfb-9e53-762af7c4d2ff
-translation-type: tm+mt
-source-git-commit: a76eb7cc579ca859769e6caa256a3a0a3f66ca33
+exl-id: f2802db2-c95f-476f-8c60-f45e8312253c
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '638'
 ht-degree: 1%
 
 ---
-
 
 # Beslutspunkter för migrering av identitetstjänst från Experience Cloud
 
@@ -125,4 +121,3 @@ Du kan behöva uppdatera ditt sätt att spåra länkar eller migrera bort från 
   </tr> 
  </tbody> 
 </table>
-
