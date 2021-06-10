@@ -1,18 +1,14 @@
 ---
 description: Funktioner för ID-tjänster eller funktioner som är unika för Adobe Analytics.
 keywords: ID-tjänst
-seo-description: Funktioner för ID-tjänster eller funktioner som är unika för Adobe Analytics.
-seo-title: Analysreferens
 title: Analysreferens
-uuid: 215f0394-a436-4f0c-9a52-3b387048e40e
-translation-type: tm+mt
-source-git-commit: 73465dcdab8b8316e0e9d41c5780ff0231270058
+exl-id: bfa13677-77e4-4201-94e4-31328523c421
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '76'
-ht-degree: 7%
+source-wordcount: '65'
+ht-degree: 9%
 
 ---
-
 
 # Analysreferens{#analytics-reference}
 
