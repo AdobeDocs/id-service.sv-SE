@@ -1,23 +1,19 @@
 ---
 description: När du har aktiverat Anmäl dig på webbplatsen använder du valideringsmetoderna för att testa att tjänsten fungerar som förväntat med hjälp av utvecklarverktygen i webbläsaren.
-seo-description: När du har aktiverat Anmäl dig på webbplatsen använder du valideringsmetoderna för att testa att tjänsten fungerar som förväntat med hjälp av utvecklarverktygen i webbläsaren.
-seo-title: Validerar anmälningstjänst
 title: Validerar anmälningstjänst
-uuid: 1743360a-d757-4e50-8697-0fa92b302cbc
-translation-type: tm+mt
-source-git-commit: 0c300aa92991c0dec2ccdeeb34f9d886dcac7671
+exl-id: f0bcb32a-ccad-40a4-b031-2584e4136ace
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
-
 
 # Validerar anmälningstjänst{#validating-opt-in-service}
 
 När du har aktiverat Anmäl dig på webbplatsen använder du valideringsmetoderna för att testa att tjänsten fungerar som förväntat med hjälp av utvecklarverktygen i webbläsaren.
 
-## Användningsfall 1: Aktivera anmälan {#section-c8fe1ee3711b420c8186c7057abbecb3}
+## Användningsfall 1: Aktivera deltagande {#section-c8fe1ee3711b420c8186c7057abbecb3}
 
 ```
 Visitor.getInstance({{YOUR_ORG_ID}}, { 
@@ -29,7 +25,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 
 Rensa cacheminnet och cookies innan du läser in sidan.
 
-Högerklicka på webbsidan i Chrome och välj Inspect. På samma sätt som i skärmbilden ovan väljer du fliken *Nätverk* för att visa de begäranden som gjorts i webbläsaren.
+Högerklicka på webbsidan i Chrome och välj Inspect. På samma sätt som i skärmbilden ovan väljer du fliken *Nätverk* för att visa begäranden som gjorts från webbläsaren.
 
 I exemplet ovan har följande Adobe JS-taggar installerats på sidan: ECID, AAM, Analytics och Target.
 
@@ -45,15 +41,15 @@ Du ska inte se några begäranden till Adobe-servrar:
 
 >[!NOTE]
 >
->Du kan se ett anrop till `http://dpm.demdex.net/optOutStatus`, som är en skrivskyddad slutpunkt som används för att hämta besökarens avanmälningsstatus. Den här slutpunkten resulterar inte i att några cookies från tredje part skapas, och ingen information samlas in från sidan.
+>Du kan se ett anrop till `http://dpm.demdex.net/optOutStatus`, som är en READ ONLY-slutpunkt som används för att hämta besökarens avanmälningsstatus. Den här slutpunkten resulterar inte i att några cookies från tredje part skapas, och ingen information samlas in från sidan.
 
-Du bör inte se några cookies som har skapats med Adobe-taggarna: (AMCV_{{YOUR_ORG_ID}}, mbox, demdex, s_cc, s_sq, everest_g_v2, everest_session_v2)
+Du bör inte se några cookies som har skapats av Adobe-taggarna: (AMCV_{{YOUR_ORG_ID}}, mbox, demdex, s_cc, s_sq, everest_g_v2, everest_session_v2)
 
-Gå till fliken *Program* i Chrome, expandera avsnittet *Cookies* under *Storage* och välj domännamnet för din webbplats:
+Gå till fliken *Program* i Chrome, expandera avsnittet *Cookies* under *Lagring* och välj domännamnet för din webbplats:
 
 ![](assets/use_case_1_2.png)
 
-## Användningsfall 2: Aktivera deltagande och lagring {#section-bd28326f52474fa09a2addca23ccdc0f}
+## Användningsfall 2: Aktivera anmälan och lagring {#section-bd28326f52474fa09a2addca23ccdc0f}
 
 ```
 Visitor.getInstance({{YOUR_ORG_ID}}, { 
@@ -62,7 +58,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 });
 ```
 
-Den enda skillnaden i användningsfall 2 är att du kommer att se *en ny cookie* som kommer att innehålla de behörigheter för anmälan som din besökare ger: **adobeujs-optin**
+Den enda skillnaden i användningsfall 2 är att du kommer att se *en ny cookie* som kommer att innehålla de behörigheter för anmälan som tillhandahålls av din besökare: **adobeujs-optin**
 
 ## Användningsfall 3: Aktivera deltagande och förgodkänn Adobe Analytics {#section-257fe582b425496cbf986d0ec12d3692}
 
@@ -95,7 +91,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 
 **Så här visar du ditt nuvarande IAB-medgivande på sidan:**
 
-Öppna utvecklarverktygen och välj fliken *Konsol* . Klistra in följande kodfragment och tryck på Retur:
+Öppna utvecklarverktygen och välj fliken *Konsol*. Klistra in följande kodfragment och tryck på Retur:
 
 ```
 <codeblock>
