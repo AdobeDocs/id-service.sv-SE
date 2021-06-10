@@ -1,20 +1,16 @@
 ---
 description: Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av ID-tjänsten.
-keywords: ID Service
-seo-description: Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av ID-tjänsten.
-seo-title: Vanliga frågor om ID-tjänster
+keywords: ID-tjänst
 title: Vanliga frågor om ID-tjänster
-uuid: e8d8f819-3d73-4fa2-864c-4867071c14ee
-translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+exl-id: 4dd2220c-8a9d-4e27-838b-be5ad357cb3e
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 0%
+source-wordcount: '789'
+ht-degree: 1%
 
 ---
 
-
-# Vanliga frågor om ID-tjänster{#id-service-faqs}
+# Vanliga frågor om ID-tjänsten{#id-service-faqs}
 
 Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av ID-tjänsten.
 
@@ -26,21 +22,21 @@ Se [Översikt](../introduction/overview.md).
 
 **Varför gör ID-tjänsten inget anrop för att hämta Experience Cloud-ID?**
 
-Detta kan vara svårt att diagnostisera. En sak som du kan kontrollera är rubrikerna för skyddsprofiler på din webbplats. Om du har en strikt säkerhetsprincip kan dessa inställningar blockera tredjepartssamtal som görs av ID-tjänsten. Se [Principer för innehållssäkerhet och Experience Cloud Identity Service](../reference/csp.md#concept-968c423a7392479db0a0d821ae9783e3).
+Detta kan vara svårt att diagnostisera. En sak som du kan kontrollera är rubrikerna för skyddsprofiler på din webbplats. Om du har en strikt säkerhetsprincip kan dessa inställningar blockera tredjepartssamtal som görs av ID-tjänsten. Se [Principer för innehållssäkerhet och Experience Cloud-identitetstjänsten](../reference/csp.md#concept-968c423a7392479db0a0d821ae9783e3).
 
 **Lagring av VisitorAPI.js-filer**
 
 Du kan få problem om du har VisitorAPI.js som värd för en lokal fil i mobilappar. Vi rekommenderar att du har filen på en webbserver.
 
-## Inläsningstider för sidor och fördröjning {#section-c78e148d8dbe4c77a436ef0f2af5434b}
+## Inläsningstider för sidan och fördröjning {#section-c78e148d8dbe4c77a436ef0f2af5434b}
 
 **Hur påverkar placeringen av ID-tjänstens VisitorAPI.js-bibliotek sidinläsningstiderna?**
 
-Placera VisitorAPI.js-biblioteket överst på sidan i `<head>` kodavsnittet. Detta bidrar till att säkerställa att anropet för ett ID skickas innan sidans brödtext börjar läsas in och maximerar chanserna för att ett ID returneras korrekt.
+Placera VisitorAPI.js-biblioteket överst på sidan i `<head>`-avsnittet i koden. Detta bidrar till att säkerställa att anropet för ett ID skickas innan sidans brödtext börjar läsas in och maximerar chanserna för att ett ID returneras korrekt.
 
-ID-tjänstanropet är asynkront och är det enda anropet till domänen [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html)demdex.net. Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
+Anropet till ID-tjänsten är asynkront och är det enda anropet till domänen [demdex.net](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html). Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
 
-För [!DNL Target] kunder kan det öka chanserna att spärra ett `<body>` samtal genom att placera ID-tjänstkoden på [!DNL Target] sidan. Om du måste placera ID-tjänstkoden i sidans brödtext bör den placeras efter den öppna `<body>` -taggen.
+För [!DNL Target]-kunder kan det öka chanserna att ett [!DNL Target]-anrop blockeras om ID-tjänstkoden placeras i `<body>` på sidan. Om du måste placera ID-tjänstkoden i sidans brödtext ska den placeras efter den öppna `<body>`-taggen.
 
 **Gör ID-tjänsten ett serversamtal med varje sidinläsning?**
 
@@ -70,13 +66,13 @@ Den här förändringen förbättrar prestanda för kunder som använder Visitor
 
 Resursbegäranden med CORS är vanligtvis mer att föredra än med JSONP. Med JSONP kan vissa webbläsare köa och avprioritera begäranden i förhållande till andra synkrona och asynkrona anrop på sidan. CORS ser till att dessa begäranden behandlas med högre prioritet i webbläsarens anropsstack.
 
-See [CORS Support in the Experience Cloud Identity Service](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758).
+Se [CORS-stöd i Experience Cloud Identity Service](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758).
 
 ## Säkerhet {#section-b176b8492fbe4acfb79ebb30ec902f98}
 
 **Stöder ID-tjänsten CORS?**
 
-Ja. See [CORS Support in the Experience Cloud Identity Service](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758).
+Ja. Se [CORS-stöd i Experience Cloud Identity Service](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758).
 
 **Vad är CORS?**
 
@@ -86,7 +82,7 @@ Ja. See [CORS Support in the Experience Cloud Identity Service](../reference/cor
 
 Om du har strikta säkerhetskrav anger du API-konfigurationen för ID-tjänsten `useCORSOnly: true`. Du bör bara aktivera det här läget om du är säker på att webbplatsens besökare använder webbläsare som stöder CORS.
 
-Se [Experience Cloud](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758) och [använd CORSOonly](../library/function-vars/use-cors-only.md#reference-8a9a143d838b48d6b23329b84b13e1fa).
+Se [Experience Cloud](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc758) och [useCORSOnly](../library/function-vars/use-cors-only.md#reference-8a9a143d838b48d6b23329b84b13e1fa).
 
 >[!MORELIKETHIS]
 >
