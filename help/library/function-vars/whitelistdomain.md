@@ -3,10 +3,10 @@ description: Med dessa konfigurationer kan olika instanser av ID-tjänstkod som 
 keywords: ID-tjänst
 title: whitelistParentDomain och whitelistIframeDomains
 exl-id: 0ed1da79-7129-4f5f-b7ad-901348a13866
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 3%
+source-wordcount: '858'
+ht-degree: 2%
 
 ---
 
@@ -72,7 +72,7 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
 
 >[!TIP]
 >
->Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [videopulsslag](https://docs.adobe.com/content/help/sv-SE/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
+>Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [videopulsslag](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
 
 **Användningsfall 1: Webbläsaren blockerar cookies från tredje part och ID-tjänsten implementeras på iFrame- och överordnad sida**
 
