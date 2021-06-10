@@ -3,9 +3,9 @@ description: Vanliga frågor och svar om funktioner, funktioner och problem i sa
 keywords: ID-tjänst
 title: Vanliga frågor om ID-tjänster
 exl-id: 4dd2220c-8a9d-4e27-838b-be5ad357cb3e
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '787'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Du kan få problem om du har VisitorAPI.js som värd för en lokal fil i mobilap
 
 Placera VisitorAPI.js-biblioteket överst på sidan i `<head>`-avsnittet i koden. Detta bidrar till att säkerställa att anropet för ett ID skickas innan sidans brödtext börjar läsas in och maximerar chanserna för att ett ID returneras korrekt.
 
-Anropet till ID-tjänsten är asynkront och är det enda anropet till domänen [demdex.net](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html). Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
+Anropet till ID-tjänsten är asynkront och är det enda anropet till domänen [demdex.net](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html). Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
 
 För [!DNL Target]-kunder kan det öka chanserna att ett [!DNL Target]-anrop blockeras om ID-tjänstkoden placeras i `<body>` på sidan. Om du måste placera ID-tjänstkoden i sidans brödtext ska den placeras efter den öppna `<body>`-taggen.
 
