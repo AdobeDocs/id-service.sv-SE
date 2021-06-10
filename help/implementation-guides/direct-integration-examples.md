@@ -1,20 +1,16 @@
 ---
 description: Exemplen omfattar två vanliga användningsfall som rör direkt integrering och Experience Cloud ID (MID). MID är ett unikt, beständigt ID för webbplatsens besökare.
-keywords: ID Service
-seo-description: Exemplen omfattar två vanliga användningsfall som rör direkt integrering och Experience Cloud ID (MID). MID är ett unikt, beständigt ID för webbplatsens besökare.
-seo-title: Användningsexempel vid direkt integration
+keywords: ID-tjänst
 title: Användningsexempel vid direkt integration
-uuid: 6de1eb8b-4783-4545-8a64-ab6b9ef93432
-translation-type: tm+mt
-source-git-commit: ec67177fc6491e4c8cea835d198574c9fdb4b01f
+exl-id: f2a55b90-8307-4242-b20a-6a3c367a251b
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '443'
 ht-degree: 2%
 
 ---
 
-
-# Användningsexempel vid direkt integration {#direct-integration-use-cases}
+# Användningsexempel för direktintegrering {#direct-integration-use-cases}
 
 Exemplen omfattar två vanliga användningsområden som rör direkt integrering och Experience Cloud ID (ECID eller MID). Detta ID är ett unikt, beständigt ID för webbplatsbesökarna.
 
@@ -48,22 +44,22 @@ Exemplen omfattar två vanliga användningsområden som rör direkt integrering 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <b>Åtgärder</b> </p> </td> 
+   <td colname="col1"> <p> <b>Instruktioner</b> </p> </td> 
    <td colname="col2"> <p>Under dessa förhållanden kan du ringa till ID-tjänsten som innehåller: </p> 
     <ul id="ul_9ECB1A65266644E89E949C57D202D5A4"> 
      <li id="li_10A6F5A9C54D44A08F4F2E405E6019E2">MID (1234). </li> 
      <li id="li_4869572B40E54C54B88A2474DAC475A8">Ditt ID för dataleverantör. Detta är ett unikt ID som tilldelats ditt företag. Ring detta ID 4444. </li> 
      <li id="li_05C8ED47488C4E289D84093127EC7B19">Ditt ID för besökaren (9876). </li> 
      <li id="li_3D1556AD18C843828A362CC604A9F76B"> <i>(Valfritt)</i> Ett status-ID som definierar autentiseringstillståndet för den här besökaren. </li> 
-    </ul> <p>Och om du råkar ha någon av de andra parametrarna som listas i guiden <a href="../implementation-guides/direct-integration.md#concept-4cd3206a84bb4687af0b312ae09648b9" format="dita" scope="local"> för</a> direkt integration (t.ex.<span class="codeph"> d_blob</span> eller <span class="codeph"> dcs_region</span>osv.) Det är ok att skicka in dem också. </p> </td> 
+    </ul> <p>Och om du råkar ha någon av de andra parametrarna som listas i <a href="../implementation-guides/direct-integration.md#concept-4cd3206a84bb4687af0b312ae09648b9" format="dita" scope="local">-guiden för direkt integration</a> (t.ex.<span class="codeph"> d_blob</span> eller <span class="codeph"> dcs_region</span>, osv.) Det är ok att skicka in dem också. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Lösningar och kodexempel</b> </p> </td> 
    <td colname="col2"> <p>Formatera ditt samtal till ID-tjänsten så här: </p> <p> <span class="codeph">https://dpm.demdex.net/id?d_mid=1234&amp;d_cid=4444%019876%011&amp;d_ver=2</span> </p> <p>Observera hur exempelanropet innehåller följande: </p> 
     <ul id="ul_0667FBFD8D3C46BDBD027F484691EC97"> 
      <li id="li_FAB1FAE703DB48D1A32EE72684028964">MID: <span class="codeph">d_mid=1234</span> </li> 
-     <li id="li_C97B74FF444F4BB4B4A5CB1CBBE52249">MID kopplat till ditt unika ID för besökaren: <span class="codeph">d_mid=1234&amp;d_cid=4444%019876%011</span> </li> 
-     <li id="li_D428DBF765234DD78DDF152C5EE8AB69">ID för autentiseringstillstånd: <span class="codeph">...d_cid=4444%019876%011</span> (tips: den sista siffran). </li> 
+     <li id="li_C97B74FF444F4BB4B4A5CB1CBBE52249">MID kopplat till ditt unika ID för besökaren: <span class="codeph">d_mid=1234&amp;d_cid=444%019876%011</span> </li> 
+     <li id="li_D428DBF765234DD78DDF152C5EE8AB69">ID för autentiseringstillstånd: <span class="codeph">..d_cid=4444%019876%011</span> (tips: den sista siffran). </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -89,13 +85,12 @@ Exemplen omfattar två vanliga användningsområden som rör direkt integrering 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <b>Åtgärder</b> </p> </td> 
-   <td colname="col2"> <p>Under dessa förhållanden kan du ringa till den ID-tjänst som innehåller ditt organisations-ID. </p> <p>Och om du råkar ha någon av de andra parametrarna som listas i guiden <a href="../implementation-guides/direct-integration.md#concept-4cd3206a84bb4687af0b312ae09648b9" format="dita" scope="local"> för</a> direkt integration (t.ex.<span class="codeph"> d_blob</span> eller <span class="codeph"> dcs_region</span>osv.) Det är ok att skicka in dem också. </p> </td> 
+   <td colname="col1"> <p> <b>Instruktioner</b> </p> </td> 
+   <td colname="col2"> <p>Under dessa förhållanden kan du ringa till den ID-tjänst som innehåller ditt organisations-ID. </p> <p>Och om du råkar ha någon av de andra parametrarna som listas i <a href="../implementation-guides/direct-integration.md#concept-4cd3206a84bb4687af0b312ae09648b9" format="dita" scope="local">-guiden för direkt integration</a> (t.ex.<span class="codeph"> d_blob</span> eller <span class="codeph"> dcs_region</span>, osv.) Det är ok att skicka in dem också. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Lösningar och kodexempel</b> </p> </td> 
-   <td colname="col2"> <p>Formatera ditt samtal till ID-tjänsten så här: </p> <p> <span class="codeph">https://dpm.demdex.net/id?d_orgid=5555&amp;d_ver=2</span> </p> <p>Observera hur exempelanropet innehåller ditt organisations-ID, <span class="codeph">d_orgid=5555</span>. Det returnerar ett <span class="keyword"> Experience Cloud</span> -ID för den här besökaren. </p> </td> 
+   <td colname="col2"> <p>Formatera ditt samtal till ID-tjänsten så här: </p> <p> <span class="codeph">https://dpm.demdex.net/id?d_orgid=5555&amp;d_ver=2</span> </p> <p>Observera hur exempelanropet innehåller ditt organisations-ID, <span class="codeph">d_orgid=555</span>. Det returnerar ett <span class="keyword"> Experience Cloud</span>-ID för den här besökaren. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-
