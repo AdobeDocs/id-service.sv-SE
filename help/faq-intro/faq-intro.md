@@ -1,20 +1,16 @@
 ---
 description: Vanliga frågor och svar om själva Experience Cloud Identity Service tillsammans med avsnitt om ID-tjänsten och andra Experience Cloud-lösningskombinationer.
-keywords: ID Service
-seo-description: Vanliga frågor och svar om själva Experience Cloud Identity Service tillsammans med avsnitt om ID-tjänsten och andra Experience Cloud-lösningskombinationer.
-seo-title: 'Vanliga frågor och svar '
+keywords: ID-tjänst
 title: 'Vanliga frågor och svar '
-uuid: b075957b-165f-4087-99ad-bf608b4d4967
-translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+exl-id: 930c0849-1d88-408e-a385-214b4d0ffd96
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '64'
 ht-degree: 3%
 
 ---
 
-
-# Vanliga frågor och svar {#faqs}
+# Vanliga frågor och svar  {#faqs}
 
 Vanliga frågor och svar om själva Experience Cloud Identity Service tillsammans med avsnitt om ID-tjänsten och andra Experience Cloud-lösningskombinationer.
 
