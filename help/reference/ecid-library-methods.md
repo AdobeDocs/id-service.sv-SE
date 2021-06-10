@@ -2,9 +2,9 @@
 title: ECID-biblioteksmetoder i en Safari ITP-värld
 description: Dokumentation för Adobe ECID-bibliotek (ID Service).
 exl-id: ac1d1ee1-2b5f-457a-a694-60bb4c960ae7
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Nedan finns information om insatser för användning av ITP- och ECID-bibliotek.
 
 ITP 2.1 förhindrar möjligheten att skriva cookies på klientsidan, vilket försämrar möjligheten att ge kunderna korrekt besöksspårningsinformation. En förändring införs i Adobe CNAME-spårningsservrar för att lagra besökarens Experience Cloud ID (ECID) i en cookie från en annan leverantör.
 
-Den här ändringen är bara användbar för ECID-kunder som använder en CNAME från Analytics i förstahandskontext. Om du är en analyskund som för närvarande inte använder CNAME, eller till och med en icke-analyskund, är du fortfarande berättigad till en CNAME-post. Kontakta kundtjänst eller din kontorepresentant för att starta registreringen av en [CNAME](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html).
+Den här ändringen är bara användbar för ECID-kunder som använder en CNAME från Analytics i förstahandskontext. Om du är en analyskund som för närvarande inte använder CNAME, eller till och med en icke-analyskund, är du fortfarande berättigad till en CNAME-post. Kontakta kundtjänst eller din kontorepresentant för att starta registreringen av en [CNAME](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
 Uppgradera till ECID-bibliotek v. 4.3.0 + för att utnyttja denna förändring.
 
@@ -49,7 +49,7 @@ När en ID-begäran har gjorts i demdex.net och ett ECID har hämtats görs en I
 
 Denna nya `s_ecid`-cookie följer samma avanmälningsstatus som AMCV-cookien. Om e-id:t läses från `s_ecid`-cookien anropas alltid demdex omedelbart för att hämta den senaste avanmälningsstatusen för det ID:t och lagras i AMCV-cookien.
 
-Om din konsument dessutom har avanmält sig från Analytics-spårning via den här [metoden](https://docs.adobe.com/content/help/en/analytics/implementation/js/opt-out.html) tas denna `s_ecid`-cookie bort.
+Om din konsument dessutom har avanmält sig från Analytics-spårning via den här [metoden](https://experienceleague.adobe.com/docs/analytics/implementation/js/opt-out.html) tas denna `s_ecid`-cookie bort.
 
 Spårningsservernamnet måste anges till VisitorJS-biblioteket när biblioteket initieras med `trackingServer` eller `trackingServerSecure`. Detta bör matcha `trackingServer`-konfigurationen i Analytics-konfigurationerna.
 
