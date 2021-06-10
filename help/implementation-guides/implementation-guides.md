@@ -1,19 +1,16 @@
 ---
 description: Instruktioner och kodexempel för standardimplementeringar och icke-standardimplementeringar av Experience Cloud Identity Service.
-keywords: ID Service
-seo-description: Instruktioner och kodexempel för standardimplementeringar och icke-standardimplementeringar av Experience Cloud Identity Service.
-seo-title: Implementeringsguider för ID-tjänsten
+keywords: ID-tjänst
 solution: Experience Cloud
 title: Implementeringsguider
 uuid: null
-translation-type: tm+mt
-source-git-commit: e75a448a2fa1c384c88f00648a6f868a886c6569
+exl-id: af6da32b-72d9-463d-a933-fd1fe960d4d8
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
-
 
 # Implementeringsguider
 
@@ -21,11 +18,11 @@ Instruktioner och kodexempel för standardimplementeringar och icke-standardimpl
 
 >[!IMPORTANT]
 >
->Läs och förstå kraven [för](../reference/requirements.md) ID-tjänsten innan du börjar använda dessa procedurer.
+>Läs och förstå [kraven för ID-tjänsten](../reference/requirements.md) innan du börjar använda dessa procedurer.
 
 ## Standardimplementering
 
-En standardimplementering använder Launch [för](https://docs.adobelaunch.com/) Adobe Experience Platform för att hjälpa dig att komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
+En standardimplementering använder [Adobe Experience Platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html) för att hjälpa dig komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
 
 ## Implementeringsresurser
 
