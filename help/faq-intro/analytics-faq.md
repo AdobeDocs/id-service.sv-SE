@@ -3,9 +3,9 @@ description: Vanliga frågor och svar om funktioner, funktioner och problem i sa
 keywords: Experience Cloud Identity Service
 title: Vanliga frågor om analys- och identitetstjänster
 exl-id: 98aeca0d-41a2-4b18-b307-19a6de816e38
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '970'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Ingenting ändras för användare som redan har identifierats av identitetstjän
 
 Om du har en huvudwebbplats där kunder kan identifieras innan de besöker andra domäner kan en CNAME aktivera spårning av korsdomäner i webbläsare som inte accepterar cookies från tredje part (som Safari).
 
-I webbläsare som accepterar cookies från tredje part anges en cookie i domänen [demdex.net](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html) under begäran att hämta ett besökar-ID. Denna cookie gör att identitetstjänsten kan returnera samma besökar-ID för Experience Cloud på alla domäner som har konfigurerats med samma organisations-ID. I webbläsare som avvisar cookies från tredje part tilldelas varje domän ett nytt besökar-ID för Experience Cloud.
+I webbläsare som accepterar cookies från tredje part anges en cookie i domänen [demdex.net](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) under begäran att hämta ett besökar-ID. Denna cookie gör att identitetstjänsten kan returnera samma besökar-ID för Experience Cloud på alla domäner som har konfigurerats med samma organisations-ID. I webbläsare som avvisar cookies från tredje part tilldelas varje domän ett nytt besökar-ID för Experience Cloud.
 
 Även när en CNAME är konfigurerad identifieras besökare annorlunda på den sekundära webbplatsen och huvudwebbplatsen i webbläsare som inte accepterar cookies från tredje part om huvudstartwebbplatsen inte besöks först.
 
