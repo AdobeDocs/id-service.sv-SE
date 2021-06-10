@@ -1,18 +1,14 @@
 ---
 description: Experience Cloud Identity Service ersätter de gamla ID-metoderna för Analytics-besökare.
 keywords: ID-tjänst
-seo-description: Experience Cloud Identity Service ersätter de gamla ID-metoderna för Analytics-besökare.
-seo-title: Ställa ID:n för Analytics och Experience Cloud
 title: Ställa ID:n för Analytics och Experience Cloud
-uuid: 421cf597-a3e0-4ca3-8ce8-d0c80cbb6aca
-translation-type: tm+mt
-source-git-commit: a76eb7cc579ca859769e6caa256a3a0a3f66ca33
+exl-id: 7399ea16-d13e-452c-b8d9-8d0699566aa2
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '927'
 ht-degree: 1%
 
 ---
-
 
 # Ställa ID:n för Analytics och Experience Cloud{#setting-analytics-and-experience-cloud-ids}
 
