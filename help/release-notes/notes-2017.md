@@ -1,24 +1,20 @@
 ---
 description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2017.
-keywords: ID Service
-seo-description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2017.
-seo-title: Versionsinformation 2017
+keywords: ID-tjänst
 title: Versionsinformation 2017
-uuid: 79452df0-49db-42b8-96fe-01aa7629fbb5
-translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+exl-id: 0b51d3b1-e405-4473-9e1a-f89a55250e5e
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '748'
 ht-degree: 3%
 
 ---
 
-
-# 2017 Release Notes {#release-notes}
+# Versionsinformation 2017 {#release-notes}
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2017.
 
-De här ändringarna visas även i versionsinformationen [för](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html)Experience Cloud.
+Dessa ändringar registreras också i [versionsinformationen för Experience Cloud](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html).
 
 >[!NOTE]
 >
@@ -45,7 +41,7 @@ ID service support for Internet Explorer 6, 7, and 8 is deprecated and will be d
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> getVisitorValues</span> </p> </td> 
-   <td colname="col2"> <p>Detta är ett asynkront API som returnerar identifierare för Analytics, ID-tjänsten, avanmälan av datainsamling, geografisk plats och metadatablockinnehåll som standard. Du kan också styra vilka ID:n du vill returnera med den valfria uppräkningen <span class="codeph"> visitor.FIELDS</span> . Se <a href="../library/get-set/getvisitorvalues.md#reference-b8c9e17c170c4291829a792df46ce279" format="dita" scope="local"> getVisitorValues</a>. </p> </td> 
+   <td colname="col2"> <p>Detta är ett asynkront API som returnerar identifierare för Analytics, ID-tjänsten, avanmälan av datainsamling, geografisk plats och metadatablockinnehåll som standard. Du kan även styra vilka ID:n du vill returnera med uppräkningen <span class="codeph"> visitor.FIELDS</span> (valfritt). Se <a href="../library/get-set/getvisitorvalues.md#reference-b8c9e17c170c4291829a792df46ce279" format="dita" scope="local"> getVisitorValues</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -54,7 +50,7 @@ ID service support for Internet Explorer 6, 7, and 8 is deprecated and will be d
 
 * Korrigerade ett Chrome-relaterat fel som gjorde att ID-tjänsten utlöste ett fel när användaren klickade på bakåtknappen i webbläsaren.
 * ID-tjänsten utlöser nu synkronisering igen när region-ID:t i händelsesvaret ändras.
-* Lagt till ny dokumentation, [Content Security Policies och Experience Cloud Identity Service](/help/reference/csp.md#concept-968c423a7392479db0a0d821ae9783e3), som förklarar hur du vitlistar anrop till Adobe-domäner som används av ID-tjänsten.
+* Ny dokumentation, [Content Security Policies och Experience Cloud Identity Service](/help/reference/csp.md#concept-968c423a7392479db0a0d821ae9783e3), som förklarar hur anrop till Adobe-domäner som används av ID-tjänsten vitlistas.
 
 ## Version 2.4 {#section-f4d1608dd8894f558a92b82e83321200}
 
@@ -77,7 +73,7 @@ Augusti 2017
 
 **Reviderad dokumentation**
 
-Uppdaterade och reviderade [vanliga frågor](/help/faq-intro/faq-intro.md) och svar som inkluderar olika vanliga frågor och svar för olika [!DNL Experience Cloud] lösningar.
+Uppdaterade och reviderade [Vanliga frågor](/help/faq-intro/faq-intro.md) för att inkludera separata vanliga frågor och svar för olika [!DNL Experience Cloud]-lösningar.
 
 ## Version 2.3 {#section-ae7b1cb1e52e4ca5a46b453a3ba1f571}
 
@@ -93,7 +89,7 @@ Juli 2017
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> sdidParamExpiry</span> </p> </td> 
-   <td colname="col2"> <p>När den läggs till i funktionen <span class="codeph"> Visitor.getInstance</span> kan du med den här konfigurationen åsidosätta standardintervallet för SDID (Supplemental Data ID) när du skickar ID:t från en sida till en annan. Du använder <span class="codeph"> sdidParamExpiry</span> med hjälpfunktionen <span class="codeph"> appendSupplimentalDataTo</span> . Se <a href="../library/function-vars/sdidparamexpiry.md#reference-cef3fd03c43b4772b2422e220b40a458" format="dita" scope="local"> didParamExpiry</a>. </p> </td> 
+   <td colname="col2"> <p>När du lägger till i funktionen <span class="codeph"> Visitor.getInstance</span> kan du med den här konfigurationen åsidosätta standardintervallet för SDID (Supplemental Data ID) när du skickar det ID:t från en sida till en annan. Du använder <span class="codeph"> barParamExpiry</span> med hjälpfunktionen <span class="codeph"> appendSupplimentalDataTo</span>. Se <a href="../library/function-vars/sdidparamexpiry.md#reference-cef3fd03c43b4772b2422e220b40a458" format="dita" scope="local"> sdidParamExpiry</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> resetState</span> </p> </td> 
@@ -107,7 +103,7 @@ Juli 2017
 * Korrigerade ett fel i VisitorAPI.js v2.2 som förhindrade ID-tjänsten och Target från att fungera tillsammans i Internet Explorer.
 * Reviderad kod som förbättrar hur ID-tjänsten skickar data till iFrame för målpublicering. Detta minskar processoranvändningen.
 
-## Version 4.2 {#section-b7dee2495c29470e9b3a3132ec1fd951}
+## Version 2.2 {#section-b7dee2495c29470e9b3a3132ec1fd951}
 
 Releasedatum: Juni 2017
 
@@ -120,7 +116,7 @@ Releasedatum: Juni 2017
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <a href="../library/function-vars/whitelistdomain.md#reference-999899ff7b5b429a8824c9db7a379808" format="dita" scope="local"> whitelistParentDomain och whitelistIframeDomains </a> </p> </td> 
+   <td colname="col1"> <p> <a href="../library/function-vars/whitelistdomain.md#reference-999899ff7b5b429a8824c9db7a379808" format="dita" scope="local"> whitelistParentDomain och whitelistIframeDomains  </a> </p> </td> 
    <td colname="col2"> <p>Med dessa konfigurationer kan olika instanser av ID-tjänstkod som implementeras i en iFrame och på den överordnade sidan kommunicera med varandra. De är utformade för att lösa problem med två specifika användningsfall där du kan styra den överordnade sidan/domänen eller inte, och där du har ID-tjänstkoden inläst i iFrame för en domän som du har kontroll över. </p> </td> 
   </tr> 
  </tbody> 
@@ -138,7 +134,7 @@ Releasedatum: Juni 2017
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <a href="../faq-intro/faq.md" format="dita" scope="local">Vanliga frågor och svar </a> </p> </td> 
-   <td colname="col2"> <p>Avsnittet <span class="keyword"> Analytics</span> har uppdaterats med information om hur du söker efter serverinformation för spårning. </p> </td> 
+   <td colname="col2"> <p>Avsnittet <span class="keyword"> Analytics</span> har uppdaterats med information om hur du hittar information om spårningsserver. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -154,12 +150,12 @@ Releasedatum: Juni 2017
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <a href="../library/function-vars/subdomain-config.md#reference-8ad017b3e5d24d34b3da25e8f8a56196" format="dita" scope="local"> auditionManagerServer och auditionManagerServerSecure </a> </p> </td> 
-   <td colname="col2"> <p>Lagt till länkar till <span class="keyword"> Audience Manager</span> -dokumentation som beskriver anrop till domänen <span class="codeph"> demdex.net</span> . </p> </td> 
+   <td colname="col1"> <p> <a href="../library/function-vars/subdomain-config.md#reference-8ad017b3e5d24d34b3da25e8f8a56196" format="dita" scope="local"> auditionManagerServer och auditionManagerServerSecure  </a> </p> </td> 
+   <td colname="col2"> <p>Länkar har lagts till i dokumentationen för <span class="keyword"> Audience Manager</span> som beskriver anrop till domänen <span class="codeph"> demdex.net</span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <a href="../library/function-vars/subdomain-config.md" format="dita" scope="local"> Förstå ID-synkronisering och matchningsfrekvenser </a> </p> </td> 
-   <td colname="col2"> <p>Reviderad <span class="keyword"> Media Optimizer</span> -sektion som beskriver anropet till <span class="codeph"> cm.eversttech.net</span>. Detta är den automatiska ID-synkronisering som ID-tjänsten utför med <span class="keyword"> Media Optimizer</span>. Den här funktionen släpptes i januari 2017. Se <a href="../release-notes/notes-2017.md#section-0ceac6007c1241b58ad607e2b76b2b7e" format="dita" scope="local"> version 2.0</a> nedan. </p> </td> 
+   <td colname="col1"> <p> <a href="../library/function-vars/subdomain-config.md" format="dita" scope="local"> Förstå ID-synkronisering och matchningsfrekvenser  </a> </p> </td> 
+   <td colname="col2"> <p>Avsnittet <span class="keyword"> Media Optimizer</span> har ändrats för att beskriva anropet till <span class="codeph"> cm.eversttech.net</span>. Detta är den automatiska ID-synkronisering som ID-tjänsten utför med <span class="keyword"> Media Optimizer</span>. Den här funktionen släpptes i januari 2017. Se <a href="../release-notes/notes-2017.md#section-0ceac6007c1241b58ad607e2b76b2b7e" format="dita" scope="local"> Version 2.0</a> nedan. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -180,11 +176,11 @@ Releasedatum: Februari 2017
  <tbody> 
   <tr> 
    <td colname="col1"> <p> API-egenskap för ID-tjänst, <span class="codeph"> idSyncContainerID</span></p> </td> 
-   <td colname="col2"> <p>Den här egenskapen anger behållar-ID:t som används av <span class="keyword"> Audience Manager</span> för ID-synkroniseringar. Se <a href="/help/library/function-vars/idsyncontainerid.md" format="https" scope="external"> idSyncContainerID</a>. </p> </td> 
+   <td colname="col2"> <p>Den här egenskapen ställer in det behållar-ID som används av <span class="keyword"> Audience Manager</span> för ID-synkroniseringar. Se <a href="/help/library/function-vars/idsyncontainerid.md" format="https" scope="external"> idSyncContainerID</a>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>ID-tjänst-API-metod, <span class="codeph">appendSupplementalDataIDTo(<span class="varname"> URL</span>,<span class="varname"> SDID</span>)</span></p> </td> 
-   <td colname="col2"> <p>Den här publika metoden bifogar <span class="wintitle"> SDID</span> (Additional Data ID) som en frågesträngsparameter till en omdirigerings-URL. Se <a href="../library/get-set/appendsupplementaldataidto.md#reference-65d09de6fde0418f8c62fa79304a755d" format="dita" scope="local"> appendSupplementalDataIDTo</a>. (MCID-285) </p> </td> 
+   <td colname="col1"> <p>ID-tjänst-API-metod, <span class="codeph">appendSupplementalDataIDT(<span class="varname"> URL</span>,<span class="varname"> SDID</span>)</span></p> </td> 
+   <td colname="col2"> <p>Den här publika metoden lägger till <span class="wintitle"> kompletterande data-ID</span> (SDID) som en frågesträngsparameter till en omdirigerings-URL. Se <a href="../library/get-set/appendsupplementaldataidto.md#reference-65d09de6fde0418f8c62fa79304a755d" format="dita" scope="local"> appendSupplementalDataIDTo</a>. (MCID-285) </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -203,7 +199,7 @@ Januari 2017
 
 >[!IMPORTANT]
 >
->ID-tjänstkoden v2.0 synkroniserar automatiskt ID:n med Adobe Media Optimizer som standard. Det innebär att du ser ett samtal från sidan till `cm.eversttech.net`, vilket är en äldre [!DNL Media Optimizer] domän som styrs av [!DNL Adobe]. Se även [Förstå ID-synkronisering och Matchningsfrekvens](../introduction/match-rates.md#concept-e55cf228b90c457fbee8c3cb06b195ab).
+>ID-tjänstkoden v2.0 synkroniserar automatiskt ID:n med Adobe Media Optimizer som standard. Det innebär att du kommer att se ett anrop från sidan till `cm.eversttech.net`, som är en äldre [!DNL Media Optimizer]-domän som styrs av [!DNL Adobe]. Se även [Förstå ID-synkronisering och matchningsfrekvenser](../introduction/match-rates.md#concept-e55cf228b90c457fbee8c3cb06b195ab).
 
 **Korrigeringar och förbättringar**
 
