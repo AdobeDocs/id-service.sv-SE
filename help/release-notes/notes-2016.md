@@ -3,9 +3,9 @@ description: Funktionsreleaser, uppdateringar eller ändringar av Experience Clo
 keywords: ID-tjänst
 title: Versionsinformation 2016
 exl-id: f96b9869-6282-4090-b392-797608e25a51
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1145'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2016.
 
-Dessa ändringar registreras också i [versionsinformationen för Experience Cloud](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html).
+Dessa ändringar registreras också i [versionsinformationen för Experience Cloud](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html).
 
 ## Version 1.10 {#section-7d719b3213344a46858835042e0214ed}
 
@@ -80,7 +80,7 @@ Reviderad: [Krav för identitetstjänsten Experience Cloud](../reference/require
 
 **Kända fel**
 
-Kunder som använder [!DNL Audience Manager] DIL-kod och visitorAPI.js-kod på samma sida bör ange DIL-variabeln `secureDataCollection= false`. Se [secureDataCollection](https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/dil-overview.html).
+Kunder som använder [!DNL Audience Manager] DIL-kod och visitorAPI.js-kod på samma sida bör ange DIL-variabeln `secureDataCollection= false`. Se [secureDataCollection](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Version 1.6.0 {#section-3faaa14bf3934c6a99b8f79ee06fc0d2}
 
