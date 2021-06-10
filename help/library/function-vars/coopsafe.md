@@ -3,9 +3,9 @@ description: En valfri boolesk konfiguration som avgör om ID-tjänsten skickar 
 keywords: ID-tjänst
 title: isCoopSafe
 exl-id: 827f7819-9f95-4e8d-90c3-dcf86b67715b
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '578'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ Innehåll:
 Om du vill använda `isCoopSafe` måste du:
 
 * Använd ID-tjänstkoden version 2.4 eller senare.
-* Delta i [Experience Cloud Device Co-op](https://docs.adobe.com/content/help/en/device-co-op/using/about/overview.html). Medlemmar som kan komma i kontakt med andra bör också granska den här dokumentationen för att avgöra om `isCoopSafe` tar upp eventuella frågor om hur data används för att skapa enhetsdiagrammet.
+* Delta i [Experience Cloud Device Co-op](https://experienceleague.adobe.com/docs/device-co-op/using/about/overview.html). Medlemmar som kan komma i kontakt med andra bör också granska den här dokumentationen för att avgöra om `isCoopSafe` tar upp eventuella frågor om hur data används för att skapa enhetsdiagrammet.
 
 * Arbeta med din [!DNL Adobe]-konsult för att ange en vitlistefärg eller svartlistflagga på ditt Device Co-op-konto. Det finns ingen självbetjäningsväg för att aktivera dessa flaggor.
 
@@ -138,5 +138,5 @@ Wiki page https://wiki.corp.adobe.com/x/RCfFTg
 
 >[!MORELIKETHIS]
 >
->* [DIL isCoopSafe](https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/class-level-dil-methods/dil-coopsafe.html)
+>* [DIL isCoopSafe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/class-level-dil-methods/dil-coopsafe.html)
 
