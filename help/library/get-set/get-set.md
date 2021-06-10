@@ -1,18 +1,14 @@
 ---
 description: Offentliga metoder som gör att du kan interagera med ID-tjänsten.
-keywords: ID Service
-seo-description: Offentliga metoder som gör att du kan interagera med ID-tjänsten.
-seo-title: Metoder
+keywords: ID-tjänst
 title: Metoder
-uuid: 184d0a62-0c8d-481b-9afe-b7a67bdafdce
-translation-type: tm+mt
-source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+exl-id: 59a930f0-c0a8-477e-abad-f019d7d02d3b
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 13%
+source-wordcount: '79'
+ht-degree: 17%
 
 ---
-
 
 # Metoder{#methods}
 
@@ -20,7 +16,7 @@ Offentliga metoder som gör att du kan interagera med ID-tjänsten.
 
 >[!NOTE]
 >
->JavaScript-bibliotek för *Experience Cloud ID* har nyligen flyttats. Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>JavaScript-biblioteken *Experience Cloud ID har nyligen flyttats.* Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Relaterade artiklar:
 
@@ -37,4 +33,3 @@ Relaterade artiklar:
 + [getVisitorValues](getvisitorvalues.md)
 + [isClientSideMarketingCloudVisitorID](client-side-id.md)
 + [resetState](resetstate.md)
-
