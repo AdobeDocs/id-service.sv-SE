@@ -1,20 +1,16 @@
 ---
 description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
-keywords: ID Service
-seo-description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
-seo-title: Skyddsprofiler för innehåll och Experience Cloud Identity Service
+keywords: ID-tjänst
 title: Skyddsprofiler för innehåll och Experience Cloud Identity Service
-uuid: 7399edf3-01c1-4730-834e-e2dd2c5791ff
-translation-type: tm+mt
-source-git-commit: ddff95876722b981f22c7e3196ff2ce9b696010e
+exl-id: e35c6809-764e-4c3e-9139-88bb92e82338
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
 
-
-# Skyddsprofiler för innehåll och Experience Cloud Identity Service {#content-security-policies-and-the-experience-cloud-id-service}
+# Skyddsprofiler för innehåll och identitetstjänsten Experience Cloud {#content-security-policies-and-the-experience-cloud-id-service}
 
 En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
 
@@ -62,7 +58,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje listlösning eller
    <li>img-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>script-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>frame-src 'self' <code>https://*.demdex.net;</code></li>
-   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan över domäner.</li></ul></p> <p>Anrop till domänen <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local"> cookies och identitetstjänsten</a> i Experience Cloud samt för ID-synkroniseringar. See also, <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Understanding Calls to the Demdex Domain</a>. </p> </td> </tr> 
+   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan med domäner.</li></ul></p> <p>Anrop till domänen <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">-cookies och Experience Cloud Identity Service</a> och för ID-synk. Se även <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> </tr> 
  <tr>
  <td colname="col1"> <p> <b>Activity Map plugin</b> </p> </td> 
  <td colname="col2"> <p>Ändra din CSP så att den inkluderar *.adobe.com. **Obs**: Om du redan hade Activity Map installerat före januari 2020 kommer webbläsaren fortfarande att se en första begäran till *.omniture.com, men den kommer att omdirigeras till *.adobe.com. </p></td> 
