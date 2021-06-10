@@ -1,18 +1,14 @@
 ---
 description: Krävs för flerdelsdomäner på den översta nivån där någon av de två sista delarna av URL:en är längre än 2 tecken.
-keywords: ID Service
-seo-description: Krävs för flerdelsdomäner på den översta nivån där någon av de två sista delarna av URL:en är längre än 2 tecken.
-seo-title: cookieDomain
+keywords: ID-tjänst
 title: cookieDomain
-uuid: a57e5477-c07b-4d54-8aea-8e8b152f1423
-translation-type: tm+mt
-source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+exl-id: 280416ad-372a-4a59-a938-0f49c0ce300f
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 9%
+source-wordcount: '56'
+ht-degree: 10%
 
 ---
-
 
 # cookieDomain{#cookiedomain}
 
@@ -40,4 +36,3 @@ var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here
    cookieDomain:"example.com.uk" 
 });
 ```
-
