@@ -3,9 +3,9 @@ description: Ändra det standarddomännamn som används av anrop till Experience
 keywords: ID-tjänst
 title: auditionManagerServer och auditionManagerServerSecure
 exl-id: b740eb5c-ac4e-46f4-ba7c-1080d8d9292d
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '216'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 **Syfte**
 
-Vanligtvis gör ID-tjänsten [!DNL Experience Cloud] anrop till [!DNL Adobe] på `dpm.demdex.net`. Ibland kanske du inte vill ringa anrop till den här destinationen eftersom den ser för generisk ut eller &quot;från tredje part&quot;. Om du vill att ID-tjänstanropet ska se mer ut som ett förstahandsanrop använder du de här konfigurationerna för att lägga till ditt [!DNL Audience Manager]-underdomännamn till `demdex.net` enligt nedan. Mer information om `dpm.demdex.net`-anropet finns i [Förstå anrop till Demdex-domänen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html).
+Vanligtvis gör ID-tjänsten [!DNL Experience Cloud] anrop till [!DNL Adobe] på `dpm.demdex.net`. Ibland kanske du inte vill ringa anrop till den här destinationen eftersom den ser för generisk ut eller &quot;från tredje part&quot;. Om du vill att ID-tjänstanropet ska se mer ut som ett förstahandsanrop använder du de här konfigurationerna för att lägga till ditt [!DNL Audience Manager]-underdomännamn till `demdex.net` enligt nedan. Mer information om `dpm.demdex.net`-anropet finns i [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html).
 
 **Krav**
 
