@@ -1,20 +1,16 @@
 ---
 description: Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av andra Experience Cloud-lösningar med ID-tjänsten.
-keywords: ID Service
-seo-description: Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av andra Experience Cloud-lösningar med ID-tjänsten.
-seo-title: Frågor och svar för andra Experience Cloud-lösningar
+keywords: ID-tjänst
 title: Frågor och svar för andra Experience Cloud-lösningar
-uuid: 7d848663-6cbb-4d80-ab06-7b6d2dc20e2b
-translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+exl-id: d1164951-01c9-4375-981a-f87d8a280e4b
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
-
-# Frågor och svar för andra Experience Cloud-lösningar{#faqs-for-other-experience-cloud-solutions}
+# Vanliga frågor om andra Experience Cloud-lösningar{#faqs-for-other-experience-cloud-solutions}
 
 Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av andra Experience Cloud-lösningar med ID-tjänsten.
 
@@ -28,10 +24,9 @@ Se [Standardimplementering med DTM](../implementation-guides/standard.md#concept
 
 ## Analyser och Audience Manager {#section-b3dd206d497041acb04554c6fb1c912a}
 
-**Kommer besökshistoriken för en användare att exporteras från [!DNL Adobe Analytics] till [!DNL Audience Manager] efter att jag har implementerat Experience Cloud Identity Service?**
+**Kommer besökshistoriken för en användare att exporteras från  [!DNL Adobe Analytics] till  [!DNL Audience Manager] efter att jag har implementerat Experience Cloud Identity Service?**
 
 Det finns två alternativ här:
 
 * Om en användare har någon besöksaktivitet efter att ID-tjänsten har implementerats inkluderas besökaren och deras historik i dataexporten till [!DNL Audience Manager].
 * Om en användare inte har någon besöksaktivitet efter att ID-tjänsten har implementerats inkluderas inte besökaren och historiken i dataexporten till Audience Manager. Eftersom det inte finns någon ny aktivitet kan vi inte koppla analys-ID:t till Experience Cloud-ID:t.
-
