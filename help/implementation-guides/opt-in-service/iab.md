@@ -2,10 +2,10 @@
 description: Koppla samman deras CMP (Consent Management Platform) med Opt-ins Audience Manager-plugin för IAB Transparency och Consent Framework (TCF).
 title: Använda Opt-in-tjänster med IAB Framework
 exl-id: 9ac9b232-0797-4e77-a611-9cf5d17a5cb7
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 5%
+source-wordcount: '468'
+ht-degree: 3%
 
 ---
 
@@ -55,5 +55,5 @@ Mer information om hur du validerar Opt-ins IAB TCF plugin finns i användningsf
 
 * [IAB Transparency and Consent Framework (TCF)](https://iabtechlab.com/standards/gdpr-transparency-and-consent-framework/)  - Mer information om IAB-standarden
 * [Adobe Opt-In](../../implementation-guides/opt-in-service/optin-overview.md#concept-f9b5db0d27a245fbadd3e19162319360)  - För mer information om Opt-In, en nödvändig komponent för samtyckeshantering i plattformslösningar
-* Stöd för IAB Transparency och Consent Framework (TCF) [i Audience Manager](https://docs.adobe.com/content/help/sv-SE/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.translate.html)
+* Stöd för IAB Transparency och Consent Framework (TCF) [i Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html)
 * [Dina sekretessval](https://www.adobe.com/se/privacy/opt-out.html#customeruse)  - Ett annat sekretessalternativ som användarna har tillgång till är möjligheten att avanmäla all datainsamling med andra globala avanmälningsverktyg. Global avanmälan har företräde framför avanmälan och IAB TCF-verifiering
