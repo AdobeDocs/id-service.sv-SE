@@ -1,24 +1,20 @@
 ---
 description: Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
-keywords: ID Service
-seo-description: Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
-seo-title: callTimeOut-metoder
+keywords: ID-tjänst
 title: callTimeOut-metoder
-uuid: e5047498-11db-4945-b356-c92b7d447573
-translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+exl-id: ff3a2c5e-a0a8-4257-b538-0e4ce454b4e8
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 2%
+source-wordcount: '125'
+ht-degree: 3%
 
 ---
-
 
 # callTimeOut-metoder{#calltimeout-methods}
 
 Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en Experience Cloud Identity Service-, Analytics- eller Audience Manager ID-förfrågan. Finns i VisitorAPI.js version 1.7.0 eller senare.
 
-## Timeout-funktioner {#section-e08228ef5f9b45c9a84139bbb763164a}
+## Timeoutfunktioner {#section-e08228ef5f9b45c9a84139bbb763164a}
 
 <table id="table_B3ACE584B3224D838070D32A8462EF28"> 
  <thead> 
@@ -30,15 +26,15 @@ Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en E
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Experience Cloud Identity Service </p> </td> 
-   <td colname="col2"> <p> <span class="codeph">var <span class="varname"> variableName</span> = visitor.MCIDCallTimedOut()</span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph">var  <span class="varname"> variableName</span> = visitor.MCIDCallTimedOut()</span> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="keyword">Analytics</span>  </p> </td> 
-   <td colname="col2"> <p> <span class="codeph">var <span class="varname"> variableName</span> = visitor.AnalyticsIDCallTimedOut()</span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph">var  <span class="varname"> variableName</span> = visitor.AnalyticsIDCallTimedOut()</span> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="keyword"> Audience Manager</span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph">var <span class="varname"> variableName</span> = visitor.AAMIDCallTimedOut()</span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph">var  <span class="varname"> variableName</span> = visitor.AAMIDCallTimedOut()</span> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -67,4 +63,3 @@ Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en E
   </tr> 
  </tbody> 
 </table>
-
