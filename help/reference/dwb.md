@@ -1,18 +1,14 @@
 ---
 description: Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket ger bättre integrering med andra produkter i Adobe Experience Cloud och förbättrar besökarspårningen.
-keywords: ID Service
-seo-description: Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i Datan Workbench. Med den här processen kan du använda det beständiga Experience Cloud-ID:t i din datafeed, vilket ger bättre integrering med andra produkter i Adobe Experience Cloud och förbättrar besökarspårningen.
-seo-title: Data Workbench och Experience Cloud Identity Service
+keywords: ID-tjänst
 title: Data Workbench och Experience Cloud Identity Service
-uuid: 9448abc8-04fb-47d2-be08-1dfbddb0764e
-translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+exl-id: 1903918d-44e4-4790-ab1f-49f5bb701e31
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '208'
 ht-degree: 3%
 
 ---
-
 
 # Data Workbench och Experience Cloud Identity Service {#data-workbench-and-the-experience-cloud-id-service}
 
@@ -20,9 +16,9 @@ Följ de här instruktionerna för att integrera Experience Cloud ID-fältet i D
 
 Så här uppdaterar du [Data Workbench](https://docs.adobe.com/content/help/en/data-workbench/using/home.html) för att använda ID-tjänsten:
 
-1. Leta reda på den aktuella [konfigurationsfilen för avkodargruppen](https://docs.adobe.com/content/help/en/data-workbench/using/dataset/dataset-include-files/types-dataset-inc-files/c-text-file-dec-groups.html) .
+1. Leta reda på den aktuella [dekodergruppen](https://docs.adobe.com/content/help/en/data-workbench/using/dataset/dataset-include-files/types-dataset-inc-files/c-text-file-dec-groups.html) konfigurationsfilen.
 
-   Vanligtvis [!DNL Decoder Group] finns den i en [!UICONTROL Profile Manager] av följande sökvägar: `Dataset\Log Processing\Decoding Instructions.cfg`. 1. Kopiera det aktuella avkodningsformatet från konfigurationsfilen.
+   Vanligtvis finns [!DNL Decoder Group] i en [!UICONTROL Profile Manager] på den här sökvägen: `Dataset\Log Processing\Decoding Instructions.cfg`. 1. Kopiera det aktuella avkodningsformatet från konfigurationsfilen.
 1. Klistra in avkodningsformatet under originalet.
 1. Öppna avkodningsformatet och lägg till följande nya fältpositioner i slutet av listan:
 
@@ -831,4 +827,3 @@ Log Processing Include = LogProcessingInclude:
   Stage = string: Default
   Transformations = vector: 0 items
 ```
-
