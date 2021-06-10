@@ -1,20 +1,16 @@
 ---
 description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service.
-keywords: ID Service
-seo-description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service.
-seo-title: Versionsinformation 2019
+keywords: ID-tjänst
 title: Versionsinformation 2019
-uuid: a5a59410-7f85-48f9-a30a-fef1c2e2b558
-translation-type: tm+mt
-source-git-commit: 8ece066545f4ca4a7bd1eca67c8f02dcd2a88369
+exl-id: 11439e27-9740-4afc-a2b8-5e35d179f34f
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '415'
 ht-degree: 1%
 
 ---
 
-
-# Experience Cloud release notes - 2019 {#release-notes}
+# Versionsinformation för Experience Cloud - 2019 {#release-notes}
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service.
 
@@ -36,10 +32,10 @@ Lägg till kryssrutan för godkännande före anmälan för medieanalys i ECID L
 **Korrigeringar, förbättringar, förbättringar**
 
 * Vi har gjort en konfigurationsuppdatering till `cookieDomain`. ECID-biblioteket filtrerar nu bort den tomma strängen `cookieDomain` i `initConfig` och använder cookie-domänen på den översta nivån, som returneras av metoden getDomain.
-* Vi har åtgärdat ett fel relaterat till `getVisitorValues` i `localVisitor`.
-* Vi har åtgärdat ett fel där det fanns en inkonsekvens för MCOPTOUT-värdet i webbläsaren Safari, som returnerades av `getVisitorValue` metoden.
-* Vi uppdaterade avanmälningsbiblioteket genom `optIn.off` att lägga till för att avbryta prenumerationen på händelser.
-* Vi har åtgärdat ett fel som är relaterat till funktionen setTimeout, där `setTimeout` Content Security Policy (CSP) har överträtts på vissa kundsajter.
+* Ett fel som är relaterat till `getVisitorValues` i `localVisitor` har korrigerats.
+* Vi har åtgärdat ett fel där det fanns en inkonsekvens för MCOPTOUT-värdet i webbläsaren Safari, som returnerades av metoden `getVisitorValue`.
+* Vi uppdaterade avanmälningsbiblioteket genom att lägga till `optIn.off` för att avbryta prenumerationen på händelser.
+* Vi har åtgärdat ett fel som är relaterat till funktionen setTimeout, där `setTimeout` överträdde CSP (Content Security Policy) på vissa kundsajter.
 
 ## Version 4.3 {#version-4point3}
 
@@ -61,13 +57,13 @@ Stöd för plugin-programmet Audience Manager för IAB TCF, tillgängligt via EC
 * Korrigerat fel vid konfiguration av opt-in doesOptInApply i DTM.
 * Avanmäl dig från ECID inaktiverar ID-synkronisering.
 
-## Version 4.0 {#section-51a4be943bbe41558f196ef2654513e2}
+## Version 3.0 {#section-51a4be943bbe41558f196ef2654513e2}
 
-**Anmälningstjänst**. Opt-in är ett tillägg till Experience Cloud ID (ECID) som gör att du kan kontrollera om (och sedan vilka) Experience Cloud-bibliotek kan skapa cookies på webbsidor för besökare. Med [Experience Platform Launch](https://docs.adobelaunch.com/)kan ni förenkla insamlandet av besökares deltagande i Experience Cloud-lösningar genom att aktivera Analytics, Target, Audience Manager och andra eller alla utvalda Experience Cloud-lösningar för att utnyttja ert system för samtyckeshantering.
+**Anmälningstjänst**. Opt-in är ett tillägg till Experience Cloud ID (ECID) som gör att du kan kontrollera om (och sedan vilka) Experience Cloud-bibliotek kan skapa cookies på webbsidor för besökare. Med [Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html) kan du förenkla insamlandet av besökares deltagande för Experience Cloud-lösning genom att aktivera Analytics, Target, Audience Manager och andra eller alla utvalda Experience Cloud-lösningar för att utnyttja ditt system för samtyckeshantering.
 
 ## Version 3.4 {#section-046ce29b43af47cc849d4091098f5927}
 
 | Objekt | Beskrivning |
 |---|---|
-| `disableIdSyncs` -flaggan fungerar inte när en sträng skickas. | Åtgärdat. Värden som angetts för `disableidSyncs` parametern för `getInstance` funktionen respekteras nu. |
+| `disableIdSyncs` -flaggan fungerar inte när en sträng skickas. | Åtgärdat. Värden som angetts för parametern `disableidSyncs` för funktionen `getInstance` respekteras nu. |
 | iFrames från tredje part hämtar inte ECID | ECID för Safari Mobil och ECID i olika iFrames som inte fungerade har åtgärdats. |
