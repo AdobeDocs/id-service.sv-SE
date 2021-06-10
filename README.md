@@ -1,9 +1,8 @@
 ---
-source-git-commit: 315d157c7eb5d7532056502d9a9b856dedf212c9
+source-git-commit: cadd9fab972936106a48a117022ed473b3614e09
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '435'
-ht-degree: 71%
+source-wordcount: '422'
+ht-degree: 73%
 
 ---
 # Artikel om att bidra
@@ -16,7 +15,7 @@ Detta projekt har antagit [Adobe Open Source Code of Conduct](code-of-conduct.md
 
 ## Om dina bidrag till innehåll hos Adobe
 
-Se [Guiden för bidragsgivare till Adobe Docs](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
+Se [Guiden för bidragsgivare till Adobe Docs](https://docs.adobe.com/help/sv-SE/contributor/contributor-guide/introduction.html).
 
 Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
 
@@ -38,7 +37,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Stora förändringar från anställda hos Adobe
 
-If you are a technical writer, program manager, or developer from the product team for an [!UICONTROL Adobe Experience Cloud] solution, and it&#39;s your job to contribute to or author technical articles, you should use the private repository at `https://git.corp.adobe.com/AdobeDocs`. Se [Intern Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
+Om du är teknikskribent, programchef eller utvecklare från produktteamet för en [!UICONTROL Adobe Experience Cloud]-lösning, och det är ditt jobb att bidra till eller skriva tekniska artiklar, bör du använda den privata databasen på `https://git.corp.adobe.com/AdobeDocs`.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
