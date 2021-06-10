@@ -1,17 +1,14 @@
 ---
 description: En konfiguration inom ECID som kan användas för att stödja AMCV-cookies på Google AMP-sidor.
 keywords: ID-tjänst
-seo-description: En konfiguration inom ECID som kan användas för att stödja AMCV-cookies på Google AMP-sidor.
-seo-title: Säkra konfigurationer och samma webbplats
 title: Säkra konfigurationer och samma webbplats
-translation-type: tm+mt
-source-git-commit: 702d20f3989f7749fb173496765d94c3a5af46dc
+exl-id: c3bc44fc-5adc-4eae-8169-9d731d148458
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '154'
 ht-degree: 1%
 
 ---
-
 
 # Säkra konfigurationer och samma webbplats
 
