@@ -1,18 +1,14 @@
 ---
 description: getInstance returnerar ett besökar-ID-objekt för det angivna Experience Cloud-organisations-ID:t. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
-keywords: ID Service
-seo-description: getInstance returnerar ett besökar-ID-objekt för det angivna Experience Cloud-organisations-ID:t. Detta krävs för att initiera det besökar-ID-objekt som tillhandahålls AppMeasurement via s.visitor.
-seo-title: getInstance
+keywords: ID-tjänst
 title: getInstance
-uuid: 259b88a6-e3d0-4aab-b935-566099bdab98
-translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+exl-id: 4941cf51-a8d0-4796-a102-4cd13cd5574d
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
-
 
 # getInstance{#getinstance}
 
@@ -36,7 +32,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 
 >[!CAUTION]
 >
->*Instansiera inte* Visitor-funktionen med `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js] kodbibliotek v3.0 eller senare.
+>*Instansiera* inte Visitor-funktionen med  `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js]-kodbibliotek v3.0 eller senare.
 
 **ActionScript / Flash**
 
@@ -54,10 +50,10 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 });
 ```
 
-Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Det liknar den [ i `s_gi()` .. ](https://docs.adobe.com/content/help/en/analytics/implementation/vars/functions/s-gi.html) funktionen [!DNL AppMeasurement].
+Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Detta liknar [ `s_gi()`-funktionen ](https://docs.adobe.com/content/help/en/analytics/implementation/vars/functions/s-gi.html) i [!DNL AppMeasurement].
 
 **Vanlig användning**
 
-ID-tjänstens [!DNL Experience Cloud] API innehåller en lista över alla instanser som skapats för varje [!DNL Adobe Experience Cloud] organisations-ID. Om programmet som använder ID-tjänstens API inte skickar runt en referens till instansen kan instansen hittas genom att anropa den `getInstance` i stället för att skapa en ny. Detta ger även stöd för flera instanser för olika organisationer på samma webbsida eller i samma program.
+ID-tjänste-API:t [!DNL Experience Cloud] upprätthåller en lista över alla instanser som skapats för varje [!DNL Adobe Experience Cloud] organisations-ID. Om programmet som använder ID-tjänstens API inte skickar runt en referens till instansen kan instansen hittas genom att anropa `getInstance` i stället för att skapa en ny. Detta ger även stöd för flera instanser för olika organisationer på samma webbsida eller i samma program.
 
-Detta är användbart för program som inte har en klar `init` fas, men som måste anropa ID-tjänstens API på flera ställen. Du kan anropa `getInstance` på alla dessa platser och instansen skapas av den första som körs. Den befintliga instansen returneras av efterföljande anrop.
+Detta är användbart för program som inte har en klar `init`-fas, men som måste anropa ID-tjänstens API på flera ställen. Du kan anropa `getInstance` på alla dessa platser och instansen skapas av den första som körs. Den befintliga instansen returneras av efterföljande anrop.
