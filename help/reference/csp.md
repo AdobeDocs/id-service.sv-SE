@@ -3,9 +3,9 @@ description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsf
 keywords: ID-tjänst
 title: Skyddsprofiler för innehåll och Experience Cloud Identity Service
 exl-id: e35c6809-764e-4c3e-9139-88bb92e82338
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje listlösning eller
    <li>img-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>script-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>frame-src 'self' <code>https://*.demdex.net;</code></li>
-   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan med domäner.</li></ul></p> <p>Anrop till domänen <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">-cookies och Experience Cloud Identity Service</a> och för ID-synk. Se även <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> </tr> 
+   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan med domäner.</li></ul></p> <p>Anrop till domänen <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">-cookies och Experience Cloud Identity Service</a> och för ID-synk. Se även <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> </tr> 
  <tr>
  <td colname="col1"> <p> <b>Activity Map plugin</b> </p> </td> 
  <td colname="col2"> <p>Ändra din CSP så att den inkluderar *.adobe.com. **Obs**: Om du redan hade Activity Map installerat före januari 2020 kommer webbläsaren fortfarande att se en första begäran till *.omniture.com, men den kommer att omdirigeras till *.adobe.com. </p></td> 
