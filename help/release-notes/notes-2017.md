@@ -3,10 +3,10 @@ description: Funktionsreleaser, uppdateringar eller ändringar av Experience Clo
 keywords: ID-tjänst
 title: Versionsinformation 2017
 exl-id: 0b51d3b1-e405-4473-9e1a-f89a55250e5e
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 3%
+source-wordcount: '744'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2017.
 
-Dessa ändringar registreras också i [versionsinformationen för Experience Cloud](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html).
+Dessa ändringar registreras också i [versionsinformationen för Experience Cloud](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html).
 
 >[!NOTE]
 >
@@ -191,7 +191,7 @@ Korrigerade ett fel som gjorde att ID-tjänsten gjorde redundanta serveranrop f�
 
 **Ny dokumentation**
 
-[Använda DNS-förhämtning med olika Experience Cloud-lösningar och -tjänster](https://docs.adobe.com/content/help/en/core-services/interface/more-resources/dns-prefetch.html)
+[Använda DNS-förhämtning med olika Experience Cloud-lösningar och -tjänster](https://experienceleague.adobe.com/docs/core-services/interface/more-resources/dns-prefetch.html)
 
 ## Version 2.0 {#section-0ceac6007c1241b58ad607e2b76b2b7e}
 
