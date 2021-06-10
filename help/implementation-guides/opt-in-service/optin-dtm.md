@@ -1,17 +1,13 @@
 ---
 description: Aktivera anmälningstjänster med dynamisk tagghantering (DTM).
-seo-description: Aktivera anmälningstjänster med dynamisk tagghantering (DTM).
-seo-title: Konfigurera deltagande med DTM
 title: Konfigurera deltagande med DTM
-uuid: 7a886bc3-c9e5-4eac-85e8-828a83c847c5
-translation-type: tm+mt
-source-git-commit: 746f8937c59d318dcf7245c7f8484884974601dc
+exl-id: 0e21e73c-aefe-41a5-87e6-499d2164f301
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 7%
+source-wordcount: '52'
+ht-degree: 9%
 
 ---
-
 
 # Konfigurera deltagande med DTM{#configuring-opt-in-with-dtm}
 
@@ -21,7 +17,7 @@ Konfigurera anmälningstjänster med DTM.
 
 Obligatoriskt:
 
-* Uppgradera till ECID 4.0.0 eller senare. Se Hämta [ECID](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+* Uppgradera till ECID 4.0.0 eller senare. Se [ECID-hämtning](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Ange [konfigurationsfält](/help/implementation-guides/opt-in-service/api.md) på sidan Allmänt DTM.
 
