@@ -3,10 +3,10 @@ description: Granska det här avsnittet för att kontrollera att du använder r�
 keywords: ID-tjänst
 title: Krav för Experience Cloud Identity Service
 exl-id: ebeac4c7-b36c-4a4e-9378-351fac5baf53
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 5%
+source-wordcount: '730'
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,7 @@ En lyckad implementering som stöds uppfyller (eller överskrider) kodkraven och
      <li id="li_1F16C6D412944197BEA56BC24730782C"> Placera någon av dessa DTM-inbäddningskoder någon annanstans i koden och/eller sidkoden. </li> 
      <li id="li_05615C01F3A947BBBD41046E68377224"> Lägg till, lägg till eller läs in DTM-kod med asynkrona metoder, anrop/callback-metoder eller wrappers. </li> 
      <li id="li_B2137DFF627B473FA876580449026D2B">Inkludera flera instanser av inbäddningskod på samma sida. </li> 
-    </ul> <p>Se även <a href="https://docs.adobe.com/content/help/en/dtm/using/client-side/deployment.html" format="https" scope="external"> Bädda in kod och värdalternativ</a>. </p> </td> 
+    </ul> <p>Se även <a href="https://experienceleague.adobe.com/docs/dtm/using/client-side/deployment.html" format="https" scope="external"> Bädda in kod och värdalternativ</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <a href="../implementation-guides/implementation-guides.md#section-2c4f2db1f9704315a7cccab6d2e07113" format="dita" scope="local"> Implementeringar som inte är standard  </a> </p> </td> 
@@ -64,7 +64,7 @@ Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL 
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <b>Aktiverad</b> </p> </td> 
-   <td colname="col2"> <p>Om ditt företag är aktiverat för <span class="keyword"> Experience Cloud</span> men du inte har ditt företags-ID, se <a href="https://docs.adobe.com/content/help/sv-SE/core-services/interface/manage-users-and-products/organizations.html" format="https" scope="external"> Organisations-ID</a> (rulla ned till avsnittet <i>Hitta ditt företags-ID</i>). </p> </td> 
+   <td colname="col2"> <p>Om ditt företag är aktiverat för <span class="keyword"> Experience Cloud</span> men du inte har ditt företags-ID, se <a href="https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/organizations.html" format="https" scope="external"> Organisations-ID</a> (rulla ned till avsnittet <i>Hitta ditt företags-ID</i>). </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Osäker</b> </p> </td> 
@@ -72,14 +72,14 @@ Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Ej aktiverad</b> </p> </td> 
-   <td colname="col2"> <p> Om ditt företag inte är aktiverat för Experience Cloud kan du läsa <a href="https://docs.adobe.com/content/help/en/core-services/interface/about-core-services/core-services.html" format="https" scope="external"> Core Services - Enabling Your Solutions</a> to get started. </p> </td> 
+   <td colname="col2"> <p> Om ditt företag inte är aktiverat för Experience Cloud kan du läsa <a href="https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html" format="https" scope="external"> Core Services - Enabling Your Solutions</a> to get started. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Analyskrav: Regional datainsamling (RDC) {#section-7d04bb013bc84a25bae3b148bc0ca25f}
 
-Alla spårningsservrar har konverterats till RDC, så det finns inget behov av att ändra analysspårningsservern. [Mer information...](https://docs.adobe.com/content/help/en/analytics/admin/data-collection/regional-data-collection/regional-data-collection.html)
+Alla spårningsservrar har konverterats till RDC, så det finns inget behov av att ändra analysspårningsservern. [Mer information...](https://experienceleague.adobe.com/docs/analytics/admin/data-collection/regional-data-collection/regional-data-collection.html)
 
 ## Kodbibliotek och versionskrav {#section-ad7542a4317d430fa79fc6b095beb84d}
 
@@ -107,7 +107,7 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
   </tr> 
   <tr> 
    <td colname="col1" morerows="2"> <p> <b><span class="keyword">Analytics</span> </b> </p> </td> 
-   <td colname="col3"> <p> <span class="codeph"> AppMeasurement.js</span> </p> <p>Se <a href="https://docs.adobe.com/content/help/en/analytics/implementation/js/overview.html" format="https" scope="external"> AppMeasurement for JavaScript </a>. </p> </td> 
+   <td colname="col3"> <p> <span class="codeph"> AppMeasurement.js</span> </p> <p>Se <a href="https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html" format="https" scope="external"> AppMeasurement for JavaScript </a>. </p> </td> 
    <td colname="col4"> <p>1.6.4 eller senare. </p> </td> 
   </tr> 
   <tr> 
@@ -115,21 +115,21 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
    <td colname="col4"> <p>H.27 </p> <p> <p>Obs!  <span class="keyword"> Analytics</span> s_code version H.27 stöds inte längre i ID-tjänstversionen 1.6.0. Uppgradera koden till den senaste versionen av AppMeasurement. </p> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col3"> <p>Videopulsslag </p> <p>Se <a href="https://docs.adobe.com/content/help/sv-SE/media-analytics/using/media-overview.html" format="https" scope="external"> Video Heartbeat 2.x för JavaScript</a>. </p> </td> 
+   <td colname="col3"> <p>Videopulsslag </p> <p>Se <a href="https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html" format="https" scope="external"> Video Heartbeat 2.x för JavaScript</a>. </p> </td> 
    <td colname="col4"> <p>2.0 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b> <span class="keyword"> Audience Manager </span> </b> </p> </td> 
-   <td colname="col3"> <p> <span class="codeph"> dil.js</span> </p> <p> Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/dil-api/dil-overview.html" format="https" scope="external"> Data Integration Library</a> (DIL). </p> </td> 
+   <td colname="col3"> <p> <span class="codeph"> dil.js</span> </p> <p> Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html" format="https" scope="external"> Data Integration Library</a> (DIL). </p> </td> 
    <td colname="col4"> <p>5.0 </p></td> 
   </tr> 
   <tr> 
    <td colname="col1" morerows="1"> <p> <b> <span class="keyword"> Målgrupp </span> </b> </p> </td> 
-   <td colname="col3"> <p> <span class="codeph"> mbox.js</span> </p> <p>Se <a href="https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-technical.html" format="https" scope="external"> mbox Code</a>. </p> </td> 
+   <td colname="col3"> <p> <span class="codeph"> mbox.js</span> </p> <p>Se <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-technical.html" format="https" scope="external"> mbox Code</a>. </p> </td> 
    <td colname="col4"> <p>61 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col3"> <p> <span class="codeph"> at.js</span> </p> <p>Se <a href="https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/at-js/how-atjs-works.html" format="https" scope="external"> at.js-implementering</a>. </p> </td> 
+   <td colname="col3"> <p> <span class="codeph"> at.js</span> </p> <p>Se <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js/how-atjs-works.html" format="https" scope="external"> at.js-implementering</a>. </p> </td> 
    <td colname="col4"> <p>0.9.1 </p> </td> 
   </tr> 
  </tbody> 
@@ -148,9 +148,9 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
 
 SDK-koden måste vara aktiverad för ID-tjänsten. Aktivera och hämta den senaste SDK-koden för varje program från ditt [Adobe Mobile Services](https://mobilemarketing.adobe.com/)-konto. Se även:
 
-* [Konfigurera tjänstalternativ för SDK Visitor ID](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/t-config-visitor.html)
-* [Android SDK-metoder](https://docs.adobe.com/content/help/en/mobile-services/android/experience-cloud-android/c-marketing-cloud.html)
-* [iOS SKD-metoder](https://docs.adobe.com/content/help/en/mobile-services/ios/exp-cloud-ios/marketing-cloud.html)
+* [Konfigurera tjänstalternativ för SDK Visitor ID](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/t-config-visitor.html)
+* [Android SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/c-marketing-cloud.html)
+* [iOS SKD-metoder](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/marketing-cloud.html)
 
 >[!MORELIKETHIS]
 >
