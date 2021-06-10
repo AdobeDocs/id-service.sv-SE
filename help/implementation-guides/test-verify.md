@@ -3,9 +3,9 @@ description: Dessa instruktioner, verktyg och procedurer hjälper dig att avgör
 keywords: ID-tjänst
 title: Testa och verifiera Experience Cloud Identity Service
 exl-id: afdf9778-e73d-46ca-9d2f-a65abaae2fe6
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -26,13 +26,13 @@ Du kan också testa ID-tjänsten i en anonym eller inkognitiv webbläsarsession.
 
 **Verktyg**
 
-Felsökaren [Adobe](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html) och [Charles HTTP-proxyn](https://www.charlesproxy.com/) kan hjälpa dig att avgöra om ID-tjänsten har konfigurerats för att fungera korrekt med Analytics. Informationen i det här avsnittet baseras på resultaten från felsökaren Adobe och Charles. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
+Felsökaren [Adobe](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html) och [Charles HTTP-proxyn](https://www.charlesproxy.com/) kan hjälpa dig att avgöra om ID-tjänsten har konfigurerats för att fungera korrekt med Analytics. Informationen i det här avsnittet baseras på resultaten från felsökaren Adobe och Charles. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
 
 ## Testa med felsökaren för Adobe {#section-861365abc24b498e925b3837ea81d469}
 
 Din tjänstintegrering är korrekt konfigurerad när du ser ett [!DNL Experience Cloud ID] (MID) i felsökningssvaret för [!DNL Adobe]. Mer information om MID finns i [Cookies och Experience Cloud Identity Service](../introduction/cookies.md).
 
-Så här verifierar du statusen för ID-tjänsten med [!DNL Adobe] [felsökaren](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html):
+Så här verifierar du statusen för ID-tjänsten med [!DNL Adobe] [felsökaren](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html):
 
 1. Rensa dina webbläsarcookies eller öppna en anonym webbläsarsession.
 1. Läs in testsidan som innehåller ID-tjänstkoden.
@@ -84,7 +84,7 @@ ID-tjänstkoden fungerar som den ska när funktionen `Visitor.getInstance` gör 
 
 **Slutförda ID-tjänstsvar i Charles**
 
-Ditt konto har etablerats korrekt för ID-tjänsten när svaret från [datainsamlingsservrarna](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/system-components/components-data-collection.html) (DCS) returnerar ett MID. MID returneras som ett nyckelvärdepar som använder den här syntaxen: `d_mid: *`besökarens Experience Cloud-ID`*`. Leta efter MID på fliken [!UICONTROL Response] enligt nedan.
+Ditt konto har etablerats korrekt för ID-tjänsten när svaret från [datainsamlingsservrarna](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/system-components/components-data-collection.html) (DCS) returnerar ett MID. MID returneras som ett nyckelvärdepar som använder den här syntaxen: `d_mid: *`besökarens Experience Cloud-ID`*`. Leta efter MID på fliken [!UICONTROL Response] enligt nedan.
 
 ![](assets/charles_response_success.png)
 
@@ -94,4 +94,4 @@ Ditt konto har inte etablerats korrekt om MID saknas i DCS-svaret. Ett misslycka
 
 ![](assets/charles_response_unsuccessful.png)
 
-Mer information om felkoder finns i [DCS-felkoder, meddelanden och exempel](https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-error-codes.html).
+Mer information om felkoder finns i [DCS-felkoder, meddelanden och exempel](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-error-codes.html).
