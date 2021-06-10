@@ -3,9 +3,9 @@ description: De här instruktionerna är till för Analytics- och Audience Manag
 keywords: ID-tjänst
 title: Implementera identitetstjänsten Experience Cloud för analys och Audience Manager
 exl-id: e31720a1-5c89-4084-88f6-443994dbb2f4
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ De här instruktionerna är till för Analytics- och Audience Manager-kunder som
 
 ## Steg 1: Planera för vidarebefordran på serversidan {#section-880797cc992d4755b29cada7b831f1fc}
 
-Utöver de steg som beskrivs här bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] migrera till vidarebefordran på serversidan. Vidarebefordran på serversidan gör att du kan ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i [vidarebefordringsdokumentationen på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
+Utöver de steg som beskrivs här bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] migrera till vidarebefordran på serversidan. Vidarebefordran på serversidan gör att du kan ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i [vidarebefordringsdokumentationen på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
 
 Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
 
@@ -140,7 +140,7 @@ Lägg till funktionen `Visitor.getInstance` som visas nedan i din `AppMeasuremen
 
 >[!IMPORTANT]
 >
->Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
+>Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
 
 ***(Valfritt, men rekommenderas)* Skapa ett anpassat utkast **
 
@@ -182,7 +182,7 @@ Du behöver en respitperiod om du skickar data till ett internt system från en 
 
 Avbryt respitperioden efter att dataöverföringsprocessen kan använda kolumnerna `post_visid_high` och `post_visid_low`.
 
-Se även [Referens för Clickstream-datakolumn](https://docs.adobe.com/content/help/en/analytics/export/analytics-data-feed/data-feed-overview.html).
+Se även [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html).
 
 ## Steg 9: Testa och distribuera ID-tjänstkoden {#section-f857542bfc70496dbb9f318d6b3ae110}
 
@@ -193,10 +193,10 @@ Du kan testa och distribuera enligt följande.
 Om du vill testa implementeringen av din ID-tjänst ska du kontrollera följande:
 
 * [AMCV-](../introduction/cookies.md) cookie i den domän där sidorna finns.
-* MID-värde i Analytics-bildbegäran med [Adobe-felsökaren](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html).
+* MID-värde i Analytics-bildbegäran med [Adobe-felsökaren](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html).
 * Se även [Testa och verifiera identitetstjänsten Experience Cloud](../implementation-guides/test-verify.md).
 
-Information om hur du verifierar vidarebefordran på serversidan finns i [Hur du verifierar implementeringen av vidarebefordran på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf-verify.html).
+Information om hur du verifierar vidarebefordran på serversidan finns i [Hur du verifierar implementeringen av vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf-verify.html).
 
 **Distribuera**
 
