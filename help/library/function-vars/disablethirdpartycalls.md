@@ -1,26 +1,22 @@
 ---
 description: En valfri boolesk flagga som förhindrar att ID-tjänsten anropar andra domäner.
-keywords: cross domain tracking;ID Service
-seo-description: En valfri boolesk flagga som förhindrar att ID-tjänsten anropar andra domäner.
-seo-title: disableThirdPartyCalls
+keywords: spårning av korsdomän;ID-tjänst
 title: disableThirdPartyCalls
-uuid: e92ce1f5-67a4-476c-9d04-41d4e96b1592
-translation-type: tm+mt
-source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+exl-id: 1d5b4e80-1b2d-4401-9057-449a6abf5db5
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '200'
 ht-degree: 2%
 
 ---
 
-
-# disableThirdPartyCalls{#disablethirdpartycalls}
+# disableThirdPartyCall{#disablethirdpartycalls}
 
 En valfri boolesk flagga som förhindrar att ID-tjänsten anropar andra domäner.
 
-**Syntax:** ` `disableThirdPartyCall: true|false&quot;(standard är `false`.)
+**Syntax:** ` `disableThirdPartyCall: true|false&quot;(standard är  `false`.)
 
-När `disableThirdPartyCalls: true`detta inträffar kommer ID-tjänsten inte att göra anrop till andra domäner.
+När `disableThirdPartyCalls: true` är  kommer ID-tjänsten inte att göra anrop till andra domäner.
 
 **Syfte**
 
@@ -32,7 +28,7 @@ Variabeln är avsedd för kunder som behöver:
 
 **Genomförandestrategi**
 
-Eftersom andra Experience Cloud-lösningar är beroende av MID, anropar ID-tjänsten Adobe för att returnera och ange detta ID. Om du behöver stoppa ID-tjänsten från att ringa anrop från autentiserade avsnitt på webbplatsen kan du låta den ringa dessa nödvändiga samtal från sidor som inte kräver autentisering först. När besökaren har ett MID kan du ange ID-tjänstkoden `disableThirdPartyCalls= true` i de autentiserade avsnitten på platsen. Förutsättningen här är att de flesta, om inte alla, av dina kunder navigerar till en autentiseringssida innan de får tillgång till de säkra delarna av din webbplats.
+Eftersom andra Experience Cloud-lösningar är beroende av MID, anropar ID-tjänsten Adobe för att returnera och ange detta ID. Om du behöver stoppa ID-tjänsten från att ringa anrop från autentiserade avsnitt på webbplatsen kan du låta den ringa dessa nödvändiga samtal från sidor som inte kräver autentisering först. När besökaren har ett MID kan du ange `disableThirdPartyCalls= true` i ID-tjänstkoden för de autentiserade avsnitten på platsen. Förutsättningen här är att de flesta, om inte alla, av dina kunder navigerar till en autentiseringssida innan de får tillgång till de säkra delarna av din webbplats.
 
 **Exempel på kod**
 
@@ -49,4 +45,3 @@ var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here
    disableThirdPartyCalls: true 
 }); 
 ```
-
