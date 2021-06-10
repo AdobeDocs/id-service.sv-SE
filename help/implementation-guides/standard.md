@@ -3,10 +3,10 @@ description: Äldre implementeringar använder Dynamic Tag Management (DTM) för
 keywords: ID-tjänst
 title: Implementering med dynamisk tagghantering
 exl-id: 37ccc919-3015-42fa-a88f-639cdf726f48
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 1%
+source-wordcount: '1965'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## Dynamisk tagghantering och ID-tjänsten {#section-4a4c4fac5d0a4cbbaff8e1833f73657c}
 
-[Med Dynamic Tag ](https://docs.adobe.com/content/help/sv-SE/dtm/using/dtm-home.html) Management kan du konfigurera, distribuera och hantera din ID-tjänstinstans och relaterade  [!DNL Experience Cloud] lösningsintegreringar. DTM underlättar implementeringsprocessen eftersom det är nära integrerat med ID-tjänsten och andra Experience Cloud-lösningar. Lägg bara till och konfigurera Experience Cloud ID-verktyget och ange information som:
+[Med Dynamic Tag ](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html) Management kan du konfigurera, distribuera och hantera din ID-tjänstinstans och relaterade  [!DNL Experience Cloud] lösningsintegreringar. DTM underlättar implementeringsprocessen eftersom det är nära integrerat med ID-tjänsten och andra Experience Cloud-lösningar. Lägg bara till och konfigurera Experience Cloud ID-verktyget och ange information som:
 
 * Experience Cloud organisations-ID (fylls i automatiskt om det är länkat till Experience Cloud)
 * Analysspårningsserver (säker och osäker)
@@ -34,7 +34,7 @@ DTM är kostnadsfritt tillgängligt för alla [!DNL Experience Cloud]-kunder.
 
 **Komma igång med DTM**
 
-DTM är ett enkelt men kraftfullt verktyg. Om du inte redan använder den bör du göra det. Se [DTM-dokumentationen](https://docs.adobe.com/content/help/en/dtm/using/c-overview.html) för att komma igång med den här tjänsten. Instruktioner om hur du konfigurerar ID-tjänsten med DTM finns i informationen och procedurerna i avsnitten nedan.
+DTM är ett enkelt men kraftfullt verktyg. Om du inte redan använder den bör du göra det. Se [DTM-dokumentationen](https://experienceleague.adobe.com/docs/dtm/using/c-overview.html) för att komma igång med den här tjänsten. Instruktioner om hur du konfigurerar ID-tjänsten med DTM finns i informationen och procedurerna i avsnitten nedan.
 
 ## Riktlinjer för driftsättning {#concept-54a2ec49af8f4bfca9207b1d404e8e1a}
 
@@ -48,8 +48,8 @@ mcvid-dtm-deployment.xml
 
 Innan du kan komma igång bör du kontrollera att din organisation och dina lösningar har etablerats för [!DNL Experience Cloud] och att du är bekant med [!DNL Dyanamic Tag Management]. Den här dokumentationen kan hjälpa dig att komma igång:
 
-* [Möjliggör lösningar för bastjänster](https://docs.adobe.com/content/help/en/core-services/interface/about-core-services/core-services.html): Implementera Experience Cloud och bli administratör. Denna process moderniserar era era lösningar för centrala tjänster som kundattribut och Experience Cloud målgrupper.
-* [Komma igång med dynamisk tagghantering](https://docs.adobe.com/content/help/en/dtm/using/getting-started/get-started.html)
+* [Möjliggör lösningar för bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html): Implementera Experience Cloud och bli administratör. Denna process moderniserar era era lösningar för centrala tjänster som kundattribut och Experience Cloud målgrupper.
+* [Komma igång med dynamisk tagghantering](https://experienceleague.adobe.com/docs/dtm/using/getting-started/get-started.html)
 
 **Placering av ID-tjänstkod och lastorder**
 
@@ -62,11 +62,11 @@ Så länge du upprätthåller alla dina [!DNL Adobe]-lösningar och kodbibliotek
 
 **Validera regional datainsamling**
 
-Kunderna måste tillhandahålla en CNAME eller använda `*.sc.omtrdc` för [regional datainsamling](https://docs.adobe.com/content/help/en/analytics/technotes/rdc/regional-data-collection.html) (RDC). Hämta de specifika RDC-inställningarna från din [!DNL Adobe]-konsult.
+Kunderna måste tillhandahålla en CNAME eller använda `*.sc.omtrdc` för [regional datainsamling](https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html) (RDC). Hämta de specifika RDC-inställningarna från din [!DNL Adobe]-konsult.
 
 **Konfigurera rapportsviter för Analytics**
 
-Nya [!DNL Analytics]-kunder bör [skapa en rapportsvit](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html) för datainsamling.
+Nya [!DNL Analytics]-kunder bör [skapa en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html) för datainsamling.
 
 ## Implementera identitetstjänsten Experience Cloud med DTM {#task-a659cf19dea84ad48edabe0b72ef9f5c}
 
@@ -74,9 +74,9 @@ Följ de här stegen för att implementera ID-tjänsten med Dynamic Tag Manageme
 
 **Förutsättningar**
 
-* Aktivera dina lösningar för [!DNL Experience Cloud] och verifiera att du har administratörsbehörighet. Se [Aktivera lösningar för bastjänster](https://docs.adobe.com/content/help/en/core-services/interface/about-core-services/core-services.html).
+* Aktivera dina lösningar för [!DNL Experience Cloud] och verifiera att du har administratörsbehörighet. Se [Aktivera lösningar för bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html).
 
-* Skapa en webbegenskap i DTM. Se dokumentationen för DTM [Create a Web Property](https://docs.adobe.com/content/help/en/dtm/using/admin/web-property.html).
+* Skapa en webbegenskap i DTM. Se dokumentationen för DTM [Create a Web Property](https://experienceleague.adobe.com/docs/dtm/using/admin/web-property.html).
 
 <!--
 mcvid-dtm-implement.xml
@@ -90,7 +90,7 @@ mcvid-dtm-implement.xml
 
    >[!NOTE]
    >
-   >Den här åtgärden fyller i rutan **[!UICONTROL Experience Cloud Organization ID]** med ditt organisations-ID. Om ditt DTM-konto inte är länkat till [!DNL Experience Cloud] måste du ange detta ID. Mer information om hur du länkar ditt konto finns i [Länka konton i Experience Cloud](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/organizations.html). Se [kraven](../reference/requirements.md#section-a02f537129a64ffbb690d5738d360c26) för information om hur du hittar ditt företags-ID.
+   >Den här åtgärden fyller i rutan **[!UICONTROL Experience Cloud Organization ID]** med ditt organisations-ID. Om ditt DTM-konto inte är länkat till [!DNL Experience Cloud] måste du ange detta ID. Mer information om hur du länkar ditt konto finns i [Länka konton i Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/organizations.html). Se [kraven](../reference/requirements.md#section-a02f537129a64ffbb690d5738d360c26) för information om hur du hittar ditt företags-ID.
 
 1. Skriv namnet på spårningsservern i rutan **[!UICONTROL Tracking Server]**. Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor och svar](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#).
 1. Klicka på **[!UICONTROL Create Tool]** och **[!UICONTROL Save Changes]**.
@@ -113,7 +113,7 @@ Inställningarna är tillgängliga när du har lagt till och sparat ID-tjänsten
 
 ## Organisations-ID {#section-949b5a0d8af940558b04ff675cf53f77}
 
-Detta är det ID som krävs av och är kopplat till ditt [!DNL Experience Cloud]-företag. En organisation är den enhet som gör det möjligt för en administratör att konfigurera användare, grupper och styra åtkomst till enkel inloggning i [!DNL Experience Cloud]. Organisations-ID:t är en 24 tecken lång alfanumerisk sträng som följs av (och måste innehålla) @AdobeOrg. [!DNL Experience Cloud] administratörer hittar detta ID i  [Experience Cloud > Verktyg](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/admin-getting-started.html).
+Detta är det ID som krävs av och är kopplat till ditt [!DNL Experience Cloud]-företag. En organisation är den enhet som gör det möjligt för en administratör att konfigurera användare, grupper och styra åtkomst till enkel inloggning i [!DNL Experience Cloud]. Organisations-ID:t är en 24 tecken lång alfanumerisk sträng som följs av (och måste innehålla) @AdobeOrg. [!DNL Experience Cloud] administratörer hittar detta ID i  [Experience Cloud > Verktyg](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html).
 
 ![](assets/orgID.png)
 
@@ -139,7 +139,7 @@ Namnet på spårningsservern som används för insamling av analysdata. Detta ä
 
 Om du inte känner till URL:erna för spårningsservern kontrollerar du dina `s_code.js`- eller `AppMeasurement.js`-filer. Du vill att URL:en ska anges med variabeln `s.trackingServer`.
 
-Se [trackingServer](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/page-variables.html) och [Fylla i variabeln trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#).
+Se [trackingServer](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/page-variables.html) och [Fylla i variabeln trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#).
 
 **Säker spårningsserver**
 
@@ -147,7 +147,7 @@ Namnet på den säkra spårningsservern som används för insamling av analysdat
 
 Om du inte känner till URL:erna för spårningsservern kontrollerar du dina `s_code.js`- eller `AppMeasurement.js`-filer. Du vill att URL:en ska anges med variabeln `s.trackingServerSecure`.
 
-Se [trackingServer](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/page-variables.html) och [Fylla i variabeln trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#).
+Se [trackingServer](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/page-variables.html) och [Fylla i variabeln trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#).
 
 **Experience Cloud Server**
 
@@ -179,7 +179,7 @@ Ytterligare fält som gör att du kan lägga till en integreringskod eller statu
 
 **Integreringskod**
 
-En integrationskod är ett unikt, kundtillhandahållet ID. Integrationskoden ska innehålla det värde som du använde för att [skapa en datakälla](hhttps://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-sources/manage-datasources.html#create-data-source) i [!DNL Audience Manager].
+En integrationskod är ett unikt, kundtillhandahållet ID. Integrationskoden ska innehålla det värde som du använde för att [skapa en datakälla](hhttps://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-sources/manage-datasources.html#create-data-source) i [!DNL Audience Manager].
 
 **Värde**
 
@@ -209,13 +209,13 @@ Du kan också testa ID-tjänsten i en anonym eller inkognitiv webbläsarsession.
 
 **Verktyg**
 
-Felsökaren [Adobe](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html) och [Charles HTTP-proxyn](https://www.charlesproxy.com/) kan hjälpa dig att avgöra om ID-tjänsten har konfigurerats för att fungera korrekt med Analytics. Informationen i det här avsnittet baseras på resultaten från felsökaren Adobe och Charles. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
+Felsökaren [Adobe](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html) och [Charles HTTP-proxyn](https://www.charlesproxy.com/) kan hjälpa dig att avgöra om ID-tjänsten har konfigurerats för att fungera korrekt med Analytics. Informationen i det här avsnittet baseras på resultaten från felsökaren Adobe och Charles. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
 
 ## Testa med felsökaren för Adobe {#section-861365abc24b498e925b3837ea81d469}
 
 Din tjänstintegrering är korrekt konfigurerad när du ser ett [!DNL Experience Cloud ID] (MID) i felsökningssvaret för [!DNL Adobe]. Mer information om MID finns i [Cookies och Experience Cloud Identity Service](../introduction/cookies.md).
 
-Så här verifierar du statusen för ID-tjänsten med [!DNL Adobe] [felsökaren](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html):
+Så här verifierar du statusen för ID-tjänsten med [!DNL Adobe] [felsökaren](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html):
 
 1. Rensa dina webbläsarcookies eller öppna en anonym webbläsarsession.
 1. Läs in testsidan som innehåller ID-tjänstkoden.
@@ -267,7 +267,7 @@ ID-tjänstkoden fungerar som den ska när funktionen `Visitor.getInstance` gör 
 
 ### Slutförda ID-tjänstsvar i Charles
 
-Ditt konto har etablerats korrekt för ID-tjänsten när svaret från [datainsamlingsservrarna](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/system-components/components-data-collection.html) (DCS) returnerar ett MID. MID returneras som ett nyckelvärdepar som använder den här syntaxen: `d_mid: visitor Experience Cloud ID`. Leta efter MID på fliken [!UICONTROL Response] så som visas nedan.
+Ditt konto har etablerats korrekt för ID-tjänsten när svaret från [datainsamlingsservrarna](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/system-components/components-data-collection.html) (DCS) returnerar ett MID. MID returneras som ett nyckelvärdepar som använder den här syntaxen: `d_mid: visitor Experience Cloud ID`. Leta efter MID på fliken [!UICONTROL Response] så som visas nedan.
 
 ![](assets/charles_response_success.png)
 
@@ -277,9 +277,9 @@ Ditt konto har inte etablerats korrekt om MID saknas i DCS-svaret. Ett misslycka
 
 ![](assets/charles_response_unsuccessful.png)
 
-Mer information om felkoder finns i [DCS-felkoder, meddelanden och exempel](https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-error-codes.html).
+Mer information om felkoder finns i [DCS-felkoder, meddelanden och exempel](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-error-codes.html).
 
 >[!MORELIKETHIS]
 >
->* [Webbegenskaper](https://docs.adobe.com/content/help/en/dtm/using/admin/web-property.html)
+>* [Webbegenskaper](https://experienceleague.adobe.com/docs/dtm/using/admin/web-property.html)
 
