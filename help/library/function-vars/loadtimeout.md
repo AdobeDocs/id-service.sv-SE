@@ -1,18 +1,14 @@
 ---
 description: Anger ett tidsgränsintervall i millisekunder. Används för att berätta om andra lösningar (t.ex. Analytics, Audience Manager, Target osv.) hur länge du ska vänta på ett svar från ID-tjänsten.
-keywords: ID Service
-seo-description: Anger ett tidsgränsintervall i millisekunder. Används för att berätta om andra lösningar (t.ex. Analytics, Audience Manager, Target osv.) hur länge du ska vänta på ett svar från ID-tjänsten.
-seo-title: loadTimeout
+keywords: ID-tjänst
 title: loadTimeout
-uuid: f627e044-bd73-49a4-8a90-6d19aa566751
-translation-type: tm+mt
-source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+exl-id: 485264f4-ee24-4042-8be3-259e70462110
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '140'
 ht-degree: 1%
 
 ---
-
 
 # loadTimeout{#loadtimeout}
 
@@ -41,4 +37,3 @@ var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here
    loadTimeout:10000 
 });
 ```
-
