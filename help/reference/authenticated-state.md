@@ -3,10 +3,10 @@ description: Tillsammans med besökar-ID:t för Experience Cloud kan du koppla y
 keywords: ID-tjänst
 title: Kund-ID:n och autentiseringstillstånd
 exl-id: 0215225c-20f5-4e44-a368-b2df683aca9d
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 6%
+source-wordcount: '625'
+ht-degree: 2%
 
 ---
 
@@ -16,11 +16,11 @@ Tillsammans med besökar-ID:t för Experience Cloud kan du koppla ytterligare ku
 
 ## Autentiseringstillstånd {#section-68ad4065dfaa437d9070832d6e2bf85c}
 
-Metoden `setCustomerIDs` accepterar flera kund-ID:n för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://docs.adobe.com/content/help/sv-SE/core-services/interface/customer-attributes/attributes.html) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
+Metoden `setCustomerIDs` accepterar flera kund-ID:n för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
 
 >[!IMPORTANT]
 >
->`setCustomerIDs` (synkronisering av kund-ID) krävs av kundattribut och centrala tjänster. Synkroniserande kund-ID:n är en valfri identifieringsmetod för [!DNL Analytics]. [!DNL Target] kräver  `Visitor.AuthState.AUTHENTICATED` att kundattribut fungerar. Se [bastjänster - Så här aktiverar du dina lösningar](https://docs.adobe.com/content/help/en/core-services/interface/about-core-services/core-services.html) för exempel.
+>`setCustomerIDs` (synkronisering av kund-ID) krävs av kundattribut och centrala tjänster. Synkroniserande kund-ID:n är en valfri identifieringsmetod för [!DNL Analytics]. [!DNL Target] kräver  `Visitor.AuthState.AUTHENTICATED` att kundattribut fungerar. Se [bastjänster - Så här aktiverar du dina lösningar](https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html) för exempel.
 
 Med början från Experience Cloud identitetstjänst v1.5+ inkluderar `setCustomerIDs` det valfria `AuthState`-objektet. `AuthState` identifierar besökare utifrån deras autentiseringsstatus (t.ex. inloggad, utloggad). Du anger autentiseringstillståndet med ett statusvärde i tabellen. Autentiseringsstatus returneras som ett heltal.
 
@@ -212,8 +212,8 @@ Object customerIDs = visitor.getCustomerIDs();
 
 ID-tjänsten [!DNL Experience Cloud] stöder kund-ID:n och autentiseringstillstånd i vår Android- och iOS SDK-kod. Se följande kodbibliotek:
 
-* [Android SDK-metoder](https://docs.adobe.com/content/help/sv-SE/mobile-services/android/overview.html)
-* [iOS SDK-metoder](https://docs.adobe.com/content/help/sv-SE/mobile-services/ios/overview.html)
+* [Android SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
+* [iOS SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html)
 
 ## Meddelande till Analytics- och Audience Manager-kunder {#section-3a8e9d51e71c4c6e865184b81ed9d99b}
 
