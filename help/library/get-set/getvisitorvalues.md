@@ -3,9 +3,9 @@ description: Detta är ett asynkront API som returnerar identifierare för Analy
 keywords: ID-tjänst
 title: getVisitorValues
 exl-id: bd023e8d-a804-4205-989f-e1e58080b63c
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '407'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ I följande tabell visas och definieras svarsparametrarna. Detta är också alla
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCAAMLH  </span> </p> </td> 
-   <td colname="col2"> <p>Datainsamlingens region-ID. Detta är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. </p> <p>Se <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> ID:n för DCS-regionen, platser och värdnamn </a> och <a href="../../library/get-set/getlocationhint.md#reference-a761030ff06c4439946bb56febf42d4c" format="dita" scope="local"> getLocationHint </a>. </p> </td> 
+   <td colname="col2"> <p>Datainsamlingens region-ID. Detta är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. </p> <p>Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> ID:n för DCS-regionen, platser och värdnamn </a> och <a href="../../library/get-set/getlocationhint.md#reference-a761030ff06c4439946bb56febf42d4c" format="dita" scope="local"> getLocationHint </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCAID  </span> </p> </td> 
