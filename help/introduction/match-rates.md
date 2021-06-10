@@ -1,14 +1,11 @@
 ---
 description: En översikt över ID-synkroniseringsprocesser och matchningsfrekvenser i Experience Cloud Identity Service, inklusive Adobe Media Optimizer och ID-tjänsten.
 keywords: ID-tjänst
-seo-description: En översikt över ID-synkroniseringsprocesser och matchningsfrekvenser i Experience Cloud Identity Service, inklusive Adobe Media Optimizer och ID-tjänsten.
-seo-title: Förstå ID-synkronisering och matchningsfrekvenser
 title: Förstå ID-synkronisering och matchningsfrekvenser
-uuid: 31bd655f-2b9e-4f8d-9a1f-e81a6110eda8
 exl-id: 9386824c-7d04-459b-9417-45b67f8a7b37
-source-git-commit: b907ffcbfbb8851ce6279b614dc58c22f2ce9907
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
