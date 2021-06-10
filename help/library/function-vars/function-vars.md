@@ -1,18 +1,14 @@
 ---
 description: Konfigurera ID-tjänsten genom att skicka dessa egenskaper till den statiska metoden Visitor.getInstance.
-keywords: Organization ID;ID Service
-seo-description: Konfigurera ID-tjänsten genom att skicka dessa egenskaper till den statiska metoden Visitor.getInstance.
-seo-title: Konfigurationer
+keywords: Organisations-ID;ID-tjänst
 title: Konfigurationer
-uuid: 2dfe1ed6-f3a6-4f5c-976b-eeb43738c20c
-translation-type: tm+mt
-source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+exl-id: a369f624-d263-4287-bb7e-b89d584fa245
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 9%
+source-wordcount: '86'
+ht-degree: 10%
 
 ---
-
 
 # Konfigurationer{#configurations}
 
@@ -20,7 +16,7 @@ Konfigurera ID-tjänsten genom att skicka dessa egenskaper till den statiska met
 
 >[!NOTE]
 >
->JavaScript-bibliotek för *Experience Cloud ID* har nyligen flyttats. Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>JavaScript-biblioteken *Experience Cloud ID har nyligen flyttats.* Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Relaterade artiklar:
 
@@ -41,4 +37,3 @@ Relaterade artiklar:
 + [secureCookie](securecookie.md)
 + [useCORSOnly](use-cors-only.md)
 + [whitelistParentDomain och whitelistIframeDomains](whitelistdomain.md)
-
