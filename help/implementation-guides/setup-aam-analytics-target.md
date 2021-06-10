@@ -3,9 +3,9 @@ description: Dessa instruktioner är till för Analytics-, Audience Manager- och
 keywords: ID-tjänst
 title: Implementera identitetstjänsten Experience Cloud för Analytics, Audience Manager och Target
 exl-id: d55baa11-e8ec-4c30-b6bc-caccf4c284ba
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Dessa instruktioner är till för Analytics-, Audience Manager- och Target-kunde
 
 ## Steg 1: Planera för vidarebefordran på serversidan {#section-880797cc992d4755b29cada7b831f1fc}
 
-Utöver de steg som beskrivs här bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] migrera till vidarebefordran på serversidan. Vidarebefordran på serversidan gör att du kan ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i [vidarebefordringsdokumentationen på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
+Utöver de steg som beskrivs här bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] migrera till vidarebefordran på serversidan. Vidarebefordran på serversidan gör att du kan ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i [vidarebefordringsdokumentationen på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
 
 Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
 
@@ -140,7 +140,7 @@ Lägg till funktionen `Visitor.getInstance` som visas nedan i din `AppMeasuremen
 
 >[!IMPORTANT]
 >
->Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
+>Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
 
 ***(Valfritt, men rekommenderas)* Skapa ett anpassat utkast **
 
@@ -182,7 +182,7 @@ Du behöver en respitperiod om du skickar data till ett internt system från en 
 
 Avbryt respitperioden efter att dataöverföringsprocessen kan använda kolumnerna `post_visid_high` och `post_visid_low`.
 
-Se även [Referens för Clickstream-datakolumn](https://docs.adobe.com/content/help/en/analytics/export/analytics-data-feed/data-feed-overview.html).
+Se även [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html).
 
 ## Steg 9: Testa och verifiera {#section-f857542bfc70496dbb9f318d6b3ae110}
 
@@ -190,7 +190,7 @@ Se även [Referens för Clickstream-datakolumn](https://docs.adobe.com/content/h
 
 >[!TIP]
 >
->Du kan använda [Adobe Debugger](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html) eller [Charles HTTP-proxy](https://www.charlesproxy.com/) för att söka efter dessa lösningsspecifika ID:n. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
+>Du kan använda [Adobe Debugger](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html) eller [Charles HTTP-proxy](https://www.charlesproxy.com/) för att söka efter dessa lösningsspecifika ID:n. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
 
 **Alla lösningar**
 
@@ -214,7 +214,7 @@ När du ser ett AID kontrollerar du dess värde mot [!DNL Target] mboxMCAVID. De
 
 **Audience Manager**
 
-Information om hur du testar vidarebefordran på serversidan finns i [Hur du verifierar implementeringen av vidarebefordring på serversidan](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/server-side-forwarding/ssf-verify.html).
+Information om hur du testar vidarebefordran på serversidan finns i [Hur du verifierar implementeringen av vidarebefordring på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf-verify.html).
 
 **Målgrupp**
 
