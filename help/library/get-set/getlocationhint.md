@@ -3,9 +3,9 @@ description: Returnerar Experience Cloud Identity Service-regionens ID. Ett regi
 keywords: ID-tjänst
 title: getLocationHint
 exl-id: 0213f828-a985-4201-8a38-0a4b170ed057
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '185'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller 
 
 **Syntax:** ` var *`variabelnamn`* = visitor.getLocationHint()`
 
-En lista över region-ID:n och motsvarande platser finns i [DCS Region-ID:n, platser och värdnamn](https://docs.adobe.com/content/help/en/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
+En lista över region-ID:n och motsvarande platser finns i [DCS Region-ID:n, platser och värdnamn](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
 
 **Exempel på kod**
 
