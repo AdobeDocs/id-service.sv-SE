@@ -2,9 +2,9 @@
 title: Google Chrome SameSite-etikettändringar
 description: Dokumentation för Adobe ECID-bibliotek (ID Service).
 exl-id: f20b25a4-c9bc-41b9-8e49-79b8424e62a0
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1065'
 ht-degree: 1%
 
 ---
@@ -119,4 +119,4 @@ Endast vanliga cookies för besökarstandard listas i tabellen nedan. Om du vill
 
 > !![IMPORTANT] Cookies från tredje part från Adobe är inställda på serversidan
 
-Mer information finns i dokumentet om [Target&#39;s Google Chrome SameSite policies](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/google-chrome-samesite-cookie-policies.html).
+Mer information finns i dokumentet om [Target&#39;s Google Chrome SameSite policies](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/google-chrome-samesite-cookie-policies.html).
