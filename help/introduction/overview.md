@@ -1,12 +1,10 @@
 ---
 description: Experience Cloud Identity-tjänstens roll i Adobe Experience Cloud.
-seo-description: Experience Cloud Identity Service (tidigare Visitor ID-tjänst eller Marketing Cloud ID-tjänst) aktiverar det gemensamma identifieringsramverket för Experience Cloud-tjänster som kundattribut och målgrupper.
-seo-title: Översikt över tjänsten Experience Cloud ID
 title: Översikt över tjänsten Experience Cloud ID
 exl-id: dc7d6220-d42b-4a3e-bf37-1e4e87280ae1
-source-git-commit: b907ffcbfbb8851ce6279b614dc58c22f2ce9907
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
