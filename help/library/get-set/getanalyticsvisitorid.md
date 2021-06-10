@@ -3,10 +3,10 @@ description: Returnerar det eventuella gamla analys-ID:t som sparades i s_vi-coo
 keywords: ID-tjänst
 title: getAnalyticsVisitorID
 exl-id: 82973de4-4257-4aab-9268-4ab124a01ee2
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 3%
+source-wordcount: '298'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,7 @@ Parametern `aid` visas i en frågesträng under två olika villkorsuppsättninga
 Du ser parametern `aid` i en frågesträng när:
 
 * ID-tjänsten [!DNL Experience Cloud] har distribuerats korrekt.
-* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics]-ID i sin [s_vi-cookie](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-analytics.html#section-5d50a078de444d12b7d927d68ff3b679).
+* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics]-ID i sin [s_vi-cookie](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-analytics.html#section-5d50a078de444d12b7d927d68ff3b679).
 
 **Fall 2**
 
@@ -51,5 +51,5 @@ Parametern `aid` visas i en frågesträng när din organisation använder en [re
 
 >[!MORELIKETHIS]
 >
->* [Analytics-cookies](https://docs.adobe.com/content/help/sv-SE/core-services/interface/ec-cookies/cookies-privacy.html)
+>* [Analytics-cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-privacy.html)
 
