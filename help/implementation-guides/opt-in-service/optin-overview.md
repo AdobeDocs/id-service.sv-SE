@@ -1,17 +1,13 @@
 ---
 description: Med anmälningstjänsten kan du konfigurera protokoll för besökaren för att avgöra om du kan ange en cookie på användarens enhet eller webbläsare när du besöker webbplatsen.
-seo-description: Med anmälningstjänsten kan du konfigurera protokoll för besökaren för att avgöra om du kan ange en cookie på användarens enhet eller webbläsare när du besöker webbplatsen.
-seo-title: Anmälningstjänst
 title: Anmälningstjänst
-uuid: aebd72ad-4118-471b-9755-d08a72caa0fd
-translation-type: tm+mt
-source-git-commit: 4fbfefddcf36855f32f2a4047e19ef0b22fc508c
+exl-id: 351da861-4faa-409b-b0ff-f4d2ce66700b
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '507'
 ht-degree: 3%
 
 ---
-
 
 # Anmälningstjänst{#opt-in-service}
 
@@ -21,9 +17,9 @@ Opt-in-tjänsten är ett tillägg till Experience Cloud ID (ECID), som är utfor
 
 Med hjälp av anmälningstjänsten kan du ange om en besökare kan välja att gå med i Adobe-lösningar samtidigt eller presentera lösningar i ordningsföljd för behörigheter. När godkännandeprocessen är klar och registrerad av kunden kan ni hämta CMP-besökarnas godkännanden från alla Adobe-lösningar.
 
-Opt-in-tjänsten implementeras och konfigureras enkelt med [Adobe Experience Platform Launch](https://docs.adobelaunch.com/) med [Opt-in-tillägget](../../implementation-guides/opt-in-service/launch.md). Den kan också implementeras och konfigureras med [DTM](../../implementation-guides/opt-in-service/optin-dtm.md).
+Opt-in-tjänsten implementeras och konfigureras enkelt med [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html) med [Opt-in-tillägget](../../implementation-guides/opt-in-service/launch.md). Den kan också implementeras och konfigureras med [DTM](../../implementation-guides/opt-in-service/optin-dtm.md).
 
-Se [Konfigurera anmälningstjänsten](../../implementation-guides/opt-in-service/getting-started.md) för att komma igång.
+Se [Konfigurera Opt-in-tjänsten](../../implementation-guides/opt-in-service/getting-started.md) för att komma igång.
 
 >[!NOTE]
 >
@@ -33,7 +29,7 @@ Se [Konfigurera anmälningstjänsten](../../implementation-guides/opt-in-service
 >
 >Innehållet i detta dokument är inte juridisk rådgivning och är inte avsett att ersätta juridisk rådgivning. Kontakta företagets juridiska avdelning för råd om samtycke och rutiner när du väljer implementering.
 
-## Anmäl dig till olika Experience Cloud-lösningar {#section-053e6224505542cf961896f0ca869e52}
+## Anmäl dig till Experience Cloud Solutions {#section-053e6224505542cf961896f0ca869e52}
 
 Opt-in-tjänsten är ett verktyg för att skapa ett medgivande i arbetsflöde efter dina egna behov, vilket gör att du kan utforma ett arbetsflöde för att reagera (brandmärken) innan och efter det att användaren eller den som har gett sitt medgivande har gett det.
 
