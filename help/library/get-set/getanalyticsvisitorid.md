@@ -1,18 +1,14 @@
 ---
 description: Returnerar det eventuella gamla analys-ID:t som sparades i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
-keywords: ID Service
-seo-description: Returnerar det eventuella gamla analys-ID:t som sparades i s_vi-cookien innan Experience Cloud Identity Service implementerades. Den returnerar en tom sträng om en besökare aldrig har tilldelats ett analys-ID.
-seo-title: getAnalyticsVisitorID
+keywords: ID-tjänst
 title: getAnalyticsVisitorID
-uuid: 6bb8ddfc-9fc1-4105-b377-d9b4d247a0f8
-translation-type: tm+mt
-source-git-commit: d2bc0e7fedc4e48d51f5dad158f9f8bfcb0cb4f3
+exl-id: 82973de4-4257-4aab-9268-4ab124a01ee2
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 2%
+source-wordcount: '302'
+ht-degree: 3%
 
 ---
-
 
 # getAnalyticsVisitorID{#getanalyticsvisitorid}
 
@@ -20,7 +16,7 @@ Returnerar det eventuella gamla analys-ID:t som sparades i s_vi-cookien innan Ex
 
 **Syntax** `var analyticsID = visitor.getAnalyticsVisitorID()`
 
-Den här funktionen används vanligtvis med anpassade lösningar som kräver att besökar-ID läses. Den används inte av en standardimplementering. `getAnalyticsVisitorID` fungerar även med callback-funktioner för att läsa ID: [!DNL Analytics] n och föra in dem i ditt system eller program.
+Den här funktionen används vanligtvis med anpassade lösningar som kräver att besökar-ID läses. Den används inte av en standardimplementering. `getAnalyticsVisitorID` fungerar även med callback-funktioner för att läsa  [!DNL Analytics] ID:n och föra in dem i ditt system eller program.
 
 **Exempelkod**
 
@@ -36,22 +32,22 @@ var analyticsID = visitor.getAnalyticsVisitorID(useAnalyticsVisitorID)
 
 >[!TIP]
 >
->Om du är kund ska du också söka efter och skicka [!DNL Analytics] [!DNL Analytics] ID:t till din funktion. Du vill till exempel att båda identifierarna ska skickas när besökar-ID:t skickas i ett dolt formulärelement till ett program på serversidan som använder API:t för datainfogning. I så fall bör du samla in och returnera [!DNL Experience Cloud] - och [!DNL Analytics] besökar-ID:n. Se [getMarketingCloudVisitorID](../../library/get-set/getmcvid.md).
+>Om du är [!DNL Analytics]-kund söker du efter och skickar även [!DNL Analytics]-ID:t till din funktion. Du vill till exempel att båda identifierarna ska skickas när besökar-ID:t skickas i ett dolt formulärelement till ett program på serversidan som använder API:t för datainfogning. I det här fallet bör du samla in och returnera besökar-ID:n för [!DNL Experience Cloud] och [!DNL Analytics]. Se [getMarketingCloudVisitorID](../../library/get-set/getmcvid.md).
 
 **Parametern&quot;aid&quot; är ett äldre värde**
 
-Parametern visas i en frågesträng under två olika villkorsuppsättningar. `aid`
+Parametern `aid` visas i en frågesträng under två olika villkorsuppsättningar.
 
 **Fall 1**
 
-Parametern visas i en frågesträng när: `aid`
+Du ser parametern `aid` i en frågesträng när:
 
-* ID- [!DNL Experience Cloud] tjänsten har distribuerats korrekt.
-* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics] ID lagrat i sin [s_vi-cookie](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-analytics.html#section-5d50a078de444d12b7d927d68ff3b679).
+* ID-tjänsten [!DNL Experience Cloud] har distribuerats korrekt.
+* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics]-ID i sin [s_vi-cookie](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-analytics.html#section-5d50a078de444d12b7d927d68ff3b679).
 
 **Fall 2**
 
-Parametern visas i en frågesträng när din organisation använder en `aid` respitperiod [](../../reference/analytics-reference/grace-period.md) innan ID-tjänsten har implementerats fullständigt. Om den användare som besöker webbplatsen är ny och du inte använder någon respitperiod får besökaren parametern `mid` ( [!DNL Experience Cloud] ID).
+Parametern `aid` visas i en frågesträng när din organisation använder en [respitperiod](../../reference/analytics-reference/grace-period.md) innan ID-tjänsten har implementerats fullständigt. Om användaren som besöker webbplatsen är ny och du inte använder någon respitperiod, får besökaren parametern `mid` ( [!DNL Experience Cloud] ID).
 
 >[!MORELIKETHIS]
 >
