@@ -1,20 +1,16 @@
 ---
 description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2018.
-keywords: ID Service
-seo-description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2018.
-seo-title: Versionsinformation 2018
+keywords: ID-tjänst
 title: Versionsinformation 2018
-uuid: 771b5b11-a8e3-464c-b65e-b15135584ace
-translation-type: tm+mt
-source-git-commit: e6d65f1bfed187d7440512e8f3c2de0550506c95
+exl-id: ad3cccf1-2753-4ac9-a68c-15b2d62bbc1a
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
 
-
-# 2018 Release Notes {#release-notes}
+# Versionsinformation 2018 {#release-notes}
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2018.
 
@@ -126,4 +122,3 @@ Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity S
   </tr> 
  </tbody> 
 </table>
-
