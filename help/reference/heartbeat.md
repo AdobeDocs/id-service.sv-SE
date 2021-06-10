@@ -3,10 +3,10 @@ description: Videopulsen kräver Experience Cloud Identity Service. När du mät
 keywords: ID-tjänst
 title: Heartbeat och Experience Cloud Identity Service
 exl-id: 5e905925-54ba-43ce-ae87-a9bf193d7b95
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 14%
+source-wordcount: '105'
+ht-degree: 6%
 
 ---
 
@@ -16,5 +16,5 @@ Videopulsen kräver Experience Cloud Identity Service. När du mäter video i Ja
 
 >[!MORELIKETHIS]
 >
->* [Mäta ljud och video i Adobe Analytics ](https://docs.adobe.com/content/help/sv-SE/media-analytics/using/media-overview.html)
+>* [Mäta ljud och video i Adobe Analytics ](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
 
