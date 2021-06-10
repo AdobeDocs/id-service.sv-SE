@@ -3,10 +3,10 @@ description: Funktionsreleaser, uppdateringar eller ändringar av Experience Clo
 keywords: ID-tjänst
 title: Versionsinformation 2020
 exl-id: c9d7876e-debc-4c8e-8ebc-91646610c876
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 5%
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
@@ -25,4 +25,4 @@ Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity S
 * Från och med version 4.5 avvisar ECID alla tomma ID:n som skickas till metoden `setCustomerIDs`.
 * Ett problem som uppstod när anmälan konfigurerades som `doesOptInApply=false` och `isIabContext=true` har korrigerats.
 
-Information om månadsversioner för alla produkter finns i [Versionsinformation för Experience Cloud](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html).
+Information om månadsversioner för alla produkter finns i [Versionsinformation för Experience Cloud](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html).
