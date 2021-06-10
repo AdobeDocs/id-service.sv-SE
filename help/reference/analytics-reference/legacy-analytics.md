@@ -3,9 +3,9 @@ description: En översikt över hur identitetstjänsten Experience Cloud fungera
 keywords: ID-tjänst
 title: Begäranden om analyser och Experience Cloud ID
 exl-id: 8c682159-e23a-4641-9ffd-e0028dc2f305
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '444'
 ht-degree: 13%
 
 ---
@@ -20,7 +20,7 @@ Historiskt sett har Experience Cloud Identity Service integrerats nära i Adobe 
 
 ## AMCV Cookie är inte inställd i webbläsaren {#section-cccf10cd775e4a95a7e98d3c3c0ff9a9}
 
-Om [!DNL Experience Cloud]-cookien (AMCV) inte finns genererar ett ID-tjänstanrop till [!DNL Adobe] ett svar som varierar beroende på om det finns ett äldre Analytics-ID eller inte. Det gamla [!DNL Analytics]-ID:t lagras i [s_vi-cookien](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-analytics.html). I tabellen nedan beskrivs hur ID:n skrivs till AMCV-cookien baserat på läget för s_vi-cookien.
+Om [!DNL Experience Cloud]-cookien (AMCV) inte finns genererar ett ID-tjänstanrop till [!DNL Adobe] ett svar som varierar beroende på om det finns ett äldre Analytics-ID eller inte. Det gamla [!DNL Analytics]-ID:t lagras i [s_vi-cookien](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-analytics.html). I tabellen nedan beskrivs hur ID:n skrivs till AMCV-cookien baserat på läget för s_vi-cookien.
 
 <table id="table_DC85FECE26DD424E841BA1059AF1E57F"> 
  <thead> 
@@ -47,7 +47,7 @@ Om [!DNL Experience Cloud]-cookien (AMCV) inte finns genererar ett ID-tjänstanr
 
 >[!NOTE]
 >
->Användare som identifieras av s_fid-cookien kommer inte att ha sina gamla FID-värden migrerade till AMCV-cookien. Med s_fid-cookie migreras användare som om ingen s_vi-cookie fanns (se ovan) och visas som nya besökare på din webbplats. Mer information finns i [Analytiska cookies](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-analytics.html).
+>Användare som identifieras av s_fid-cookien kommer inte att ha sina gamla FID-värden migrerade till AMCV-cookien. Med s_fid-cookie migreras användare som om ingen s_vi-cookie fanns (se ovan) och visas som nya besökare på din webbplats. Mer information finns i [Analytiska cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-analytics.html).
 
 ## AMCV Cookie är inställd i webbläsaren {#section-01c088fc565c4b24ba1722c7cc240310}
 
