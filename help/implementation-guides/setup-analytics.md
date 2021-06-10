@@ -3,10 +3,10 @@ description: De här instruktionerna är till för Analytics-kunder som vill anv
 keywords: ID-tjänst
 title: Implementera Experience Cloud Identity Service för analys
 exl-id: c0271e49-32e5-49ee-bb11-548751ccafad
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 1%
+source-wordcount: '1014'
+ht-degree: 0%
 
 ---
 
@@ -91,7 +91,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 
 ## Steg 3: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-7b8a6e76dc124d0e9ab1ce96ab2ffb0e}
 
-I funktionen `Visitor.getInstance` ersätter du `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt [!DNL Experience Cloud] organisations-ID. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för [!DNL Experience Cloud]. Se även [Administration - bastjänster](https://docs.adobe.com/content/help/sv-SE/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+I funktionen `Visitor.getInstance` ersätter du `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt [!DNL Experience Cloud] organisations-ID. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för [!DNL Experience Cloud]. Se även [Administration - bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg", { ...`
 
@@ -178,7 +178,7 @@ Du behöver en respitperiod om du skickar data till ett internt system från en 
 
 Avbryt respitperioden efter att dataöverföringsprocessen kan använda kolumnerna `post_visid_high` och `post_visid_low`.
 
-Se [Referens för Clickstream-datakolumn](https://docs.adobe.com/content/help/en/analytics/export/analytics-data-feed/data-feed-overview.html).
+Se [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html).
 
 **Inmatning av data i Clickstream**
 
@@ -191,7 +191,7 @@ Du kan testa och distribuera enligt följande.
 Om du vill testa implementeringen av din ID-tjänst ska du kontrollera följande:
 
 * [AMCV-](../introduction/cookies.md) cookie i domänen där sidan finns.
-* MID-värde i [!DNL Analytics]-avbildningsbegäran med felsökningsverktyget [Adobe](https://docs.adobe.com/content/help/en/analytics/implementation/validate/debugger.html).
+* MID-värde i [!DNL Analytics]-avbildningsbegäran med felsökningsverktyget [Adobe](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html).
 
 Se [Testa och verifiera identitetstjänsten Experience Cloud](../implementation-guides/test-verify.md).
 
