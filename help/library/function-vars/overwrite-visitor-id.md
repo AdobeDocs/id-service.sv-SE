@@ -1,24 +1,20 @@
 ---
 description: Den här egenskapen skriver över en besökares Experience Cloud- och Analytics-ID:n när de navigerar från en domän till en annan. Om du vill skriva över ett ID måste du äga och ha implementerat ID-tjänsten på varje domän. Med den här koden kan du inte skriva över ID:n på domäner som du inte kontrollerar.
-keywords: ID Service
-seo-description: Den här egenskapen skriver över en besökares Experience Cloud- och Analytics-ID:n när de navigerar från en domän till en annan. Om du vill skriva över ett ID måste du äga och ha implementerat ID-tjänsten på varje domän. Med den här koden kan du inte skriva över ID:n på domäner som du inte kontrollerar.
-seo-title: overwriteCrossDomainMCIDAndAID
+keywords: ID-tjänst
 title: overwriteCrossDomainMCIDAndAID
-uuid: 8e48127a-ac62-4ea0-9756-2a27b20ecbcf
-translation-type: tm+mt
-source-git-commit: bc5c81455023e22e64877bb861dfe141e158599c
+exl-id: 726261b1-c8d0-4b12-b0cb-52d7e21e7fac
+source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '397'
 ht-degree: 1%
 
 ---
-
 
 # overwriteCrossDomainMCIDAndAID{#overwritecrossdomainmcidandaid}
 
 Den här egenskapen skriver över en besökares Experience Cloud- och Analytics-ID:n när de navigerar från en domän till en annan. Om du vill skriva över ett ID måste du äga och ha implementerat ID-tjänsten på varje domän. Med den här koden kan du inte skriva över ID:n på domäner som du inte kontrollerar.
 
-**Syntax:** `Visitor.overwriteCrossDomainMCIDAndAID: true|false` (standard är `false`)
+**Syntax:** `Visitor.overwriteCrossDomainMCIDAndAID: true|false` (default is  `false`)
 
 **Exempel på kod**
 
@@ -36,7 +32,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ID-HERE", {
 
 **Användningsexempel**
 
-Om du vill spåra besökare skriver ID-tjänsten ett [!DNL Experience Cloud] ID (eller MID) till en webbläsarcookie. I följande tabell visas och beskrivs de vanliga användningsfall där du kanske vill skriva över en befintlig MID som angetts av ID-tjänsten i en annan domän.
+Om du vill spåra webbplatsbesökare skriver ID-tjänsten ett [!DNL Experience Cloud]-ID (eller MID) till en webbläsarcookie. I följande tabell visas och beskrivs de vanliga användningsfall där du kanske vill skriva över en befintlig MID som angetts av ID-tjänsten i en annan domän.
 
 <table id="table_FC1AF6551D6646E0BF1C4FB7C1316EBB"> 
  <thead> 
@@ -67,8 +63,7 @@ Om du vill spåra besökare skriver ID-tjänsten ett [!DNL Experience Cloud] ID 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Identifiera besökare från mobilappar till webbläsare</b> </p> </td> 
-   <td colname="col2"> <p>Det här användningsfallet är något annorlunda. Det handlar om att identifiera användare när de går från en mobilapp till din webbplats. I det här fallet har besökaren redan en MID lokalt angiven av en mobilapp och har en annan MID angiven i en cookie på webbplatsen. Du kan ange <span class="codeph"> Visitor.overwriteCrossDomainMCIDAndAID: true </span> för att skriva över MID som angetts i webbläsarens cookie med MID som angetts av mobilappen. </p> </td> 
+   <td colname="col2"> <p>Det här användningsfallet är något annorlunda. Det handlar om att identifiera användare när de går från en mobilapp till din webbplats. I det här fallet har besökaren redan en MID lokalt angiven av en mobilapp och har en annan MID angiven i en cookie på webbplatsen. Du kan ange <span class="codeph"> Visitor.overwriteCrossDomainMCIDAndAID: true </span> om du vill skriva över MID-inställningen i webbläsarcookien med MID-värdet som angetts av mobilappen. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-
