@@ -3,9 +3,9 @@ description: Innan du distribuerar Experience Cloud Identity Service bör du fö
 keywords: ID-tjänst
 title: Beslutspunkter för migrering av identitetstjänst från Experience Cloud
 exl-id: f2802db2-c95f-476f-8c60-f45e8312253c
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Om du har flera domäner som skickar data till *samma rapportserie* rekommendera
    <td colname="col1"> <p>En enda domän </p> </td> 
    <td colname="col2"> <p>Att arbeta med en enda domän innebär att du kan migrera bort från en datainsamling med CNAME om du inte längre vill hantera den. Du behöver dock inte ändra om CNAME fungerar. </p> <p>Om du tar bort CNAME: </p> 
     <ul id="ul_12CDECEFC7BB41A18895B507CAA42315"> 
-     <li id="li_32E2CD3E58454E20A642BADE507AE86E">Kontrollera att den nya spårningsservern är <a href="https://docs.adobe.com/content/help/en/analytics/technotes/rdc/regional-data-collection.html" format="https" scope="external"> RDC-kompatibel</a>. </li> 
+     <li id="li_32E2CD3E58454E20A642BADE507AE86E">Kontrollera att den nya spårningsservern är <a href="https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html" format="https" scope="external"> RDC-kompatibel</a>. </li> 
      <li id="li_865BB6DAA3594EBBAB688E73C8343762">Gå från CNAME till en RDC-spårningsserver några månader innan du migrerar till Experience Cloud<span class="keyword"> ID-tjänsten </span>. </li> 
      <li id="li_284A015177554C848C8648DC5BBAA365"> <i>Använd </i> inte en  <span class="codeph"> *.2o7.</span> nettracking-server. </li> 
      <li id="li_B1ABF03DC46C42059F61542CDE0FE5A1">Kontakta <a href="https://helpx.adobe.com/marketing-cloud/contact-support.html" format="https" scope="external"> kundtjänst</a> för att konfigurera en migrering av besökare. Detta bidrar till att säkerställa ett konsekvent antal besökare. </li> 
