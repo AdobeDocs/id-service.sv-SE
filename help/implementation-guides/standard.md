@@ -3,9 +3,9 @@ description: Äldre implementeringar använder Dynamic Tag Management (DTM) för
 keywords: ID-tjänst
 title: Implementering med dynamisk tagghantering
 exl-id: 37ccc919-3015-42fa-a88f-639cdf726f48
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 0dde49ca194e4a86ea7957629eec79d0b75a1e81
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ mcvid-dtm-implement.xml
 
    När du har sparat är ID-tjänsten konfigurerad som ett verktyg i DTM. Den är dock inte klar att användas än. DTM-verktyget måste fortfarande gå igenom DTM-publicerings-/godkännandeprocessen och du kanske vill konfigurera ytterligare parametrar. Mer information om de ytterligare parametrar som du kan lägga till i DTM finns i [Experience Cloud Identity Service Settings for DTM](../implementation-guides/standard.md#concept-fb6cb6a0e6cc4f10b92371f8671f6b59).
 
-## Inställningar för identitetstjänsten i Experience Cloud för DTM {#concept-fb6cb6a0e6cc4f10b92371f8671f6b59}
+## Inställningar för Experience Cloud-identitetstjänst för DTM {#concept-fb6cb6a0e6cc4f10b92371f8671f6b59}
 
 Beskriver fälten [!UICONTROL Organization ID], [!UICONTROL General] och [!UICONTROL Customer Settings] och hur de används av ID-tjänsten [!DNL Experience Cloud].
 
@@ -179,7 +179,7 @@ Ytterligare fält som gör att du kan lägga till en integreringskod eller statu
 
 **Integreringskod**
 
-En integrationskod är ett unikt, kundtillhandahållet ID. Integrationskoden ska innehålla det värde som du använde för att [skapa en datakälla](hhttps://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-sources/manage-datasources.html#create-data-source) i [!DNL Audience Manager].
+En integrationskod är ett unikt, kundtillhandahållet ID. Integrationskoden ska innehålla det värde som du använde för att [skapa en datakälla](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-sources/manage-datasources.html#create-data-source) i [!DNL Audience Manager].
 
 **Värde**
 
@@ -189,7 +189,7 @@ Värdet ska vara ett dataelement som innehåller användar-ID:t. Dataelement är
 
 Alternativ som definierar eller identifierar besökare utifrån deras autentiseringsstatus (t.ex. inloggad, utloggad). Se [Kund-ID och autentiseringstillstånd](../reference/authenticated-state.md).
 
-## Testa och verifiera identitetstjänsten Experience Cloud {#concept-644fdbef433b46ba9c0634ac95eaa680}
+## Testa och verifiera Experience Cloud Identity Service {#concept-644fdbef433b46ba9c0634ac95eaa680}
 
 Dessa instruktioner, verktyg och procedurer hjälper dig att avgöra om ID-tjänsten fungerar som den ska. Dessa tester gäller för ID-tjänsten i allmänhet och för olika ID-tjänster och [!DNL Experience Cloud]-lösningskombinationer.
 
@@ -211,7 +211,7 @@ Du kan också testa ID-tjänsten i en anonym eller inkognitiv webbläsarsession.
 
 Felsökaren [Adobe](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html) och [Charles HTTP-proxyn](https://www.charlesproxy.com/) kan hjälpa dig att avgöra om ID-tjänsten har konfigurerats för att fungera korrekt med Analytics. Informationen i det här avsnittet baseras på resultaten från felsökaren Adobe och Charles. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
 
-## Testa med felsökaren för Adobe {#section-861365abc24b498e925b3837ea81d469}
+## Testa med felsökaren i Adobe {#section-861365abc24b498e925b3837ea81d469}
 
 Din tjänstintegrering är korrekt konfigurerad när du ser ett [!DNL Experience Cloud ID] (MID) i felsökningssvaret för [!DNL Adobe]. Mer information om MID finns i [Cookies och Experience Cloud Identity Service](../introduction/cookies.md).
 
@@ -222,7 +222,7 @@ Så här verifierar du statusen för ID-tjänsten med [!DNL Adobe] [felsökaren]
 1. Öppna felsökningsprogrammet [!DNL Adobe].
 1. Kontrollera resultatet för ett MID.
 
-## Om Adobe-felsökningsresultat {#section-bd2caa6643d54d41a476d747b41e7e25}
+## Om felsökningsresultat för Adobe {#section-bd2caa6643d54d41a476d747b41e7e25}
 
 MID lagras i ett nyckelvärdepar som använder den här syntaxen: `MID= *`Experience Cloud ID`*`. Felsökaren visar den här informationen som visas nedan.
 
@@ -255,7 +255,7 @@ Så här verifierar du ID-tjänstens status med Charles:
 1. Läs in testsidan som innehåller ID-tjänstkoden.
 1. Kontrollera om det finns förfrågningar, svarssamtal och data som beskrivs nedan.
 
-## Om Charles-resultat {#section-c10c3dc0bb9945cbaffcf6fec7082fab}
+## Charles results {#section-c10c3dc0bb9945cbaffcf6fec7082fab}
 
 I det här avsnittet finns information om var du ska söka och vad du ska leta efter när du använder Charles för att övervaka HTTP-anrop.
 
