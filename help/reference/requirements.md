@@ -3,18 +3,18 @@ description: Granska det här avsnittet för att kontrollera att du använder r�
 keywords: ID-tjänst
 title: Krav för Experience Cloud Identity Service
 exl-id: ebeac4c7-b36c-4a4e-9378-351fac5baf53
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 2c87022baeb09a8767d0d9627bf2b607c51b2503
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '731'
 ht-degree: 3%
 
 ---
 
-# Krav för identitetstjänsten Experience Cloud {#requirements-for-the-experience-cloud-id-service}
+# Krav för Experience Cloud Identity Service {#requirements-for-the-experience-cloud-id-service}
 
 Granska det här avsnittet för att kontrollera att du använder rätt lösningar, tjänster och kodversioner som krävs av Experience Cloud identitetstjänst.
 
-## Krav för att säkerställa att implementeringen lyckas och att stödet är {#section-15e54a9e9ad2443cb9dc950b4a78f1f1}
+## Krav för att säkerställa att implementeringen lyckas och stöds {#section-15e54a9e9ad2443cb9dc950b4a78f1f1}
 
 En lyckad implementering som stöds uppfyller (eller överskrider) kodkraven och följer instruktionerna så som de visas i [!DNL Adobe]-hjälpen. En implementering som inte stöds ger oväntade resultat och förhindrar kundtjänst och våra tekniker från att hjälpa till med felsökning eller lösningar av dina problem med ID-tjänsten.
 
@@ -79,7 +79,7 @@ Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL 
 
 ## Analyskrav: Regional datainsamling (RDC) {#section-7d04bb013bc84a25bae3b148bc0ca25f}
 
-Alla spårningsservrar har konverterats till RDC, så det finns inget behov av att ändra analysspårningsservern. [Mer information...](https://experienceleague.adobe.com/docs/analytics/admin/data-collection/regional-data-collection/regional-data-collection.html)
+Alla spårningsservrar har konverterats till RDC, så det finns inget behov av att ändra analysspårningsservern. [Mer information...](https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html?lang=en)
 
 ## Kodbibliotek och versionskrav {#section-ad7542a4317d430fa79fc6b095beb84d}
 
