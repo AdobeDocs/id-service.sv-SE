@@ -5,9 +5,9 @@ solution: Experience Cloud
 title: Implementeringsguider
 uuid: null
 exl-id: af6da32b-72d9-463d-a933-fd1fe960d4d8
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 8b8615b65dd3ea0427ba585a6707f059148d05e2
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -18,17 +18,16 @@ Instruktioner och kodexempel för standardimplementeringar och icke-standardimpl
 
 >[!IMPORTANT]
 >
->Läs och förstå [kraven för ID-tjänsten](../reference/requirements.md) innan du börjar använda dessa procedurer.
+>Var noga med att läsa och förstå [Krav för ID-tjänst](../reference/requirements.md) innan du börjar med dessa procedurer.
 
 ## Standardimplementering
 
-En standardimplementering använder [Adobe Experience Platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html) för att hjälpa dig komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
+En standardimplementering använder [Platforma launchen Adobe Experience](https://experienceleague.adobe.com/docs/launch/using/home.html) för att hjälpa dig att komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
 
 ## Implementeringsresurser
 
 * [Implementeringsmetoder](implementation-methods.md)
 * [Implementera med Experience Platform Launch](ecid-implement-with-launch.md)
-* [Implementering med dynamisk tagghantering](standard.md)
 * [Implementera Experience Cloud Identity Service för analys](setup-analytics.md)
 * [Implementera identitetstjänsten Experience Cloud för Target](setup-target.md)
 * [Implementera identitetstjänsten Experience Cloud för analys och Audience Manager](setup-aam-analytics.md)

@@ -3,9 +3,9 @@ description: Granska det här avsnittet för att kontrollera att du använder r�
 keywords: ID-tjänst
 title: Krav för Experience Cloud Identity Service
 exl-id: ebeac4c7-b36c-4a4e-9378-351fac5baf53
-source-git-commit: 2c87022baeb09a8767d0d9627bf2b607c51b2503
+source-git-commit: e171c94ccfa1f4fe9b8d909d0204adb94f20cbb6
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '649'
 ht-degree: 3%
 
 ---
@@ -16,39 +16,19 @@ Granska det här avsnittet för att kontrollera att du använder rätt lösninga
 
 ## Krav för att säkerställa att implementeringen lyckas och stöds {#section-15e54a9e9ad2443cb9dc950b4a78f1f1}
 
-En lyckad implementering som stöds uppfyller (eller överskrider) kodkraven och följer instruktionerna så som de visas i [!DNL Adobe]-hjälpen. En implementering som inte stöds ger oväntade resultat och förhindrar kundtjänst och våra tekniker från att hjälpa till med felsökning eller lösningar av dina problem med ID-tjänsten.
+En lyckad implementering som stöds uppfyller (eller överskrider) kodkraven och följer instruktionerna som de visas i [!DNL Adobe] hjälp. En implementering som inte stöds ger oväntade resultat och förhindrar kundtjänst och våra tekniker från att hjälpa till med felsökning eller lösningar av dina problem med ID-tjänsten.
 
-<table id="table_2216C44AA66248DCAA13BF64BDF2D88A"> 
- <thead> 
-  <tr> 
-   <th colname="col1" class="entry"> Implementeringstyp </th> 
-   <th colname="col2" class="entry"> Beskrivning </th> 
-  </tr> 
- </thead>
- <tbody> 
-  <tr> 
-   <td colname="col1"> <p> <a href="../implementation-guides/standard.md#concept-89cd0199a9634fc48644f2d61e3d2445" format="dita" scope="local"> Standard</a> </p> </td> 
-   <td colname="col2"> <p>För en standardimplementering med dynamisk tagghantering (DTM) måste du: </p> 
-    <ul id="ul_59CDE179566844B494F3068FF6333809"> 
-     <li id="li_CCCB6AFC08EE405F94C42216D3CE50AC"> Placera den inbäddade huvudkoden i <span class="codeph"> &lt;head&gt;</span>-avsnittet på sidan. </li> 
-     <li id="li_13962F2CB1764091A84863BE499675A2">Placera den inbäddade sidfotskoden före den avslutande <span class="codeph"> &lt;/body&gt;</span>-taggen. </li> 
-    </ul> <p>En standardimplementering stöds inte när du: </p> 
-    <ul id="ul_3B62559317ED4C7AA548C3B8DBA281F7"> 
-     <li id="li_1F16C6D412944197BEA56BC24730782C"> Placera någon av dessa DTM-inbäddningskoder någon annanstans i koden och/eller sidkoden. </li> 
-     <li id="li_05615C01F3A947BBBD41046E68377224"> Lägg till, lägg till eller läs in DTM-kod med asynkrona metoder, anrop/callback-metoder eller wrappers. </li> 
-     <li id="li_B2137DFF627B473FA876580449026D2B">Inkludera flera instanser av inbäddningskod på samma sida. </li> 
-    </ul> <p>Se även <a href="https://experienceleague.adobe.com/docs/dtm/using/client-side/deployment.html" format="https" scope="external"> Bädda in kod och värdalternativ</a>. </p> </td> 
-  </tr> 
-  <tr> 
-   <td colname="col1"> <p> <a href="../implementation-guides/implementation-guides.md#section-2c4f2db1f9704315a7cccab6d2e07113" format="dita" scope="local"> Implementeringar som inte är standard  </a> </p> </td> 
-   <td colname="col2"> <p>För icke-standardiserade eller manuella implementeringar måste du konfigurera ID-tjänsten enligt anvisningarna i den här handboken. Precis som med DTM-riktlinjerna ovan skapar felaktig kodplacering och inläsning en implementering som inte stöds. </p> </td> 
-  </tr> 
- </tbody> 
-</table>
+### Standardimplementeringar
+
+Se [Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) för standardimplementeringen.
+
+### Implementeringar som inte är standard
+
+För icke-standardiserade eller manuella implementeringar måste du konfigurera ID-tjänsten enligt anvisningarna i den här handboken. Precis som med DTM-riktlinjerna ovan skapar felaktig kodplacering och inläsning en implementering som inte stöds.
 
 ## Krav för Experience Cloud: Organisations-ID {#section-a02f537129a64ffbb690d5738d360c26}
 
-Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL Experience Cloud] och ha ett organisations-ID. Kontrollera följande lista om du är osäker på företagets [!DNL Experience Cloud]-status och behöver hitta ditt företags-ID.
+Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL Experience Cloud] och har ett organisations-ID. Kontrollera följande lista om du är osäker på företagets [!DNL Experience Cloud] status och behöver hitta ditt organisations-ID.
 
 >[!IMPORTANT]
 >
@@ -64,15 +44,15 @@ Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL 
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <b>Aktiverad</b> </p> </td> 
-   <td colname="col2"> <p>Om ditt företag är aktiverat för <span class="keyword"> Experience Cloud</span> men du inte har ditt företags-ID, se <a href="https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/organizations.html" format="https" scope="external"> Organisations-ID</a> (rulla ned till avsnittet <i>Hitta ditt företags-ID</i>). </p> </td> 
+   <td colname="col2"> <p>Om ditt företag är aktiverat för <span class="keyword"> Experience Cloud</span> men du har inte ditt organisations-ID, se <a href="https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/organizations.html" format="https" scope="external"> Organisations-ID</a> (rulla ned till avsnittet <i>Hitta ditt företags-ID</i>). </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Osäker</b> </p> </td> 
-   <td colname="col2"> <p> Om du inte känner till ditt företags <span class="keyword"> Experience Cloud</span>-status kan du fråga vem som hanterar ditt Adobe-konto om medlemmar i ditt företag kan logga in på <a href="https://experiencecloud.adobe.com" format="https" scope="external"> marketing.adobe.com</a> med hjälp av en Adobe ID. Om du kan det är du aktiverad och en administratör kan visa ditt organisations-ID. Information om organisationsnummer finns i avsnittet Administrationssida i <a href="https://docs.adobe.com/help/sv-SE/core-services/interface/experience-cloud.html" format="https" scope="external"> Administrera Experience Cloud</a>. </p> </td> 
+   <td colname="col2"> <p> Om du inte känner till ditt företags <span class="keyword"> Experience Cloud</span> status, fråga vem som hanterar ditt Adobe-konto om medlemmar i ditt företag kan logga in på <a href="https://experiencecloud.adobe.com" format="https" scope="external"> marketing.adobe.com</a> med en Adobe ID. Om du kan det är du aktiverad och en administratör kan visa ditt organisations-ID. Information om organisation-ID finns i avsnittet Administrationssida i <a href="https://docs.adobe.com/help/sv-SE/core-services/interface/experience-cloud.html" format="https" scope="external"> Experience Cloud Administration</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Ej aktiverad</b> </p> </td> 
-   <td colname="col2"> <p> Om ditt företag inte är aktiverat för Experience Cloud kan du läsa <a href="https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html" format="https" scope="external"> Core Services - Enabling Your Solutions</a> to get started. </p> </td> 
+   <td colname="col2"> <p> Om ditt företag inte är aktiverat för Experience Cloud finns mer information i <a href="https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html" format="https" scope="external"> Bastjänster - Möjliggör dina lösningar</a> för att komma igång. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -83,7 +63,7 @@ Alla spårningsservrar har konverterats till RDC, så det finns inget behov av a
 
 ## Kodbibliotek och versionskrav {#section-ad7542a4317d430fa79fc6b095beb84d}
 
-I följande avsnitt listas de lägsta kodversionerna som krävs för att använda ID-tjänsten [!DNL Experience Cloud].
+I följande avsnitt listas de lägsta kodversionerna som krävs för att använda [!DNL Experience Cloud] ID-tjänst.
 
 >[!TIP]
 >
@@ -101,7 +81,7 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <b> <span class="keyword"> Experience </span> CloudID-tjänst</b> </p> </td> 
+   <td colname="col1"> <p> <b> <span class="keyword"> Experience Cloud</span> ID-tjänst</b> </p> </td> 
    <td colname="col3"> <p> <span class="codeph"> VisitorAPI.js</span> </p> </td> 
    <td colname="col4"> <p>2.0 eller senare </p> </td> 
   </tr> 
@@ -112,10 +92,10 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
   </tr> 
   <tr> 
    <td colname="col3"> <p> <span class="codeph"> s_code.js</span> </p> </td> 
-   <td colname="col4"> <p>H.27 </p> <p> <p>Obs!  <span class="keyword"> Analytics</span> s_code version H.27 stöds inte längre i ID-tjänstversionen 1.6.0. Uppgradera koden till den senaste versionen av AppMeasurement. </p> </p> </td> 
+   <td colname="col4"> <p>H.27 </p> <p> <p>Obs!  <span class="keyword"> Analyser</span> s_code version H.27 stöds inte längre i ID-tjänstversionen 1.6.0. Uppgradera koden till den senaste versionen av AppMeasurement. </p> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col3"> <p>Videopulsslag </p> <p>Se <a href="https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html" format="https" scope="external"> Video Heartbeat 2.x för JavaScript</a>. </p> </td> 
+   <td colname="col3"> <p>Videopulsslag </p> <p>Se <a href="https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html" format="https" scope="external"> Video Heartbeat 2.x for JavaScript</a>. </p> </td> 
    <td colname="col4"> <p>2.0 </p> </td> 
   </tr> 
   <tr> 
@@ -146,7 +126,7 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
 >
 >Vi rekommenderar att du använder de senaste kodversionerna i stället för de nödvändiga minimumen.
 
-SDK-koden måste vara aktiverad för ID-tjänsten. Aktivera och hämta den senaste SDK-koden för varje program från ditt [Adobe Mobile Services](https://mobilemarketing.adobe.com/)-konto. Se även:
+SDK-koden måste vara aktiverad för ID-tjänsten. Aktivera och hämta den senaste SDK-koden för varje app från [Adobe Mobile Services](https://mobilemarketing.adobe.com/) konto. Se även:
 
 * [Konfigurera tjänstalternativ för SDK Visitor ID](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/t-config-visitor.html)
 * [Android SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/c-marketing-cloud.html)

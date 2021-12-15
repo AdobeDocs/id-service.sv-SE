@@ -5,16 +5,15 @@ user-guide-title: Hjälp om Experience Cloud Identity Service
 breadcrumb-title: Handbok för identitetstjänst
 user-guide-description: ID-tjänsten tillhandahåller ett universellt, beständigt ID som identifierar besökarna över alla lösningar i Experience Cloud. Den kan ersätta ID-genereringskoden för tjänster som Analytics, Audience Manager, Target och andra lösningar eller funktioner från Experience Cloud.
 user-guide-url: /content/help/en/id-service/using/home.html
-translation-type: tm+mt
-source-git-commit: 01d50f9def8916b45fac846de235363836ba0429
+source-git-commit: e171c94ccfa1f4fe9b8d909d0204adb94f20cbb6
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '394'
 ht-degree: 8%
 
 ---
 
 
-# Hjälp om Experience Cloud identitetstjänst {#using}
+# Hjälp om Experience Cloud Identity Service {#using}
 
 + [Hjälp om ID-tjänst](home.md)
 + Översikt {#intro}
@@ -26,8 +25,7 @@ ht-degree: 8%
 + Implementering {#implementation}
    + [Implementeringsmetoder](implementation-guides/implementation-methods.md)
    + [Implementeringsguider](implementation-guides/implementation-guides.md)
-   + [Implementera med Experience Platform Launch](implementation-guides/ecid-implement-with-launch.md)
-   + [Implementering med DTM](implementation-guides/standard.md)
+   + [Implementera med Experience Platform-taggar](implementation-guides/ecid-implement-with-launch.md)
    + [Implementering för Analytics](implementation-guides/setup-analytics.md)
    + [Implementera för mål](implementation-guides/setup-target.md)
    + [Implementering för Analytics och Audience Manager](implementation-guides/setup-aam-analytics.md)
@@ -36,7 +34,7 @@ ht-degree: 8%
    + [Direktintegrering med ID-tjänsten](implementation-guides/direct-integration.md)
    + [Användningsexempel för direktintegrering](implementation-guides/direct-integration-examples.md)
    + [Testa och verifiera ID-tjänsten](implementation-guides/test-verify.md)
-   + Opt-in-tjänst {#opt-in-service}
+   + Anmälningstjänst {#opt-in-service}
       + [Översikt över anmälningstjänsten](implementation-guides/opt-in-service/optin-overview.md)
       + [Konfigurera anmälningstjänst](implementation-guides/opt-in-service/getting-started.md)
       + [Validerar anmälningstjänst](implementation-guides/opt-in-service/testing-optin-and-iab-plugin.md)
@@ -112,7 +110,7 @@ ht-degree: 8%
    + [Vanliga frågor om ID-tjänster](faq-intro/faq.md)
    + [Vanliga frågor om analys och ID-tjänster](faq-intro/analytics-faq.md)
    + [Frågor och svar för andra Experience Cloud-lösningar](faq-intro/other-faq.md)
-+ Versionsinformation för ID-tjänsten {#release-notes}
++ Versionsinformation för ID-tjänst {#release-notes}
    + [Versionsinformation 2020](release-notes/release-notes.md)
    + [Versionsinformation 2019](release-notes/notes-2019.md)
    + [Versionsinformation 2018](release-notes/notes-2018.md)
