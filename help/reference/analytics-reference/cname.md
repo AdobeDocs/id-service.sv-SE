@@ -3,9 +3,9 @@ description: Om du har en huvudwebbplats där kunder kan identifieras innan de b
 keywords: operationsordning;ID-tjänst
 title: CNAME - implementeringsöversikt
 exl-id: f95dda3c-7bb2-4c7d-a25a-a4d20b58fe27
-source-git-commit: 61f9f1888430ff0fdbb90a8cf6561bf23d204a45
+source-git-commit: d2586fc722be25df1b82caaf2cc6de6a2a6c31bf
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -16,4 +16,4 @@ Med CNAME-implementeringar kan du anpassa den samlingsdomän som används av Ado
 
 En CNAME-implementering ger inga fördelar vad gäller cookie-livstid, men det kan finnas andra fördelar. Fördelarna är annonsblockerare och mindre vanliga webbläsare som förhindrar att data skickas till domäner som de klassificerar som spårare. I dessa fall kan användning av CNAME förhindra att datainsamlingen avbryts för användare som använder dessa verktyg.
 
-Dessutom kan du med CNAME-implementeringar ange **[!UICONTROL Choose custom RDC type]** som styr var användarnas träffar dirigeras från början. De flesta kunder använder inte anpassade RDC-typer.
+Dessutom kan du med CNAME-implementeringar [välj en anpassad RDC-typ](https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html?lang=en) som styr var användarnas träffar dirigeras från början. De flesta kunder använder inte anpassade RDC-typer.
