@@ -3,10 +3,10 @@ description: Konfigurera ID-tjänsten genom att skicka dessa egenskaper till den
 keywords: Organisations-ID;ID-tjänst
 title: Konfigurationer
 exl-id: a369f624-d263-4287-bb7e-b89d584fa245
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 384b292413bbc7e43ade97e442ab7195f3b26c7a
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 10%
+source-wordcount: '85'
+ht-degree: 9%
 
 ---
 
@@ -16,7 +16,7 @@ Konfigurera ID-tjänsten genom att skicka dessa egenskaper till den statiska met
 
 >[!NOTE]
 >
->JavaScript-biblioteken *Experience Cloud ID har nyligen flyttats.* Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>The *Experience Cloud ID JavaScript-bibliotek* har flyttats nyligen. Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Relaterade artiklar:
 
@@ -29,7 +29,6 @@ Relaterade artiklar:
 + [idSyncAttachIframeOnWindowLoad](idsyncattachiframeonwindowload.md)
 + [idSyncContainerID](idsyncontainerid.md)
 + [idSyncSSLUseAkamai](idsyncssluseakamai.md)
-+ [isCoopSafe](coopsafe.md)
 + [loadTimeout](loadtimeout.md)
 + [overwriteCrossDomainMCIDAndAID](overwrite-visitor-id.md)
 + [resetBeforeVersion](resetbeforeversion.md)
