@@ -1,18 +1,28 @@
 ---
-description: 'Experience Cloud Identity Service tillhandahåller ett universellt, beständigt ID som identifierar besökarna i alla lösningar i Experience Cloud. '
-keywords: ID-tjänst
+description: Experience Cloud Identity Service aktiverar det gemensamma identifieringsramverket för Experience Cloud program och tjänster. Det fungerar genom att tilldela ett unikt, beständigt ID som kallas Experience Cloud-ID (ECID) till en besökare.
+keywords: ID-tjänst; Identitetstjänst Experience Cloud Identity Service
 title: Experience Cloud Identity Service
 exl-id: fe1368db-06ca-4c79-b655-b7064e316d74
-source-git-commit: 384b292413bbc7e43ade97e442ab7195f3b26c7a
+source-git-commit: f7c25f5ebd0690c56c081422949eb34f1f277ae1
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 18%
+source-wordcount: '405'
+ht-degree: 13%
 
 ---
 
 # Adobe Experience Cloud Identity Service {#experience-cloud-id-service}
 
-Adobe Experience Cloud ID-tjänst (Identity Service) är ett universellt, beständigt ID som identifierar besökarna i alla lösningar i Experience Cloud. Den kan ersätta ID-genereringskoden för tjänster som Analytics, Audience Manager, Target och andra lösningar eller funktioner från Experience Cloud.
+Experience Cloud Identity Service aktiverar det gemensamma identifieringsramverket för Experience Cloud program och tjänster. Det fungerar genom att tilldela ett unikt, beständigt ID som kallas Experience Cloud-ID (ECID) till en besökare.
+
+## Förstå de viktigaste entiteterna i identiteten
+
+För att få en bättre förståelse för hur Adobe kan hjälpa till att identifiera besökare unikt och lösa identitetsinformation kan du göra följande:
+
+* **Experience Cloud Identity Service**: Experience Cloud Identity Service **ansvarar för att ställa in Experience Cloud-ID (ECID)**. Mer information finns i [Experience Cloud Identity Service - översikt](./introduction/overview.md).
+* **Experience Cloud ID (ECID)**: ECID är ett delat ID-namnområde som används i Adobe Experience Platform- och Adobe Experience Cloud-program för att identifiera människor och enheter. Mer information om ECID finns i [ECID - översikt](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html).
+* **Experience Platform Identity Service**: Experience Platform Identity Service ger er en heltäckande bild av era kunder och deras beteende genom att överbrygga identiteter mellan olika enheter och system. Mer information finns i [Experience Platform Identity Service - översikt](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html).
+
+<!-- The Adobe Experience Cloud Identity Service provides a universal, persistent ID that identifies your visitors across all the solutions in the Experience Cloud. It can replace ID generation code for Experience Cloud solutions and services. -->
 
 <table id="table_5E612F746A704FE095B809A013EE977F" class="simpletable"> 
  <tbody> 

@@ -1,48 +1,52 @@
 ---
 description: Experience Cloud Identity-tjänstens roll i Adobe Experience Cloud.
-title: Översikt över tjänsten Experience Cloud ID
+title: Experience Cloud Identity Service - översikt
 exl-id: dc7d6220-d42b-4a3e-bf37-1e4e87280ae1
-source-git-commit: 953a4932e581a7a0019bec354201be4bc39f8b6b
+source-git-commit: f7c25f5ebd0690c56c081422949eb34f1f277ae1
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 0%
+source-wordcount: '489'
+ht-degree: 1%
 
 ---
 
-# Översikt över tjänsten Experience Cloud ID
+# Experience Cloud Identity Service - översikt
 
-The [!UICONTROL Experience Cloud Identity Service] används för att skapa ett gemensamt identifieringsramverk för Experience Cloud Core Services (t.ex. kundattribut och målgrupper) i Experience Platform Identity Service.
+Experience Cloud Identity Service aktiverar det gemensamma identifieringsramverket för Experience Cloud Application Services. Du kan använda Experience Cloud Identity Service för att ange [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html).
+
+ECID är ett delat ID-namnområde som används i Adobe Experience Platform- och Experience Cloud-program för att spåra besökares beteende och se till att varje enhet har en unik identifierare som kan finnas kvar i flera sessioner.
+
+>[!TIP]
+>
+>Experience Cloud Identity Service, Experience Platform Identity Service och ECID är tre **olika** enheter.
+
+Experience Cloud Identity Service kan ersätta olika programspecifika ID:n och använda [Kund-ID och autentiseringstillstånd](/help/reference/authenticated-state.md) så att du kan skicka in dina egna kund-ID:n till Experience Cloud.
 
 >[!NOTE]
 >
-> Du kan se referenser till ID-tjänsten som akronymer eller tidigare namn, som ECID, Marketing Cloud ID-tjänst (MID) och Visitor ID-tjänst. De här refererar till [!UICONTROL Experience Cloud Identity Service]. Du kan också se [!UICONTROL Experience Platform Identity Service]. Förtydliga:
+>Experience Cloud Identity Service fungerar bara med Experience Cloud Application Services som du prenumererar på och ger inte tillgång till andra programtjänster om du inte prenumererar på dem.
 
-* [!UICONTROL Experience Platform Identity Service]: Tjänsten som länkar identiteter. Det är en enhetslänkningstjänst för personbaserad upplevelsehantering.
-* [!UICONTROL Experience Cloud ID Service] (ECID): Det unika, beständiga ID som tilldelats en besökare. Det är en specifik enhet som kan användas av plattformsidentitetstjänsten.
+Experience Cloud Identity Service stöder följande program:
 
-När din organisation implementerar ID-tjänsten kan du med detta ID identifiera samma besökare och deras data i olika Experience Cloud-lösningar.
-
-![](assets/ecid-new.png)
-
-Dessutom kan ID-tjänsten ersätta olika lösningsspecifika ID:n (t.ex. Analytics AID). Och via [Kund-ID och autentiseringstillstånd](/help/reference/authenticated-state.md) kan du med ID-tjänsten skicka dina egna kund-ID:n till Experience Cloud. Tänk dock på att ID-tjänsten bara fungerar med de lösningar du redan prenumererar på. Den ger inte åtkomst till andra produkter om du inte är registrerad för dem.
+* [Adobe Analytics](https://business.adobe.com/products/analytics/web-analytics.html)
+* [Audience Manager](https://business.adobe.com/products/audience-manager/adobe-audience-manager.html)
+* [Adobe Target](https://business.adobe.com/products/target/adobe-target.html)
 
 I framtiden är ID-tjänsten en integrerad komponent i många nuvarande och framtida funktioner, förbättringar och tjänster för Experience Cloud. För närvarande stöder ID-tjänsten [Analyser](http://www.adobe.com/marketing-cloud/web-analytics.html), [Audience Manager](http://www.adobe.com/marketing-cloud/data-management-platform.html)och [Mål](http://www.adobe.com/marketing-cloud/testing-targeting.html). Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu.
 
 ## Sammanfattning av funktioner
 
-Sammanfattningsvis kan ID-tjänsten:
+Sammanfattningsvis hjälper Experience Cloud Identity Service till att
 
-* Skapar en gemensam nyckel eller ett ID som kan användas för att länka profiler och identiteter.
-* Identifierar unikt en enhet över flera lösningar.
+* Identifierar en besökare på en enhet i flera program.
 * Ställer in en cookie för första part i kundens domän för att säkerställa spårning på samma domän. Visa dokumentet på [cookies och Experience Cloud Identity Service](./cookies.md) för mer information.
 * Tar emot alias och ID-mappningar från Experience Cloud kunder och partners.
 * Hanterar ID-synkronisering i Experience Cloud.
 * Stöder synkronisering med olika tredjepartsleverantörer över hela reklamteknikens ekosystem.
 
-## Krav för ID-tjänst
+## Krav för identitetstjänsten i Experience Cloud
 
-Din lösning och andra Adobe-kodbibliotek måste uppfylla [vissa krav](/help/reference/requirements.md) innan du kan använda ID-tjänsten.
+Din lösning och andra Adobe-kodbibliotek måste uppfylla [vissa krav](/help/reference/requirements.md) innan du kan använda identitetstjänsten.
 
-* [Cookies och Experience Cloud Identity Service](cookies.md): ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och möjliggöra datadelning mellan olika Experience Cloud-lösningar.
+* [Cookies och Experience Cloud Identity Service](cookies.md): Identitetstjänsten för Experience Cloud använder ditt företags-ID, Experience Cloud AMCV-cookien och en demdexcookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan identitetstjänsten spåra besökare i olika domäner och möjliggöra datadelning mellan olika Experience Cloud-lösningar.
 * [Så här begär och anger Experience Cloud Identity Service ID:n](id-request.md): En översikt över ID-begäran och svarsprocessen. De här exemplen omfattar ID-tilldelning på enskilda webbplatser, på olika webbplatser och för webbplatser som hanteras av olika Experience Cloud-kunder med egna företags-ID:n.
-* [Förstå ID-synkronisering och matchningsfrekvenser](match-rates.md): En översikt över ID-synkroniseringsprocesser och matchningsfrekvenser i Experience Cloud Identity Service, inklusive Adobe Media Optimizer och ID-tjänsten.
+* [Förstå ID-synkronisering och matchningsfrekvenser](match-rates.md): En översikt över ID-synkroniseringsprocesser och matchningsfrekvenser i Experience Cloud Identity Service, inklusive Adobe Media Optimizer och Identity Service.
