@@ -3,7 +3,7 @@ description: Med den här hjälpmetoden kan du lägga till ett SDID (Supplementa
 keywords: ID-tjänst
 title: appendSupplementalDataIDTo
 exl-id: 7f0e7fca-4551-4165-a12b-c7e5514d6818
-source-git-commit: 2500b6d7b392731009f9149d8821be9505ba4b76
+source-git-commit: 5710539b45a81394061cd4af2ef3edc27b49092e
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 1%
@@ -67,6 +67,9 @@ var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here
    sdidParamExpiry: 15 
 }); 
  
+//Get current supplemental data id
+var theCurrentSDID = visitor._supplementalDataIDCurrent ? visitor._supplementalDataIDCurrent : "";
+
 //Call helper method to append SDID to the Page B URL from Page A 
 var pageB = "www.domain.com/pageB"; 
 var pageBWithSdid = visitor.appendSupplementalDataIDTo(pageB, theCurrentSDID)); 
