@@ -3,9 +3,9 @@ description: Med den här funktionen kan du dela en besökares Experience Cloud-
 keywords: ID-tjänst
 title: appendVisitorIDsTo (spårning mellan domäner)
 exl-id: 3e4f4e2c-e658-4124-bd0e-59c63127bdde
-source-git-commit: fa2549090e6790763a7ac6b87348789678d18ab6
+source-git-commit: 622f785384386e108f54b7e5381cc80f53b3ef8e
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,10 @@ För att lösa problemet implementerar du ` Visitor.appendVisitorIDsTo( *`url`*)
 Mer information finns i kodexemplet.
 
 ## Lägg till exempel på besökar-ID-kod {#section-62d55f7f986542b0b9238e483d50d7b0}
+
+>[!IMPORTANT]
+>
+>För att de värden som skickas i URL:en via appendVisitorsIDsTo ska kunna hämtas, [ovewritCrossDomainMDCIDAndAID](../function-vars/overwrite-visitor-id.md) variabeln måste anges till true.
 
 Följande exempel kan hjälpa dig att komma igång med ` Visitor.appendVisitorIDsTo( *`url`*)`. När JavaScript-koden implementeras på rätt sätt kan den se ut som i följande exempel.
 
