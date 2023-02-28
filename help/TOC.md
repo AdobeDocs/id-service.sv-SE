@@ -1,19 +1,19 @@
 ---
 cloud: platform-cloud
 audience: end-user
-user-guide-title: Hjälp om Experience Cloud Identity Service
-breadcrumb-title: Handbok för identitetstjänst
-user-guide-description: Adobe Experience Cloud identitetstjänst är ett universellt, beständigt ID som identifierar besökarna i alla lösningar i Experience Cloud. Den ersätter tidigare ID-genereringskod för lösningar och tjänster från Experience Cloud.
+user-guide-title: Hjälp med Experience Cloud Identity Service
+breadcrumb-title: Användarhandbok om Identity Service
+user-guide-description: Adobe Experience Cloud Identity Service är ett universellt, beständigt ID som identifierar besökarna i alla lösningar i Experience Cloud. Den ersätter tidigare ID-genereringskod för lösningar och tjänster från Experience Cloud.
 user-guide-url: /content/help/en/id-service/using/home.html
 source-git-commit: f7c25f5ebd0690c56c081422949eb34f1f277ae1
 workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 7%
+ht-degree: 20%
 
 ---
 
 
-# Hjälp om Experience Cloud Identity Service {#using}
+# Hjälp med Experience Cloud Identity Service {#using}
 
 + [Hjälp för identitetstjänst](home.md)
 + Översikt {#intro}
