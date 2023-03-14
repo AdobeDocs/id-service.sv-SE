@@ -3,9 +3,9 @@ description: ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-coo
 keywords: spelstation;ID-tjänst
 title: Cookies och Experience Cloud Identity Service
 exl-id: 727c6381-56b9-44b8-8e59-355d072769be
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 33e467ade389144423abf14539aad8a5a5f69d21
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ID-tjänsten använder ditt företags-ID, Experience Cloud AMCV-cookie och en demdex-cookie för att skapa och lagra unika, beständiga identifierare för webbplatsens besökare. Med dessa cookies kan ID-tjänsten spåra besökare i olika domäner och möjliggöra datadelning mellan olika Experience Cloud-lösningar.
 
-## Om ID-tjänstcookies {#section-f438168beaec409ab8b2cc58bd021e26}
+## Om cookies i ID-tjänsten {#section-f438168beaec409ab8b2cc58bd021e26}
 
 ID-tjänsten förlitar sig på cookies från AMCV, AMCVS och demdex för att fungera korrekt. Dessa cookies är bara filer som lagrar data som används av ID-tjänsten. Dessa ID-tjänstcookies är inte farliga, skadliga eller skiljer sig från andra cookies från första eller tredje part som lagras av en webbplats eller tjänst i en webbläsare, enligt samma regler som styr andra cookies från första och tredje part. Mer information om cookies som används av ID-tjänsten finns i följande avsnitt nedan.
 
@@ -38,7 +38,7 @@ Följande attribut för cookien som angetts av ID-tjänsten.
 
 **Namn**
 
-AMCV-cookie-namnet följer syntaxen `AMCV_<variable name>@AdobeOrg`. I namnet är `<variable name>`-elementen platshållare för en del av ditt Experience Cloud-organisations-ID. Detta ID skickas till DCS av funktionen `Visitor.getInstance` i ID-tjänstkoden.
+AMCV-cookie-namnet följer syntaxen `AMCV_<variable name>@AdobeOrg`. I namnet `<variable name>` -element är platshållare för en del av ditt Experience Cloud-organisations-ID. Detta ID skickas till DCS av `Visitor.getInstance` i ID-tjänstkoden.
 
 Ett fullständigt cookie-namn ser ut ungefär så här:
 
@@ -48,7 +48,7 @@ AMCV_1FD6776A524453CC0A490D44%40AdobeOrg
 
 **Innehåll**
 
-AMCV-cookien innehåller Experience Cloud besökar-ID eller MID. MID lagras i ett nyckel/värde-par som följer syntaxen `MCMID|<Experience Cloud ID>`.
+AMCV-cookien innehåller Experience Cloud besökar-ID eller MID. MID lagras i ett nyckelvärdepar som följer syntaxen, `MCMID|<Experience Cloud ID>`.
 
 Ett nyckelvärdepar med helt format ser ut ungefär så här:
 
@@ -64,11 +64,11 @@ AMCV-cookien anges i en webbläsares förstapartsdomän. Det innebär att den an
 
 Eftersom AMCV-cookien är inställd i den första domänen kan den inte användas för att spåra och identifiera användare i olika domäner. Istället förlitar sig ID-tjänsten på organisations-ID:t och demdex-ID:t för att returnera rätt MID när en besökare navigerar till en annan domän.
 
-## AMCVS-cookie {#section-92a9454f1ac645948f9059b9fad928bf}
+## AMCVS cookie {#section-92a9454f1ac645948f9059b9fad928bf}
 
 **Namn**
 
-AMCVS-cookie-namnet följer syntaxen `AMCVS_####@AdobeOrg`. I namnet är ####-elementen platshållare för en del av ditt Experience Cloud-organisations-ID. Detta ID skickas till DCS av funktionen `theVisitor.getInstance` i ID-tjänstkoden.
+AMCVS-cookie-namnet följer syntaxen `AMCVS_####@AdobeOrg`. I namnet är ####-elementen platshållare för en del av ditt Experience Cloud-organisations-ID. Detta ID skickas till DCS av `theVisitor.getInstance` i ID-tjänstkoden.
 
 Ett fullständigt cookie-namn ser ut ungefär så här:
 
@@ -113,13 +113,15 @@ I följande tabell listas och definieras några viktiga attribut i demodex-cooki
  </tbody> 
 </table>
 
-Mer information finns i [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=en).
+Information om information om Demdex finns på [Lagringsinformation för Audience Manager-enheter](https://aam-iab-tcf-vendor.s3.amazonaws.com/aam_device_storage_disclosures.json).
+
+Mer information finns i dokumentationen om [förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=en).
 
 ## Genererar Experience Cloud-ID {#section-15f69c0bac394b4b9966a23fbc586d17}
 
 Experience Cloud ID (MID) härleds matematiskt från ditt företags-ID och demdex-ID. Så länge dessa ID:n är konstanta är det helt enkelt ett viktigt problem att generera rätt MID för en viss användare. Med samma organisations-ID och demdex-ID får du samma MID-värde varje gång. Detta gör att ID-tjänsten kan spåra besökare över domäner som du kontrollerar och har konfigurerat med ID-tjänstkoden.
 
-ID-tjänsten börjar skapa ett MID när sidan läses in. Under den här processen skickar koden som tillhandahålls av kodbiblioteket `visitorAPI.js` ditt organisations-ID i ett händelseanrop till ID-tjänsten. ID-tjänsten skapar och returnerar MID och ett demdex-ID i AMCV- respektive demdex-cookies.
+ID-tjänsten börjar skapa ett MID när sidan läses in. Under den här processen tillhandahålls kod från `visitorAPI.js` kodbiblioteket skickar ditt organisations-ID i ett händelseanrop till ID-tjänsten. ID-tjänsten skapar och returnerar MID och ett demdex-ID i AMCV- respektive demdex-cookies.
 
 ## Cookies-flaggor
 
@@ -131,8 +133,8 @@ I följande tabell beskrivs flaggorna för Experience Cloud Cookies:
 | AMCV (Javascript) | Nej | Konfigurerbar | Ta bort (standard är Lax) |
 | AMCVS (Javascript) | Nej | Konfigurerbar | Ta bort (standard är Lax) |
 
-*Obs! Information om hur du konfigurerar AMCV- och AMCVS-cookie med säkra attribut finns i avsnittet om  [secureCookie](../library/function-vars/securecookie.md).*
+*Obs! Information om hur du konfigurerar AMCV- och AMCVS-cookie med säkra attribut finns i avsnittet för [secureCookie](../library/function-vars/securecookie.md).*
 
 ## Nästa steg {#section-8db1727a63bc4ff68b495f270315d453}
 
-Se [How the Experience Cloud Identity Service Requests and Sets IDs...](../introduction/id-request.md#concept-2caacebb1d244402816760e9b8bcef6a).
+Se [Hur Experience Cloud Identity Service begär och anger ID:n...](../introduction/id-request.md#concept-2caacebb1d244402816760e9b8bcef6a).
