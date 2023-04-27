@@ -3,9 +3,9 @@ description: Experience Cloud ID-tjänsten (ECID) stöder SHA-256-algoritmen som
 keywords: ID-tjänst
 title: SHA256 Hash-stöd för setCustomerIDs
 exl-id: fd30634e-6435-4d14-8804-649c1ad3aaaa
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 159b37e360b586bbada13e34793009e3067de668
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ Det finns två sätt att implementera hash-stöd med setCustomerID, vilket beskr
 * [Använd metoden setCustomerIDs i ECID](/help/reference/hashing-support.md#use-setcustomerids-method)
 * [Lägg till en åtgärd i Adobe Experience Platform Launch](/help/reference/hashing-support.md#add-action-launch)
 
-## Använd metoden `setCustomerIDs` i ECID {#use-setcustomerids-method}
+## Använd `setCustomerIDs` metod i ECID {#use-setcustomerids-method}
 
-Den första metoden använder metoden [`setCustomerIDs`](/help/library/get-set/setcustomerids.md) (`customerIDs<object>`, `hashType<string>`).
+Den första metoden använder [`setCustomerIDs`](/help/library/get-set/setcustomerids.md) (`customerIDs<object>`, `hashType<string>`).
 
 ECID-biblioteket utför datavypnormalisering på kund-ID:n innan hash inträffar. Den här processen trimmar de tomma områdena för användar-ID:n i båda ändar och konverterar alla tecken till gemener. Exempel: &quot; ecid@adobe.com &quot; blir &quot;ecid@adobe.com&quot;
 
@@ -35,9 +35,9 @@ visitor.setCustomerIDs({email: {id: "ecid@adobe.com", authState: 1}}, "SHA-256")
 
 Tillsammans med besökar-ID:t för Experience Cloud kan du koppla ytterligare kund-ID:n, autentiseringsstatus och hash-typ (SHA-256) till varje besökare. Om du inte anger någon hash-typ betraktas den som ingen hash.
 
-Metoden `setCustomerIDs` accepterar flera kund-ID:n för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) till Experience Cloud och få tillgång till dessa data via olika lösningar.
+The `setCustomerIDs` metoden godkänner flera kund-ID:n för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) till Experience Cloud och få tillgång till dessa data via olika lösningar.
 
-Kund-ID, autentiserade tillstånd och hash-typ *lagras inte* i en cookie som ska användas senare. I stället ska Kund-ID, autentiserade tillstånd och hash-typ lagras i en instansvariabel som ska hämtas med [`getCustomerIDs`](/help/library/get-set/getcustomerids.md), vilket visas nedan:
+Kund-ID, autentiserade tillstånd och hash-typ *är inte* lagras i en cookie som ska användas senare. I stället ska Kund-ID, autentiserade tillstånd och hash-typ lagras i en instansvariabel som ska hämtas med [`getCustomerIDs`](/help/library/get-set/getcustomerids.md), enligt nedan:
 
 ```
 > visitor.getCustomerIDs();
@@ -48,7 +48,7 @@ Kund-ID, autentiserade tillstånd och hash-typ *lagras inte* i en cookie som ska
 
 <br> 
 
-Om du använder metoden `setCustomerIDs` anropas Experience Cloud ID-tjänsten till `dpm.demdex.net`, med tillägget `d_cid_ic`-frågeparametern som innehåller det hash-kodade kund-ID:t. Ett exempelanrop kan se ut som det nedan. Radbrytningar lades till för tydlighet.
+Använda `setCustomerIDs` -metoden leder till ett anrop till Experience Cloud ID-tjänsten, till `dpm.demdex.net`, med tillägget `d_cid_ic` frågeparameter, som innehåller det hashkodade kund-ID:t. Ett exempelanrop kan se ut som det nedan. Radbrytningar lades till för tydlighet.
 
 ```
 http://dpm.demdex.net/id?d_visid_ver=4.4.0&d_fieldgroup=AAM&d_rtbd=json&d_ver=2&
@@ -60,7 +60,7 @@ ts=1563299964843
 
 <br> 
 
-I tabellen nedan finns en beskrivning av parametern `d_cid_ic` och autentiseringstillståndet.
+Se tabellen nedan för en beskrivning av `d_cid_ic` parameter och autentiseringstillstånd.
 
 | Parameter | Beskrivning |
 |------------|----------|
@@ -68,9 +68,9 @@ I tabellen nedan finns en beskrivning av parametern `d_cid_ic` och autentisering
 
 ## Lägg till en åtgärd i Adobe Experience Platform Launch {#add-action-launch}
 
-Experience Platform Launch är nästa generation av tagghanteringsfunktioner från Adobe. Läs mer om Platform launch i [Starta produktdokumentationen](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=en).
+Experience Platform Launch är nästa generation av tagghanteringsfunktioner från Adobe. Läs mer om Platform launch i [Starta produktdokumentation](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv).
 
-Om du vill lägga till en åtgärd i Launch läser du [regeldokumentationen](https://docs.adobe.com/help/en/launch/using/reference/manage-resources/rules.html) i Adobe Launch och läser skärmbilden nedan:
+Om du vill lägga till en åtgärd i Launch läser du [regeldokumentation](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html) i Adobe Launch och se skärmbilden nedan:
 
 ![](/help/reference/assets/hashing-support.png)
 
@@ -99,4 +99,4 @@ setCustomerIDs(Ingeration code: {
 });
 ```
 
-På samma sätt som `setCustomerIDs`-metoden som beskrivs i det första avsnittet, resulterar detta i ett anrop till Experience Cloud ID-tjänsten, med tillägget `d_cid_ic`-frågeparametern.
+På samma sätt som `setCustomerIDs` som beskrivs i första avsnittet, leder detta till ett anrop till Experience Cloud ID-tjänsten, med tillägg av `d_cid_ic` frågeparameter.

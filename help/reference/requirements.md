@@ -3,9 +3,9 @@ description: Granska det här avsnittet för att kontrollera att du använder r�
 keywords: ID-tjänst
 title: Krav för Experience Cloud Identity Service
 exl-id: ebeac4c7-b36c-4a4e-9378-351fac5baf53
-source-git-commit: e171c94ccfa1f4fe9b8d909d0204adb94f20cbb6
+source-git-commit: 159b37e360b586bbada13e34793009e3067de668
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '650'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ En lyckad implementering som stöds uppfyller (eller överskrider) kodkraven och
 
 ### Standardimplementeringar
 
-Se [Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) för standardimplementeringen.
+Se [Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) för standardimplementeringen.
 
 ### Implementeringar som inte är standard
 
@@ -48,7 +48,7 @@ Om du vill använda ID-tjänsten måste ditt företag vara aktiverat för [!DNL 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Osäker</b> </p> </td> 
-   <td colname="col2"> <p> Om du inte känner till ditt företags <span class="keyword"> Experience Cloud</span> status, fråga vem som hanterar ditt Adobe-konto om medlemmar i ditt företag kan logga in på <a href="https://experiencecloud.adobe.com" format="https" scope="external"> marketing.adobe.com</a> med en Adobe ID. Om du kan det är du aktiverad och en administratör kan visa ditt organisations-ID. Information om organisation-ID finns i avsnittet Administrationssida i <a href="https://docs.adobe.com/help/sv-SE/core-services/interface/experience-cloud.html" format="https" scope="external"> Experience Cloud Administration</a>. </p> </td> 
+   <td colname="col2"> <p> Om du inte känner till ditt företags <span class="keyword"> Experience Cloud</span> status, fråga vem som hanterar ditt Adobe-konto om medlemmar i ditt företag kan logga in på <a href="https://experiencecloud.adobe.com" format="https" scope="external"> marketing.adobe.com</a> med en Adobe ID. Om du kan det är du aktiverad och en administratör kan visa ditt organisations-ID. Information om organisation-ID finns i avsnittet Administrationssida i <a href="https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=en" format="https" scope="external"> Experience Cloud Administration</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Ej aktiverad</b> </p> </td> 

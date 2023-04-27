@@ -3,9 +3,9 @@ description: Med den här funktionen kan du dela en besökares Experience Cloud-
 keywords: ID-tjänst
 title: appendVisitorIDsTo (spårning mellan domäner)
 exl-id: 3e4f4e2c-e658-4124-bd0e-59c63127bdde
-source-git-commit: 70e0ff00be9037b475084a906405180107f2514c
+source-git-commit: c035f0af76f70322e4d79ed842502b26c3f155ac
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,10 @@ Mer information finns i kodexemplet.
 ## Lägg till exempel på besökar-ID-kod {#section-62d55f7f986542b0b9238e483d50d7b0}
 
 Följande exempelkod kan hjälpa dig att komma igång med `appendVisitorIDsTo` funktion:
+
+>[!TIP]
+>
+>Den här koden kan placeras i den anpassade kodredigeraren som är en del av Adobe Analytics-tillägget eller högst upp i [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html).
 
 ```js
 var adbeDomains = ["marketo.com", "figma.com", "workfront.com"];

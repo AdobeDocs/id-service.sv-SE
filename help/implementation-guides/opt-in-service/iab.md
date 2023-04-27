@@ -2,7 +2,7 @@
 description: Koppla samman deras CMP (Consent Management Platform) med Opt-ins Audience Manager plugin för IAB Transparency och Consent Framework (TCF).
 title: Använda Opt-in-tjänster med IAB Framework
 exl-id: 9ac9b232-0797-4e77-a611-9cf5d17a5cb7
-source-git-commit: fa2549090e6790763a7ac6b87348789678d18ab6
+source-git-commit: 159b37e360b586bbada13e34793009e3067de668
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 2%
@@ -47,7 +47,7 @@ När inställningarna har konfigurerats på rätt sätt kommer ECID- och DIL-bib
 
 >[!IMPORTANT]
 >
->Audience Manager behöver samtycke för *Syfte 1 och Syfte 10, plus leverantörssamtycke* för att distribuera cookies och initiera eller respektera ID-synkroniseringar. Läs mer om plugin-programmet IAB TCF för deltagande i Audience Manager-dokumentationen [här](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/gdpr/aam-iab-plugin.html).
+>Audience Manager behöver samtycke för *Syfte 1 och Syfte 10, plus leverantörssamtycke* för att distribuera cookies och initiera eller respektera ID-synkroniseringar. Läs mer om plugin-programmet IAB TCF för deltagande i Audience Manager-dokumentationen [här](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 Mer information om hur du validerar plugin-programmet IAB TCF för deltagande finns i användningsfall nr 4 i valideringsguiden [här](../../implementation-guides/opt-in-service/testing-optin-and-iab-plugin.md#section-ca5c6f92fbdf4fd29b4acb6b644efbd0).
 

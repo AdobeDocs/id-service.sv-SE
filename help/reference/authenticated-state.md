@@ -3,9 +3,9 @@ description: Tillsammans med besökar-ID:t för Experience Cloud kan du koppla y
 keywords: ID-tjänst
 title: Kund-ID:n och autentiseringstillstånd
 exl-id: 0215225c-20f5-4e44-a368-b2df683aca9d
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 159b37e360b586bbada13e34793009e3067de668
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 2%
 
 ---
@@ -16,13 +16,13 @@ Tillsammans med besökar-ID:t för Experience Cloud kan du koppla ytterligare ku
 
 ## Autentiseringstillstånd {#section-68ad4065dfaa437d9070832d6e2bf85c}
 
-Metoden `setCustomerIDs` accepterar flera kund-ID:n för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
+The `setCustomerIDs` metoden godkänner flera kund-ID:n för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
 
 >[!IMPORTANT]
 >
->`setCustomerIDs` (synkronisering av kund-ID) krävs av kundattribut och centrala tjänster. Synkroniserande kund-ID:n är en valfri identifieringsmetod för [!DNL Analytics]. [!DNL Target] kräver  `Visitor.AuthState.AUTHENTICATED` att kundattribut fungerar. Se [bastjänster - Så här aktiverar du dina lösningar](https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html) för exempel.
+>`setCustomerIDs` (synkronisering av kund-ID) krävs av kundattribut och centrala tjänster. Synkronisering av kund-ID:n är en valfri identifieringsmetod för [!DNL Analytics]. [!DNL Target] kräver `Visitor.AuthState.AUTHENTICATED` för att kundattribut ska fungera. Se [bastjänster - Så här aktiverar du dina lösningar](https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html) till exempel.
 
-Med början från Experience Cloud identitetstjänst v1.5+ inkluderar `setCustomerIDs` det valfria `AuthState`-objektet. `AuthState` identifierar besökare utifrån deras autentiseringsstatus (t.ex. inloggad, utloggad). Du anger autentiseringstillståndet med ett statusvärde i tabellen. Autentiseringsstatus returneras som ett heltal.
+Från och med Experience Cloud Identity Service v1.5+, `setCustomerIDs` innehåller det valfria `AuthState` -objekt. `AuthState` identifierar besökare utifrån deras autentiseringsstatus (t.ex. inloggad, utloggad). Du anger autentiseringstillståndet med ett statusvärde i tabellen. Autentiseringsstatus returneras som ett heltal.
 
 <table id="table_8547671CC97145529981FBF6C302BEC5"> 
  <thead> 
@@ -34,24 +34,24 @@ Med början från Experience Cloud identitetstjänst v1.5+ inkluderar `setCustom
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.UNKNOWN  </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> 0  </span> </p> </td> 
-   <td colname="col3"> <p>Okänd eller aldrig autentiserad. </p> <p> Okänd används som standard när <span class="codeph"> AuthState </span> inte används med ett besökar-ID eller inte uttryckligen anges på varje sida eller i appkontext. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.UNKNOWN </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> 0 </span> </p> </td> 
+   <td colname="col3"> <p>Okänd eller aldrig autentiserad. </p> <p> Okänd används som standard när <span class="codeph"> AuthState </span> används inte med ett besökar-ID eller anges inte uttryckligen på varje sida eller i appsammanhang. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.AUTHENTICATED  </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> 3  </span> </p> </td> 
-   <td colname="col3"> <p>Autentiserad för en viss instans, sida eller app. </p> <p> <p>Obs!  För att kundattributen för <span class="keyword">-målet </span> ska fungera på rätt sätt krävs den här statusen. </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.AUTHENTICATED </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> 1 </span> </p> </td> 
+   <td colname="col3"> <p>Autentiserad för en viss instans, sida eller app. </p> <p> <p>Obs! För att fungera som det ska, kundattribut för <span class="keyword"> Mål </span> kräver den här statusen. </p> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.LOGGED_OUT  </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> 2  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.LOGGED_OUT </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> 2 </span> </p> </td> 
    <td colname="col3"> <p>Utloggad. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Använd ärenden för autentiseringslägen {#section-fe9560cc490943b29dac2c4fb6efd72c}
+## Använd ärenden för autentiseringstillstånd {#section-fe9560cc490943b29dac2c4fb6efd72c}
 
 Du kan tilldela autentiseringstillstånd till dina användare, beroende på vilka åtgärder de utför på dina webbegenskaper och om de är autentiserade. Se några exempel i tabellen nedan:
 
@@ -64,7 +64,7 @@ Du kan tilldela autentiseringstillstånd till dina användare, beroende på vilk
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.UNKNOWN  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.UNKNOWN </span> </p> </td> 
    <td colname="col2"> <p>Det här läget kan användas för scenarier som: </p> <p> 
      <ul id="ul_086C7446D258443DA7AF5BB96A6AAEC7"> 
       <li id="li_7845BBD62D7B4362AD3FE33DEDA8FBA1">Läsa ett e-postmeddelande (den här åtgärden innebär troligtvis att läsaren är den avsedda mottagaren, men e-postmeddelandet kan också ha vidarebefordrats). </li> 
@@ -72,12 +72,12 @@ Du kan tilldela autentiseringstillstånd till dina användare, beroende på vilk
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.AUTHENTICATED  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.AUTHENTICATED </span> </p> </td> 
    <td colname="col2"> <p>Användaren autentiseras för närvarande med en aktiv session på din webbplats eller i din app. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.LOGGED_OUT  </span> </p> </td> 
-   <td colname="col2"> <p>Användaren autentiserades men loggades aktivt ut. Användaren avsåg att koppla från det autentiserade läget. Användaren vill inte längre behandlas som autentiserad. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> Visitor.AuthState.LOGGED_OUT </span> </p> </td> 
+   <td colname="col2"> <p>Användaren autentiserades men loggades aktivt ut. Användaren avsåg att koppla från det autentiserade tillståndet. Användaren vill inte längre behandlas som autentiserad. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -91,7 +91,7 @@ Kund-ID:n kan innehålla kombinationer av ID:n och autentiserade tillstånd som 
 >* ID:n är skiftlägeskänsliga.
 >* Använd bara okodade värden för dina ID:n.
 >* Kund-ID:n och autentiseringstillstånd lagras inte i cookien för besökar-ID. De måste anges för varje sida eller programkontext.
->* Du bör inte inkludera någon personligt identifierbar information (PII) i kund-ID:n. Om du använder PII för att identifiera en besökare (till exempel en e-postadress) rekommenderar vi att du lagrar en hashad eller krypterad version av informationen i stället. ECID-biblioteket har stöd för att hash-koda användaridentifierare. Se [SHA256 Hashing Support for setCustomerIDs](/help/reference/hashing-support.md).
+>* Du bör inte inkludera någon personligt identifierbar information (PII) i kund-ID:n. Om du använder PII för att identifiera en besökare (till exempel en e-postadress) rekommenderar vi att du lagrar en hashad eller krypterad version av informationen i stället. ECID-biblioteket har stöd för att hash-koda användaridentifierare. Se [SHA256 Hash-stöd för setCustomerIDs](/help/reference/hashing-support.md).
 
 
 ```js
@@ -210,11 +210,11 @@ Object customerIDs = visitor.getCustomerIDs();
 
 ## SDK-stöd {#section-861c6b3b1ba645dda133dccb22ec7bb0}
 
-ID-tjänsten [!DNL Experience Cloud] stöder kund-ID:n och autentiseringstillstånd i vår Android- och iOS SDK-kod. Se följande kodbibliotek:
+The [!DNL Experience Cloud] ID-tjänsten stöder kund-ID:n och autentiseringstillstånd i Android- och iOS SDK-koden. Se följande kodbibliotek:
 
 * [Android SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
 * [iOS SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html)
 
 ## Meddelande till Analytics- och Audience Manager-kunder {#section-3a8e9d51e71c4c6e865184b81ed9d99b}
 
-Om du skickar deklarerade ID:n till [!DNL Audience Manager] måste `userid`-objektet matcha integrationskoden som är associerad med en datakälla. Mer information finns i avsnittet [!UICONTROL Visitor ID Service] i dokumentationen [Konfigurera kod för kopplingsregler](https://docs.adobe.com/help/en/audience-manager/user-guide/features/profile-merge-rules/merge-rules-start.html#configure-merge-rule-code).
+Om du skickar deklarerade ID:n till [!DNL Audience Manager], `userid` -objektet måste matcha den integrationskod som är associerad med en datakälla. Mer information finns i [!UICONTROL Visitor ID Service] i [Konfigurera kod för kopplingsregler](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/profile-merge-rules/merge-rules-start.html?lang=en#configure-merge-rule-code) dokumentation.
