@@ -32,7 +32,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 
 >[!CAUTION]
 >
->*Instansiera* inte Visitor-funktionen med  `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js]-kodbibliotek v3.0 eller senare.
+>*Gör inte* instansiera besökarfunktionen med `var visitor = new Visitor`. Du måste använda rätt funktionsanrop som beskrivs här. Gäller för [!UICONTROL VisitorAPI.js] kodbibliotek v3.0 eller senare.
 
 **ActionScript / Flash**
 
@@ -50,10 +50,10 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 });
 ```
 
-Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Detta liknar [ `s_gi()`-funktionen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/s-gi.html) i [!DNL AppMeasurement].
+If `getInstance` hittar inte en befintlig instans. En ny instans skapas och returneras. Detta liknar [ `s_gi()` function ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/s-gi.html) in [!DNL AppMeasurement].
 
 **Vanlig användning**
 
-ID-tjänste-API:t [!DNL Experience Cloud] upprätthåller en lista över alla instanser som skapats för varje [!DNL Adobe Experience Cloud] organisations-ID. Om programmet som använder ID-tjänstens API inte skickar runt en referens till instansen kan instansen hittas genom att anropa `getInstance` i stället för att skapa en ny. Detta ger även stöd för flera instanser för olika organisationer på samma webbsida eller i samma program.
+The [!DNL Experience Cloud] ID-tjänste-API:t underhåller en lista över alla instanser som skapats för varje [!DNL Adobe Experience Cloud] organisations-ID. Om programmet som använder ID-tjänstens API inte skickar en referens till instansen kan instansen hittas genom att anropa `getInstance` i stället för att skapa en ny. Detta ger även stöd för flera instanser för olika organisationer på samma webbsida eller i samma program.
 
-Detta är användbart för program som inte har en klar `init`-fas, men som måste anropa ID-tjänstens API på flera ställen. Du kan anropa `getInstance` på alla dessa platser och instansen skapas av den första som körs. Den befintliga instansen returneras av efterföljande anrop.
+Detta är användbart för program som inte har en tydlig `init` men måste anropa ID-tjänstens API på flera platser. Du kan ringa `getInstance` på alla dessa platser och den första som körs skapar instansen. Den befintliga instansen returneras av efterföljande anrop.

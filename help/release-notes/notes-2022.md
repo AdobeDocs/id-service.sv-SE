@@ -2,7 +2,8 @@
 description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service.
 keywords: ID-tjänst
 title: Versionsinformation 2022
-source-git-commit: dce2c0036f697507381d0763c2f6a9538155681c
+exl-id: 1550f43f-81be-447e-904c-b408785965fe
+source-git-commit: fcd3e8b65bb84e94eabac7ffec6a34f4cf75ec3d
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%

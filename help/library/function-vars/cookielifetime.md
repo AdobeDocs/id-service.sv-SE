@@ -14,7 +14,7 @@ ht-degree: 8%
 
 Med den här variabeln kan du åsidosätta standardintervallet för livstid för AMCV-cookien.
 
-Som standard upphör [!DNL Experience Cloud] ID-tjänstcookies att gälla efter 24 månader. Ange tidsintervallet i sekunder.
+Som standard [!DNL Experience Cloud] ID-tjänstcookies går ut efter 24 månader. Ange tidsintervallet i sekunder.
 
 **Syntax:** ` cookieLifetime: *`livstid i sekunder`*`
 

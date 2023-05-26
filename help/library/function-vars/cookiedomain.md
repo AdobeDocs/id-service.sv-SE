@@ -14,7 +14,7 @@ ht-degree: 10%
 
 Krävs för flerdelsdomäner på den översta nivån där någon av de två sista delarna av URL:en är längre än 2 tecken.
 
-**Syntax:** ` cookieDomain: " *`URL`*"` ( `www` prefixet är inte obligatoriskt.)
+**Syntax:** ` cookieDomain: " *`URL`*"` (Med `www` prefix krävs inte.)
 
 **Användningsfall**
 

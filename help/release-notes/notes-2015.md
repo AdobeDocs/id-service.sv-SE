@@ -18,26 +18,26 @@ Versionsinformation och uppdateringar för 2015.
 
 November 2015
 
-The Children&#39;s Online Privacy Protection Act (COPPA) förbjuder insamling av personuppgifter online från barn som är yngre än 13 år utan verifierbart föräldrars samtycke. Kunder som är intresserade av COPPA kan lägga till en valfri variabel i sin [!DNL Experience Cloud] ID-tjänstkod som förhindrar att den ställer in cookies i en webbläsares tredjepartsdomän. Se [Stöd för COPPA i Experience Cloud Identity Service](../reference/coppa.md#concept-d7ddf81bebd74f129661fcec1ca19413). För version 1.5.3 eller senare.
+The Children&#39;s Online Privacy Protection Act (COPPA) förbjuder insamling av personuppgifter online från barn som är yngre än 13 år utan verifierbart föräldrars samtycke. Kunder som är intresserade av COPPA kan lägga till en valfri variabel till sina [!DNL Experience Cloud] ID-tjänstkod som hindrar den från att ange cookies i en webbläsares tredjepartsdomän. Se [Stöd för COPPA i Experience Cloud Identity Service](../reference/coppa.md#concept-d7ddf81bebd74f129661fcec1ca19413). För version 1.5.3 eller senare.
 
 ## Version 1.5.2 {#section-e3c73e47539942a89b02d33061128148}
 
 September 2015
 
 * Korrigerade ett fel i webbläsaren Safari som gjorde att synkroniseringstjänsterna inte fungerade när användare blockerade cookies från tredje part. (AAM-20764)
-* Anrop till ID-tjänsten inkluderar nu versions-ID i parametern `d_visid_ver=`. Det returnerade ID:t hjälper interna team att felsöka och ge support. (AAM-20824)
+* Anrop till ID-tjänsten inkluderar nu versions-ID i `d_visid_ver=` parameter. Det returnerade ID:t hjälper interna team att felsöka och ge support. (AAM-20824)
 
 ## Version 1.5.1 {#section-f4309d7917964a748fee4bdb45bffa44}
 
 Augusti 2015
 
 * Korrigerade ett fel som hindrade ID-tjänsten från att begära en iframe om det inte finns några data att synkronisera eller utlösa. (AAM-20164)
-* Ett fel som gjorde att ID-tjänsten inte kunde ställa in en domäncookie på flera delar har korrigerats. Om du till exempel har en domän som `my_company.co.uk` skulle ID-tjänsten under vissa omständigheter bara ange en cookie i `co.uk`. (AN-104683)
+* Ett fel som gjorde att ID-tjänsten inte kunde ställa in en domäncookie på flera delar har korrigerats. Om du till exempel har en domän som `my_company.co.uk`under vissa omständigheter skulle ID-tjänsten ställa in en cookie i `co.uk` endast. (AN-104683)
 
-   Detta påverkade bara ett fåtal klienter som uppfyllde *alla* av följande kriterier:
+   Detta påverkade bara ett fåtal klienter som träffade *alla* av följande kriterier:
 
    * Använda ID-tjänsten.
-   * Aktiverade en [respitperiod ](../reference/analytics-reference/grace-period.md)*eller* använder cookies från första part och användarna blockerar cookies från tredje part.
+   * Aktiverad som [respitperiod ](../reference/analytics-reference/grace-period.md)*eller* använder cookies från första part och användarna blockerar cookies från tredje part.
 
    * Har sidor med flerdelade toppnivådomäner.
 
@@ -50,13 +50,13 @@ Dokumentationsrevideringar i den här versionen är:
 
 Juli 2015
 
-ID-tjänsten [!DNL Experience Cloud] stöder flera ID:n och autentiseringstillstånd. Den här ändringen tar också bort det inaktuella stödet för [!DNL Audience Manager] DPID-mappningar till användar-ID:n som används av funktionen `setCustomerIDs`. Se [Kund-ID och autentiseringstillstånd](../reference/authenticated-state.md)
+The [!DNL Experience Cloud] ID-tjänsten stöder flera ID:n och autentiseringstillstånd. Den här ändringen tar också bort inaktuellt stöd för [!DNL Audience Manager] DPID-mappningar till användar-ID som används av `setCustomerIDs` funktion. Se [Kund-ID och autentiseringstillstånd](../reference/authenticated-state.md)
 
 ## Version 1.4 {#section-f5c596f355b14da28f45c798df513572}
 
 Maj 2015
 
-Från och med version 1.4 skickar den inställda konfigurationsmetoden ett config-objekt i som den andra parametern till funktionen `Visitor.getInstance`.
+Från och med version 1.4 skickar den inställda konfigurationsmetoden ett config-objekt i som den andra parametern till `Visitor.getInstance` funktion.
 
 ```js
 var visitor = Visitor.getInstance("016D5C175213CCA80A490D05@AdobeOrg",{ 
@@ -78,4 +78,4 @@ Korrigerade hanteringen av timeout för begäranden om AAM och platstips. Efter 
 
 Januari 2015
 
-Omarbetad `<head>/<body>`-taggsökning för JSONP-begäran `<script>`-taggbehållare samt skapandet av `<script>`-taggen för att ta hänsyn till olika DOM-implementeringar (HTML och XHTML) med möjligen olika skiftlägeskänslighetsinställningar. (AN-9355)
+Realiserad `<head>/<body>` taggsökning för JSONP-begäran `<script>` -taggbehållare samt skapande av `<script>` tagg för att ta hänsyn till olika DOM-implementeringar (HTML eller XHTML) med möjligen olika skiftlägeskänslighetsinställningar. (AN-9355)

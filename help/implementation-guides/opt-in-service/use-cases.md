@@ -9,13 +9,13 @@ ht-degree: 0%
 
 ---
 
-# Användningsexempel för Opt-in {#opt-in-use-cases}
+# Användningsexempel {#opt-in-use-cases}
 
 Exempel på användningsexempel och lösningar för att hantera avanmälningstjänsten.
 
 ## Tips och felsökning {#section-5c566366410f4a8f89eca0d3f556d99f}
 
-* JS-initieringen för besökare är synkron och körs under sidinläsning. Om du interagerar med en CMP- eller permissions-beständighet som har hög latens, kan det vara bättre att använda de asynkrona funktionerna som beskrivs i [Alternativ-in Setup](../../implementation-guides/opt-in-service/getting-started.md#section-cf9ab638780141c9b62dc57cf00b7047).
+* JS-initieringen för besökare är synkron och körs under sidinläsning. Om du interagerar med en CMP- eller permissions-beständighet med hög fördröjning kan det vara bättre att använda de asynkrona funktionerna som beskrivs i [Inställningar för anmälan](../../implementation-guides/opt-in-service/getting-started.md#section-cf9ab638780141c9b62dc57cf00b7047).
 * Opt-in är en implementering per domän. Det hanterar inte implementeringar över domäner.
 * Om du vill inaktivera tredjepartssamtal för ett visst bibliotek måste du konfigurera den inställningen separat i varje bibliotek.
 
@@ -44,7 +44,7 @@ De här användningsexemplen är exempel på hur du använder Opt-in-tjänsten.
   </tr> 
   <tr> 
    <td colname="col1"> <p>Mätning från första part plus målgruppsanpassning är acceptabelt i ett förhandstillstånd. Alla andra typer av dataanvändning förhindras tills samtycke erhålls. </p> </td> 
-   <td colname="col2"> <p>Använd Opt-in för att aktivera Analytics + ECID + Target Libraries i förhandstillstånd. </p> <p>Lägg till <span class="codeph"> isablethirdpartycookies</span>-konfigurationen i ECID-biblioteket för att blockera cookie-filer från tredje part + ID-synk i förhandstillstånd. Ta bort flagga i tillstånd efter samtycke. </p> </td> 
+   <td colname="col2"> <p>Använd Opt-in för att aktivera Analytics + ECID + Target Libraries i förhandstillstånd. </p> <p>Lägg till <span class="codeph"> isablethirdpartycookies</span> konfigurera till ECID-bibliotek för att blockera cookie + ID-synk från tredje part i förhandstillstånd. Ta bort flagga i tillstånd efter samtycke. </p> </td> 
    <td colname="col3"> <p>Adobe Demdex-anropet utlöses för ECID-hämtning, men ingen Demdex-cookie, annan cookie från tredje part eller ID-synk kommer att finnas. </p> <p>Behåller en konsekvent besökare i pre-/post-medgivande-läge för förstahandslösningar. Insamling i förhandstillstånd är knuten till datainsamling efter samtycke. </p> </td> 
   </tr> 
   <tr> 

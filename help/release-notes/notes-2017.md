@@ -6,7 +6,7 @@ exl-id: 0b51d3b1-e405-4473-9e1a-f89a55250e5e
 source-git-commit: 384b292413bbc7e43ade97e442ab7195f3b26c7a
 workflow-type: tm+mt
 source-wordcount: '700'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service för 2017.
 
-Dessa ändringar registreras också i [Versionsinformation om Experience Cloud](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html).
+Dessa ändringar registreras också i [Versionsinformation om Experience Cloud](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=sv).
 
 >[!NOTE]
 >
@@ -133,7 +133,7 @@ Releasedatum: Juni 2017
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <a href="../faq-intro/faq.md" format="dita" scope="local">Vanliga frågor och svar </a> </p> </td> 
+   <td colname="col1"> <p> <a href="../faq-intro/faq.md" format="dita" scope="local"> Vanliga frågor och svar </a> </p> </td> 
    <td colname="col2"> <p>Uppdaterade <span class="keyword"> Analyser</span> med information om hur du hittar information om spårningsservern. </p> </td> 
   </tr> 
  </tbody> 

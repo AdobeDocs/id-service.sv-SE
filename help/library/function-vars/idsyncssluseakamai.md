@@ -14,7 +14,7 @@ ht-degree: 7%
 
 Anger om målpubliceringsmallen ska använda Akamai för HTTPS-anslutningar.
 
-Konfigurationen `idSyncSSLUseAkamai` är aktiverad per partner.
+The `idSyncSSLUseAkamai` konfiguration aktiveras per partner.
 
 **Syntax:** `idSyncSSLUseAkamai: true`
 

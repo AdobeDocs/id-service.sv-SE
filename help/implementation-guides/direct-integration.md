@@ -16,11 +16,11 @@ Den här implementeringen gör att kunder kan använda ID-tjänsten på enheter 
 
 ## Syntax {#section-a4754afec5ad40b6be00d6f1011d68bb}
 
-Enheter som inte kan använda kodbiblioteken VisitorAPI.js eller SDK kan anropa direkt till de datainsamlingsservrar (DCS) som används av ID-tjänsten. Om du vill göra det ringer du `dpm.demdex.net` och formaterar din begäran enligt nedan. *En* variabelplatshållare anges med kursiv stil.
+Enheter som inte kan använda kodbiblioteken VisitorAPI.js eller SDK kan anropa direkt till de datainsamlingsservrar (DCS) som används av ID-tjänsten. Om du vill göra det ringer du `dpm.demdex.net` och formatera din begäran enligt nedan. *Kursiv* används för att ange en variabelplatshållare.
 
 ![](assets/directSyntax.png)
 
-I det här syntaxexemplet identifierar `d_`-prefixet nyckelvärdepar i anropet som en systemnivåvariabel. Du kan skicka flera `d_`-parametrar till ID-tjänsten, men fokusera på nyckelvärdepar enligt koden ovan. Mer information om andra variabler finns i [Attribut som stöds för DCS API-anrop](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-keys.html).
+I det här syntaxexemplet `d_` prefix identifierar nyckelvärdepar i anropet som en systemnivåvariabel. Du kan skicka ganska många `d_` parametrar till ID-tjänsten, men fokusera på nyckelvärdepar enligt koden ovan. Mer information om andra variabler finns i [Attribut som stöds för DCS API-anrop](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-keys.html).
 
 ID-tjänsten stöder HTTP- och HTTPS-anrop. Använd HTTPS för att skicka data från en säker sida.
 
@@ -65,29 +65,29 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_orgid</span> </p> </td> 
-   <td colname="col2"> <p>Organisations-ID för Experience Cloud. Mer information om hur du hittar detta ID finns i <a href="../reference/requirements.md" format="dita" scope="local"> Krav för identitetstjänsten Experience Cloud</a>. </p> </td> 
+   <td colname="col2"> <p>Organisations-ID för Experience Cloud. Mer information om hur du hittar detta ID finns i <a href="../reference/requirements.md" format="dita" scope="local"> Krav för Experience Cloud Identity Service</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_cid</span> </p> </td> 
-   <td colname="col2"> <p>En valfri parameter som skickar Data Provider ID (DPID), det unika användar-ID:t (DPUID) och ett <a href="../reference/authenticated-state.md" format="dita" scope="local">-autentiserat tillstånd-ID</a> till ID-tjänsten. Som du kan se i kodexemplet separerar du DPID och DPUID med kontrolltecknet som inte skrivs ut, <span class="codeph"> %01</span>. </p> <p> <b>DPID och DPUID</b> </p> <p>I parametern <span class="codeph"> d_cid</span> tilldelar du varje relaterad DPID- och DPUID-kombination till samma <span class="codeph"> d_cid</span>-parameter. På så sätt kan du returnera flera ID-uppsättningar i en enda begäran. Separera också DPID, DPUID och valfri autentiseringsflagga med kontrolltecknet som inte skrivs ut, <span class="codeph"> %01</span>. I exemplen nedan markeras provider- och användar-ID i <b>fet</b>-text. </p> 
+   <td colname="col2"> <p>En valfri parameter som skickar Data Provider ID (DPID), det unika användar-ID:t (DPUUID) och en <a href="../reference/authenticated-state.md" format="dita" scope="local"> ID för autentiserat tillstånd</a> till ID-tjänsten. Som framgår av kodexemplet ska DPID och DPUID skiljas från kontrolltecknet som inte skrivs ut. <span class="codeph"> %01</span>. </p> <p> <b>DPID och DPUID</b> </p> <p>I <span class="codeph"> d_cid</span> parameter, tilldela varje relaterad DPID- och DPUUID-kombination till samma <span class="codeph"> d_cid</span> parameter. På så sätt kan du returnera flera ID-uppsättningar i en enda begäran. Separera också DPID, DPUID och valfri autentiseringsflagga med kontrolltecknet som inte skrivs ut. <span class="codeph"> %01</span>. I exemplen nedan markeras leverantörs- och användar-ID:n i <b>fet</b> text. </p> 
     <ul id="ul_2E19D837296B40E9ACD096495CF711C5"> 
-     <li id="li_5B94B057654440B99B989BA60E4ED053">Syntax: <span class="codeph">..d_cid=DPID%01DPUUID%01autentiseringsläge..</span> </li> 
-     <li id="li_B07833EF51D54F088574B7B7F9FB841A">Exempel: <span class="codeph">..d_cid=123%01456%011..</span> </li> 
-    </ul> <p> <b>Autentiseringstillstånd</b> </p> <p>Detta är ett valfritt ID i parametern <span class="codeph"> d_cid</span>. Uttryckt som ett heltal identifierar det användare utifrån deras autentiseringsstatus enligt nedan: </p> 
+     <li id="li_5B94B057654440B99B989BA60E4ED053">Syntax: <span class="codeph">...d_cid=DPID%01DPUUID%01autentiseringsläge..</span> </li> 
+     <li id="li_B07833EF51D54F088574B7B7F9FB841A">Exempel: <span class="codeph">...d_cid=123%01456%011..</span> </li> 
+    </ul> <p> <b>Autentiseringstillstånd</b> </p> <p>Detta är ett valfritt ID i <span class="codeph"> d_cid</span> parameter. Uttryckt som ett heltal identifierar det användare utifrån deras autentiseringsstatus enligt nedan: </p> 
     <ul id="ul_E2B36922B11C4AA2A9016B6E2DC9EDAA"> 
-     <li id="li_31C018E3F9514B938C73EF40C436715F"> <span class="codeph"> 0</span> (okänd) </li> 
-     <li id="li_1F125C3879324C2F8EF4613C0ECB5F02"> <span class="codeph"> 1</span> (autentiserad) </li> 
-     <li id="li_EF6792D0115D407485079D5D7480D965"> <span class="codeph"> 2</span> (utloggad) </li> 
-    </ul> <p>Om du vill ange ett autentiseringstillstånd anger du den här flaggan efter variabeln för användar-ID (UUID). Avgränsa UUID- och autentiseringsflaggan med kontrolltecknet som inte skrivs ut, <span class="codeph"> %01</span>. I exemplen nedan markeras autentiserings-ID:n i <b>fet</b>-texten. </p> <p>Syntax: <span class="codeph">..d_cid=DPID%01DPUUID%01autentiseringstillstånd</span> </p> <p>Exempel: </p> 
+     <li id="li_31C018E3F9514B938C73EF40C436715F"> <span class="codeph"> 0</span> (Okänd) </li> 
+     <li id="li_1F125C3879324C2F8EF4613C0ECB5F02"> <span class="codeph"> 1</span> (Autentiserad) </li> 
+     <li id="li_EF6792D0115D407485079D5D7480D965"> <span class="codeph"> 2</span> (Utloggad) </li> 
+    </ul> <p>Om du vill ange ett autentiseringstillstånd anger du den här flaggan efter variabeln för användar-ID (UUID). Avgränsa UUID- och autentiseringsflaggan med kontrolltecknet som inte skrivs ut. <span class="codeph"> %01</span>. I exemplen nedan markeras autentiserings-ID:n i <b>fet</b> text. </p> <p>Syntax: <span class="codeph">...d_cid=DPID%01DPUUID%01autentiseringsläge</span> </p> <p>Exempel: </p> 
     <ul id="ul_4C1054CE860A4D9C8DD85C2A8020C47F"> 
-     <li id="li_AD4000BF3E0146C0BD37B1EC513EC314">Okänd: <span class="codeph">..d_cid=123%01456%010...</span> </li> 
-     <li id="li_B037D424AADA4D41BF29381A9602AE61">Autentiserad: <span class="codeph">..d_cid=123%01456%011..</span> </li> 
-     <li id="li_0410FCB9E60D4DD08E7898D814E1C3C9">Utloggad: <span class="codeph">..d_cid=123%01456%012...</span> </li> 
+     <li id="li_AD4000BF3E0146C0BD37B1EC513EC314">Okänd: <span class="codeph">...d_cid=123%01456%010...</span> </li> 
+     <li id="li_B037D424AADA4D41BF29381A9602AE61">Autentiserad: <span class="codeph">...d_cid=123%01456%011..</span> </li> 
+     <li id="li_0410FCB9E60D4DD08E7898D814E1C3C9">Utloggad: <span class="codeph">...d_cid=123%01456%012...</span> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> dcs_region</span> </p> </td> 
-   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> ID:n för DCS-regionen, platser och värdnamn</a>. </p> </td> 
+   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> DCS-region-ID, -platser och -värdnamn</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_cb</span> </p> </td> 
@@ -99,7 +99,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_ver</span> </p> </td> 
-   <td colname="col2"> <p>Obligatoriskt. Detta anger API-versionsnumret. Låt den här uppsättningen vara <span class="codeph"> d_ver=2</span>. </p> </td> 
+   <td colname="col2"> <p>Obligatoriskt. Detta anger API-versionsnumret. Lämna uppsättningen som <span class="codeph"> d_ver=2</span>. </p> </td> 
   </tr> 
  </tbody> 
 </table>

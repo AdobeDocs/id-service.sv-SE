@@ -2,7 +2,8 @@
 description: Funktionsreleaser, uppdateringar eller ändringar av Experience Cloud Identity Service.
 keywords: ID-tjänst
 title: Versionsinformation 2021
-source-git-commit: dce2c0036f697507381d0763c2f6a9538155681c
+exl-id: f0bbb100-49a9-4bba-8cee-5f40bec87984
+source-git-commit: fcd3e8b65bb84e94eabac7ffec6a34f4cf75ec3d
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 1%

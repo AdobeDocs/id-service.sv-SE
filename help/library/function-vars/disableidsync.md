@@ -16,9 +16,9 @@ En valfri boolesk flagga som inaktiverar ID-synkronisering.
 
 >[!NOTE]
 >
->Den här konfigurationen var `idSyncDisableSyncs` och döptes om till `disableIdSyncs` i versionen från 18 januari 2018 av v3.0.
+>Den här konfigurationen `idSyncDisableSyncs` och ändrat namn till `disableIdSyncs` den 18 januari 2018-versionen av v3.0.
 
-**Syntax:** `disableIdSyncs: true|false` (default is  `false`.)
+**Syntax:** `disableIdSyncs: true|false` (standard är `false`.)
 
 **Exempel på kod**
 

@@ -10,42 +10,42 @@ ht-degree: 0%
 
 ---
 
-# Migreringsscenarier för identitetstjänsten i Experience Cloud {#experience-cloud-id-service-migration-scenarios}
+# Migreringsscenarier för Experience Cloud Identity Service {#experience-cloud-id-service-migration-scenarios}
 
 Innehåller exempelkonfigurationer för servern och nödvändiga migreringssteg.
 
 ## En webbegenskap {#section-6ccfea84628d46c99507cb124e7f5445}
 
 * **Kund**: Exempel på Company Inc.
-* **Experience Cloud aktiverat**: Nej
+* **Experience Cloud aktiverad**: Nej
 * **Webbegenskaper**: example.com
 * **Datainsamlingsservrar**: metrics.example.com, smetrics.example.com
 * **Analytics JavaScript-fil**: En enda fil för alla webbplatssidor
 
-Först måste den här kunden aktiveras för Experience Cloud (se [kraven](../../reference/requirements.md)). Och eftersom de har en enda JavaScript-fil behöver kunden ingen respitperiod. Den här kunden kommer också att konfigurera migrering av besökare och sedan migrera bort från sin datainsamling CNAME, vilket inte är nödvändigt.
+För det första ska den här kunden aktiveras för Experience Cloud (se [krav](../../reference/requirements.md)). Och eftersom de har en enda JavaScript-fil behöver kunden ingen respitperiod. Den här kunden kommer också att konfigurera migrering av besökare och sedan migrera bort från sin datainsamling CNAME, vilket inte är nödvändigt.
 
 ## Flera JavaScript-filer, hårdkodade bildtaggar {#section-a665f6ee202940449198e4e7a5dcac54}
 
 * **Kund**: Ett annat exempel på Company Inc.
-* **Experience Cloud aktiverat**: Ja
+* **Experience Cloud aktiverad**: Ja
 * **Webbegenskaper**: anotherexample.com
 * **Datainsamlingsservrar**: anotherexampleco.112.2o7.net
 * **Analytics JavaScript-fil**: Flera JavaScript-filer. En fil för huvudplatsen, en annan fil för supportavsnittet som finns i ett separat CMS-system.
 * **Andra datainsamlingsmetoder**: Hårdkodade bildtaggar i ett webbplatsavsnitt
 
-Först ska kunden hitta sitt Adobe Experience Cloud Organization ID (se [kraven](../../reference/requirements.md)). Därefter bör de konfigurera en tidsgräns för migrering eftersom de använder flera JavaScript-filer. Den här kunden kommer också att konfigurera migrering av besökare och sedan migrera från `*.2o7.net` till `*.sc.omtrdc.net`.
+Först ska kunden hitta sitt Adobe Experience Cloud Organization ID (se [krav](../../reference/requirements.md)). Därefter bör de konfigurera en tidsgräns för migrering eftersom de använder flera JavaScript-filer. Den här kunden kommer också att konfigurera migrering av besökare och sedan migrera från `*.2o7.net` till `*.sc.omtrdc.net`.
 
-När den här kunden uppdaterar den senaste JavaScript-koden för Analytics som förberedelse för utrullningen av ID-tjänsten [!DNL Experience Cloud] kommer de även att uppdatera alla hårdkodade bildtaggar så att de använder JavaScript i stället.
+När den här kunden uppdaterar den senaste JavaScript-koden för Analytics som förberedelse för [!DNL Experience Cloud] När en ID-tjänst lanseras uppdateras även alla hårdkodade bildtaggar så att JavaScript används i stället.
 
 ## Flera webbegenskaper, flera JavaScript-filer och en Flash-baserad videospelare {#section-34647995ff3740b999fdee22d885e515}
 
 * **Kund**: En bra kund LLC
-* **Experience Cloud aktiverat**: Ja
+* **Experience Cloud aktiverad**: Ja
 * **Webbegenskaper**: mymainsite.com, myothersiteA.com, myothersiteB.com
 * **Datainsamlingsservrar**: metrics.mymainsite.com, smetrics.mymainsite.com
 * **Analytics JavaScript-fil**: Flera JavaScript-filer. En fil för varje webbegenskap.
 * **Andra datainsamlingsmetoder**: En Flash-baserad videospelare
 
-Först ska kunden hitta sitt Adobe Experience Cloud Organization ID (se [kraven](../../reference/requirements.md)). Därefter bör de konfigurera en tidsgräns för migrering eftersom de använder flera JavaScript-filer. Den här kunden spårar besökare mellan sin primära domän och sina underdomäner, så de kommer att fortsätta använda sin datainsamling CNAME med besökar-ID-tjänsten.
+Först ska kunden hitta sitt Adobe Experience Cloud Organization ID (se [krav](../../reference/requirements.md)). Därefter bör de konfigurera en tidsgräns för migrering eftersom de använder flera JavaScript-filer. Den här kunden spårar besökare mellan sin primära domän och sina underdomäner, så de kommer att fortsätta använda sin datainsamling CNAME med besökar-ID-tjänsten.
 
-När den här kunden uppdaterar den senaste JavaScript-koden för Analytics som förberedelse för introduktionen av [!DNL Experience Cloud] ID-tjänsten kommer de också att uppdatera sin Flash-baserade videospelare till den senaste versionen av AppMeasurement for Flash.
+När den här kunden uppdaterar den senaste JavaScript-koden för Analytics som förberedelse för [!DNL Experience Cloud] När en ID-tjänst lanseras uppdaterar de även sin Flash-baserade videospelare till den senaste versionen av AppMeasurement for Flash.

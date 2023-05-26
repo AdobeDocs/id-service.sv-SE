@@ -10,13 +10,13 @@ ht-degree: 0%
 
 ---
 
-# Skyddsprofiler för innehåll och identitetstjänsten Experience Cloud {#content-security-policies-and-the-experience-cloud-id-service}
+# Skyddsprofiler för innehåll och Experience Cloud Identity Service {#content-security-policies-and-the-experience-cloud-id-service}
 
 En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
 
 ## CSP-granskning {#section-5fde5c00a678455c914b8307a8caab82}
 
-CSP använder HTTP-huvudet `Content-Security-Policy` för att styra vilken typ av resurser en webbläsare accepterar eller läser in på en sida. Med en CSP kan du förhindra följande:
+CSP använder HTTP-huvudet `Content-Security-Policy` för att styra vilken typ av resurser en webbläsare ska godkänna eller läsa in på en sida. Med en CSP kan du förhindra följande:
 
 * JavaScript-filer läses in om källan är okänd eller inte ingår i en vitlista.
 * Serveröverskridande skriptattacker (XXS).
@@ -47,7 +47,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje listlösning eller
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <b>Målgrupp</b> </p> </td> 
+   <td colname="col1"> <p> <b>Target</b> </p> </td> 
    <td colname="col2"> <p>Ändra din CSP så att den inkluderar <span class="codeph"> *.tt.omtrdc.net</span>. </p> </td> 
   </tr> 
   <tr> 
@@ -58,7 +58,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje listlösning eller
    <li>img-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>script-src 'self' <code>https://*.demdex.net https://cm.everesttech.net https://assets.adobedtm.com;</code></li>
    <li>frame-src 'self' <code>https://*.demdex.net;</code></li>
-   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan med domäner.</li></ul></p> <p>Anrop till domänen <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">-cookies och Experience Cloud Identity Service</a> och för ID-synk. Se även <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> </tr> 
+   <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> till listan över domäner.</li></ul></p> <p>Anropar <span class="codeph"> demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local"> Cookies och Experience Cloud Identity Service</a> och för ID-synkronisering. Se även <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen</a>. </p> </td> </tr> 
  <tr>
  <td colname="col1"> <p> <b>Activity Map plugin</b> </p> </td> 
  <td colname="col2"> <p>Ändra din CSP så att den inkluderar *.adobe.com. **Obs**: Om du redan hade Activity Map installerat före januari 2020 kommer webbläsaren fortfarande att se en första begäran till *.omniture.com, men den kommer att omdirigeras till *.adobe.com. </p></td> 

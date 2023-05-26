@@ -16,7 +16,7 @@ Offentliga metoder som gör att du kan interagera med ID-tjänsten.
 
 >[!NOTE]
 >
->JavaScript-biblioteken *Experience Cloud ID har nyligen flyttats.* Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>The *Experience Cloud ID JavaScript-bibliotek* har flyttats nyligen. Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Relaterade artiklar:
 

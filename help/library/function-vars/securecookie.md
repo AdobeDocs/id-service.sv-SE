@@ -18,7 +18,7 @@ Det här konfigurationsattributet är tillgängligt i `visitorAPI`, version 3.3.
 
 >[!NOTE]
 >
->Konfigurationen `SecureCookie` fungerar inte på oskyddade domäner och kan leda till att du inte får MID-värden för besök som använder ett oskyddat protokoll. Konfigurationen `secureCookie` ska bara anges till `true` när du är säker på att alla sidor och underdomäner alltid använder ett säkert protokoll.
+>The `SecureCookie` kommer inte att fungera på oskyddade domäner och kan leda till att du inte får MID-värden för besök som använder ett oskyddat protokoll. The `secureCookie` ska vara inställd på `true` bara när du är säker på att alla sidor och underdomäner alltid använder ett säkert protokoll.
 
 **Syntax:** `secureCookie: true | false` (standard)
 

@@ -14,9 +14,9 @@ ht-degree: 2%
 
 En valfri boolesk flagga som styr hur Experience Cloud Identity Service läser in iFrame för ID-synkronisering.
 
-**Syntax:** ` `idSyncAttachIframeOnWindowLoad= true|false&quot;(standard är  `false`.)
+**Syntax:** ` `idSyncAttachIframeOnWindowLoad= true|false (standard är `false`.)
 
-När `idSyncAttachIframeOnWindowLoad: true` har läst in ID-synkroniseringens iFrame vid fönsterinläsning. Som standard läser ID-tjänsten in iFrame för ID-synkronisering så snabbt som möjligt i stället för vid inläsning av fönster.
+När `idSyncAttachIframeOnWindowLoad: true` ID-tjänsten läser in iFrame för synkronisering av ID vid inläsning av fönster. Som standard läser ID-tjänsten in iFrame för ID-synkronisering så snabbt som möjligt i stället för vid inläsning av fönster.
 
 **Exempel på kod**
 

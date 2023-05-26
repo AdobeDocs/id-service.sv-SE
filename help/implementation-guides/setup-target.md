@@ -10,19 +10,19 @@ ht-degree: 1%
 
 ---
 
-# Implementera identitetstjänsten Experience Cloud för mål{#implement-the-experience-cloud-id-service-for-target}
+# Implementera identitetstjänsten Experience Cloud för Target{#implement-the-experience-cloud-id-service-for-target}
 
 Dessa instruktioner är till för målkunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
->* [Läs ](../reference/requirements.md) kraven innan du börjar.
+>* [Läs kraven](../reference/requirements.md) innan du börjar.
 >* Konfigurera och testa koden i en utvecklingsmiljö innan den implementeras i produktionen.
 
 
 ## Steg 1: Hämta ID-tjänstkoden {#section-b32ba0548aa546a79dd38be59832a53e}
 
-[!UICONTROL ID Service] kräver kodbiblioteket `VisitorAPI.js`. Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få den här koden.
+The [!UICONTROL ID Service] kräver `VisitorAPI.js` kodbibliotek. Kontakt [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få den här koden.
 
 ## Steg 2: Lägg till funktionen Visitor.getInstance i ID-tjänstkoden {#section-287ef2958e9f43858fe9d630ae519e22}
 
@@ -34,7 +34,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE")
 
 **Del 2: Lägga till funktionskod i filen VisitorAPI.js**
 
-Placera funktionen `Visitor.getInstance` i slutet av filen efter kodblocket. Den redigerade filen ska se ut så här:
+Placera `Visitor.getInstance` i slutet av filen efter kodblocket. Den redigerade filen ska se ut så här:
 
 ```js
 /* 
@@ -51,19 +51,19 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE")
 
 ## Steg 3: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-522b1877be9243c39b222859b821f0ce}
 
-I funktionen `Visitor.getInstance` ersätter du `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt [!DNL Experience Cloud] organisations-ID. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för [!DNL Experience Cloud]. Se även [Administration - bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+I `Visitor.getInstance` funktion, ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med [!DNL Experience Cloud] organisations-ID. Om du inte känner till ditt organisations-ID kan du hitta det på [!DNL Experience Cloud] administrationssida. Se även [Administration - bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg");`
 
 >[!IMPORTANT]
 >
->*Ändra* inte skiftläget för tecknen i ditt organisations-ID. ID:t är skiftlägeskänsligt och måste användas exakt som angivet.
+>*Gör inte* ändra skiftläget för tecknen i ditt organisations-ID. ID:t är skiftlägeskänsligt och måste användas exakt som angivet.
 
 ## Steg 4: Lägg till API-kod för besökare på sidan {#section-02d8dd7678b64a85b5abc1c4ef0845dd}
 
-Distribuera `VisitorAPI.js`-filen till din plats i `<head>`-taggarna före referensen till `mbox.js`-filen. ID-tjänsten [!DNL Experience Cloud] måste köras innan det första [!DNL Target]-nätverksanropet genereras. Flytta koden till produktion efter testning och verifiering.
+Distribuera `VisitorAPI.js` till din webbplats i `<head>` taggar före referensen till `mbox.js` -fil. The [!DNL Experience Cloud] ID-tjänsten måste köras före den första [!DNL Target] nätverksanrop genereras. Flytta koden till produktion efter testning och verifiering.
 
-## Steg 5: Testa och distribuera ID-tjänstkoden {#section-e81ee439bb8a4c2abea43d76f3112e9c}
+## Steg 5: Testa och distribuera ID-tjänstkod {#section-e81ee439bb8a4c2abea43d76f3112e9c}
 
 Du kan testa och distribuera enligt följande.
 
@@ -72,7 +72,7 @@ Du kan testa och distribuera enligt följande.
 Så här testar du implementeringen av din ID-tjänst:
 
 * Kontrollera om det finns en AMCV-cookie i domänen där sidan finns.
-* Kontrollera att `mboxMCGVID` visas i din [!DNL Target]-begäran och att den innehåller [!DNL Experience Cloud] ID (MID).
+* Verifiera `mboxMCGVID` visas i [!DNL Target] begäran och att den innehåller [!DNL Experience Cloud] ID (MID).
 
 Se [Cookies och Experience Cloud Identity Service](../introduction/cookies.md) för information om AMCV-cookien och MID.
 

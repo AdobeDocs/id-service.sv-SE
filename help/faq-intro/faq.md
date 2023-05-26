@@ -10,7 +10,7 @@ ht-degree: 1%
 
 ---
 
-# Vanliga frågor om ID-tjänsten{#id-service-faqs}
+# Vanliga frågor om ID-tjänster{#id-service-faqs}
 
 Vanliga frågor och svar om funktioner, funktioner och problem i samband med användning av ID-tjänsten.
 
@@ -22,21 +22,21 @@ Se [Översikt](../introduction/overview.md).
 
 **Varför gör ID-tjänsten inget anrop för att hämta Experience Cloud-ID?**
 
-Detta kan vara svårt att diagnostisera. En sak som du kan kontrollera är rubrikerna för skyddsprofiler på din webbplats. Om du har en strikt säkerhetsprincip kan dessa inställningar blockera tredjepartssamtal som görs av ID-tjänsten. Se [Principer för innehållssäkerhet och Experience Cloud-identitetstjänsten](../reference/csp.md#concept-968c423a7392479db0a0d821ae9783e3).
+Detta kan vara svårt att diagnostisera. En sak som du kan kontrollera är rubrikerna för skyddsprofiler på din webbplats. Om du har en strikt säkerhetsprincip kan dessa inställningar blockera tredjepartssamtal som görs av ID-tjänsten. Se [Skyddsprofiler för innehåll och Experience Cloud Identity Service](../reference/csp.md#concept-968c423a7392479db0a0d821ae9783e3).
 
 **Lagring av VisitorAPI.js-filer**
 
 Du kan få problem om du har VisitorAPI.js som värd för en lokal fil i mobilappar. Vi rekommenderar att du har filen på en webbserver.
 
-## Inläsningstider för sidan och fördröjning {#section-c78e148d8dbe4c77a436ef0f2af5434b}
+## Inläsningstider för sidor och fördröjning {#section-c78e148d8dbe4c77a436ef0f2af5434b}
 
 **Hur påverkar placeringen av ID-tjänstens VisitorAPI.js-bibliotek sidinläsningstiderna?**
 
-Placera VisitorAPI.js-biblioteket överst på sidan i `<head>`-avsnittet i koden. Detta bidrar till att säkerställa att anropet för ett ID skickas innan sidans brödtext börjar läsas in och maximerar chanserna för att ett ID returneras korrekt.
+Placera VisitorAPI.js-biblioteket överst på sidan i `<head>` i koden. Detta bidrar till att säkerställa att anropet för ett ID skickas innan sidans brödtext börjar läsas in och maximerar chanserna för att ett ID returneras korrekt.
 
-Anropet till ID-tjänsten är asynkront och är det enda anropet till domänen [demdex.net](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html). Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
+ID-tjänstanropet är asynkront och är det enda anropet till [demdex.net-domän](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html). Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
 
-För [!DNL Target]-kunder kan det öka chanserna att ett [!DNL Target]-anrop blockeras om ID-tjänstkoden placeras i `<body>` på sidan. Om du måste placera ID-tjänstkoden i sidans brödtext ska den placeras efter den öppna `<body>`-taggen.
+För [!DNL Target] kunder, placera ID-tjänstkoden i `<body>` på sidan kan öka chanserna att den kan blockera en [!DNL Target] ring. Om du måste placera ID-tjänstkoden i sidans brödtext bör den placeras efter den öppna `<body>` -tagg.
 
 **Gör ID-tjänsten ett serversamtal med varje sidinläsning?**
 
@@ -56,7 +56,7 @@ Det är svårt att katalogisera alla möjliga villkor. Miljoner kunder ansluter 
 
 **Kan du ange några förbättringar som du har gjort för att korta sidinläsningstiderna?**
 
-Till exempel, trådgenerering. Vi har introducerat trådgenerering om flera ID-synkroniseringsbegäranden skulle göras. Vi har observerat från labbrapporter att användargränssnittet skulle blockeras för kunder som utför flera ID-synkroniseringar på grund av att en mängd kontinuerliga CPU-beräkningar sker. Därför introducerade vi trådar som separerar begäranden om ID-synkronisering med 100 msek vardera.
+Till exempel, trådgenerering. Vi introducerade trådgenerering vid flera begäranden om synkronisering av ID. Vi har observerat från labbrapporter att användargränssnittet skulle blockeras för kunder som utför flera ID-synkroniseringar på grund av att en mängd kontinuerliga CPU-beräkningar sker. Därför introducerade vi trådar som separerar begäranden om ID-synkronisering med 100 msek vardera.
 
 Den här förändringen förbättrar prestanda för kunder som använder Visitor 2.3.0+ och DIL 6.10+. Förbättringarna av sidinläsningstiderna visas i bilden nedan:
 

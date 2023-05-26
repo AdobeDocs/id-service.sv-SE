@@ -22,7 +22,7 @@ Alla korrekt konfigurerade delar av AppMeasurement-koden innehåller din spårni
 
 Men ibland kan kunderna dela upp sin Analytics AppMeasurement-fil i separata filer. Vissa kunder kan till exempel placera konfigurationsvariabler i en fil, använda en andra fil för plugin-program och sedan placera AppMeasurement-kod i en tredje fil. Detta rekommenderas inte.
 
-Om du inte kan hitta din spårningsserverinformation kanske inte Analytics-instansen är korrekt konfigurerad. Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) om du inte hittar din spårningsserverinformation.
+Om du inte kan hitta din spårningsserverinformation kanske inte Analytics-instansen är korrekt konfigurerad. Kontakt [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) om du inte hittar din spårningsserverinformation.
 
 **Vad händer om jag använder identitetstjänsten och ändrar min spårningsserver?**
 
@@ -34,13 +34,13 @@ Ingenting ändras för användare som redan har identifierats av identitetstjän
 
 Om du har en huvudwebbplats där kunder kan identifieras innan de besöker andra domäner kan en CNAME aktivera spårning av korsdomäner i webbläsare som inte accepterar cookies från tredje part (som Safari).
 
-I webbläsare som accepterar cookies från tredje part anges en cookie i domänen [demdex.net](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) under begäran att hämta ett besökar-ID. Denna cookie gör att identitetstjänsten kan returnera samma besökar-ID för Experience Cloud på alla domäner som har konfigurerats med samma organisations-ID. I webbläsare som avvisar cookies från tredje part tilldelas varje domän ett nytt besökar-ID för Experience Cloud.
+I webbläsare som accepterar cookies från tredje part anges en cookie i [demdex.net-domän](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) under begäran om att hämta ett besökar-ID. Denna cookie gör att identitetstjänsten kan returnera samma besökar-ID för Experience Cloud på alla domäner som har konfigurerats med samma organisations-ID. I webbläsare som avvisar cookies från tredje part tilldelas varje domän ett nytt besökar-ID för Experience Cloud.
 
-Även när en CNAME är konfigurerad identifieras besökare annorlunda på den sekundära webbplatsen och huvudwebbplatsen i webbläsare som inte accepterar cookies från tredje part om huvudstartwebbplatsen inte besöks först.
+Även när en CNAME är konfigurerad identifieras besökare annorlunda på den sekundära webbplatsen och huvudwebbplatsen i webbläsare som inte accepterar cookies från tredje part, om huvudstartwebbplatsen inte besöks först.
 
 **Varför finns inte Experience Cloud ID-parametern (MID) i Analytics-begäran?**
 
-Om identitetstjänsten returnerar information korrekt, men du inte ser parametern `MID`, kontrollerar du att du har uppgraderat till en version av AppMeasurement som stöds.
+Om identitetstjänsten returnerar information korrekt men du inte ser `MID` ska du kontrollera att du har uppgraderat till en version av AppMeasurement som stöds.
 
 **Kan min webbplats använda H-kod och AppMeasurement for JavaScript med identitetstjänsten?**
 
@@ -50,7 +50,7 @@ H-kod stöds dock inte med visitorAPI.js-koden version 1.6 eller senare. Om du v
 
 **Vad är en respitperiod och hur konfigurerar jag den?**
 
-Se [Identitetstjänstens giltighetsperiod](../reference/analytics-reference/grace-period.md) och kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
+Se [Giltighetsperioden för identitetstjänsten](../reference/analytics-reference/grace-period.md) och kontakta [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
 
 **Varför måste jag migrera till datainsamling i realtid (RDC) för att kunna använda identitetstjänsten?**
 

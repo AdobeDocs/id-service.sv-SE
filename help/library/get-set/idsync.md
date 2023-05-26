@@ -27,11 +27,11 @@ Med ID-tjänstfunktionerna idSyncByURL och idSyncByDataSource kan du manuellt im
  </thead>
  <tbody> 
   <tr valign="top"> 
-   <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByURL();  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByURL(); </span> </p> </td> 
    <td colname="col2"> <p>Mellan olika datapartners och <span class="keyword"> Audience Manager </span> genom att använda en anpassad URL för ID-synkronisering. </p> </td> 
   </tr> 
   <tr valign="top"> 
-   <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByDataSource();  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByDataSource(); </span> </p> </td> 
    <td colname="col2"> <p>När du redan känner till DPID och DPUID och vill skicka det till <span class="keyword"> Audience Manager </span> i standardformatet för ID-synkroniserings-URL. </p> <p></p> </td> 
   </tr> 
  </tbody> 
@@ -51,22 +51,22 @@ I följande tabell visas och definieras de egenskaper som är tillgängliga för
  </thead>
  <tbody> 
   <tr valign="top"> 
-   <td colname="col1"> <span class="codeph"> dpid  </span> </td> 
+   <td colname="col1"> <span class="codeph"> dpid </span> </td> 
    <td colname="col2"> Sträng </td> 
    <td colname="col3"> <p>Data provider-ID tilldelat av Audience Manager. </p> </td> 
   </tr> 
   <tr valign="top"> 
-   <td colname="col1"> <span class="codeph"> dpuuid  </span> </td> 
+   <td colname="col1"> <span class="codeph"> dpuuid </span> </td> 
    <td colname="col2"> Sträng </td> 
    <td colname="col3"> <p>Dataleverantörens unika ID för användaren. </p> </td> 
   </tr> 
   <tr valign="top"> 
-   <td colname="col1"> <span class="codeph"> minutesToLive  </span> </td> 
+   <td colname="col1"> <span class="codeph"> minutesToLive </span> </td> 
    <td colname="col2"> Siffra </td> 
    <td colname="col3"> <p> <i>(Valfritt)</i> Anger förfallotid för cookie. Måste vara ett heltal. Standardvärdet är 2 0160 minuter (14 dagar). </p> </td> 
   </tr> 
   <tr valign="top"> 
-   <td colname="col1"> <span class="codeph"> url  </span> </td> 
+   <td colname="col1"> <span class="codeph"> url </span> </td> 
    <td colname="col2"> Sträng </td> 
    <td colname="col3"> <p>Mål-URL. </p> </td> 
   </tr> 
@@ -79,11 +79,11 @@ Båda funktionerna kan hantera följande makron:
 
 * `%TIMESTAMP%`: Skapar en tidsstämpel (i millisekunder). Används för cachebusting.
 * `%DID%`: Infogar användarens Audience Manager-ID.
-* `%HTTP_PROTO%`: Anger kommunikationsprotokollet (`http` eller  `https`).
+* `%HTTP_PROTO%`: Anger kommunikationsprotokollet (`http` eller `https`).
 
 ## Exempelkod och utdata {#section-0115615c37584a19a2ab11e917c4e7e9}
 
-Båda funktionerna returnerar `Successfully queued` om de lyckas. De returnerar i annat fall en felmeddelandesträng.
+Båda funktionerna returnerar `Successfully queued` om det lyckas. De returnerar i annat fall en felmeddelandesträng.
 
 ### visitor.idSyncByURL
 

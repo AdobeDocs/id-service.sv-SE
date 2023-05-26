@@ -30,15 +30,15 @@ I följande tabell visas och beskrivs de svar som returneras av den här funktio
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> sant</span> </p> </td> 
-   <td colname="col2"> <p>ID-tjänsten kunde inte eller fick inte ett MID från Experience Cloud<span class="keyword">-servern. </span> Ett MID skapades lokalt i webbläsaren (klientsidan). </p> </td> 
+   <td colname="col2"> <p>ID-tjänsten kunde inte eller fick inte ett MID från <span class="keyword"> Experience Cloud</span> server. Ett MID skapades lokalt i webbläsaren (klientsidan). </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> falskt</span> </p> </td> 
-   <td colname="col2"> <p>ID-tjänsten tog emot ett MID från Experience Cloud<span class="keyword">-servern.</span> </p> </td> 
+   <td colname="col2"> <p>ID-tjänsten tog emot ett MID från <span class="keyword"> Experience Cloud</span> server. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> null</span> </p> </td> 
-   <td colname="col2"> <p>ID-tjänsten gjorde inget anrop till Experience Cloud<span class="keyword">-servern.</span> </p> </td> 
+   <td colname="col2"> <p>ID-tjänsten gjorde inget anrop till <span class="keyword"> Experience Cloud</span> server. </p> </td> 
   </tr> 
  </tbody> 
 </table>

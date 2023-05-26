@@ -16,7 +16,7 @@ setCustomerIDs anger 1 eller flera nyckelvärdepar som definierar kund-ID:n och 
 
 **Syntax:** `visitor.setCustomerIDs()`
 
-Du kan ange ett eller flera ID:n enligt exemplet nedan. Mer information och exempel finns i [Kund-ID och autentiseringstillstånd](../../reference/authenticated-state.md).
+Du kan ange ett eller flera ID:n enligt exemplet nedan. Se [Kund-ID och autentiseringstillstånd](../../reference/authenticated-state.md) för mer information och exempel.
 
 ```js
 // Single ID with a single authentication state 

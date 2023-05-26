@@ -10,7 +10,7 @@ ht-degree: 1%
 
 ---
 
-# audiensManagerServer och auditionManagerServerSecure{#audiencemanagerserver-and-audiencemanagerserversecure}
+# auditionManagerServer och auditionManagerServerSecure{#audiencemanagerserver-and-audiencemanagerserversecure}
 
 Ändra det standarddomännamn som används av anrop till Experience Cloud Identity Service till ditt eget underdomännamn med dessa konfigurationer.
 
@@ -21,19 +21,19 @@ ht-degree: 1%
 
 **Syfte**
 
-Vanligtvis gör ID-tjänsten [!DNL Experience Cloud] anrop till [!DNL Adobe] på `dpm.demdex.net`. Ibland kanske du inte vill ringa anrop till den här destinationen eftersom den ser för generisk ut eller &quot;från tredje part&quot;. Om du vill att ID-tjänstanropet ska se mer ut som ett förstahandsanrop använder du de här konfigurationerna för att lägga till ditt [!DNL Audience Manager]-underdomännamn till `demdex.net` enligt nedan. Mer information om `dpm.demdex.net`-anropet finns i [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html).
+Normalt visas [!DNL Experience Cloud] ID-tjänsten gör anrop till [!DNL Adobe] på `dpm.demdex.net`. Ibland kanske du inte vill ringa anrop till den här destinationen eftersom den ser för generisk ut eller &quot;från tredje part&quot;. Om du vill att ID-tjänstsamtalet ska se mer ut som ett förstapartssamtal använder du dessa konfigurationer för att lägga till [!DNL Audience Manager] underdomännamn till `demdex.net` enligt nedan. Mer information om `dpm.demdex.net` ring, se [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html).
 
 **Krav**
 
 Dessa konfigurationer kräver att du använder:
 
-* Postens [!DNL Audience Manager]-underdomännamn för ditt företag. Bekräfta eller hämta det här namnet från din konsult.
-* Det underdomännamn som är associerat med din [!UICONTROL Organization ID].
-* *Båda* konfigurationsparametrarna med samma underdomännamn.
+* The [!DNL Audience Manager] underdomänsnamn på posten för ditt företag. Bekräfta eller hämta det här namnet från din konsult.
+* Underdomännamnet som är associerat med din [!UICONTROL Organization ID].
+* *Båda* konfigurationsparametrar med samma underdomännamn.
 
 **Exempel på kod**
 
-Låt oss i det här exemplet säga att vi har ett mediespelarföretag som har uttryckt juridiska betänkligheter när det gäller att ringa till `dpm.demdex.net`. I [!DNL Audience Manager] är företagets underdomännamn för posten Music1. I följande kodexempel visas hur ID-tjänstanropet varumärkesprofileras med det här kundspecifika underdomännamnet.
+Låt oss i det här exemplet säga att vi har ett mediespelarföretag som har uttryckt juridiska betänkligheter när det gäller att ringa `dpm.demdex.net`. I [!DNL Audience Manager]är postens underdomännamn Music1. I följande kodexempel visas hur ID-tjänstanropet varumärkesprofileras med det här kundspecifika underdomännamnet.
 
 ```
 //Instantiate Visitor 

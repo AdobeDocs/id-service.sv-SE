@@ -14,15 +14,15 @@ ht-degree: 2%
 
 En valfri boolesk flagga som styr hur webbläsaren begär resurser från Experience Cloud Identity Service.
 
-**Syntax:** `useCORSOnly: true|false` (default is  `false`.)
+**Syntax:** `useCORSOnly: true|false` (standard är `false`.)
 
 **Översikt**
 
-När inställningen är `false` utför webbläsaren resurskontroller med CORS eller JSONP. Men ID-tjänsten försöker alltid begära resurser med CORS först. Den återgår till JSONP i äldre webbläsare som inte stöder CORS. Om du behöver tvinga webbläsaren att endast använda CORS anger du `useCORSOnly:true` i funktionsanropet `Visitor.getInstance`.
+När inställt på `false`utförs resurskontroller med CORS eller JSONP i webbläsaren. Men ID-tjänsten försöker alltid begära resurser med CORS först. Den återgår till JSONP i äldre webbläsare som inte stöder CORS. Om du behöver tvinga webbläsaren att endast använda CORS anger du `useCORSOnly:true` i `Visitor.getInstance` funktionsanrop.
 
 >[!IMPORTANT]
 >
->`Set useCORSOnly: true` om du har strikta säkerhetskrav. Du bör bara aktivera det här läget om du är säker på att alla besökare använder webbläsare som stöder CORS. Användarupplevelsen påverkas inte av webbläsare som inte stöder CORS. Webbläsare utan stöd för CORS kan dock inte begära resurser eller utbyta data med [!DNL Adobe Experience Cloud].
+>`Set useCORSOnly: true` om du har strikta säkerhetskrav. Du bör bara aktivera det här läget om du är säker på att alla besökare använder webbläsare som stöder CORS. Användarupplevelsen påverkas inte av webbläsare som inte stöder CORS. Webbläsare utan CORS-stöd kan dock inte begära resurser eller utbyta data med [!DNL Adobe Experience Cloud].
 
 **Exempel på kod**
 

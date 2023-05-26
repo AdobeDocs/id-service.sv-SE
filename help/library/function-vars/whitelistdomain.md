@@ -19,9 +19,9 @@ Innehåll:
 <ul class="simplelist"> 
  <li> <a href="../../library/function-vars/whitelistdomain.md#section-f645198bbaba4fba8961acb6e88d1470" format="dita" scope="local"> Syntax </a> </li> 
  <li> <a href="../../library/function-vars/whitelistdomain.md#section-09d0049fe88a473baa69d404c50bf8ae" format="dita" scope="local"> Exempel på kod </a> </li> 
- <li> <a href="../../library/function-vars/whitelistdomain.md#section-fc2eeb93546b406fae3b102dbcd11de7" format="dita" scope="local"> Användningsexempel  </a> </li> 
- <li> <a href="../../library/function-vars/whitelistdomain.md#section-2b1ce31fab034e1ca0f6b1c3cc57a6e2" format="dita" scope="local"> Säkerhet och säkerhet för konfiguration  </a> </li> 
- <li> <a href="../../library/function-vars/whitelistdomain.md#section-30c6a9f4dcdc4265a1149260b97cc057" format="dita" scope="local"> API-metoder för besökare som stöds  </a> </li> 
+ <li> <a href="../../library/function-vars/whitelistdomain.md#section-fc2eeb93546b406fae3b102dbcd11de7" format="dita" scope="local"> Användningsexempel </a> </li> 
+ <li> <a href="../../library/function-vars/whitelistdomain.md#section-2b1ce31fab034e1ca0f6b1c3cc57a6e2" format="dita" scope="local"> Säkerhet och säkerhet för konfiguration </a> </li> 
+ <li> <a href="../../library/function-vars/whitelistdomain.md#section-30c6a9f4dcdc4265a1149260b97cc057" format="dita" scope="local"> API-metoder för besökare som stöds </a> </li> 
 </ul>
 
 ## Syntax {#section-f645198bbaba4fba8961acb6e88d1470}
@@ -37,11 +37,11 @@ Båda konfigurationselementen krävs när du använder den här koden.
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> whitelistParentDomain: "  <span class="varname"> Domännamn för överordnad sida  </span>"  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> whitelistParentDomain: " <span class="varname"> Domännamn för överordnad sida </span>" </span> </p> </td> 
    <td colname="col2"> <p>Accepterar ett domännamn som skickas som en sträng. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> whitelistIframeDomains: [  <span class="varname"> "iFrame domain","iFrame domain","iFrame domain"  </span>]  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> whitelistIframeDomains: [ <span class="varname"> "iFrame domain","iFrame domain","iFrame domain" </span>] </span> </p> </td> 
    <td colname="col2"> <p>Accepterar ett eller flera iFrame-domännamn som skickas som en array. </p> </td> 
   </tr> 
  </tbody> 
@@ -49,7 +49,7 @@ Båda konfigurationselementen krävs när du använder den här koden.
 
 ## Exempel på kod {#section-09d0049fe88a473baa69d404c50bf8ae}
 
-Den konfigurerade [!UICONTROL ID service]-koden kan se ut som i det här exemplet.
+Din konfigurerade [!UICONTROL ID service] koden kan se ut ungefär som i det här exemplet.
 
 ```js
 //Instantiate Visitor 
@@ -63,7 +63,7 @@ var visitor = Visitor.getInstance("Insert Experience Cloud Organization ID here"
 );
 ```
 
-## Använd fall {#section-fc2eeb93546b406fae3b102dbcd11de7}
+## Användningsexempel {#section-fc2eeb93546b406fae3b102dbcd11de7}
 
 Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en cookie för en ID-tjänst och tilldela ett besökar-ID när webbläsare blockerar cookies från tredje part och om något av dessa villkor gäller:
 
@@ -72,7 +72,7 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
 
 >[!TIP]
 >
->Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [videopulsslag](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
+>Du kanske också vill implementera dessa konfigurationer när du visar video i en iFrame med [Videopulsslag](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
 
 **Användningsfall 1: Webbläsaren blockerar cookies från tredje part och ID-tjänsten implementeras på iFrame- och överordnad sida**
 
@@ -104,7 +104,7 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Lösning</b> </p> </td> 
-   <td colname="col2"> <p>Ändra ID-tjänstens <span class="codeph"> Visitor.getInstance </span>-funktion i iFrame med dessa konfigurationer för vit lista. Ange de överordnade och underordnade domänerna i koden. Dessa konfigurationer gör att ID-tjänstkoden i iFrame kan kontrollera ID-tjänstkoden på den överordnade sidan för ett besökar-ID. </p> <p>Om ID-tjänstkoden i iFrame inte får någon överordnad svarssida genererar dessa konfigurationer ett lokalt besökar-ID. </p> </td> 
+   <td colname="col2"> <p>Ändra ID-tjänsten <span class="codeph"> Visitor.getInstance </span> i iFrame med dessa vita listkonfigurationer. Ange de överordnade och underordnade domänerna i koden. Dessa konfigurationer gör att ID-tjänstkoden i iFrame kan kontrollera ID-tjänstkoden på den överordnade sidan för ett besökar-ID. </p> <p>Om ID-tjänstkoden i iFrame inte får någon överordnad svarssida genererar dessa konfigurationer ett lokalt besökar-ID. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -138,12 +138,12 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Lösning</b> </p> </td> 
-   <td colname="col2"> <p>Ändra ID-tjänstens <span class="codeph"> Visitor.getInstance </span>-funktion i iFrame med dessa konfigurationer för vit lista. Ange de överordnade och underordnade domänerna i koden. Dessa konfigurationer gör att ID-tjänstkoden i iFrame kan kontrollera ID-tjänstkoden på den överordnade sidan för ett besökar-ID. </p> <p>Om ID-tjänstkoden i iFrame inte får någon överordnad svarssida genererar dessa konfigurationer ett lokalt besökar-ID. </p> </td> 
+   <td colname="col2"> <p>Ändra ID-tjänsten <span class="codeph"> Visitor.getInstance </span> i iFrame med dessa vita listkonfigurationer. Ange de överordnade och underordnade domänerna i koden. Dessa konfigurationer gör att ID-tjänstkoden i iFrame kan kontrollera ID-tjänstkoden på den överordnade sidan för ett besökar-ID. </p> <p>Om ID-tjänstkoden i iFrame inte får någon överordnad svarssida genererar dessa konfigurationer ett lokalt besökar-ID. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Configuration Safety and Security {#section-2b1ce31fab034e1ca0f6b1c3cc57a6e2}
+## Säkerhet och säkerhet för konfiguration {#section-2b1ce31fab034e1ca0f6b1c3cc57a6e2}
 
 Du kan implementera dessa konfigurationer på ett säkert sätt eftersom:
 
@@ -151,7 +151,7 @@ Du kan implementera dessa konfigurationer på ett säkert sätt eftersom:
 * Dessa konfigurationer kommunicerar bara med den domän och iFrames som anges i koden.
 * Kommunikationen mellan iFrame och den överordnade sidan har ett visst format. Om ID-tjänsten på den överordnade sidan inte tar emot någon begäran i det förväntade formatet kommer denna delningsprocess att misslyckas.
 
-## API-metoder för besökare {#section-30c6a9f4dcdc4265a1149260b97cc057} som stöds
+## API-metoder för besökare som stöds {#section-30c6a9f4dcdc4265a1149260b97cc057}
 
 ID-tjänsten har stöd för en begränsad uppsättning publika API-metoder när du implementerar dessa konfigurationer för vit lista. Vilka metoder som stöds varierar beroende på vilka scenarier för användningsfall som beskrivs ovan.
 
@@ -167,19 +167,19 @@ ID-tjänsten har stöd för en begränsad uppsättning publika API-metoder när 
    <td colname="col1"> <p> <b>Fall 1</b> </p> </td> 
    <td colname="col2"> <p> 
      <ul id="ul_99FAC8608F4C4B39805EEAA6297DB771"> 
-      <li id="li_B13F6C4119F44F17963794B1E2046B1F"> <span class="codeph"> getMarketingCloudID  </span> </li> 
-      <li id="li_9C1B5C00A17F467CAB7EFE5F0D040777"> <span class="codeph"> getAudienceManagerLocationHint  </span> </li> 
-      <li id="li_30D4608F4C3849659FCBA97D88A10F0C"> <span class="codeph"> getAudienceManagerBlob  </span> </li> 
-      <li id="li_BA359596C80147EEA89CABCE83F123CA"> <span class="codeph"> getSupplementalDataID  </span> </li> 
-      <li id="li_26774089B6854CD6A3216043B6EEA01B"> <span class="codeph"> getCustomerIDs  </span> </li> 
+      <li id="li_B13F6C4119F44F17963794B1E2046B1F"> <span class="codeph"> getMarketingCloudID </span> </li> 
+      <li id="li_9C1B5C00A17F467CAB7EFE5F0D040777"> <span class="codeph"> getAudienceManagerLocationHint </span> </li> 
+      <li id="li_30D4608F4C3849659FCBA97D88A10F0C"> <span class="codeph"> getAudienceManagerBlob </span> </li> 
+      <li id="li_BA359596C80147EEA89CABCE83F123CA"> <span class="codeph"> getSupplementalDataID </span> </li> 
+      <li id="li_26774089B6854CD6A3216043B6EEA01B"> <span class="codeph"> getCustomerIDs </span> </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Fall 2</b> </p> </td> 
    <td colname="col2"> <p> 
      <ul id="ul_CCAD7E362E7F4DAB9D5C3E166EEE6BDD"> 
-      <li id="li_1F0B006BAD044ECBA5604625DE411E84"> <span class="codeph"> getSupplementalDataID  </span> </li> 
-      <li id="li_C6022223C8314B9C923202207C7472EA"> <span class="codeph"> getMarketingCloudVisitorID  </span> </li> 
+      <li id="li_1F0B006BAD044ECBA5604625DE411E84"> <span class="codeph"> getSupplementalDataID </span> </li> 
+      <li id="li_C6022223C8314B9C923202207C7472EA"> <span class="codeph"> getMarketingCloudVisitorID </span> </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 

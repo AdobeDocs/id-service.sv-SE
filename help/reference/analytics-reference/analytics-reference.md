@@ -21,4 +21,4 @@ Funktioner för ID-tjänster eller funktioner som är unika för Adobe Analytics
 + [Begäranden om analyser och Experience Cloud ID](legacy-analytics.md)
 + [Implementering på serversidan blandad med JavaScript](server-side.md)
 + [Giltighetsperioden för ID-tjänsten](grace-period.md)
-<!--+ [Data Collection CNAMEs and Cross-Domain Tracking](cname.md)-->
+   <!--+ [Data Collection CNAMEs and Cross-Domain Tracking](cname.md)-->

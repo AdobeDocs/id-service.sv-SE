@@ -16,7 +16,7 @@ Anger ett tidsgränsintervall i millisekunder. Används för att berätta om and
 
 **Syntax:** ` loadTimeout: *`intervall i millisekunder`*`
 
-Standardvärdet är 30 000 millisekunder (30 sekunder). Vi rekommenderar att du *inte* ändrar standardvärdet.
+Standardvärdet är 30 000 millisekunder (30 sekunder). Vi rekommenderar att du *inte* ändra standardvärdet.
 
 >[!NOTE]
 >

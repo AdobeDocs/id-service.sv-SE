@@ -16,13 +16,13 @@ Med den här konfigurationen kan du åsidosätta standardintervallet för SDID (
 
 **Åsidosätt SDID-timeout**
 
-Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` i funktionen `Visitor.getInstance` med följande syntax:
+Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` till `Visitor.getInstance` med följande syntax:
 
 **Syntax:** ` sdidParamExpiry: *`tid i sekunder`*`
 
 **Exempel på kod**
 
-När den är konfigurerad kan ID-tjänstkoden se ut ungefär som i det här exemplet. I det här exemplet anges SDID-tidsgränsen till 15 sekunder. Den här konfigurationen fungerar med hjälpmetoden [appendSupplementalDataIDTo](../../library/get-set/appendsupplementaldataidto.md#reference-65d09de6fde0418f8c62fa79304a755d).
+När den är konfigurerad kan ID-tjänstkoden se ut ungefär som i det här exemplet. I det här exemplet anges SDID-tidsgränsen till 15 sekunder. Den här konfigurationen fungerar med [appendSupplementalDataIDTo](../../library/get-set/appendsupplementaldataidto.md#reference-65d09de6fde0418f8c62fa79304a755d) hjälpmetod.
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 

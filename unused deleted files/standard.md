@@ -1,7 +1,7 @@
 ---
 description: Äldre implementeringar använder Dynamic Tag Management (DTM) för att konfigurera, driftsätta och integrera Experience Cloud Identity Service med dina andra Experience Cloud-lösningar.
 keywords: ID-tjänst
-title: Implementering med dynamisk tagghantering
+title: Implementering med Dynamic Tag Management
 exl-id: 37ccc919-3015-42fa-a88f-639cdf726f48
 source-git-commit: e171c94ccfa1f4fe9b8d909d0204adb94f20cbb6
 workflow-type: tm+mt
@@ -10,11 +10,11 @@ ht-degree: 0%
 
 ---
 
-# Implementering med dynamisk tagghantering {#implementation-with-dynamic-tag-management}
+# Implementering med Dynamic Tag Management {#implementation-with-dynamic-tag-management}
 
 Äldre implementeringar använder Dynamic Tag Management (DTM) för att konfigurera, driftsätta och integrera Experience Cloud Identity Service med dina andra Experience Cloud-lösningar.
 
-## Implementering med dynamisk tagghantering {#topic-6f4ed5d96977406ca991e50f3fbd5b01}
+## Implementering med Dynamic Tag Management {#topic-6f4ed5d96977406ca991e50f3fbd5b01}
 
 Äldre implementeringar använder Dynamic Tag Management (DTM) för att konfigurera, driftsätta och integrera Experience Cloud Identity Service med dina andra Experience Cloud-lösningar.
 
@@ -22,9 +22,9 @@ ht-degree: 0%
 >
 >För närvarande [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html) är det rekommenderade och rekommenderade implementeringsverktyget eftersom det förenklar komplexa tagghanteringsuppgifter och automatiserar kodplaceringen utöver DTM-funktionerna. Se [Implementera med Launch](../implementation-guides/ecid-implement-with-launch.md).
 
-## Dynamisk tagghantering och ID-tjänsten {#section-4a4c4fac5d0a4cbbaff8e1833f73657c}
+## Dynamiska Tag Management och ID-tjänsten {#section-4a4c4fac5d0a4cbbaff8e1833f73657c}
 
-[Dynamisk tagghantering](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html) låter dig konfigurera, distribuera och hantera din ID-tjänstinstans och relaterade [!DNL Experience Cloud] -lösningar. DTM underlättar implementeringsprocessen eftersom det är nära integrerat med ID-tjänsten och andra Experience Cloud-lösningar. Lägg bara till och konfigurera Experience Cloud ID-verktyget och ange information som:
+[Dynamiska Tag Management](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html) låter dig konfigurera, distribuera och hantera din ID-tjänstinstans och relaterade [!DNL Experience Cloud] -lösningar. DTM underlättar implementeringsprocessen eftersom det är nära integrerat med ID-tjänsten och andra Experience Cloud-lösningar. Lägg bara till och konfigurera Experience Cloud ID-verktyget och ange information som:
 
 * Experience Cloud organisations-ID (fylls i automatiskt om det är länkat till Experience Cloud)
 * Analysspårningsserver (säker och osäker)
@@ -49,7 +49,7 @@ mcvid-dtm-deployment.xml
 Innan du kan komma igång bör du kontrollera att din organisation och dina lösningar har etablerats för [!DNL Experience Cloud] och du är bekant med [!DNL Dyanamic Tag Management]. Den här dokumentationen kan hjälpa dig att komma igång:
 
 * [Möjliggör era lösningar för bastjänsterna](https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html): Implementera Experience Cloud och bli administratör. Denna process moderniserar era era lösningar för centrala tjänster som kundattribut och Experience Cloud målgrupper.
-* [Komma igång med dynamisk tagghantering](https://experienceleague.adobe.com/docs/dtm/using/getting-started/get-started.html)
+* [Komma igång med Dynamic Tag Management](https://experienceleague.adobe.com/docs/dtm/using/getting-started/get-started.html)
 
 **Placering av ID-tjänstkod och lastorder**
 
@@ -129,7 +129,7 @@ I följande tabell listas och definieras [!UICONTROL General] inställningar.
 
 **Begär besökar-ID automatiskt**
 
-När det här alternativet är markerat anropar Dynamic Tag Management automatiskt `getMarketingCloudVisitorID()` innan du läser in någon av de Adobe-lösningar som använder identitetstjänsten Experience Cloud.
+När detta är markerat anropar Dynamic Tag Management automatiskt `getMarketingCloudVisitorID()` innan du läser in någon av de Adobe-lösningar som använder identitetstjänsten Experience Cloud.
 
 Se [getMarketingCloudVisitorID](../library/get-set/getmcvid.md).
 
