@@ -1,18 +1,18 @@
 ---
-description: Dessa instruktioner gäller för Analytics-kunder och Audience Manager-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+description: De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda identitetstjänsten i Experience Cloud och som inte använder datainsamlingstaggar. Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID-tjänst
 title: Implementera identitetstjänsten Experience Cloud för analys och Audience Manager
 exl-id: e31720a1-5c89-4084-88f6-443994dbb2f4
-source-git-commit: 070390ec0534c9066d717fe52ff572f34c110137
+source-git-commit: 26152f559150f5bd67d4802b8464446482f2e9a1
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
 
 # Implementera identitetstjänsten Experience Cloud för analys och Audience Manager{#implement-the-experience-cloud-id-service-for-analytics-and-audience-manager}
 
-Dessa instruktioner gäller för Analytics-kunder och Audience Manager-kunder som vill använda Experience Cloud Identity Service och som inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud Identity Service och som inte använder [Datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
@@ -20,18 +20,17 @@ Dessa instruktioner gäller för Analytics-kunder och Audience Manager-kunder so
 >* Den här proceduren kräver AppMeasurement. Kunder som använder s_code kan inte slutföra den här proceduren.
 >* Konfigurera och testa koden i en utvecklingsmiljö innan den implementeras i produktionen.
 
-
 ## Steg 1: Planera för vidarebefordran på serversidan {#section-880797cc992d4755b29cada7b831f1fc}
 
-Förutom de steg som beskrivs här, använder kunder som [!DNL Analytics] och [!DNL Audience Manager] bör migrera till vidarebefordran på serversidan. Med vidarebefordran på serversidan kan du ta bort DIL (Audience Manager datainsamlingskod) och ersätta den med [Audience Management Module](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Se [vidarebefordringsdokumentation på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html) för mer information.
+Förutom de steg som beskrivs här, använder kunder som [!DNL Analytics] och [!DNL Audience Manager] bör migrera till vidarebefordran på serversidan. Med vidarebefordran på serversidan kan du ta bort DIL (Audience Manager datainsamlingskod) och ersätta den med [Modul för målgruppshantering](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Se [vidarebefordringsdokumentation på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html) för mer information.
 
-Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
+Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas ut tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
 
 1. Arbeta med dina [!DNL Analytics] och [!DNL Audience Manager] kontakter för att planera din ID-tjänst och migrering på serversidan. Gör det viktigt att välja en spårningsserver i den här planen.
 
 1. Fyll i formuläret på [integrations- och provisioneringswebbplats](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=X8SVES) för att komma igång.
 
-1. Implementera ID-tjänsten och [!DNL Audience Management Module] samtidigt. För att fungera som det ska [!DNL Audience Management Module] (vidarebefordran på serversidan) och ID-tjänsten måste släppas för samma uppsättning sidor samtidigt.
+1. Implementera ID-tjänsten och [!DNL Audience Management Module] samtidigt. För att fungera som det ska [!DNL Audience Management Module] (vidarebefordran på serversidan) och ID-tjänsten måste släppas för samma uppsättning sidor och samtidigt.
 
 ## Steg 2: Hämta ID-tjänstkoden {#section-0780126cf43e4ad9b6fc5fe17bb3ef86}
 
@@ -39,7 +38,7 @@ ID-tjänsten kräver `VisitorAPI.js` kodbibliotek. Så här hämtar du det här 
 
 1. Gå till **[!UICONTROL Admin]** > **[!UICONTROL Code Manager]**.
 
-1. I Kodhanteraren klickar du på antingen **[!UICONTROL JavaScrpt (New)]** eller **[!UICONTROL JavaScript (Legacy)]**. Detta hämtar komprimerade kodbibliotek.
+1. I Kodhanteraren klickar du på **[!UICONTROL JavaScrpt (New)]** eller **[!UICONTROL JavaScript (Legacy)]**. Detta hämtar komprimerade kodbibliotek.
 
 1. Dekomprimera kodfilen och öppna `VisitorAPI.js` -fil.
 
@@ -47,9 +46,8 @@ ID-tjänsten kräver `VisitorAPI.js` kodbibliotek. Så här hämtar du det här 
 
 >[!IMPORTANT]
 >
->* I tidigare versioner av ID-tjänstens API placerades den här funktionen på en annan plats och en annan syntax krävdes. Om du migrerar från en version som är tidigare [version 1.4](../release-notes/notes-2015.md#section-f5c596f355b14da28f45c798df513572), notera den nya placeringen och syntaxen som beskrivs här.
+>* I tidigare versioner av ID-tjänstens API placerades den här funktionen på en annan plats och en annan syntax krävdes. Om du migrerar från en tidigare version [version 1.4](../release-notes/notes-2015.md#section-f5c596f355b14da28f45c798df513572), notera den nya placeringen och syntaxen som beskrivs här.
 >* Kod i ALL CAPS är en platshållare för faktiska värden. Ersätt den här texten med ditt företags-ID, URL för spårningsserver eller annat namngivet värde.
-
 
 **Del 1: Kopiera funktionen Visitor.getInstance nedan**
 
@@ -134,7 +132,7 @@ Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frå
 
 Det här steget kräver [!UICONTROL AppMeasurement]. Du kan inte fortsätta om du fortfarande använder s_code.
 
-Lägg till `Visitor.getInstance` funktionen som visas nedan för `AppMeasurement.js` -fil. Placera den i det avsnitt som innehåller konfigurationer som `linkInternalFilters`, `charSet`, `trackDownloads`, osv. :
+Lägg till `Visitor.getInstance` visas nedan för `AppMeasurement.js` -fil. Placera den i det avsnitt som innehåller konfigurationer som `linkInternalFilters`, `charSet`, `trackDownloads`osv.:
 
 `s.visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE");`
 
@@ -144,19 +142,19 @@ Lägg till `Visitor.getInstance` funktionen som visas nedan för `AppMeasurement
 
 ***(Valfritt, men rekommenderas)* Skapa en anpassad propp **
 
-Ange en anpassad svällning i `AppMeasurement.js` för att mäta täckningen. Lägg till den här anpassade sviten i `doPlugins` din `AppMeasurement.js` fil:
+Ange en anpassad svällning `AppMeasurement.js` för att mäta täckningen. Lägg till den här anpassade sviten i `doPlugins` din `AppMeasurement.js` fil:
 
 ```js
 // prop1 is used as an example only. Choose any available prop. 
 s.prop1 = (typeof(Visitor) != "undefined" ? "VisitorAPI Present" : "VisitorAPI Missing");
 ```
 
-## Steg 7: Lägg till besökar-API-kod på sidan {#section-c2bd096a3e484872a72967b6468d3673}
+## Steg 7: Lägg till API-kod för besökare på sidan {#section-c2bd096a3e484872a72967b6468d3673}
 
-Placera ` [!UICONTROL VisitorAPI.js]` i `<head>` -taggar på varje sida. När du `VisitorAPI.js` till din sida:
+Placera ` [!UICONTROL VisitorAPI.js]` -filen i `<head>` -taggar på varje sida. När du `VisitorAPI.js` till din sida:
 
 * Placera den i början av `<head>` -avsnittet visas före andra lösningstaggar.
-* Den måste köras före AppMeasurement och koden för andra [!DNL Experience Cloud] lösningar.
+* Det måste köras före AppMeasurementet och koden för andra [!DNL Experience Cloud] lösningar.
 
 ## Steg 8: (Valfritt) Konfigurera en respitperiod {#section-aceacdb7d5794f25ac6ff46f82e148e1}
 
@@ -184,7 +182,7 @@ Avbryt respitperioden efter att dataöverföringsprocessen kan använda `post_vi
 
 Se även [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html).
 
-## Steg 9: Testa och distribuera ID-tjänstkod {#section-f857542bfc70496dbb9f318d6b3ae110}
+## Steg 9: Testa och distribuera ID-tjänstkoden {#section-f857542bfc70496dbb9f318d6b3ae110}
 
 Du kan testa och distribuera enligt följande.
 
