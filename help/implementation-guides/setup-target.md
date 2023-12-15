@@ -1,24 +1,23 @@
 ---
-description: Dessa instruktioner är till för målkunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+description: Dessa instruktioner är till för målkunder som vill använda Experience Cloud Identity Service och som inte använder datainsamlingstaggar. Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID-tjänst
 title: Implementera identitetstjänsten Experience Cloud för Target
 exl-id: 7a387e98-c8fc-4904-942a-be5e527eada2
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 792fb5d5192843f345577a99b6179fb6d95fedc0
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 1%
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
 # Implementera identitetstjänsten Experience Cloud för Target{#implement-the-experience-cloud-id-service-for-target}
 
-Dessa instruktioner är till för målkunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna är till för målkunder som vill använda Experience Cloud Identity Service och som inte använder [Datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
 >* [Läs kraven](../reference/requirements.md) innan du börjar.
 >* Konfigurera och testa koden i en utvecklingsmiljö innan den implementeras i produktionen.
-
 
 ## Steg 1: Hämta ID-tjänstkoden {#section-b32ba0548aa546a79dd38be59832a53e}
 
@@ -63,7 +62,7 @@ I `Visitor.getInstance` funktion, ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION I
 
 Distribuera `VisitorAPI.js` till din webbplats i `<head>` taggar före referensen till `mbox.js` -fil. The [!DNL Experience Cloud] ID-tjänsten måste köras före den första [!DNL Target] nätverksanrop genereras. Flytta koden till produktion efter testning och verifiering.
 
-## Steg 5: Testa och distribuera ID-tjänstkod {#section-e81ee439bb8a4c2abea43d76f3112e9c}
+## Steg 5: Testa och distribuera ID-tjänstkoden {#section-e81ee439bb8a4c2abea43d76f3112e9c}
 
 Du kan testa och distribuera enligt följande.
 

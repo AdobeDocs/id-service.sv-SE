@@ -1,24 +1,23 @@
 ---
-description: Dessa instruktioner är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+description: Dessa instruktioner är till för Analytics-kunder som vill använda Experience Cloud Identity Service och som inte använder datainsamlingstaggar. Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID-tjänst
 title: Implementera Experience Cloud Identity Service för analys
 exl-id: c0271e49-32e5-49ee-bb11-548751ccafad
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 792fb5d5192843f345577a99b6179fb6d95fedc0
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
 
 # Implementera Experience Cloud Identity Service för analys {#implement-the-experience-cloud-id-service-for-analytics}
 
-Dessa instruktioner är till för Analytics-kunder som vill använda Experience Cloud Identity Service och inte använder Dynamic Tag Management (DTM). Vi rekommenderar dock starkt att du använder DTM för att implementera ID-tjänsten. DTM effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och som inte använder [Datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
 >* [Läs kraven](../reference/requirements.md) innan du börjar.
 >* Konfigurera och testa koden i en utvecklingsmiljö innan den implementeras i produktionen.
-
 
 Så här implementerar du ID-tjänsten för Adobe Analytics:
 
@@ -46,9 +45,8 @@ The [!UICONTROL ID Service] kräver `VisitorAPI.js` kodbibliotek. Så här hämt
 
 >[!IMPORTANT]
 >
->* I tidigare versioner av ID-tjänstens API placerades den här funktionen på en annan plats och en annan syntax krävdes. Om du migrerar från en version som är tidigare [version 1.4](../release-notes/notes-2015.md#section-f5c596f355b14da28f45c798df513572), notera den nya placeringen och syntaxen som beskrivs här.
+>* I tidigare versioner av ID-tjänstens API placerades den här funktionen på en annan plats och en annan syntax krävdes. Om du migrerar från en tidigare version [version 1.4](../release-notes/notes-2015.md#section-f5c596f355b14da28f45c798df513572), notera den nya placeringen och syntaxen som beskrivs här.
 >* Kod i ALL CAPS är en platshållare för faktiska värden. Ersätt den här texten med ditt företags-ID, URL för spårningsserver eller annat namngivet värde.
-
 
 **Del 1: Kopiera funktionen Visitor.getInstance nedan**
 
@@ -127,7 +125,6 @@ Så här tar du reda på vilka spårningsservervariabler som ska användas:
 >* [!DNL Experience Cloud] server-URL = URL för spårningsserver
 >* [!DNL Experience Cloud] säker URL för server = spårningsserverns säkra URL
 
-
 Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure korrekt](https://helpx.adobe.com/analytics/kb/determining-data-center.html#).
 
 ## Steg 5: Uppdatera filen AppMeasurement.js eller s_code.js {#section-b53113aea1bd4de896e0e4e9a7edee19}
@@ -140,7 +137,7 @@ Placera koden i samma avsnitt som innehåller konfigurationer som `linkInternalF
 
 ***(Valfritt men rekommenderas)* Skapa en anpassad egenskap **
 
-Ange en anpassad svällning i `AppMeasurement.js` eller `s_code.js` för att mäta täckningen. Lägg till den här anpassade sviten i `doPlugins` din `AppMeasurement.js` eller `s_code.js` filer:
+Ange en anpassad svällning `AppMeasurement.js` eller `s_code.js` för att mäta täckningen. Lägg till den här anpassade sviten i `doPlugins` din `AppMeasurement.js` eller `s_code.js` filer:
 
 ```js
 // prop1 is used as an example only. Choose any available prop. 
@@ -149,10 +146,10 @@ s.prop1 = (typeof(Visitor) != "undefined" ? "VisitorAPI Present" : "VisitorAPI M
 
 ## Steg 6: Lägg till API-kod för besökare på sidan {#section-d46d6aa324c842f2931d901e38d6db1d}
 
-Placera `VisitorAPI.js` i `<head>` -taggar på varje sida. När du `VisitorAPI.js` till din sida:
+Placera `VisitorAPI.js` -filen i `<head>` -taggar på varje sida. När du `VisitorAPI.js` till din sida:
 
 * Placera den i början av `<head>` -avsnittet visas före andra lösningstaggar.
-* Den måste köras före AppMeasurement och koden för andra [!DNL Experience Cloud] lösningar.
+* Det måste köras före AppMeasurementet och koden för andra [!DNL Experience Cloud] lösningar.
 
 Flytta koden till produktion efter testning och verifiering.
 
@@ -182,7 +179,7 @@ Se, [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/do
 
 **Inmatning av data i Clickstream**
 
-## Steg 8: Testa och distribuera ID-tjänstkod {#section-e9c1764ac21a4ec5be1ff338c0e2e01b}
+## Steg 8: Testa och distribuera ID-tjänstkoden {#section-e9c1764ac21a4ec5be1ff338c0e2e01b}
 
 Du kan testa och distribuera enligt följande.
 
@@ -201,5 +198,5 @@ Distribuera koden när den har testats.
 
 Om du aktiverat en respitperiod i [Steg 7](../implementation-guides/setup-analytics.md#section-7bbb2f72c26e4abeb8881e18366797a3):
 
-* Se till att [!DNL Analytics] ID (AID) och MID finns i bildbegäran.
+* Kontrollera [!DNL Analytics] ID (AID) och MID finns i bildbegäran.
 * Kom ihåg att inaktivera fristen när du uppfyller villkoren för att avbryta prenumerationen.
