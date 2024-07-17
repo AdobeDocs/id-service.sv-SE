@@ -5,8 +5,8 @@ title: loadTimeout
 exl-id: 485264f4-ee24-4042-8be3-259e70462110
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 1%
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +16,13 @@ Anger ett tidsgränsintervall i millisekunder. Används för att berätta om and
 
 **Syntax:** ` loadTimeout: *`intervall i millisekunder`*`
 
-Standardvärdet är 30 000 millisekunder (30 sekunder). Vi rekommenderar att du *inte* ändra standardvärdet.
+Standardvärdet är 30 000 millisekunder (30 sekunder). Vi rekommenderar att du *inte* ändrar standardvärdet.
 
 >[!NOTE]
 >
 >Anrop till ID-tjänsten är asynkrona i förhållande till annan kod som inte är Adobe på sidan. Om du ökar eller minskar tidsgränsen ändras alltså inte den hastighet med vilken sidan återger innehåll. Långa timeoutintervall kan dock påverka sidinläsningstider som mäts med vanliga nätverksövervakningsverktyg, men återgivningstiden påverkas inte.
 
-**Exempel på kod**
+**Kodexempel**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 

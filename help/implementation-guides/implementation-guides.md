@@ -7,8 +7,8 @@ uuid: null
 exl-id: af6da32b-72d9-463d-a933-fd1fe960d4d8
 source-git-commit: 39eaffe8b166babb186ec9cd4c0da26b53b999ae
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 3%
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +18,11 @@ Instruktioner och kodexempel för standardimplementeringar och icke-standardimpl
 
 >[!IMPORTANT]
 >
->Var noga med att läsa och förstå [Krav för ID-tjänst](../reference/requirements.md) innan du börjar med dessa procedurer.
+>Läs och förstå [ID-tjänstkraven](../reference/requirements.md) innan du börjar använda dessa procedurer.
 
 ## Standardimplementering
 
-En standardimplementering använder [Platforma launchen Adobe Experience](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) för att hjälpa dig att komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
+En standardimplementering använder [Adobe Experience Platform launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) för att hjälpa dig komma igång med ID-tjänsten och integrera den med andra Experience Cloud-lösningar. Vi rekommenderar att du använder Experience Platform Launch när du implementerar ID-tjänsten.
 
 ## Implementeringsresurser
 

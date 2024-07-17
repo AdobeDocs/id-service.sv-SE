@@ -6,8 +6,8 @@ user-guide-description: Adobe Experience Cloud Identity Service är ett universe
 user-guide-url: /content/help/en/id-service/using/home.html
 source-git-commit: 6ef86bdb7bc10e24dbd3efe2481cb2e6e6c270fb
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 20%
+source-wordcount: '404'
+ht-degree: 13%
 
 ---
 
@@ -46,12 +46,12 @@ ht-degree: 20%
 + ID-tjänst-API {#id-service-api}
    + [API-översikt för ID-tjänst](library/library.md)
    + Konfiguration {#configurations}
-      + [Översikt över konfigurationer](library/function-vars/function-vars.md)
+      + [Konfigurationer - översikt](library/function-vars/function-vars.md)
       + [auditionManagerServer och auditionManagerServerSecure](library/function-vars/subdomain-config.md)
       + [cookieDomain](library/function-vars/cookiedomain.md)
       + [cookieLifetime](library/function-vars/cookielifetime.md)
       + [disableIdSyncs](library/function-vars/disableidsync.md)
-      + [disableThirdPartyCalls](library/function-vars/disablethirdpartycalls.md)
+      + [disableThirdPartyCall](library/function-vars/disablethirdpartycalls.md)
       + [disableThirdPartyCookies](library/function-vars/disable-cookies.md)
       + [idSyncAttachIframeOnWindowLoad](library/function-vars/idsyncattachiframeonwindowload.md)
       + [idSyncContainerID](library/function-vars/idsyncontainerid.md)
@@ -69,7 +69,7 @@ ht-degree: 20%
       + [appendSupplementalDataIDTo](library/get-set/appendsupplementaldataidto.md)
       + [appendVisitorIDsTo (spårning mellan domäner)](library/get-set/appendvisitorid.md)
       + [callTimeOut-metoder](library/get-set/timeout-functions.md)
-      + [ID-synkronisering efter URL eller datakälla](library/get-set/idsync.md)
+      + [ID-synkronisering efter URL eller Data Source](library/get-set/idsync.md)
       + [getInstance](library/get-set/getinstance.md)
       + [getAnalyticsVisitorID](library/get-set/getanalyticsvisitorid.md)
       + [getCustomerIDs](library/get-set/getcustomerids.md)
@@ -84,18 +84,18 @@ ht-degree: 20%
    + Analysreferens {#analytics-reference}
       + [Analysreferensöversikt](reference/analytics-reference/analytics-reference.md)
       + [CNAME-implementering - översikt](reference/analytics-reference/cname.md)
-      + [Ställa ID:n för Analytics och Experience Cloud](reference/analytics-reference/analytics-ids.md)
+      + [Ställa in analyser och Experience Cloud-ID](reference/analytics-reference/analytics-ids.md)
       + [Åtgärdsordning för analys-ID:n](reference/analytics-reference/analytics-order-of-operations.md)
       + [Beslutspunkter för migrering av ID-tjänst](reference/analytics-reference/migration-decisions.md)
       + [Migreringsscenarier för ID-tjänst](reference/analytics-reference/migration-scenarios.md)
       + [Analys- och identitetsförfrågningar](reference/analytics-reference/legacy-analytics.md)
-      + [Implementering på serversidan blandad med JavaScript](reference/analytics-reference/server-side.md)
+      + [Implementering på serversidan blandat med JavaScript](reference/analytics-reference/server-side.md)
       + [Giltighetsperioden för ID-tjänsten](reference/analytics-reference/grace-period.md)
    + [Google Chrome SameSite-etikettändringar](reference/chrome-samesite-labelling.md)
    + [Skyddsprofiler för innehåll och ID-tjänsten](reference/csp.md)
    + [Stöd för COPPA i ID-tjänsten](reference/coppa.md)
    + [CORS-stöd i ID-tjänsten](reference/cors.md)
-   + [Kund-ID:n och autentiseringstillstånd](reference/authenticated-state.md)
+   + [Kund-ID och autentiseringstillstånd](reference/authenticated-state.md)
    + [ECID-biblioteksmetoder i en Safari ITP-värld](reference/ecid-library-methods.md)
    + [Identifiera unika besökare](reference/unique-vis-method.md)
    + [Hämta region- och användar-ID från AMCV Cookie eller ID-tjänsten](reference/regions.md)
@@ -103,12 +103,12 @@ ht-degree: 20%
    + [Videopulsslag och ID-tjänst](reference/heartbeat.md)
    + [Data Workbench och ID-tjänst](reference/dwb.md)
    + [SHA256 Hash-stöd för setCustomerIDs](reference/hashing-support.md)
-+ Vanliga frågor och svar {#faqs}
++ Vanliga frågor {#faqs}
    + [Frågor och svar - översikt](faq-intro/faq-intro.md)
    + [Vanliga frågor om ID-tjänster](faq-intro/faq.md)
    + [Vanliga frågor om analys och ID-tjänster](faq-intro/analytics-faq.md)
    + [Frågor och svar för andra Experience Cloud-lösningar](faq-intro/other-faq.md)
-+ Versionsinformation för ID-tjänst {#release-notes}
++ Versionsinformation för ID-tjänsten {#release-notes}
    + [Versionsinformation 2022](release-notes/notes-2022.md)
    + [Versionsinformation 2021](release-notes/notes-2021.md)
    + [Versionsinformation 2020](release-notes/notes-2020.md)

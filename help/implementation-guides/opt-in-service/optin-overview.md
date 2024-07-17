@@ -4,8 +4,8 @@ title: Anmälningstjänst
 exl-id: 351da861-4faa-409b-b0ff-f4d2ce66700b
 source-git-commit: 070390ec0534c9066d717fe52ff572f34c110137
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 4%
+source-wordcount: '503'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +17,13 @@ Opt-in-tjänsten är ett tillägg till Experience Cloud ID (ECID), som är utfor
 
 Med hjälp av anmälningstjänsten kan du ange om en besökare kan välja att gå med i Adobe-lösningar samtidigt eller presentera lösningar i ordningsföljd för behörigheter. När godkännandeprocessen är klar och registrerad av kunden kan ni hämta CMP-besökarnas godkännanden från alla Adobe-lösningar.
 
-Opt-in-tjänsten implementeras och konfigureras enkelt med [Taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) med [Anmäl tillägg](../../implementation-guides/opt-in-service/launch.md). Den kan också implementeras och konfigureras med [DTM](../../implementation-guides/opt-in-service/optin-dtm.md).
+Opt-in-tjänsten implementeras och konfigureras enkelt med [taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) med [Opt-in-tillägget](../../implementation-guides/opt-in-service/launch.md). Den kan också implementeras och konfigureras med [DTM](../../implementation-guides/opt-in-service/optin-dtm.md).
 
-Se [Konfigurera anmälningstjänst](../../implementation-guides/opt-in-service/getting-started.md) för att komma igång.
+Se [Konfigurera anmälningstjänsten](../../implementation-guides/opt-in-service/getting-started.md) för att komma igång.
 
 >[!NOTE]
 >
->Med anmälningstjänsten kan du konfigurera ett system för att endast godkänna eller neka hämtning av Adobe-cookies. Det har inte stöd för att samla in användarens medgivandeinställningar och är inte heller en databas för inställningar.
+>Med anmälningstjänsten kan du konfigurera ett system för att endast godkänna eller neka hämtning av Adobe-cookies. Det har inte stöd för att samla in användarens medgivandeinställningar, och det är inte heller en databas för inställningar.
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Se [Konfigurera anmälningstjänst](../../implementation-guides/opt-in-service/g
 
 Opt-in-tjänsten är ett verktyg för att skapa ett medgivande i arbetsflöde efter dina egna behov, vilket gör att du kan utforma ett arbetsflöde för att reagera (brandmärken) innan och efter det att användaren eller den som har gett sitt medgivande har gett det.
 
-Med tjänsten Opt-In kan ni ange rutiner för samtyckeshantering för Adobe-lösningar för att:
+Med tjänsten Opt-In kan ni ange rutiner för samtyckeshantering för Adobe för att:
 
 * Ange om kraven för insamling av samtycke gäller i allmänhet för en användare.
 * Ange vilka lösningar som tillåts generera cookies.
@@ -44,4 +44,4 @@ Med hjälp av anmälningstjänsterna kan du konfigurera din webbplats så att vi
 
 ![](assets/Opt-in-approval.png)
 
-Adobe lösningar kan sedan kontrollera om taggen är godkänd, prenumerera på ändringar och sedan hämta alla Opt-in-kunder. Med en anmälningstjänst kan du få behörigheter direkt via JavaScript-bibliotek i lösningen eller via ECID om det implementeras.
+Adobe lösningar kan sedan kontrollera om taggen är godkänd, prenumerera på ändringar och sedan hämta alla Opt-in-kunder. Med en anmälningstjänst kan du få behörigheter direkt via JavaScript Libraries eller via ECID om det implementeras.

@@ -5,8 +5,8 @@ title: Beslutspunkter för migrering av identitetstjänst från Experience Cloud
 exl-id: f2802db2-c95f-476f-8c60-f45e8312253c
 source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 1%
+source-wordcount: '625'
+ht-degree: 0%
 
 ---
 
@@ -34,14 +34,14 @@ Många kunder kan migrera från en datainsamling med CNAME som en del av migreri
   </tr> 
   <tr> 
    <td colname="col1"> <p>Utan CNAME </p> </td> 
-   <td colname="col2"> <p>Hoppa till <a href="../../reference/analytics-reference/migration-decisions.md#section-34dabde7780e4a339f134c0ca7768961" format="dita" scope="local"> Om du inte har någon datainsamling i CNAME, är datainsamlingsservern *.2o7.net eller *.sc.omtrdc.net?</a>. </p> </td> 
+   <td colname="col2"> <p>Hoppa till <a href="../../reference/analytics-reference/migration-decisions.md#section-34dabde7780e4a339f134c0ca7768961" format="dita" scope="local"> Om du inte har någon datainsamling-CNAME, är din datainsamlingsserver *.2o7.net eller *.sc.omtrdc.net?</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Har du flera domäner om du har en datainsamling i CNAME?
 
-Om du har flera domäner som skickar data till *samma rapportserie* rekommenderar vi datainsamling med CNAME. Detta hjälper er att spåra besökare över domäner. Om du samlar in data på en enda domän finns det ingen fördel med att underhålla en CNAME för datainsamling.
+Om du har flera domäner som skickar data till *samma rapportsvit* rekommenderar vi datainsamling med en CNAME. Detta hjälper er att spåra besökare över domäner. Om du samlar in data på en enda domän finns det ingen fördel med att underhålla en CNAME för datainsamling.
 
 <table id="table_D132BCA243E54657AEC930559343FDD3"> 
  <thead> 
@@ -53,24 +53,24 @@ Om du har flera domäner som skickar data till *samma rapportserie* rekommendera
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Flera domäner </p> </td> 
-   <td colname="col2"> <p>Om du spårar besökare i flera domäner, och du också har en huvudstartwebbplats där kunderna kan identifieras innan de besöker andra domäner, bör du fortsätta använda din datainsamling CNAME. <!--See <a href="../../reference/analytics-reference/cname.md#concept-4df91f8a30ad4ec7a01eb943d579cc9d" format="dita" scope="local"> Data Collection CNAMES and Cross Domain Tracking</a> for a detailed explanation.--> </p> <p>Observera att du måste ange ytterligare två spårningsserverparametrar, <span class="codeph"> visitor.marketingCloudServer</span> och <span class="codeph"> visitor.marketingCloudServerSecure</span>, för att konfigurera en CNAME med ID-tjänsten. </p> </td> 
+   <td colname="col2"> <p>Om du spårar besökare över flera domäner, och du också har en huvudstartwebbplats där kunder kan identifieras innan de besöker andra domäner, bör du fortsätta använda din datainsamling CNAME. <!--See <a href="../../reference/analytics-reference/cname.md#concept-4df91f8a30ad4ec7a01eb943d579cc9d" format="dita" scope="local"> Data Collection CNAMES and Cross Domain Tracking</a> for a detailed explanation.--> </p> <p>Observera att du måste ange ytterligare två spårningsserverparametrar, <span class="codeph"> visitor.marketingCloudServer</span> och <span class="codeph"> visitor.marketingCloudServerSecure</span>, för att konfigurera en CNAME med ID-tjänsten. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>En enda domän </p> </td> 
    <td colname="col2"> <p>Att arbeta med en enda domän innebär att du kan migrera bort från en datainsamling med CNAME om du inte längre vill hantera den. Du behöver dock inte ändra om CNAME fungerar. </p> <p>Om du tar bort CNAME: </p> 
     <ul id="ul_12CDECEFC7BB41A18895B507CAA42315"> 
      <li id="li_32E2CD3E58454E20A642BADE507AE86E">Kontrollera att den nya spårningsservern är <a href="https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html" format="https" scope="external"> RDC-kompatibel</a>. </li> 
-     <li id="li_865BB6DAA3594EBBAB688E73C8343762">Gå från CNAME till en RDC-spårningsserver några månader innan du går över till <span class="keyword"> Experience Cloud</span> ID-tjänst. </li> 
-     <li id="li_284A015177554C848C8648DC5BBAA365"> <i>Gör inte</i> använd en <span class="codeph"> *.2o7.net</span> spårningsserver. </li> 
-     <li id="li_B1ABF03DC46C42059F61542CDE0FE5A1">Kontakt <a href="https://helpx.adobe.com/marketing-cloud/contact-support.html" format="https" scope="external"> Kundtjänst</a> för att konfigurera en migrering av besökare. Detta bidrar till att säkerställa ett konsekvent antal besökare. </li> 
+     <li id="li_865BB6DAA3594EBBAB688E73C8343762">Gå från CNAME till en RDC-spårningsserver några månader innan du migrerar till ID-tjänsten <span class="keyword"> Experience Cloud</span>. </li> 
+     <li id="li_284A015177554C848C8648DC5BBAA365"> <i>Använd inte</i> en <span class="codeph"> *.2o7.net</span>-spårningsserver. </li> 
+     <li id="li_B1ABF03DC46C42059F61542CDE0FE5A1">Kontakta <a href="https://helpx.adobe.com/marketing-cloud/contact-support.html" format="https" scope="external"> kundtjänst</a> för att konfigurera en migrering av besökare. Detta bidrar till att säkerställa ett konsekvent antal besökare. </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Har du flera Analytics JavaScript-filer, eller spårar du Flash-program eller -videor?
+## Har du flera Analytics JavaScript-filer eller spårar du Flashar eller videofilmer?
 
-Om du har flera Analytics JavaScript-filer eller Flash-program eller -videofilmer på webbplatsen som skickar data till *samma rapportserie* bör du konfigurera en respitperiod så att besökarna identifieras av ett analys-ID medan du lanserar [!DNL Experience Cloud] ID-tjänst.
+Om du har flera Analytics JavaScript-filer eller Analytics-program eller -videoprogram på webbplatsen som skickar data till *samma rapportsvit* bör du konfigurera en respitperiod så att besökarna identifieras av ett Analytics-ID när du distribuerar [!DNL Experience Cloud]-ID-tjänsten.
 
 <table id="table_8A4EA063AF4345B69BC98537E2E702BA"> 
  <thead> 
@@ -86,11 +86,11 @@ Om du har flera Analytics JavaScript-filer eller Flash-program eller -videofilme
      <li id="li_4366CC8EB7A54A959568E3761ABBBF23">JavaScript-filer med flera analyser </li> 
      <li id="li_B8A8132019EA48088E4F37E36F153D76">Andra datainsamlingsmetoder </li> 
     </ul> </td> 
-   <td colname="col2"> <p>Du bör konfigurera en respitperiod för besökar-ID så att du kan skicka besökar-ID-tjänsten till alla JavaScript-filer och andra datainsamlingsbibliotek. Se <a href="../../reference/analytics-reference/grace-period.md" format="dita" scope="local"> Giltighetsperiod för ID-tjänst</a>. </p> </td> 
+   <td colname="col2"> <p>Du bör konfigurera en respitperiod för besökar-ID så att du kan skicka besökar-ID-tjänsten till alla JavaScript-filer och andra datainsamlingsbibliotek. Se <a href="../../reference/analytics-reference/grace-period.md" format="dita" scope="local"> ID-tjänstens giltighetsperiod </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>En enda Analytics JavaScript-fil </p> </td> 
-   <td colname="col2"> <p>Du kan uppdatera din enda JavaScript-fil så att besökar-ID-tjänsten används utan någon respitperiod. </p> </td> 
+   <td colname="col2"> <p>Du kan uppdatera din enda JavaScript-fil så att besökar-ID-tjänsten kan användas utan någon respitperiod. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -109,11 +109,11 @@ Du kan behöva uppdatera ditt sätt att spåra länkar eller migrera bort från 
  <tbody> 
   <tr> 
    <td colname="col1"> <p>JavaScript och/eller Flash </p> </td> 
-   <td colname="col2"> <p>Ingen. The <span class="keyword"> Experience Cloud</span> ID-tjänsten stöder dessa datainsamlingsmetoder. </p> </td> 
+   <td colname="col2"> <p>Ingen. ID-tjänsten <span class="keyword"> Experience Cloud</span> stöder dessa datainsamlingsmetoder. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Silverlight </p> </td> 
-   <td colname="col2"> <p>Du måste migrera bort från Silverlight om besökarna kan komma åt Silverlight-innehåll och andra avsnitt på webbplatsen som använder <span class="keyword"> Experience Cloud</span> ID-tjänst. Silverlight stöds inte av ID-tjänsten. </p> <p> Om du spårar en Silverlight-baserad videospelare tillhandahåller leverantören förmodligen JavaScript-API:er som du kan använda i stället. </p> </td> 
+   <td colname="col2"> <p>Du måste migrera bort från Silverlight om besökarna kan komma åt Silverlight-innehåll och andra avsnitt på webbplatsen som använder ID-tjänsten <span class="keyword"> Experience Cloud</span>. Silverlight stöds inte av ID-tjänsten. </p> <p> Om du håller på att spåra en Silverlight-baserad videospelare tillhandahåller leverantören sannolikt JavaScript-API:er som du kan använda i stället. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Hårdkodade bildtaggar </p> </td> 

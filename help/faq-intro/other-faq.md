@@ -16,7 +16,7 @@ Vanliga frågor och svar om funktioner, funktioner och problem i samband med anv
 
 ## Analyser och Audience Manager {#section-b3dd206d497041acb04554c6fb1c912a}
 
-**Exporteras användarens besökshistorik från [!DNL Adobe Analytics] till [!DNL Audience Manager] efter att jag har implementerat Experience Cloud Identity Service?**
+**Kommer besökshistoriken för en användare att exporteras från [!DNL Adobe Analytics] till [!DNL Audience Manager] när jag har implementerat Experience Cloud-identitetstjänsten?**
 
 Det finns två alternativ här:
 

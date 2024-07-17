@@ -5,8 +5,8 @@ title: cookieDomain
 exl-id: 280416ad-372a-4a59-a938-0f49c0ce300f
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 10%
+source-wordcount: '58'
+ht-degree: 0%
 
 ---
 
@@ -14,14 +14,14 @@ ht-degree: 10%
 
 Krävs för flerdelsdomäner på den översta nivån där någon av de två sista delarna av URL:en är längre än 2 tecken.
 
-**Syntax:** ` cookieDomain: " *`URL`*"` (Med `www` prefix krävs inte.)
+**Syntax:** ` cookieDomain: " *`URL`*"` (prefixet `www` krävs inte.)
 
-**Användningsfall**
+**Använd skiftläge**
 
 * Obligatoriskt: `www.example.com.uk`
 * Krävs inte: `www.example.co.uk`
 
-**Exempel på kod**
+**Kodexempel**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 

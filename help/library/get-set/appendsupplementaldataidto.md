@@ -5,8 +5,8 @@ title: appendSupplementalDataIDTo
 exl-id: 7f0e7fca-4551-4165-a12b-c7e5514d6818
 source-git-commit: 5710539b45a81394061cd4af2ef3edc27b49092e
 workflow-type: tm+mt
-source-wordcount: '348'
-ht-degree: 1%
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +18,16 @@ Innehåll:
 
 <ul class="simplelist"> 
  <li> <a href="../../library/get-set/appendsupplementaldataidto.md#section-cbb0b2f73bcc418386796c24c01b2365" format="dita" scope="local"> Exempel på syntax och kod </a> </li> 
- <li> <a href="../../library/get-set/appendsupplementaldataidto.md#section-dbe02d7ff6bd4ad1a2a26bf9cff54fa4" format="dita" scope="local"> Exempelutdata </a> </li> 
+ <li> <a href="../../library/get-set/appendsupplementaldataidto.md#section-dbe02d7ff6bd4ad1a2a26bf9cff54fa4" format="dita" scope="local"> provutdata </a> </li> 
  <li> <a href="../../library/get-set/appendsupplementaldataidto.md#section-cbb0b2f73bcc418386796c24c01b2365" format="dita" scope="local"> Exempel på syntax och kod </a> </li> 
- <li> <a href="../../library/get-set/appendsupplementaldataidto.md#section-99946715cefa4acc95200b093db5297e" format="dita" scope="local"> Ändra SDID-timeout med sdidParamExpiry </a> </li> 
+ <li> <a href="../../library/get-set/appendsupplementaldataidto.md#section-99946715cefa4acc95200b093db5297e" format="dita" scope="local"> Ändrar SDID-timeout med sdidParamExpiry </a> </li> 
 </ul>
 
 ## Exempel på syntax och kod {#section-cbb0b2f73bcc418386796c24c01b2365}
 
 **Syntax:** ` appendSupplementalDataIDTo( *`URL`*, *`SDID`*)`
 
-**Exempel på kod**
+**Kodexempel**
 
 ```js
 var visitor = Visitor.getInstance("Insert Experience Cloud organization ID here"); 
@@ -50,15 +50,15 @@ Som framgår nedan innehåller URL-omdirigeringen besökarens SDID, ditt organis
 
 ## Ändra SDID-timeout med sdidParamExpiry {#section-99946715cefa4acc95200b093db5297e}
 
-The [sdidParamExpiry](../../library/function-vars/sdidparamexpiry.md#reference-cef3fd03c43b4772b2422e220b40a458) kan du ändra standardintervallet för SDID-förfallodatum när du skickar det ID:t från en sida till en annan med hjälp av `appendSupplementalDataIDTo` hjälpfunktion. Som standard har ID-tjänstkoden på den mottagande sidan 30 sekunder på sig att hämta SDID från den URL som skickas av den refererande sidan. Om ID-tjänstkoden på den mottagande sidan inte kan hämta SDID på mindre än 30 sekunder begär den ett nytt SDID. Den här funktionen är främst avsedd för A4T-kunder som behöver skicka SDID från en sida till en annan och vill ha kontroll över tidsgränsen.
+Med konfigurationen [sdidParamExpiry](../../library/function-vars/sdidparamexpiry.md#reference-cef3fd03c43b4772b2422e220b40a458) kan du ändra standardintervallet för SDID-förfallodatum när du skickar ID:t från en sida till en annan med hjälp av hjälpfunktionen `appendSupplementalDataIDTo`. Som standard har ID-tjänstkoden på den mottagande sidan 30 sekunder på sig att hämta SDID från den URL som skickas av den refererande sidan. Om ID-tjänstkoden på den mottagande sidan inte kan hämta SDID på mindre än 30 sekunder begär den ett nytt SDID. Den här funktionen är främst avsedd för A4T-kunder som behöver skicka SDID från en sida till en annan och vill ha kontroll över tidsgränsen.
 
-Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` till `Visitor.getInstance` med följande syntax:
+Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` i funktionen `Visitor.getInstance` med följande syntax:
 
 **Syntax:** ` sdidParamExpiry: *`tid i sekunder`*`
 
-**Exempel på kod**
+**Kodexempel**
 
-När din ID-tjänstkod är konfigurerad kan den se ut ungefär som i det här exemplet. I det här exemplet anges SDID-tidsgränsen till 15 sekunder.
+När din ID-tjänstkod är konfigurerad kan den se ut ungefär som detta exempel. I det här exemplet anges SDID-tidsgränsen till 15 sekunder.
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 

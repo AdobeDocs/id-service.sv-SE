@@ -5,8 +5,8 @@ title: callTimeOut-metoder
 exl-id: ff3a2c5e-a0a8-4257-b538-0e4ce454b4e8
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 6%
+source-wordcount: '129'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ Anropa dessa ID-tjänstfunktioner för att fastställa timeoutstatusen för en E
    <td colname="col2"> <p> <span class="codeph">var <span class="varname"> variableName</span> = visitor.MCIDCallTimedOut()</span> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="keyword">Analytics</span>  </p> </td> 
+   <td colname="col1"> <p> <span class="keyword"> Analys</span> </p> </td> 
    <td colname="col2"> <p> <span class="codeph">var <span class="varname"> variableName</span> = visitor.AnalyticsIDCallTimedOut()</span> </p> </td> 
   </tr> 
   <tr> 

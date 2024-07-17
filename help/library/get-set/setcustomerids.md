@@ -5,8 +5,8 @@ title: setCustomerIDs
 exl-id: 8fc549d3-2a6f-4214-bb0d-3e0bc1501ce2
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 1%
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ setCustomerIDs anger 1 eller flera nyckelvärdepar som definierar kund-ID:n och 
 
 **Syntax:** `visitor.setCustomerIDs()`
 
-Du kan ange ett eller flera ID:n enligt exemplet nedan. Se [Kund-ID och autentiseringstillstånd](../../reference/authenticated-state.md) för mer information och exempel.
+Du kan ange ett eller flera ID:n enligt exemplet nedan. Mer information och exempel finns i [Kund-ID:n och autentiseringstillstånd](../../reference/authenticated-state.md).
 
 ```js
 // Single ID with a single authentication state 

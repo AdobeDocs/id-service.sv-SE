@@ -5,8 +5,8 @@ title: idSyncContainerID
 exl-id: 6c4cd41b-902b-4872-8c3f-475a834b76f4
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 1%
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -18,15 +18,15 @@ Innehåll:
 
 <ul class="simplelist"> 
  <li> <a href="../../library/function-vars/idsyncontainerid.md#section-b0c50732b1c84bed8616e82e8e83d58c" format="dita" scope="local"> Exempel på syntax och kod </a> </li> 
- <li> <a href="../../library/function-vars/idsyncontainerid.md#section-6aed44fbe9d6401a8f912cb0d98339a7" format="dita" scope="local"> Vad är behållare och när skulle jag använda detta? </a> </li> 
+ <li> <a href="../../library/function-vars/idsyncontainerid.md#section-6aed44fbe9d6401a8f912cb0d98339a7" format="dita" scope="local"> Vad är behållare och när skulle jag använda det här? </a> </li> 
  <li> <a href="../../library/function-vars/idsyncontainerid.md#section-f283cb69c8de4348b5316cc4e02a3e9e" format="dita" scope="local"> Ange behållar-ID när du använder DIL och VisitorAPI.js </a> </li> 
 </ul>
 
 ## Exempel på syntax och kod {#section-b0c50732b1c84bed8616e82e8e83d58c}
 
-**Syntax:** ` idSyncContainerID: *`behållar-ID-värde`*`
+**Syntax:** ` idSyncContainerID: *`värde för behållar-ID`*`
 
-**Exempel på kod:**
+**Kodexempel:**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 
@@ -40,12 +40,12 @@ var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here
 
 **Behållare**
 
-Behållare är objekt som skapas av [!DNL Audience Manager]. Även om de inte är externt tillgängliga listas alla datakällor som:
+Behållare är objekt som har skapats av [!DNL Audience Manager]. Även om de inte är externt tillgängliga listas alla datakällor som:
 
 * Är tillgängliga för dig, men används inte, för ID-synkronisering.
 * Används för ID-synkronisering.
 
-Även om du inte är en [!DNL Audience Manager] kund har ditt konto dessa behållare om du utbyter ID:n med olika datakällor på olika sidor i domänen. Det beror på att [!DNL Audience Manager] innehåller den teknik och de funktioner som möjliggör synkronisering av ID:n.
+Även om du inte är en [!DNL Audience Manager]-kund har ditt konto dessa behållare om du utbyter ID:n med olika datakällor på olika sidor i domänen. Detta beror på att [!DNL Audience Manager] tillhandahåller den teknik och de serverfunktioner som möjliggör synkronisering av ID.
 
 **Användningsexempel**
 
@@ -63,7 +63,7 @@ Beroende på din situation kan du behöva lägga till den här konfigurationen i
    <td colname="col1"> <p> <b>Behövs inte</b> </p> </td> 
    <td colname="col2"> <p>Du behöver inte använda den här konfigurationen om: </p> <p> 
      <ul id="ul_4D6F794CD65C43D0BEFBA6F5DE420C2E"> 
-      <li id="li_0F048A6AC7BE4450AFA1B20B1AC25808">Du använder ID-tjänsten med alla <span class="keyword"> Experience Cloud </span> och inte utföra ID-synkroniseringar med andra datakällor. I det här fallet har ditt konto en standardbehållare med ID 0 och ingen åtgärd krävs. </li> 
+      <li id="li_0F048A6AC7BE4450AFA1B20B1AC25808">Du använder ID-tjänsten med någon <span class="keyword"> Experience Cloud </span>-lösning och utför inte ID-synkronisering med andra datakällor. I det här fallet har ditt konto en standardbehållare med ID 0 och ingen åtgärd krävs. </li> 
       <li id="li_5657D64D9406407D9B4DB7D8BE4F8EE4">Alla datakällor finns i en enda behållare. </li> 
      </ul> </p> </td> 
   </tr> 
@@ -84,4 +84,4 @@ Beroende på din situation kan du behöva lägga till den här konfigurationen i
 Om du har distribuerat [!UICONTROL DIL]*och* VisitorAPI.js på samma sida:
 
 * Tjänstkoden för besökar-ID har företräde framför DIL för ID-synkroniseringar.
-* Ange `idSyncContainerID` endast i ID-tjänstkoden.
+* Ange endast konfigurationen `idSyncContainerID` i ID-tjänstkoden.

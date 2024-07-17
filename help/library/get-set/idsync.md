@@ -1,16 +1,16 @@
 ---
 description: Med ID-tjänstfunktionerna idSyncByURL och idSyncByDataSource kan du manuellt implementera en ID-synkronisering i iFrame för målpublicering. Dessa finns i VisitorAPI.js version 1.10 eller senare.
 keywords: ID-tjänst
-title: ID-synkronisering efter URL eller datakälla
+title: ID-synkronisering efter URL eller Data Source
 exl-id: a22e6b47-00ff-4b51-9958-ddeccc1e507e
 source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 9%
+source-wordcount: '236'
+ht-degree: 1%
 
 ---
 
-# ID-synkronisering efter URL eller datakälla{#id-synchronization-by-url-or-data-source}
+# ID-synkronisering efter URL eller Data Source{#id-synchronization-by-url-or-data-source}
 
 Med ID-tjänstfunktionerna idSyncByURL och idSyncByDataSource kan du manuellt implementera en ID-synkronisering i iFrame för målpublicering. Dessa finns i VisitorAPI.js version 1.10 eller senare.
 
@@ -28,11 +28,11 @@ Med ID-tjänstfunktionerna idSyncByURL och idSyncByDataSource kan du manuellt im
  <tbody> 
   <tr valign="top"> 
    <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByURL(); </span> </p> </td> 
-   <td colname="col2"> <p>Mellan olika datapartners och <span class="keyword"> Audience Manager </span> genom att använda en anpassad URL för ID-synkronisering. </p> </td> 
+   <td colname="col2"> <p>Mellan olika datapartners och <span class="keyword"> Audience Manager </span> med hjälp av en anpassad URL för ID-synkronisering. </p> </td> 
   </tr> 
   <tr valign="top"> 
    <td colname="col1"> <p> <span class="codeph"> visitor.idSyncByDataSource(); </span> </p> </td> 
-   <td colname="col2"> <p>När du redan känner till DPID och DPUID och vill skicka det till <span class="keyword"> Audience Manager </span> i standardformatet för ID-synkroniserings-URL. </p> <p></p> </td> 
+   <td colname="col2"> <p>När du redan känner till DPID och DPUID och vill skicka det till <span class="keyword"> Audience Manager </span> i standardformatet för ID-synkronisering. </p> <p></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -61,8 +61,8 @@ I följande tabell visas och definieras de egenskaper som är tillgängliga för
    <td colname="col3"> <p>Dataleverantörens unika ID för användaren. </p> </td> 
   </tr> 
   <tr valign="top"> 
-   <td colname="col1"> <span class="codeph"> minutesToLive </span> </td> 
-   <td colname="col2"> Siffra </td> 
+   <td colname="col1"> <span class="codeph"> minuterToLive </span> </td> 
+   <td colname="col2"> Nummer </td> 
    <td colname="col3"> <p> <i>(Valfritt)</i> Anger förfallotid för cookie. Måste vara ett heltal. Standardvärdet är 2 0160 minuter (14 dagar). </p> </td> 
   </tr> 
   <tr valign="top"> 
@@ -83,7 +83,7 @@ Båda funktionerna kan hantera följande makron:
 
 ## Exempelkod och utdata {#section-0115615c37584a19a2ab11e917c4e7e9}
 
-Båda funktionerna returnerar `Successfully queued` om det lyckas. De returnerar i annat fall en felmeddelandesträng.
+Båda funktionerna returnerar `Successfully queued` om de lyckas. De returnerar en felmeddelandesträng om de inte gör det.
 
 ### visitor.idSyncByURL
 
@@ -130,4 +130,3 @@ http://dpm.demdex.net/ibs:dpid=24&dpuuid=98765
 >[!MORELIKETHIS]
 >
 >* [DIL idSync](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-instance-methods.html#idsync)
-

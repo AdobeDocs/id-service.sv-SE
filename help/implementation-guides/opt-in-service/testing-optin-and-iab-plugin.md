@@ -4,7 +4,7 @@ title: Validerar anmälningstjänst
 exl-id: f0bcb32a-ccad-40a4-b031-2584e4136ace
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 
 Rensa cacheminnet och cookies innan du läser in sidan.
 
-Högerklicka på webbsidan i Chrome och välj Inspect. Precis som på skärmbilden ovan väljer du *Nätverk* för att visa de begäranden som görs från webbläsaren.
+I Chrome högerklickar du på webbsidan och väljer Inspect. På samma sätt som i skärmbilden ovan väljer du fliken *Nätverk* för att visa begäranden som gjorts från webbläsaren.
 
-I exemplet ovan har följande Adobe JS-taggar installerats på sidan: ECID, AAM, Analytics och Target.
+I exemplet ovan har vi följande Adobe JS-taggar installerade på sidan: ECID, AAM, Analytics och Target.
 
-**Hur man bevisar att Opt-in fungerar som väntat:**
+**Så här bevisar du att Opt-in fungerar som förväntat:**
 
 Du ska inte se några begäranden till Adobe-servrar:
 
@@ -41,15 +41,15 @@ Du ska inte se några begäranden till Adobe-servrar:
 
 >[!NOTE]
 >
->Du kanske ser ett samtal till `http://dpm.demdex.net/optOutStatus`, som är en READ ONLY-slutpunkt som används för att hämta besökarens avanmälningsstatus. Den här slutpunkten resulterar inte i att några cookies från tredje part skapas, och ingen information samlas in från sidan.
+>Du kan se ett anrop till `http://dpm.demdex.net/optOutStatus`, som är en READ ONLY-slutpunkt som används för att hämta besökarens avanmälningsstatus. Den här slutpunkten resulterar inte i att några cookies från tredje part skapas, och ingen information samlas in från sidan.
 
-Du bör inte se några cookies som har skapats av Adobe-taggarna: (AMCV_{{YOUR_ORG_ID}}, mbox, demdex, s_cc, s_sq, everest_g_v2, everest_session_v2)
+Du ska inte se några cookies som har skapats av Adobe-taggarna: (AMCV_{{YOUR_ORG_ID}}, mbox, demdex, s_cc, s_sq, everest_g_v2, everest_session_v2)
 
-I Chrome går du till *Program* -fliken, expandera *Cookies* avsnitt under *Lagring* och välj domännamnet för din webbplats:
+I Chrome går du till fliken *Program*, expanderar avsnittet *Cookies* under *Lagring* och väljer domännamnet för din webbplats:
 
 ![](assets/use_case_1_2.png)
 
-## Användningsfall 2: Aktivera deltagande och lagring {#section-bd28326f52474fa09a2addca23ccdc0f}
+## Användningsfall 2: Aktivera anmälan och lagring {#section-bd28326f52474fa09a2addca23ccdc0f}
 
 ```
 Visitor.getInstance({{YOUR_ORG_ID}}, { 
@@ -58,7 +58,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 });
 ```
 
-Den enda skillnaden i användningsfall 2 är att du kommer att se *en ny cookie* som kommer att innehålla besökarens behörigheter för anmälan: **adobeujs-optin**
+Den enda skillnaden i användningsfall 2 är att du kommer att se *en ny cookie* som kommer att innehålla avanmälningsbehörigheterna från din besökare: **adobeujs-option**
 
 ## Användningsfall 3: Aktivera deltagande och förgodkänn Adobe Analytics {#section-257fe582b425496cbf986d0ec12d3692}
 
@@ -72,7 +72,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 });
 ```
 
-Eftersom Adobe Analytics är förberett för godkännande ser du förfrågningar på fliken Nätverk till spårningsservern:
+Eftersom Adobe Analytics har godkänts i förväg kommer du att se förfrågningar på fliken Nätverk till din spårningsserver:
 
 ![](assets/use_case_3_1.png)
 
@@ -80,7 +80,7 @@ så ser du Analytics-cookies på fliken Application:
 
 ![](assets/use_case_3_2.png)
 
-## Användningsfall 4: Aktivera deltagande och IAB {#section-64331998954d4892960dcecd744a6d88}
+## Användningsfall 4: Aktivera anmälan och IAB {#section-64331998954d4892960dcecd744a6d88}
 
 ```
 Visitor.getInstance({{YOUR_ORG_ID}}, { 
@@ -91,7 +91,7 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 
 **Så här visar du ditt nuvarande IAB-medgivande på sidan:**
 
-Öppna utvecklingsverktygen och välj *Konsol* -fliken. Klistra in följande kodfragment och tryck på Retur:
+Öppna utvecklarverktygen och välj fliken *Konsol*. Klistra in följande kodfragment och tryck på Retur:
 
 ```
 <codeblock>
@@ -103,9 +103,9 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 
 Här visas ett exempel på utdata när syften 1, 2 och 5 godkänns och Audience Manager leverantörs-ID godkänns:
 
-* demdex.net/id: Det här anropet bevisar att ECID har begärt ett ID från demdex.net
-* demdex.net/event: Anropet visar att datainsamlingsanropet från DIL fungerar som förväntat.
-* demdex.net/dest5.html: Det här anropet visar att ID-synkronisering aktiveras.
+* demdex.net/id: Detta anrop bevisar att ECID har begärt ett ID från demdex.net
+* demdex.net/event: Detta anrop visar att datainsamlingsanropet från DIL fungerar som förväntat.
+* demdex.net/dest5.html: Detta anrop visar att ID-synkronisering aktiveras.
 
 ![](assets/use_case_4_1.png)
 

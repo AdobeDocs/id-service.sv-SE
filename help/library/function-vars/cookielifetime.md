@@ -6,7 +6,7 @@ exl-id: bdbabdcd-a87b-412c-8c2f-3f39820f939a
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 8%
+ht-degree: 0%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 8%
 
 Med den här variabeln kan du åsidosätta standardintervallet för livstid för AMCV-cookien.
 
-Som standard [!DNL Experience Cloud] ID-tjänstcookies går ut efter 24 månader. Ange tidsintervallet i sekunder.
+Som standard upphör [!DNL Experience Cloud] ID-tjänstcookies att gälla efter 24 månader. Ange tidsintervallet i sekunder.
 
 **Syntax:** ` cookieLifetime: *`livstid i sekunder`*`
 
-**Exempel på kod**
+**Kodexempel**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 

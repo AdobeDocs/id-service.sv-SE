@@ -6,7 +6,7 @@ exl-id: 726261b1-c8d0-4b12-b0cb-52d7e21e7fac
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
 source-wordcount: '397'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -16,9 +16,9 @@ Den här egenskapen skriver över en besökares Experience Cloud- och Analytics-
 
 **Syntax:** `Visitor.overwriteCrossDomainMCIDAndAID: true|false` (standard är `false`)
 
-**Exempel på kod**
+**Kodexempel**
 
-JavaScript-koden kan se ut ungefär som i följande exempel.
+Din JavaScript-kod kan se ut ungefär som i följande exempel.
 
 ```js
 //Call the ID service 
@@ -32,7 +32,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ID-HERE", {
 
 **Användningsexempel**
 
-För att spåra besökare skriver ID-tjänsten en [!DNL Experience Cloud] ID (eller MID) för en webbläsarcookie. I följande tabell visas och beskrivs de vanliga användningsfall där du kanske vill skriva över en befintlig MID som angetts av ID-tjänsten i en annan domän.
+Om du vill spåra webbplatsbesökare skriver ID-tjänsten ett [!DNL Experience Cloud]-ID (eller MID) till en webbläsarcookie. I följande tabell visas och beskrivs de vanliga användningsfall där du kanske vill skriva över en befintlig MID som angetts av ID-tjänsten i en annan domän.
 
 <table id="table_FC1AF6551D6646E0BF1C4FB7C1316EBB"> 
  <thead> 
@@ -63,7 +63,7 @@ För att spåra besökare skriver ID-tjänsten en [!DNL Experience Cloud] ID (el
   </tr> 
   <tr> 
    <td colname="col1"> <p> <b>Identifiera besökare från mobilappar till webbläsare</b> </p> </td> 
-   <td colname="col2"> <p>Det här användningsfallet är något annorlunda. Det handlar om att identifiera användare när de går från en mobilapp till din webbplats. I det här fallet har besökaren redan en MID lokalt angiven av en mobilapp och har en annan MID angiven i en cookie på webbplatsen. Du kan ange <span class="codeph"> Visitor.overwriteCrossDomainMCIDAndAID: true </span> för att skriva över MID-inställningen i webbläsarens cookie med MID-värdet som angetts av mobilappen. </p> </td> 
+   <td colname="col2"> <p>Det här användningsfallet är något annorlunda. Det handlar om att identifiera användare när de går från en mobilapp till din webbplats. I det här fallet har besökaren redan en MID lokalt angiven av en mobilapp och har en annan MID angiven i en cookie på webbplatsen. Du kan ställa in <span class="codeph"> Visitor.overwriteCrossDomainMCIDAndAID: true </span> så att MID-inställningen i webbläsarens cookie skrivs över med MID-värdet som angetts av mobilappen. </p> </td> 
   </tr> 
  </tbody> 
 </table>

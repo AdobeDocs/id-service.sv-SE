@@ -5,8 +5,8 @@ title: Konfigurationer
 exl-id: a369f624-d263-4287-bb7e-b89d584fa245
 source-git-commit: 384b292413bbc7e43ade97e442ab7195f3b26c7a
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 9%
+source-wordcount: '77'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Konfigurera ID-tjänsten genom att skicka dessa egenskaper till den statiska met
 
 >[!NOTE]
 >
->The *Experience Cloud ID JavaScript-bibliotek* har flyttats nyligen. Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>JavaScript-biblioteken *Experience Cloud ID* har nyligen flyttats. Den senaste versionen av ECID JS-biblioteken finns på [https://github.com/Adobe-Marketing-Cloud/id-service/releases](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Relaterade artiklar:
 
@@ -24,7 +24,7 @@ Relaterade artiklar:
 + [cookieDomain](cookiedomain.md)
 + [cookieLifetime](cookielifetime.md)
 + [disableIdSyncs](disableidsync.md)
-+ [disableThirdPartyCalls](disablethirdpartycalls.md)
++ [disableThirdPartyCall](disablethirdpartycalls.md)
 + [disableThirdPartyCookies](disable-cookies.md)
 + [idSyncAttachIframeOnWindowLoad](idsyncattachiframeonwindowload.md)
 + [idSyncContainerID](idsyncontainerid.md)

@@ -12,41 +12,41 @@ ht-degree: 0%
 
 # Implementera identitetstjänsten Experience Cloud för Analytics, Audience Manager och Target {#implement-the-experience-cloud-id-service-for-analytics-audience-manager-and-target}
 
-De här instruktionerna är till för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder [Datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna gäller för Analytics-, Audience Manager- och Target-kunder som vill använda Experience Cloud Identity Service och som inte använder [datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
->Läs ID-tjänsten [krav](../reference/requirements.md) innan du börjar och noterar följande krav som är specifika för den här implementeringen:
+>Läs ID-tjänstens [krav](../reference/requirements.md) innan du börjar och notera följande krav som är specifika för den här implementeringen:
 >
 >* Kunder som använder s_code kan inte slutföra den här proceduren. Uppgradera till mbox-kod v61 för att slutföra den här proceduren.
->* Konfigurera och testa koden i en utvecklingsmiljö *före* ni implementerar det i produktionen.
+>* Konfigurera och testa den här koden i en utvecklingsmiljö *innan* du implementerar den i produktionen.
 
 ## Steg 1: Planera för vidarebefordran på serversidan {#section-880797cc992d4755b29cada7b831f1fc}
 
-Förutom de steg som beskrivs här, använder kunder som [!DNL Analytics] och [!DNL Audience Manager] bör migrera till vidarebefordran på serversidan. Med vidarebefordran på serversidan kan du ta bort DIL (Audience Manager datainsamlingskod) och ersätta den med [Modul för målgruppshantering](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Se [vidarebefordringsdokumentation på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html) för mer information.
+Utöver de steg som beskrivs här bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] migrera till vidarebefordran på serversidan. Med hjälp av vidarebefordran på serversidan kan du ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i [vidarebefordringsdokumentationen på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html).
 
 Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas ut tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
 
-1. Arbeta med dina [!DNL Analytics] och [!DNL Audience Manager] kontakter för att planera din ID-tjänst och migrering på serversidan. Gör det viktigt att välja en spårningsserver i den här planen.
+1. Arbeta med dina [!DNL Analytics]- och [!DNL Audience Manager]-kontakter för att planera migreringen av din ID-tjänst och vidarebefordran på serversidan. Gör det viktigt att välja en spårningsserver i den här planen.
 
-1. Fyll i formuläret på [integrations- och provisioneringswebbplats](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=X8SVES) för att komma igång.
+1. Fyll i formuläret på [integrerings- och provisioneringswebbplatsen](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=X8SVES) för att komma igång.
 
-1. Implementera ID-tjänsten och [!DNL Audience Management Module] samtidigt. För att fungera som det ska [!DNL Audience Management Module] (vidarebefordran på serversidan) och ID-tjänsten måste släppas för samma uppsättning sidor och samtidigt.
+1. Implementera ID-tjänsten och [!DNL Audience Management Module] samtidigt. [!DNL Audience Management Module] (vidarebefordran på serversidan) och ID-tjänsten måste släppas för samma uppsättning sidor och samtidigt för att fungera korrekt.
 
 ## Steg 2: Hämta ID-tjänstkoden {#section-0780126cf43e4ad9b6fc5fe17bb3ef86}
 
-ID-tjänsten kräver `VisitorAPI.js` kodbibliotek. Så här hämtar du det här kodbiblioteket:
+ID-tjänsten kräver kodbiblioteket `VisitorAPI.js`. Så här hämtar du det här kodbiblioteket:
 
 1. Gå till **[!UICONTROL Admin > Code Manager]**.
-1. I Kodhanteraren klickar du på **[!UICONTROL JavaScrpt (New)]** eller **[!UICONTROL JavaScript (Legacy)]**. Detta hämtar komprimerade kodbibliotek.
+1. Klicka på **[!UICONTROL JavaScrpt (New)]** eller **[!UICONTROL JavaScript (Legacy)]** i Kodhanteraren. Detta hämtar komprimerade kodbibliotek.
 
-1. Dekomprimera kodfilen och öppna `VisitorAPI.js` -fil.
+1. Dekomprimera kodfilen och öppna filen `VisitorAPI.js`.
 
 ## Steg 3: Lägg till funktionen Visitor.getInstance i ID-tjänstkoden {#section-9e30838b4d0741658a7a492153c49f27}
 
 >[!IMPORTANT]
 >
->* I tidigare versioner av ID-tjänstens API placerades den här funktionen på en annan plats och en annan syntax krävdes. Om du migrerar från en tidigare version [version 1.4](../release-notes/notes-2015.md#section-f5c596f355b14da28f45c798df513572), notera den nya placeringen och syntaxen som beskrivs här.
+>* I tidigare versioner av ID-tjänstens API placerades den här funktionen på en annan plats och en annan syntax krävdes. Om du migrerar från en version som är äldre än [version 1.4](../release-notes/notes-2015.md#section-f5c596f355b14da28f45c798df513572) bör du notera den nya placeringen och syntaxen som beskrivs här.
 >* Kod i ALL CAPS är en platshållare för faktiska värden. Ersätt den här texten med ditt företags-ID, URL för spårningsserver eller annat namngivet värde.
 
 **Del 1: Kopiera funktionen Visitor.getInstance nedan**
@@ -63,9 +63,9 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE",
 }); 
 ```
 
-**Del 2: Lägga till funktionskod i Visitor API.js-filen**
+**Del 2: Lägg till funktionskod i Visitor API.js-filen**
 
-Placera `Visitor.getInstance` i slutet av filen efter kodblocket. Den redigerade filen ska se ut så här:
+Placera funktionen `Visitor.getInstance` i slutet av filen efter kodblocket. Den redigerade filen ska se ut så här:
 
 ```js
 /* 
@@ -90,13 +90,13 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE",
 
 ## Steg 4: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-e2947313492546789b0c3b2fc3e897d8}
 
-I `Visitor.getInstance` funktion, ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt företags-ID för Experience Cloud. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för Experience Cloud. Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt företags-ID i funktionen `Visitor.getInstance`. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för Experience Cloud. Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg", { ...`
 
 >[!IMPORTANT]
 >
->*Gör inte* ändra skiftläget för tecknen i ditt organisations-ID. ID:t är skiftlägeskänsligt och måste användas exakt som angivet.
+>*Ändra inte skiftläget för tecknen i ditt organisations-ID.* ID:t är skiftlägeskänsligt och måste användas exakt som angivet.
 
 ## Steg 5: Lägg till dina spårningsservrar i Visitor.getInstance {#section-0dfc52096ac2427f86045aab9a0e0dfc}
 
@@ -104,7 +104,7 @@ Analytics använder spårningsservrar för datainsamling.
 
 **Del 1: Hitta URL:er till spårningsservern**
 
-Kontrollera `s_code.js` eller `AppMeasurement.js` filer för att hitta spårningsserverns URL:er. Du vill att URL:erna som anges av dessa variabler ska vara:
+Kontrollera dina `s_code.js`- eller `AppMeasurement.js`-filer för att hitta URL:er för spårningsservern. Du vill att URL:erna som anges av dessa variabler ska vara:
 
 * `s.trackingServer`
 * `s.trackingServerSecure`
@@ -126,23 +126,23 @@ Så här tar du reda på vilka spårningsservervariabler som ska användas:
 * URL för Experience Cloud-server = URL för spårningsserver
 * Säker URL för Experience Cloud-server = spårningsserverns säkra URL
 
-Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure korrekt](https://helpx.adobe.com/analytics/kb/determining-data-center.html#).
+Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#) korrekt.
 
 ## Steg 6: Uppdatera filen AppMeasurement.js {#section-5517e94a09bc44dfb492ebca14b43048}
 
 Det här steget kräver [!UICONTROL AppMeasurement]. Du kan inte fortsätta om du fortfarande använder s_code.
 
-Lägg till `Visitor.getInstance` visas nedan för `AppMeasurement.js` -fil. Placera den i det avsnitt som innehåller konfigurationer som `linkInternalFilters`, `charSet`, `trackDownloads`osv.:
+Lägg till funktionen `Visitor.getInstance` som visas nedan i din `AppMeasurement.js`-fil. Placera den i avsnittet som innehåller konfigurationer som `linkInternalFilters`, `charSet`, `trackDownloads` osv.:
 
 `s.visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE");`
 
 >[!IMPORTANT]
 >
->Nu bör du ta bort [!DNL Audience Manager] Koda DIL och ersätt den med Audience Management Module. Se [Implementera vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html) för instruktioner.
+>Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
 
-***(Valfritt, men rekommenderas)* Skapa en anpassad propp **
+***(Valfritt, men rekommenderas)* Skapa en anpassad prop **
 
-Ange en anpassad svällning `AppMeasurement.js` för att mäta täckningen. Lägg till den här anpassade sviten i `doPlugins` din `AppMeasurement.js` fil:
+Ange en anpassad prop i `AppMeasurement.js` för att mäta täckning. Lägg till den här anpassade proppen i funktionen `doPlugins` i din `AppMeasurement.js`-fil:
 
 ```js
 // prop1 is used as an example only. Choose any available prop. 
@@ -151,14 +151,14 @@ s.prop1 = (typeof(Visitor) != "undefined" ? "VisitorAPI Present" : "VisitorAPI M
 
 ## Steg 7: Lägg till API-kod för besökare på sidan {#section-c2bd096a3e484872a72967b6468d3673}
 
-Placera ` [!UICONTROL VisitorAPI.js]` -filen i `<head>` -taggar på varje sida. När du `VisitorAPI.js` till din sida:
+Placera ` [!UICONTROL VisitorAPI.js]`-filen i `<head>` -taggarna på varje sida. När du skickar filen `VisitorAPI.js` till sidan:
 
-* Placera den i början av `<head>` -avsnittet visas före andra lösningstaggar.
-* Det måste köras före AppMeasurementet och koden för andra [!DNL Experience Cloud] lösningar.
+* Placera det i början av avsnittet `<head>` så att det visas före andra lösningstaggar.
+* Den måste köras före AppMeasurementet och koden för andra [!DNL Experience Cloud]-lösningar.
 
 ## Steg 8: (Valfritt) Konfigurera en respitperiod {#section-aceacdb7d5794f25ac6ff46f82e148e1}
 
-Om något av dessa fall gäller din situation, fråga [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att konfigurera en temporär [respitperiod](../reference/analytics-reference/grace-period.md). Gränsperioder kan vara upp till 180 dagar. Du kan förnya en respitperiod om det behövs.
+Om något av dessa användningsfall gäller din situation ber du [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) att ställa in en tillfällig [respitperiod](../reference/analytics-reference/grace-period.md). Gränsperioder kan vara upp till 180 dagar. Du kan förnya en respitperiod om det behövs.
 
 **Partiell implementering**
 
@@ -176,28 +176,28 @@ Se även [Cookies och Experience Cloud Identity Service](../introduction/cookies
 
 **Integrering av Clickstream-data**
 
-Du behöver en frist om du skickar data till ett internt system från en datafeed i Clickstream och som bearbetar använder `visid_high` och `visid_low` kolumner.
+Du behöver en respitperiod om du skickar data till ett internt system från en Clickstream-datafeed och som bearbetar använder kolumnerna `visid_high` och `visid_low`.
 
-Avbryt respitperioden efter att dataöverföringsprocessen kan använda `post_visid_high` och `post_visid_low` kolumner.
+Avbryt respitperioden efter att dataöverföringsprocessen kan använda kolumnerna `post_visid_high` och `post_visid_low`.
 
 Se även [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html).
 
 ## Steg 9: Testa och verifiera {#section-f857542bfc70496dbb9f318d6b3ae110}
 
-The [!DNL Experience Cloud] lösningar i den här implementeringen returnerar ID i form av nyckelvärdepar. Varje lösning använder olika nycklar (t.ex. [!DNL Analytics] SDID jämfört med [!DNL Target] mboxMCSDID) för samma ID. Om du vill testa implementeringen läser du in sidorna i en utvecklingsmiljö. Använd webbläsarkonsolen eller programvara som övervakar HTTP-begäranden och svar för att kontrollera ID:n som anges nedan. ID-tjänsten har implementerats korrekt när nyckelvärdepar som anges nedan returnerar samma ID-värden.
+[!DNL Experience Cloud]-lösningarna i den här implementeringen returnerar ID:n i form av nyckelvärdepar. Varje lösning använder olika nycklar (t.ex. SDID:t [!DNL Analytics] jämfört med [!DNL Target] mboxMCSDID) för samma ID. Om du vill testa implementeringen läser du in sidorna i en utvecklingsmiljö. Använd webbläsarkonsolen eller programvara som övervakar HTTP-begäranden och svar för att kontrollera ID:n som anges nedan. ID-tjänsten har implementerats korrekt när nyckelvärdepar som anges nedan returnerar samma ID-värden.
 
 >[!TIP]
 >
->Du kan använda [Adobe Debugger](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html) eller [Charles HTTP-proxy](https://www.charlesproxy.com/) om du vill söka efter dessa lösningsspecifika ID:n. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
+>Du kan använda [Adobe Debugger](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html) eller [Charles HTTP-proxy](https://www.charlesproxy.com/) för att söka efter dessa lösningsspecifika ID:n. Du bör dock kunna använda det verktyg eller den felsökare som passar dig bäst.
 
 **Alla lösningar**
 
 Sök efter:
 
-* [AMCV cookie](../introduction/cookies.md) i domänen där sidan finns.
-* [!DNL Experience Cloud] ID (MID) med [!DNL Adobe] felsökningsprogram eller det felsökningsverktyg du föredrar.
+* [AMCV-cookie](../introduction/cookies.md) i domänen där du har en värdserver för sidan.
+* [!DNL Experience Cloud] ID (MID) med felsökaren [!DNL Adobe] eller det felsökningsverktyg du föredrar.
 
-Ytterligare kontroller som hjälper dig att avgöra om ID-tjänsten fungerar som den ska finns i [Testa och verifiera Experience Cloud Identity Service](../implementation-guides/test-verify.md).
+Ytterligare kontroller som hjälper dig att avgöra om ID-tjänsten fungerar som den ska finns i [Testa och verifiera Experience Cloud-identitetstjänsten](../implementation-guides/test-verify.md).
 
 **Analytics** 
 
@@ -205,8 +205,8 @@ Sök efter SDID-identifieraren i JavaScript-begäran. Analytics SDID ska matcha 
 
 Om testerna returnerar ett ID, innebär det något av följande:
 
-* Du är en återkommande besökare som håller på att migrera äldre [!DNL Analytics] ID.
-* Du har en [respitperiod](../reference/analytics-reference/grace-period.md) aktiverat.
+* Du är en återkommande besökare som migrerar äldre [!DNL Analytics] ID:n.
+* Du har aktiverat en [respitperiod](../reference/analytics-reference/grace-period.md).
 
 När du ser ett AID kontrollerar du dess värde mot [!DNL Target] mboxMCAVID. Dessa värden är identiska när ID-tjänsten har implementerats korrekt.
 
@@ -214,7 +214,7 @@ När du ser ett AID kontrollerar du dess värde mot [!DNL Target] mboxMCAVID. De
 
 Information om hur du testar vidarebefordran på serversidan finns i [Så här verifierar du implementeringen av vidarebefordring på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf-verify.html).
 
-**Målgrupp**
+**Mål**
 
 Sök efter:
 
@@ -223,10 +223,10 @@ Sök efter:
 
 Om dina tester returnerar ett mboxMCAVID, visar det något av följande:
 
-* Du är en återkommande besökare som håller på att migrera äldre [!DNL Analytics] ID.
+* Du är en återkommande besökare som migrerar äldre [!DNL Analytics] ID:n.
 * Du har aktiverat en respitperiod.
 
-När du ser ett mboxMCAVID kontrollerar du dess värde mot [!DNL Analytics] STÖD. Dessa värden är identiska när ID-tjänsten har implementerats korrekt.
+När du ser ett mboxMCAVID kontrollerar du dess värde mot AID:t för [!DNL Analytics]. Dessa värden är identiska när ID-tjänsten har implementerats korrekt.
 
 **Distribution**
 
@@ -237,4 +237,4 @@ Distribuera koden när den har testats.
 Om du aktiverade en respitperiod:
 
 * Kontrollera att Analytics ID (AID) och MID finns i bildbegäran.
-* Kom ihåg att inaktivera respitperioden när du har uppfyllt [kriterier för upphörande](../implementation-guides/setup-aam-analytics-target.md#section-aceacdb7d5794f25ac6ff46f82e148e1).
+* Kom ihåg att inaktivera respitperioden när du uppfyller [villkoren för avbrott](../implementation-guides/setup-aam-analytics-target.md#section-aceacdb7d5794f25ac6ff46f82e148e1).

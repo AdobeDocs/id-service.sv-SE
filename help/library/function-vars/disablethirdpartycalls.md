@@ -1,22 +1,22 @@
 ---
 description: En valfri boolesk flagga som förhindrar att ID-tjänsten anropar andra domäner.
 keywords: spårning av korsdomän;ID-tjänst
-title: disableThirdPartyCalls
+title: disableThirdPartyCall
 exl-id: 1d5b4e80-1b2d-4401-9057-449a6abf5db5
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
 source-wordcount: '200'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
-# disableThirdPartyCalls{#disablethirdpartycalls}
+# disableThirdPartyCall{#disablethirdpartycalls}
 
 En valfri boolesk flagga som förhindrar att ID-tjänsten anropar andra domäner.
 
-**Syntax:** ` `disableThirdPartyCall: true|false&quot;(standard är `false`.)
+**Syntax:** ` `disableThirdPartyCall: true|false (standard är `false`).
 
-När `disableThirdPartyCalls: true`kommer ID-tjänsten inte att göra anrop till andra domäner.
+När `disableThirdPartyCalls: true` anropas inte andra domäner av ID-tjänsten.
 
 **Syfte**
 
@@ -28,9 +28,9 @@ Variabeln är avsedd för kunder som behöver:
 
 **Implementeringsstrategi**
 
-Eftersom andra Experience Cloud-lösningar är beroende av MID, anropar ID-tjänsten Adobe för att returnera och ange detta ID. Om du behöver stoppa ID-tjänsten från att ringa anrop från autentiserade avsnitt på webbplatsen kan du låta den ringa dessa nödvändiga samtal från sidor som inte kräver autentisering först. När besökaren har ett MID kan du ange `disableThirdPartyCalls= true` i ID-tjänstkoden på webbplatsens autentiserade avsnitt. Förutsättningen här är att de flesta, om inte alla, av dina kunder navigerar till en autentiseringssida innan de får tillgång till de säkra delarna av din webbplats.
+Eftersom andra Experience Cloud-lösningar är beroende av MID, anropar ID-tjänsten Adobe för att returnera och ange detta ID. Om du behöver stoppa ID-tjänsten från att ringa anrop från autentiserade avsnitt på webbplatsen kan du låta den ringa dessa nödvändiga samtal från sidor som inte kräver autentisering först. När besökaren har ett MID kan du ange `disableThirdPartyCalls= true` i ID-tjänstkoden för de autentiserade avsnitten på platsen. Förutsättningen här är att de flesta, om inte alla, av era kunder kommer att navigera till en autentiseringssida innan de får tillgång till de säkra delarna av er webbplats.
 
-**Exempel på kod**
+**Kodexempel**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 

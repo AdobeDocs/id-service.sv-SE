@@ -5,7 +5,7 @@ title: Stöd för COPPA i Experience Cloud Identity Service
 exl-id: c7579f90-3011-4e26-b908-08907bf12ba2
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -20,14 +20,14 @@ Enligt lagen om skydd av barns integritet online (COPPA) är det förbjudet att 
 
 **Cookies och spårning**
 
-När en webbsida läses in visas [!DNL Experience Cloud] ID-tjänsten anropar en [!DNL Adobe] datainsamlingsserver (DCS). DCS-svaret innehåller en Experience Cloud-cookie och en demdex.net-cookie.
+När en webbsida läses in anropar ID-tjänsten [!DNL Experience Cloud] en [!DNL Adobe] datainsamlingsserver (DCS). DCS-svaret innehåller en Experience Cloud-cookie och en demdex.net.
 
 * Cookien Experience Cloud anges i den första partdomänen. Det kan inte användas för att spåra besökare över olika domäner, såvida inte dessa domäner fungerar tillsammans för att tillåta åtkomst.
-* Den här cookie-filen för demdex.net har angetts i tredjepartsdomänen. Den innehåller en unik identifierare som kan användas för att spåra besökare i olika domäner.
+* demdex.net cookie anges i tredjepartsdomänen. Den innehåller en unik identifierare som kan användas för att spåra besökare i olika domäner.
 
-**Cookies och COPPA-överensstämmelse**
+**Cookies och COPPA-kompatibilitet**
 
-Cookies från tredje part som spårar besökare i olika domäner på webbplatser som dirigeras till (eller huvudsakligen till) barn, utlöser krav på samtycke från COPPA-föräldrar. Lägg till variabeln så blir det enklare att följa COPPA för intern webbplatsanalys `disableThirdPartyCookies:true` till `Visitor.getInstance` enligt nedan.
+Cookies från tredje part som spårar besökare i olika domäner på webbplatser som dirigeras till (eller huvudsakligen till) barn, utlöser krav på samtycke från COPPA-föräldrar. Om du enklare vill följa COPPA för intern webbplatsanalys lägger du till variabeln `disableThirdPartyCookies:true` i funktionen `Visitor.getInstance` enligt nedan.
 
 ```js
 //Call the ID service 
@@ -40,10 +40,9 @@ var visitor = Visitor.getInstance("insert marketing cloud ID here", {
 });
 ```
 
-När inställt på `true`, `disableThirdPartyCookies` hindrar DCS från att returnera en tredjeparts demdex.net-cookie. Om en besökare redan har denna cookie i sin webbläsare kommer ID-tjänsten inte att använda den för att skapa en ny [!DNL Experience Cloud] ID eller returnera ett befintligt ID. I stället [!DNL Experience Cloud] ID-tjänsten skapar ett nytt slumpmässigt ID i cookie-filen för första part. När det här alternativet är aktiverat kan du samla in data med ID-tjänsten och dela dem mellan olika [!DNL Experience Cloud] lösningar, inklusive andra interna åtgärder som tillåts av COPPA.
+När `true` anges stoppar objektet `disableThirdPartyCookies` DCS från att returnera demdex.net cookie från tredje part. Om en besökare redan har denna cookie i sin webbläsare kommer ID-tjänsten inte att använda den för att skapa ett nytt [!DNL Experience Cloud]-ID eller returnera ett befintligt ID. I stället skapar ID-tjänsten [!DNL Experience Cloud] ett nytt slumpmässigt ID i cookie-filen för den första parten. När den är aktiverad kan du samla in data med ID-tjänsten och dela den mellan olika [!DNL Experience Cloud]-lösningar, inklusive andra interna åtgärder som tillåts av COPPA.
 
 >[!MORELIKETHIS]
 >
->* [Adobes sekretesscenter](http://www.adobe.com/privacy.html)
+>* [Sekretesscenter för Adobe](http://www.adobe.com/privacy.html)
 >* [Vad är COPPA?](http://www.consumer.ftc.gov/articles/0031-protecting-your-childs-privacy-online#whatis)
-

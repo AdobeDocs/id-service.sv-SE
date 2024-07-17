@@ -6,7 +6,7 @@ exl-id: 96d42133-6040-4da3-9315-fd94318b33aa
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
 source-wordcount: '37'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
@@ -16,11 +16,11 @@ En valfri boolesk flagga som inaktiverar ID-synkronisering.
 
 >[!NOTE]
 >
->Den här konfigurationen `idSyncDisableSyncs` och ändrat namn till `disableIdSyncs` den 18 januari 2018-versionen av v3.0.
+>Den här konfigurationen var `idSyncDisableSyncs` och döptes om till `disableIdSyncs` i version 18 januari 2018 av v3.0.
 
 **Syntax:** `disableIdSyncs: true|false` (standard är `false`.)
 
-**Exempel på kod**
+**Kodexempel**
 
 ```js
 var visitor = Visitor.getInstance ("Insert Experience Cloud organization ID here",{ 

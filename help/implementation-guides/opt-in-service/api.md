@@ -4,7 +4,7 @@ title: Anmälningsreferens
 exl-id: aa61aed7-695b-47e4-a922-9841e00aa09d
 source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ adobe.OptInCategories = {
 }
 ```
 
-## Parametrar för Opt-in-konfiguration {#section-d66018342baf401389f248bb381becbf}
+## Parametrar för konfiguration av valfritt {#section-d66018342baf401389f248bb381becbf}
 
 I det här avsnittet beskrivs hur du använder API för att konfigurera anmälan. En stor del av konfigurationen och implementeringen kan göras med tillägget Experience Platform Launch.
 
-Opt-in-konfigurationer finns i JavaScript-koden för Visitor `getInstance()` som instansierar den globala `adobe` -objekt. Nedan visas JS-konfigurationer för besökare som är relaterade till Opt-in-tjänsten.
+Opt-in-konfigurationer tillhandahålls i Visitor JavaScript `getInstance()`-funktionen som initierar det globala `adobe` -objektet. Nedan visas JS-konfigurationer för besökare som är relaterade till Opt-in-tjänsten.
 
 **`doesOptInApply (boolean or function that evaluates to a boolean)`**:
 
@@ -40,7 +40,7 @@ Definiera vilka kategorier som godkänns eller nekas när ingen inställning har
 
 **`previousPermissions (Object<adobe.OptInCategories enum: boolean>)`**
 
-Besökarens inställningar anges uttryckligen. Behörigheterna i den här konfigurationen skriver över organisationsstandardvärden ( `previousPermissions` överskrivning `preOptInApprovals`).
+Besökarens inställningar anges uttryckligen. Behörigheterna i den här konfigurationen skriver över organisationsstandardvärden ( `previousPermissions` skriver över `preOptInApprovals`).
 
 **`isOptInStorageEnabled (boolean)`**
 
@@ -68,15 +68,15 @@ Funktion som nekar eller flyttar besökaren från alla angivna kategorier.
 
 **`adobe.optIn.approveAll()`**:
 
-Använd `approveAll()` eller `denyAll()`, i förhållande till deras svar.
+Om din begäran om tillstånd för din webbplats att skapa är formulerad så att en besökarfilt ger eller nekar behörighet för din webbplats att skapa cookies använder du `approveAll()` eller `denyAll()` i förhållande till deras svar.
 
 **`adobe.optIn.denyAll()`**:
 
-Använd `approveAll()` eller `denyAll()`, i förhållande till svaret.
+Om din begäran om tillstånd för din webbplats att skapa är formulerad så att en besökarfilt beviljar eller nekar behörighet för din webbplats att skapa cookies, använder du `approveAll()` eller `denyAll()` i förhållande till svaret.
 
 ## Parametrar för Opt-in-arbetsflöden {#section-2c5adfa5459c4e72b96d2693123a53c2}
 
-Opt-in har stöd för ett arbetsflöde där behörigheter kan samlas in över mer än en begärandecykel, till exempel var inställningarna ges en åt gången. Använda följande funktioner och *true* for `shouldWaitForComplete` kan er lösning samla in samtycke för en lösning eller en delmängd av de totala kategorierna och sedan samla in samtycke för nästa eller delmängd av kategorier. Från och med första samtalet visas `adobe.optIn.status` egenskapen väntar tills `adobe.optIn.complete()` anropas i slutet av flödet. Statusen ställs in på *Slutförd*.
+Opt-in har stöd för ett arbetsflöde där behörigheter kan samlas in över mer än en begärandecykel, till exempel var inställningarna ges en åt gången. Med hjälp av följande funktioner och med inställningen *true* för `shouldWaitForComplete` kan din lösning samla in samtycke för en lösning eller en delmängd av de totala kategorierna och sedan samla in samtycke för nästa eller en delmängd av kategorierna. Från och med det första anropet väntar egenskapen `adobe.optIn.status` tills `adobe.optIn.complete()` anropas i slutet av flödet. När status har anropats anges den till *Complete*.
 
 **`adobe.optIn.approve(categories, shouldWaitForComplete)`**
 
@@ -104,7 +104,7 @@ Om alla kategorier har godkänts returneras true.
 
 `adobe.optIn.fetchPermissions(callback, shouldAutoSubscribe)`
 
-Hämta listan över behörigheter asynkront. Återanropet anropas med listan över behörigheter när processen för att bevilja/neka behörigheter är slutförd. Ange värdet för *true* for `shouldAutoSubscribe` registrerar återanropet för ändringar av avanmälan som går framåt. Följande är egenskaper för `adobe.OptIn`:
+Hämta listan över behörigheter asynkront. Återanropet anropas med listan över behörigheter när processen för att bevilja/neka behörigheter är slutförd. Om du anger värdet *true* för `shouldAutoSubscribe` registreras återanropet för alla ändringar av Opt-in som fortsätter framåt. Följande är egenskaper för `adobe.OptIn`:
 
 **`permissions`**
 
@@ -112,7 +112,7 @@ Ett objekt som listar alla Experience Cloud-lösningar, som kategorier, som har 
 
 **`status`**
 
-* väntar
+* väntande
 * ändrad
 * complete
 
@@ -154,11 +154,11 @@ Kontrollera om en eller flera kategorier har godkänts av kunden.
 
 **`isPreApproved(categories)`**
 
-Kontrollera om en eller flera kategorier har godkänts i förväg av kunden. (Om de skickats in i `preOptInApprovals` config).
+Kontrollera om en eller flera kategorier har godkänts i förväg av kunden. (Om de skickades i `preOptInApprovals`-konfigurationen).
 
 **`fetchPermissions(callback, shouldAutoSubscribe)`**
 
-Async API för att hämta listan över behörigheter. Återanropet anropas med listan över behörigheter när processen för att bevilja/neka behörigheter är slutförd. **`shouldAutoSubscribe`:** Ett hjälpverktyg som automatiskt prenumererar på återanropet för alla framtida händelser. Betydelse som återanropet anropas varje gång en godkännanderutlösare eller en avvisare i Opt In anropas. På så sätt uppdateras du alltid utan att du själv behöver prenumerera på händelserna.
+Async API för att hämta listan över behörigheter. Återanropet anropas med listan över behörigheter när processen för att bevilja/neka behörigheter är slutförd. **`shouldAutoSubscribe`:** Ett hjälpverktyg kommer automatiskt att prenumerera på återanropet för alla framtida händelser. Betydelse som återanropet anropas varje gång en godkännanderutlösare eller en avvisare i Opt In anropas. På så sätt uppdateras du alltid utan att du själv behöver prenumerera på händelserna.
 
 **Exempel**
 
@@ -191,7 +191,7 @@ optIn.fetchPermissions(callback, true);
 
 >[!NOTE]
 >
->Använd bara om du har godkänt `shouldWaitForComplete` parameter som ska godkännas eller nekas. Detta API slutför godkännandeprocessen. Exempel: `adobe.optIn.complete()`.
+>Använd bara om du har skickat parametern `shouldWaitForComplete` för att godkänna eller neka. Detta API slutför godkännandeprocessen. Exempel: `adobe.optIn.complete()`.
 
 **`approveAll()`:**
 
@@ -205,7 +205,7 @@ Neka alla befintliga kategorier.
 
 **`complete`:**
 
-Slutförandehändelse utlöses när godkännandeprocessen har slutförts. Om du ringer Godkänn/Neka utan att skicka `shouldWaitForComplete`, eller `approveAll`/ `denyAll`, utlöser den här händelsen. Eller om du passerar `shouldWaitForComplete`, utlöses den här händelsen när `complete` anropas.
+Slutförandehändelse utlöses när godkännandeprocessen har slutförts. Om du anropar Godkänn/Neka utan att skicka `shouldWaitForComplete`, eller `approveAll`/ `denyAll`, utlöses den här händelsen. Eller, om du skickar `shouldWaitForComplete`, utlöses den här händelsen när `complete` anropas.
 
 **Exempel**
 
