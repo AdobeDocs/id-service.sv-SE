@@ -3,7 +3,7 @@ description: Med den här funktionen kan du dela en besökares Experience Cloud-
 keywords: ID-tjänst
 title: appendVisitorIDsTo (spårning mellan domäner)
 exl-id: 3e4f4e2c-e658-4124-bd0e-59c63127bdde
-source-git-commit: fc630f3a161b65edab1c34ec3b3f07938bf13aaf
+source-git-commit: f185ae10dac686b6986b171aef8a46a574484283
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Spårning av domäner fungerar inte som avsett om ECID avvisas från början (eller tidigare). Den kontrollerar inte befintliga ID:n som antingen skickades via URL eller som tidigare fanns i cookien, med tanke på att dessa ID:n var när medgivandet var inställt på &quot;NO&quot;
+>Spårning av domäner fungerar inte som avsett om ECID avvisas från början (eller tidigare). Den kontrollerar inte befintliga ID:n som antingen skickades via URL eller som tidigare fanns i cookien, med tanke på att dessa var ID:n när medgivandet var inställt på&quot;NO&quot;.
 
 Med den här funktionen kan du dela en besökares Experience Cloud-ID över domäner när webbläsare blockerar cookies från tredje part. Om du vill använda den här funktionen måste du ha implementerat ID-tjänsten och äga käll- och måldomänerna. Finns i VisitorAPI.js version 1.7.0 eller senare.
 
