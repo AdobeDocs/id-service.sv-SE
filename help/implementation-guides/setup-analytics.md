@@ -135,7 +135,7 @@ Lägg till den här funktionen i din `AppMeasurement.js`- eller `s_code.js`-fil:
 
 Placera koden i samma avsnitt som innehåller konfigurationer som `linkInternalFilters`, `charSet`, `trackDownloads` osv.
 
-***(Valfritt men rekommenderas)* Skapa en anpassad egenskap **
+***(Valfritt men rekommenderas)* Skapa en anpassad egenskap &#x200B;**
 
 Ange en anpassad prop i `AppMeasurement.js` eller `s_code.js` för att mäta täckning. Lägg till den här anpassade proppen i funktionen `doPlugins` för dina `AppMeasurement.js`- eller `s_code.js`-filer:
 
