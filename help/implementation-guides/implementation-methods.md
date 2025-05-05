@@ -20,7 +20,7 @@ Du kan välja en standardmetod för implementering av [!DNL Experience Cloud ID 
 
 ## Standardimplementering {#section-ea1e5270f2184f85a2e85214a6ac60cb}
 
-Adobe rekommenderar att du använder [[!DNL Experience Platform tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en) för att implementera ID-tjänsten. Den här metoden garanterar integrering med andra [!DNL Experience Cloud]-lösningar, effektiviserar implementeringsarbetsflöden och garanterar automatiskt korrekt kodplacering och sekvensering.
+Adobe rekommenderar att du använder [[!DNL Experience Platform tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE) för att implementera ID-tjänsten. Den här metoden garanterar integrering med andra [!DNL Experience Cloud]-lösningar, effektiviserar implementeringsarbetsflöden och garanterar automatiskt korrekt kodplacering och sekvensering.
 
 ## Implementeringar som inte är standard {#section-2c4f2db1f9704315a7cccab6d2e07113}
 

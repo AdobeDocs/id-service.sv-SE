@@ -35,7 +35,7 @@ visitor.setCustomerIDs({email: {id: "ecid@adobe.com", authState: 1}}, "SHA-256")
 
 Tillsammans med besökar-ID:t för Experience Cloud kan du koppla ytterligare kund-ID:n, autentiseringsstatus och hash-typ (SHA-256) till varje besökare. Om du inte anger någon hash-typ betraktas den som ingen hash.
 
-Metoden `setCustomerIDs` accepterar flera kund-ID för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) till Experience Cloud och få tillgång till dessa data via olika lösningar.
+Metoden `setCustomerIDs` accepterar flera kund-ID för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=sv-SE) till Experience Cloud och få tillgång till dessa data via olika lösningar.
 
 Kund-ID, autentiserade tillstånd och hash-typ *lagras inte* i en cookie som kan användas senare. I stället ska Kund-ID, autentiserade tillstånd och hash-typ lagras i en instansvariabel som ska hämtas med [`getCustomerIDs`](/help/library/get-set/getcustomerids.md), vilket visas nedan:
 
@@ -70,7 +70,7 @@ I tabellen nedan finns en beskrivning av parametern `d_cid_ic` och autentisering
 
 Experience Platform Launch är nästa generation av tagghanteringsfunktioner från Adobe. Läs mer om Platform launch i [Starta produktdokumentation](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv).
 
-Om du vill lägga till en åtgärd i Launch läser du [regeldokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html) i Adobe Launch och ser skärmbilden nedan:
+Om du vill lägga till en åtgärd i Launch läser du [regeldokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=sv-SE) i Adobe Launch och ser skärmbilden nedan:
 
 ![](/help/reference/assets/hashing-support.png)
 

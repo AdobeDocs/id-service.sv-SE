@@ -49,7 +49,7 @@ Följande exempelkod kan hjälpa dig att komma igång med funktionen `appendVisi
 
 >[!TIP]
 >
->Den här koden kan placeras i den anpassade kodredigeraren som är en del av Adobe Analytics-tillägget eller högst upp i [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html).
+>Den här koden kan placeras i den anpassade kodredigeraren som är en del av Adobe Analytics-tillägget eller högst upp i [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE).
 
 ```js
 var adbeDomains = ["marketo.com", "figma.com", "workfront.com"];

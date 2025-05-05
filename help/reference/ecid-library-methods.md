@@ -33,7 +33,7 @@ Nedan finns information om insatser för användning av ITP- och ECID-bibliotek.
 
 ITP 2.1 förhindrar möjligheten att skriva cookies på klientsidan, vilket försämrar möjligheten att ge kunderna korrekt besöksspårningsinformation. En förändring införs i Adobe CNAME-spårningsservrar för att lagra besökarens Experience Cloud ID (ECID) i en cookie från en annan leverantör.
 
-Den här ändringen är bara användbar för ECID-kunder som använder en CNAME från Analytics i förstahandskontext. Om du är en analyskund som för närvarande inte använder CNAME, eller till och med en icke-analyskund, är du fortfarande berättigad till en CNAME-post. Kontakta kundtjänst eller din kontorepresentant för att starta registreringen av en [CNAME](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Den här ändringen är bara användbar för ECID-kunder som använder en CNAME från Analytics i förstahandskontext. Om du är en analyskund som för närvarande inte använder CNAME, eller till och med en icke-analyskund, är du fortfarande berättigad till en CNAME-post. Kontakta kundtjänst eller din kontorepresentant för att starta registreringen av en [CNAME](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=sv-SE).
 
 Uppgradera till ECID-bibliotek v. 4.3.0 + för att utnyttja denna förändring.
 
@@ -49,7 +49,7 @@ När en ID-begäran har gjorts på demdex.net och ett ECID har hämtats görs en
 
 Den nya `s_ecid`-cookien följer samma avanmälningsstatus som AMCV-cookien. Om e-id:t läses från `s_ecid`-cookien anropas alltid DEDEX omedelbart för att hämta den senaste avanmälningsstatusen för det ID:t och lagras i AMCV-cookien.
 
-Om din konsument har avanmält sig från Analytics-spårning via den här [metoden](https://experienceleague.adobe.com/docs/analytics/implementation/js/opt-out.html) tas den här `s_ecid`-cookien bort.
+Om din konsument har avanmält sig från Analytics-spårning via den här [metoden](https://experienceleague.adobe.com/docs/analytics/implementation/js/opt-out.html?lang=sv-SE) tas den här `s_ecid`-cookien bort.
 
 Spårningsservernamnet måste anges till VisitorJS-biblioteket när biblioteket initieras med `trackingServer` eller `trackingServerSecure`. Detta bör matcha `trackingServer`-konfigurationen i Analytics-konfigurationerna.
 

@@ -81,7 +81,7 @@ Reviderad: [Krav för identitetstjänsten Experience Cloud](../reference/require
 
 **Kända fel**
 
-Kunder som använder [!DNL Audience Manager] DIL-kod och besökarAPI.js-kod på samma sida bör ange variabeln `secureDataCollection= false` för DIL. Se [secureDataCollection](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
+Kunder som använder [!DNL Audience Manager] DIL-kod och besökarAPI.js-kod på samma sida bör ange variabeln `secureDataCollection= false` för DIL. Se [secureDataCollection](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=sv-SE).
 
 ## Version 1.6.0 {#section-3faaa14bf3934c6a99b8f79ee06fc0d2}
 

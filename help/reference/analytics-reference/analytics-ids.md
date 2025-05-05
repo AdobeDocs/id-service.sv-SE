@@ -30,7 +30,7 @@ När en begäran skickas till datainsamlingsservern Adobe kontrolleras rubriken 
 
 Vissa webbläsare, till exempel Apple Safari, accepterar dock inte cookies från tredje part. Detta är cookies som anges i webbläsaren från andra domäner än den aktuella webbplatsen. Dessutom blockerar Safari cookies i tredjepartsdomäner om en besökare inte har varit i den domänen tidigare. Om du till exempel är på `mysite.com` och din datainsamlingsserver är `mysite.omtrdc.net` kan den cookie som returneras i HTTP-huvudet från `mysite.omtrdc.net` avvisas av webbläsaren.
 
-För att undvika detta har många kunder implementerat CNAME-poster för sina datainsamlingsservrar. Detta kan vara en effektiv del av en [förstapartsstrategi för cookie-implementering](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html). Om en CNAME-post har konfigurerats för att mappa ett värdnamn på kundens domän till datainsamlingsservern (t.ex. mappning `metrics.mysite.com` till `mysite.omtrdc.net`), lagras [!DNL Experience Cloud]-ID-cookien eftersom datainsamlingsdomänen nu matchar webbplatsens domän. Detta ökar sannolikheten för att ID-tjänstens cookie lagras. Detta medför emellertid en viss belastning eftersom du måste konfigurera CNAME-poster och upprätthålla SSL-certifikat för datainsamlingsservrarna.
+För att undvika detta har många kunder implementerat CNAME-poster för sina datainsamlingsservrar. Detta kan vara en effektiv del av en [förstapartsstrategi för cookie-implementering](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=sv-SE). Om en CNAME-post har konfigurerats för att mappa ett värdnamn på kundens domän till datainsamlingsservern (t.ex. mappning `metrics.mysite.com` till `mysite.omtrdc.net`), lagras [!DNL Experience Cloud]-ID-cookien eftersom datainsamlingsdomänen nu matchar webbplatsens domän. Detta ökar sannolikheten för att ID-tjänstens cookie lagras. Detta medför emellertid en viss belastning eftersom du måste konfigurera CNAME-poster och upprätthålla SSL-certifikat för datainsamlingsservrarna.
 
 **JavaScript**
 
@@ -59,12 +59,12 @@ När du har distribuerat besökar-ID-tjänsten finns det fem sätt som en besök
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <img id="image_9F3E58898A1B4F40BBDEF5ADE362E55C" src="assets/step1_icon.png" /> </p> </td> 
-   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html" format="http" scope="external"> vid (s.visitorID)</a> </p> </td> 
+   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=sv-SE" format="http" scope="external"> vid (s.visitorID)</a> </p> </td> 
    <td colname="col3"> <p>s.visitorID har angetts </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <img id="image_77A06981672745B6AEA8BB4D55911CCA" src="assets/step2_icon.png" /> </p> </td> 
-   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-analytics.html" format="http" scope="external"> hjälp (s_vi cookie)</a> </p> </td> 
+   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-analytics.html?lang=sv-SE" format="http" scope="external"> hjälp (s_vi cookie)</a> </p> </td> 
    <td colname="col3"> <p>Besökaren hade en befintlig s_vi-cookie innan du distribuerade ID-tjänsten <span class="keyword"> Experience Cloud</span>, eller så har du konfigurerat en <a href="../../reference/analytics-reference/grace-period.md" format="dita" scope="local"> respitperiod </a>. </p> </td> 
   </tr> 
   <tr> 
@@ -74,12 +74,12 @@ När du har distribuerat besökar-ID-tjänsten finns det fem sätt som en besök
   </tr> 
   <tr> 
    <td colname="col1"> <p> <img id="image_6F0ED8FE3EF846CA8E6ECCC3C0070D85" src="assets/step4_icon.png" /> </p> </td> 
-   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html" format="http" scope="external">-sökning (grundcookie på H.25.3 eller senare, eller AppMeasurement för JavaScript)</a> </p> </td> 
+   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html?lang=sv-SE" format="http" scope="external">-sökning (grundcookie på H.25.3 eller senare, eller AppMeasurement för JavaScript)</a> </p> </td> 
    <td colname="col3"> <p>En webbläsare accepterar inte cookies från tredje part och Analytics tracking-servern är konfigurerad som en spårningsserver från tredje part. </p> <p> <p>Obs! <span class="codeph">-fältet </span> är en äldre identifierare och används inte om du har implementerat ID-tjänsten på din plats. I det här fallet behövs inte fältet <span class="codeph"> </span> eftersom den första parten, <a href="../../introduction/cookies.md" format="dita" scope="local"> AMCV cookie </a>, gör den föråldrad. Den har bibehållits för att stödja äldre kod och av historiska skäl. </p> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <img id="image_23D8C0EB69EC4084BC237B5B98C036F4" src="assets/step5_icon.png" /> </p> </td> 
-   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/analytics/technotes/visitor-identification.html" format="http" scope="external"> IP-adress, användaragent, gateway-IP-adress </a> </p> </td> 
+   <td colname="col2"> <p> <a href="https://experienceleague.adobe.com/docs/analytics/technotes/visitor-identification.html?lang=sv-SE" format="http" scope="external"> IP-adress, användaragent, gateway-IP-adress </a> </p> </td> 
    <td colname="col3"> <p>Besökarens webbläsare accepterar inte cookies. </p> </td> 
   </tr> 
  </tbody> 

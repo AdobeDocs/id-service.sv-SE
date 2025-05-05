@@ -29,7 +29,7 @@ Innehåll:
 Om du vill använda `isCoopSafe` måste du:
 
 * Använd ID-tjänstkoden version 2.4 eller senare.
-* Delta i [Experience Cloud Device Co-op](https://experienceleague.adobe.com/docs/device-co-op/using/about/overview.html). Prospektiva medarbetare bör också granska den här dokumentationen för att avgöra om `isCoopSafe` tar upp eventuella problem med hur data används för att skapa enhetsdiagrammet.
+* Delta i [Experience Cloud Device Co-op](https://experienceleague.adobe.com/docs/device-co-op/using/about/overview.html?lang=sv-SE). Prospektiva medarbetare bör också granska den här dokumentationen för att avgöra om `isCoopSafe` tar upp eventuella problem med hur data används för att skapa enhetsdiagrammet.
 
 * Arbeta med din [!DNL Adobe]-konsult för att ange en vitlista eller svartlistflagga på ditt Device Co-op-konto. Det finns ingen självbetjäningsväg för att aktivera dessa flaggor.
 

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Implementera Experience Cloud Identity Service för analys {#implement-the-experience-cloud-id-service-for-analytics}
 
-De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och som inte använder [datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna är till för Analytics-kunder som vill använda Experience Cloud Identity Service och som inte använder [datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
@@ -89,7 +89,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 
 ## Steg 3: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-7b8a6e76dc124d0e9ab1ce96ab2ffb0e}
 
-Ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt [!DNL Experience Cloud]-organisations-ID i funktionen `Visitor.getInstance`. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för [!DNL Experience Cloud]. Se även [Administration - bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt [!DNL Experience Cloud]-organisations-ID i funktionen `Visitor.getInstance`. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för [!DNL Experience Cloud]. Se även [Administration - bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html?lang=sv-SE). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg", { ...`
 
@@ -125,7 +125,7 @@ Så här tar du reda på vilka spårningsservervariabler som ska användas:
 >* [!DNL Experience Cloud] server-URL = URL för spårningsserver
 >* Skyddad URL för [!DNL Experience Cloud]-server = spårningsserverns säkra URL
 
-Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#) korrekt.
+Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure](https://helpx.adobe.com/se/analytics/kb/determining-data-center.html#) korrekt.
 
 ## Steg 5: Uppdatera filen AppMeasurement.js eller s_code.js {#section-b53113aea1bd4de896e0e4e9a7edee19}
 
@@ -155,7 +155,7 @@ Flytta koden till produktion efter testning och verifiering.
 
 ## Steg 7: (Valfritt) Konfigurera en respitperiod {#section-7bbb2f72c26e4abeb8881e18366797a3}
 
-Om något av dessa användningsfall gäller din situation ber du [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) att ställa in en tillfällig [respitperiod](../reference/analytics-reference/grace-period.md). Gränsperioder kan vara upp till 180 dagar. Du kan förnya en respitperiod om det behövs.
+Om något av dessa användningsfall gäller din situation ber du [kundtjänst](https://helpx.adobe.com/se/marketing-cloud/contact-support.html) att ställa in en tillfällig [respitperiod](../reference/analytics-reference/grace-period.md). Gränsperioder kan vara upp till 180 dagar. Du kan förnya en respitperiod om det behövs.
 
 **Partiell implementering**
 
@@ -175,7 +175,7 @@ Du behöver en respitperiod om du skickar data till ett internt system från en 
 
 Avbryt respitperioden efter att dataöverföringsprocessen kan använda kolumnerna `post_visid_high` och `post_visid_low`.
 
-Mer information finns i [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html).
+Mer information finns i [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html?lang=sv-SE).
 
 **Inmatning av data i Clickstream**
 
@@ -188,7 +188,7 @@ Du kan testa och distribuera enligt följande.
 Om du vill testa implementeringen av din ID-tjänst ska du kontrollera följande:
 
 * [AMCV-cookie](../introduction/cookies.md) i domänen där sidan finns.
-* MID-värde i bildbegäran [!DNL Analytics] med felsökningsverktyget [Adobe](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html).
+* MID-värde i bildbegäran [!DNL Analytics] med felsökningsverktyget [Adobe](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html?lang=sv-SE).
 
 Se [Testa och verifiera identitetstjänsten Experience Cloud](../implementation-guides/test-verify.md).
 

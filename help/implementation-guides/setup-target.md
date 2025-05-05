@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Implementera identitetstjänsten Experience Cloud för Target{#implement-the-experience-cloud-id-service-for-target}
 
-De här instruktionerna är till för målkunder som vill använda Experience Cloud Identity Service och som inte använder [datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna är till för målkunder som vill använda Experience Cloud Identity Service och som inte använder [datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ De här instruktionerna är till för målkunder som vill använda Experience Cl
 
 ## Steg 1: Hämta ID-tjänstkoden {#section-b32ba0548aa546a79dd38be59832a53e}
 
-[!UICONTROL ID Service] kräver kodbiblioteket `VisitorAPI.js`. Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) om du vill hämta den här koden.
+[!UICONTROL ID Service] kräver kodbiblioteket `VisitorAPI.js`. Kontakta [kundtjänst](https://helpx.adobe.com/se/marketing-cloud/contact-support.html) om du vill hämta den här koden.
 
 ## Steg 2: Lägg till funktionen Visitor.getInstance i ID-tjänstkoden {#section-287ef2958e9f43858fe9d630ae519e22}
 
@@ -50,7 +50,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE")
 
 ## Steg 3: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-522b1877be9243c39b222859b821f0ce}
 
-Ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt [!DNL Experience Cloud]-organisations-ID i funktionen `Visitor.getInstance`. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för [!DNL Experience Cloud]. Se även [Administration - bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt [!DNL Experience Cloud]-organisations-ID i funktionen `Visitor.getInstance`. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för [!DNL Experience Cloud]. Se även [Administration - bastjänster](https://experienceleague.adobe.com/docs/core-services/interface/manage-users-and-products/admin-getting-started.html?lang=sv-SE). Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg");`
 

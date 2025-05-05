@@ -191,7 +191,7 @@ Korrigerade ett fel som gjorde att ID-tjänsten gjorde redundanta serveranrop f�
 
 **Ny dokumentation**
 
-[Använda DNS-förhämtning med olika Experience Cloud-lösningar och -tjänster](https://experienceleague.adobe.com/docs/core-services/interface/more-resources/dns-prefetch.html)
+[Använda DNS-förhämtning med olika Experience Cloud-lösningar och -tjänster](https://experienceleague.adobe.com/docs/core-services/interface/more-resources/dns-prefetch.html?lang=sv-SE)
 
 ## Version 2.0 {#section-0ceac6007c1241b58ad607e2b76b2b7e}
 

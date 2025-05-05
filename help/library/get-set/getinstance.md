@@ -50,7 +50,7 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION-ID-HERE",
 });
 ```
 
-Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Detta liknar funktionen [`s_gi()` ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/s-gi.html) i [!DNL AppMeasurement].
+Om `getInstance` inte hittar någon befintlig instans skapas en ny instans och returneras. Detta liknar funktionen [`s_gi()` ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/s-gi.html?lang=sv-SE) i [!DNL AppMeasurement].
 
 **Vanlig användning**
 

@@ -31,13 +31,13 @@ I [!UICONTROL Opt-in] kan du också bestämma om taggar ska aktiveras innan anv�
 
 >[!VIDEO](https://video.tv.adobe.com/v/26431/?quality=12)
 
-Om du inte använder Experience Platform-taggar kan du ange konfigurationen för [!UICONTROL Opt-in] i initieringen av det globala Visitor-objektet, vilket visas i [dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/getting-started.html?lang=en).
+Om du inte använder Experience Platform-taggar kan du ange konfigurationen för [!UICONTROL Opt-in] i initieringen av det globala Visitor-objektet, vilket visas i [dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/getting-started.html?lang=sv-SE).
 
 ## Implementera [!UICONTROL Opt-In] på sidan
 
 Allt detta är under förberedelser för att ge besökarna ett gränssnitt som kan presenteras med samtycke. Det här användargränssnittet kan skapas av dig eller så kan du använda en CMP-partner (Consent Management Platform) för att skapa användargränssnittet.
 
-När du konfigurerar ett användargränssnitt för att använda [!UICONTROL Opt-in] för att samla in samtycke, bör det konfigureras att anropa API:er som ansluter till [!UICONTROL Opt-in] och informera det om att ge sitt samtycke till vissa eller alla Adobe Experience Cloud-lösningar. Detaljerad information om dessa API:er finns i [Opt-in Reference-dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/api.html?lang=en). Ytterligare information om deltagande finns också på de omgivande dokumentationssidorna.
+När du konfigurerar ett användargränssnitt för att använda [!UICONTROL Opt-in] för att samla in samtycke, bör det konfigureras att anropa API:er som ansluter till [!UICONTROL Opt-in] och informera det om att ge sitt samtycke till vissa eller alla Adobe Experience Cloud-lösningar. Detaljerad information om dessa API:er finns i [Opt-in Reference-dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/api.html?lang=sv-SE). Ytterligare information om deltagande finns också på de omgivande dokumentationssidorna.
 
 ## [!UICONTROL Opt-In] demo
 

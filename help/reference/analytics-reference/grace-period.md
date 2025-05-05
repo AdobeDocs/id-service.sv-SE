@@ -32,4 +32,4 @@ Om du har flera JavaScript-filer som skickar data till *samma rapportsvit*, elle
 
 ## Hur kan jag aktivera en respitperiod? {#section-512d5cd8570e483cbdd8b04457a16ced}
 
-Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
+Kontakta [kundtjänst](https://helpx.adobe.com/se/marketing-cloud/contact-support.html).

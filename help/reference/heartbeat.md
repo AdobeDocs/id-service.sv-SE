@@ -18,4 +18,4 @@ Videopulsen kräver Experience Cloud Identity Service. När du mäter video på 
 
 >[!MORELIKETHIS]
 >
->* [Mäta ljud och video i Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
+>* [Mäta ljud och video i Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=sv-SE)

@@ -23,6 +23,6 @@ Om Experience Cloud ID-tillägget inte har installerats än kan du öppna egensk
 
 Om du vill konfigurera tillägget öppnar du fliken *Tillägg* och håller pekaren över tillägget. Klicka sedan på *Konfigurera*.
 
-Mer referensinformation finns i översikten för [Adobe Experience Cloud Identity Service-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/id-service/overview.html).
+Mer referensinformation finns i översikten för [Adobe Experience Cloud Identity Service-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/id-service/overview.html?lang=sv-SE).
 
 ![](assets/optin-launch.jpg)

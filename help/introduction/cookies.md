@@ -115,7 +115,7 @@ I följande tabell listas och definieras några viktiga attribut i demodex-cooki
 
 Information om information om Demdex finns på [Audience Manager-enhetens lagringsinformation](https://aam-iab-tcf-vendor.s3.amazonaws.com/aam_device_storage_disclosures.json).
 
-Mer information finns i dokumentationen om [att förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=en).
+Mer information finns i dokumentationen om [att förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE).
 
 ## Genererar Experience Cloud-ID {#section-15f69c0bac394b4b9966a23fbc586d17}
 

@@ -17,7 +17,7 @@ Taggar i Adobe Experience Platform är det primära verktyget som används för 
 
 ## Om Experience Platform-taggar {#section-611711602854464ea351a4af80a8dafe}
 
-[Taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en) är nästa generation av tagghanteringsfunktionen i Adobe som är inbyggd i Adobe Experience Cloud. Plattformstaggar gör att klienter kan:
+[Taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE) är nästa generation av tagghanteringsfunktionen i Adobe som är inbyggd i Adobe Experience Cloud. Plattformstaggar gör att klienter kan:
 
 * Distribuera webbprodukter på klientsidan med integreringar som kallas _extensions_.
 * Samla in, definiera, hantera och utbyt data mellan marknadsförings- och annonsprodukter från andra leverantörer och från Adobe.

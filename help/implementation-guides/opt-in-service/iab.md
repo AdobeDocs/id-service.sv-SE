@@ -47,7 +47,7 @@ När inställningarna har konfigurerats på rätt sätt kommer ECID- och DIL-bib
 
 >[!IMPORTANT]
 >
->Audience Manager behöver samtycke för *Syfte 1 och Syfte 10, plus leverantörsmedgivande* för att kunna distribuera cookies och initiera eller hedra ID-synkroniseringar. Läs mer om plugin-programmet IAB TCF för deltagande i Audience Manager-dokumentationen [här](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+>Audience Manager behöver samtycke för *Syfte 1 och Syfte 10, plus leverantörsmedgivande* för att kunna distribuera cookies och initiera eller hedra ID-synkroniseringar. Läs mer om plugin-programmet IAB TCF för deltagande i Audience Manager-dokumentationen [här](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=sv-SE).
 
 Mer information om hur du validerar plugin-programmet IAB TCF för Opt-in finns i användningsfall nr 4 i valideringsguiden [här](../../implementation-guides/opt-in-service/testing-optin-and-iab-plugin.md#section-ca5c6f92fbdf4fd29b4acb6b644efbd0).
 
@@ -55,5 +55,5 @@ Mer information om hur du validerar plugin-programmet IAB TCF för Opt-in finns 
 
 * [IAB Transparency and Consent Framework (TCF)](https://iabtechlab.com/standards/gdpr-transparency-and-consent-framework/) - Mer information om IAB-standarden
 * [Adobe-deltagande](../../implementation-guides/opt-in-service/optin-overview.md#concept-f9b5db0d27a245fbadd3e19162319360) - För mer information om deltagande, en nödvändig komponent för samtyckeshantering i plattformslösningar
-* Stöd för IAB Transparency och Consent Framework (TCF) [i Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html)
+* Stöd för IAB Transparency och Consent Framework (TCF) [i Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=sv-SE)
 * [Dina sekretessalternativ](https://www.adobe.com/privacy/opt-out.html#customeruse) - Ett annat sekretessalternativ som dina användare har tillgång till är möjligheten att avanmäla all datainsamling med andra globala avanmälningsverktyg. Global avanmälan har företräde framför avanmälan och IAB TCF-verifiering

@@ -43,7 +43,7 @@ Parametern `aid` visas i en frågesträng under två olika villkorsuppsättninga
 Parametern `aid` visas i en frågesträng när:
 
 * ID-tjänsten [!DNL Experience Cloud] har distribuerats korrekt.
-* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics]-ID lagrat i sin [s_vi-cookie](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-analytics.html#section-5d50a078de444d12b7d927d68ff3b679).
+* Användaren som besöker en webbplats har ett befintligt [!DNL Analytics]-ID lagrat i sin [s_vi-cookie](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-analytics.html?lang=sv-SE#section-5d50a078de444d12b7d927d68ff3b679).
 
 **Fall 2**
 
@@ -51,4 +51,4 @@ Parametern `aid` visas i en frågesträng när din organisation använder en [re
 
 >[!MORELIKETHIS]
 >
->* [Analytiska cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-privacy.html)
+>* [Analytiska cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-privacy.html?lang=sv-SE)

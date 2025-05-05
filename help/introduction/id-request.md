@@ -29,7 +29,7 @@ I följande exempel visas hur ID-tjänsten begär och tar emot besökar-ID:t fö
 I det här exemplet kommer en ny besökare till pizzabiten som hanteras av Food Company. The Food Company har ID-tjänstkod på pizzans webbplats. När pizzabiten läses in söker ID-tjänstkoden efter AMCV-cookien i pizzabdomänen.
 
 * Om AMCV-cookien är inställd har besökaren ett Experience Cloud-ID. I det här fallet spårar cookien besökaren och delar data med andra Experience Cloud-lösningar.
-* Om AMCV-cookien inte är inställd anropar ID-tjänstkoden en regional [datainsamlingsserver](https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html?lang=en) (DCS) på `dpm.demdex.net/id` (se även [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=en)). I samtalet ingår organisations-ID för Food Company. Organisations-ID anges i funktionen `Visitor.getInstance` för ID-tjänstkoden.
+* Om AMCV-cookien inte är inställd anropar ID-tjänstkoden en regional [datainsamlingsserver](https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html?lang=sv-SE) (DCS) på `dpm.demdex.net/id` (se även [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE)). I samtalet ingår organisations-ID för Food Company. Organisations-ID anges i funktionen `Visitor.getInstance` för ID-tjänstkoden.
 
 ![](assets/request1.png)
 

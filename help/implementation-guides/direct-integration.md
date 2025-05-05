@@ -20,7 +20,7 @@ Enheter som inte kan använda kodbiblioteken VisitorAPI.js eller SDK kan anropa 
 
 ![](assets/directSyntax.png)
 
-I det här syntaxexemplet identifierar prefixet `d_` nyckelvärdepar i anropet som en variabel på systemnivå. Du kan skicka flera `d_`-parametrar till ID-tjänsten, men fokusera på nyckelvärdepar enligt koden ovan. Mer information om andra variabler finns i [Attribut som stöds för DCS API-anrop](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-keys.html).
+I det här syntaxexemplet identifierar prefixet `d_` nyckelvärdepar i anropet som en variabel på systemnivå. Du kan skicka flera `d_`-parametrar till ID-tjänsten, men fokusera på nyckelvärdepar enligt koden ovan. Mer information om andra variabler finns i [Attribut som stöds för DCS API-anrop](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-keys.html?lang=sv-SE).
 
 ID-tjänsten stöder HTTP- och HTTPS-anrop. Använd HTTPS för att skicka data från en säker sida.
 
@@ -57,7 +57,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> dpm.demdex.net</span> </p> </td> 
-   <td colname="col2"> <p>En äldre domän som styrs av <span class="keyword"> Adobe</span>. Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external"> Förstå anrop till Demdex-domänen </a>. </p> </td> 
+   <td colname="col2"> <p>En äldre domän som styrs av <span class="keyword"> Adobe</span>. Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE" format="https" scope="external"> Förstå anrop till Demdex-domänen </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_mid</span> </p> </td> 
@@ -87,7 +87,7 @@ ID-tjänsten returnerar data i ett JSON-objekt enligt nedan. Ditt svar kan vara 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> dcs_region</span> </p> </td> 
-   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> ID:n för DCS-region, platser och värdnamn</a>. </p> </td> 
+   <td colname="col2"> <p>ID-tjänsten är ett geografiskt distribuerat och lastbalanserat system. ID:t identifierar den region i datacentret som hanterar anropet. Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=sv-SE" format="https" scope="external"> ID:n för DCS-region, platser och värdnamn</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> d_cb</span> </p> </td> 

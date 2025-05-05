@@ -50,11 +50,11 @@ ID-synkroniseringen är en URL som utlöses i iFrame för målpublicering. Som v
 
 `http://abc.com?partner_id=abc&sync_id=123&redir=http://dpm.demdex.net/ibs:dpid=<ADOBE_PARTNER_ID>&dpuuid=<PARTNER_UUID>`
 
-Se även [ID-synkronisering för inkommande dataöverföringar](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/sending-audience-data/batch-data-transfer-process/id-sync-http.html?lang=en).
+Se även [ID-synkronisering för inkommande dataöverföringar](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/sending-audience-data/batch-data-transfer-process/id-sync-http.html?lang=sv-SE).
 
 **Steg 4: Lager-ID**
 
-Synkroniserade ID:n lagras på [edge- och core data-servrarna](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/system-components/components-edge.html?lang=en).
+Synkroniserade ID:n lagras på [edge- och core data-servrarna](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/system-components/components-edge.html?lang=sv-SE).
 
 ## Synkroniseringstjänster hanterar ID-synkronisering {#section-cd5784d7ad404a24aa28ad4816a0119a}
 
@@ -69,8 +69,8 @@ Termen *`Sync Services`* hänvisar till interna [!DNL Experience Cloud]-tekniker
 
 ## ID-synkronisering med Adobe Advertising Cloud {#section-642c885ea65d45ffb761f78838735016}
 
-[!DNL Adobe Advertising Cloud] (som tidigare kallades [!DNL Adobe Media Optimizer]) är ett undantag till den iFrame-baserade ID-synkroniseringsprocessen. Eftersom [!DNL Advertising Cloud] är en betrodd domän synkroniseras ID från den överordnade sidan i stället för från [!UICONTROL Destination Publishing iFrame]. Under synkroniseringen anropar ID-tjänsten [!DNL Advertising Cloud] vid `cm.eversttech.net`, som är ett äldre domännamn som används av [!DNL Advertising Cloud] innan det förvärvas av Adobe. Om du skickar data till [!DNL Advertising Cloud] förbättras matchningsfrekvensen och det är automatiskt för ID-tjänstkunder som använder version 2.0 (eller senare). Se även [Advertising Cloud Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-advertising-cloud.html?lang=en).
+[!DNL Adobe Advertising Cloud] (som tidigare kallades [!DNL Adobe Media Optimizer]) är ett undantag till den iFrame-baserade ID-synkroniseringsprocessen. Eftersom [!DNL Advertising Cloud] är en betrodd domän synkroniseras ID från den överordnade sidan i stället för från [!UICONTROL Destination Publishing iFrame]. Under synkroniseringen anropar ID-tjänsten [!DNL Advertising Cloud] vid `cm.eversttech.net`, som är ett äldre domännamn som används av [!DNL Advertising Cloud] innan det förvärvas av Adobe. Om du skickar data till [!DNL Advertising Cloud] förbättras matchningsfrekvensen och det är automatiskt för ID-tjänstkunder som använder version 2.0 (eller senare). Se även [Advertising Cloud Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-advertising-cloud.html?lang=sv-SE).
 
 >[!MORELIKETHIS]
 >
->* [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=en)
+>* [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE)

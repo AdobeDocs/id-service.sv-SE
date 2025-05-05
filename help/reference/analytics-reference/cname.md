@@ -16,4 +16,4 @@ Med CNAME-implementeringar kan du anpassa den samlingsdomän som används av Ado
 
 En CNAME-implementering ger inga fördelar vad gäller cookie-livstid, men det kan finnas andra fördelar. Fördelarna är annonsblockerare och mindre vanliga webbläsare som förhindrar att data skickas till domäner som de klassificerar som spårare. I dessa fall kan användning av CNAME förhindra att datainsamlingen avbryts för användare som använder dessa verktyg.
 
-Dessutom kan du med CNAME-implementeringar [välja en anpassad RDC-typ](https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html?lang=en) som styr var användarnas träffar dirigeras från början. De flesta kunder använder inte anpassade RDC-typer.
+Dessutom kan du med CNAME-implementeringar [välja en anpassad RDC-typ](https://experienceleague.adobe.com/docs/analytics/technotes/rdc/regional-data-collection.html?lang=sv-SE) som styr var användarnas träffar dirigeras från början. De flesta kunder använder inte anpassade RDC-typer.

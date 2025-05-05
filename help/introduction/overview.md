@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Översikt över identitetstjänsten i Experience Cloud
 
-Experience Cloud Identity Service aktiverar det gemensamma identifieringsramverket för Experience Cloud Application Services. Du kan använda identitetstjänsten i Experience Cloud för att ange [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html).
+Experience Cloud Identity Service aktiverar det gemensamma identifieringsramverket för Experience Cloud Application Services. Du kan använda identitetstjänsten i Experience Cloud för att ange [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=sv-SE).
 
 ECID är ett delat ID-namnområde som används i Adobe Experience Platform- och Experience Cloud-program för att spåra besökares beteende och se till att varje enhet har en unik identifierare som kan finnas kvar i flera sessioner.
 

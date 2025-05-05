@@ -34,7 +34,7 @@ Du kan få problem om du har VisitorAPI.js som värd för en lokal fil i mobilap
 
 Placera VisitorAPI.js-biblioteket överst på sidan i avsnittet `<head>` i koden. Detta bidrar till att säkerställa att anropet för ett ID skickas innan sidans brödtext börjar läsas in och maximerar chanserna för att ett ID returneras korrekt.
 
-ID-tjänstanropet är asynkront och är det enda anropet till [demdex.net](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html). Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
+ID-tjänstanropet är asynkront och är det enda anropet till [demdex.net](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE). Anropet till ID-tjänsten blockerar inte andra element från att läsas in på sidan.
 
 För [!DNL Target]-kunder kan det öka chanserna att ett [!DNL Target]-anrop blockeras om ID-tjänstkoden placeras i `<body>` på sidan. Om du måste placera ID-tjänstkoden i sidans brödtext bör den placeras efter den öppna `<body>`-taggen.
 
@@ -86,4 +86,4 @@ Se [Experience Cloud](../reference/cors.md#concept-6c280446990d46d88ba9da15d2dcc
 
 >[!MORELIKETHIS]
 >
->* [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html)
+>* [Kundtjänst](https://helpx.adobe.com/se/marketing-cloud/contact-support.html)

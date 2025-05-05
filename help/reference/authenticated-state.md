@@ -16,7 +16,7 @@ Tillsammans med besökar-ID:t för Experience Cloud kan du koppla ytterligare ku
 
 ## Autentiseringstillstånd {#section-68ad4065dfaa437d9070832d6e2bf85c}
 
-Metoden `setCustomerIDs` accepterar flera kund-ID för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
+Metoden `setCustomerIDs` accepterar flera kund-ID för samma besökare. Detta hjälper er att identifiera eller rikta in er på en enskild användare på olika enheter. Du kan till exempel överföra dessa ID:n som [kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=sv-SE) till [!DNL Experience Cloud] och få tillgång till dessa data via olika lösningar.
 
 >[!IMPORTANT]
 >
@@ -216,4 +216,4 @@ ID-tjänsten [!DNL Experience Cloud] stöder kund-ID:n och autentiseringstillst�
 
 ## Meddelande till Analytics- och Audience Manager-kunder {#section-3a8e9d51e71c4c6e865184b81ed9d99b}
 
-Om du skickar deklarerade ID:n till [!DNL Audience Manager] måste `userid`-objektet matcha integrationskoden som är associerad med en datakälla. Mer information finns i avsnittet [!UICONTROL Visitor ID Service] i dokumentationen för [Konfigurera kod för kopplingsregler](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/profile-merge-rules/merge-rules-start.html?lang=en#configure-merge-rule-code).
+Om du skickar deklarerade ID:n till [!DNL Audience Manager] måste `userid`-objektet matcha integrationskoden som är associerad med en datakälla. Mer information finns i avsnittet [!UICONTROL Visitor ID Service] i dokumentationen för [Konfigurera kod för kopplingsregler](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/profile-merge-rules/merge-rules-start.html?lang=sv-SE#configure-merge-rule-code).

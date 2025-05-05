@@ -72,7 +72,7 @@ Dessa konfigurationer hjälper dig att lösa problemet med att ställa in en coo
 
 >[!TIP]
 >
->Du kanske också vill implementera de här konfigurationerna när du visar video i en iFrame med [videominnen](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
+>Du kanske också vill implementera de här konfigurationerna när du visar video i en iFrame med [videominnen](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=sv-SE). Videopulsen behöver ett ID-tjänst-ID (MID) för att fungera korrekt.
 
 **Användningsfall 1: Webbläsaren blockerar cookies från tredje part och ID-tjänsten implementeras på iFrame- och överordnad sida**
 
