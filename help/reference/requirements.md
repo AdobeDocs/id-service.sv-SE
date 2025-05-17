@@ -129,8 +129,8 @@ I följande avsnitt listas de lägsta kodversionerna som krävs för att använd
 SDK-koden måste vara aktiverad för ID-tjänsten. Aktivera och hämta den senaste SDK-koden för varje app från ditt [Adobe Mobile Services](https://mobilemarketing.adobe.com/)-konto. Se även:
 
 * [Konfigurera tjänstalternativ för SDK Visitor ID ](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/t-config-visitor.html?lang=sv-SE)
-* [Android SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/c-marketing-cloud.html)
-* [iOS SKD-metoder](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/marketing-cloud.html)
+* [Android SDK-metoder](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/c-marketing-cloud.html?lang=sv-SE)
+* [iOS SKD-metoder](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/marketing-cloud.html?lang=sv-SE)
 
 >[!MORELIKETHIS]
 >
