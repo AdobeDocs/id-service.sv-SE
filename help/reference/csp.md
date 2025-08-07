@@ -1,9 +1,9 @@
 ---
-description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
+description: En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder tillåtelselista för att acceptera resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-tillåtelselista.
 keywords: ID-tjänst
 title: Skyddsprofiler för innehåll och Experience Cloud Identity Service
 exl-id: e35c6809-764e-4c3e-9139-88bb92e82338
-source-git-commit: 2bb47b56b26ce6ea17297a9ee0200f2623e44e71
+source-git-commit: c56bbaa6a3639e421c11a8231e14afb58a4fa305
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Skyddsprofiler för innehåll och Experience Cloud Identity Service {#content-security-policies-and-the-experience-cloud-id-service}
 
-En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder vitlistor för att ta emot resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-vitlistor.
+En CSP (Content Security Policy) är en HTTP-rubrik och säkerhetsfunktion som ger webbläsarna kontroll över vilken typ av resurser som läses in på en webbsida. Granska det här avsnittet om du använder ID-tjänsten och har strikta CSP:er som använder tillåtelselista för att acceptera resurser från betrodda domäner. Du måste lägga till de Adobe-domäner som listas här i dina CSP-tillåtelselista.
 
 ## CSP-granskning {#section-5fde5c00a678455c914b8307a8caab82}
 
 CSP använder HTTP-huvudet `Content-Security-Policy` för att styra vilken typ av resurser en webbläsare accepterar eller läser in på en sida. Med en CSP kan du förhindra följande:
 
-* JavaScript-filer läses in om källan är okänd eller inte ingår i en vitlista.
+* JavaScript-filer läses in om källan är okänd eller inte ingår i en tillåtelselista.
 * Serveröverskridande skriptattacker (XXS).
 * Datainmatningsattacker.
 * Anfall av webbplatsdefacement.
@@ -26,7 +26,7 @@ CSP använder HTTP-huvudet `Content-Security-Policy` för att styra vilken typ a
 
 Användningen av CSP är vanlig och väl underbyggd. Syftet med den här dokumentationen är inte att förklara CSP i detalj (se relaterade informationslänkar nedan för mer information). Det viktiga är att du förstår vilka Adobe-domännamn du ska lägga till i en CSP om du använder dessa och har strikta säkerhetsregler. Genom att lägga till de här domänerna kan besökarwebbläsare som har åtkomst till din webbplats göra de viktiga anropen till de Experience Cloud-resurser som du använder.
 
-## Experience Cloud-domäner för vitlistning {#section-30693e9a96834edfbf04de9e698cf2aa}
+## Experience Cloud-domäner för Tillåtelselistning {#section-30693e9a96834edfbf04de9e698cf2aa}
 
 Lägg till dessa domännamn eller URL:er i din CSP för varje lista med Experience Cloud-lösningar eller -tjänster som du använder.
 
@@ -71,7 +71,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje lista med Experien
      <li>frame-src 'self' <code>https://*.demdex.net;</code></li>
      <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan över domäner.</li>
     </ul>
-    <p>Anrop till domänen <span class="codeph">demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">cookies och Experience Cloud Identity Service</a> samt för ID-synkroniseringar. Se även <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE" format="https" scope="external">Förstå anrop till Demdex-domänen</a>.</p>
+    <p>Anrop till domänen <span class="codeph">demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">cookies och Experience Cloud Identity Service</a> samt för ID-synkroniseringar. Se även <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external">Förstå anrop till Demdex-domänen</a>.</p>
    </td>
   </tr>
   <tr>
@@ -87,12 +87,12 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje lista med Experien
     <p><b>Advertising Analytics</b></p>
    </td>
    <td colname="col2">
-    <p>Om du begränsar frågesträngsparametrar vitlistar du följande parametrar:</p>
+    <p>Om du begränsar frågesträngsparametrar tillåtslista du följande parametrar:</p>
     <ul>
      <li><code>s_kwcid</code> (som använder <code>!</code>)</li>
      <li><code>ef_id</code> (som använder <code>:</code>)</li>
     </ul>
-    <p>Om du blockerar tecknet <code>!</code> i URL:er vitlistas det också.</p>
+    <p>Om du blockerar tecknet <code>!</code> i URL:er tillåtslista du det också.</p>
     <p>Advertising Analytics använder bara <code>s_kwcid</code>, men Advertising Search, Social, Commerce och Advertising DSP använder också <code>ef_id</code>.</p>
    </td>
   </tr>
