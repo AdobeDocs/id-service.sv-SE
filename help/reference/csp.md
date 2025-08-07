@@ -71,7 +71,7 @@ Lägg till dessa domännamn eller URL:er i din CSP för varje lista med Experien
      <li>frame-src 'self' <code>https://*.demdex.net;</code></li>
      <li>Om du använder Adobe Launch för att distribuera taggar måste du också lägga till <code>https://assets.adobedtm.com</code> i listan över domäner.</li>
     </ul>
-    <p>Anrop till domänen <span class="codeph">demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">cookies och Experience Cloud Identity Service</a> samt för ID-synkroniseringar. Se även <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html" format="https" scope="external">Förstå anrop till Demdex-domänen</a>.</p>
+    <p>Anrop till domänen <span class="codeph">demdex.net</span> används för att generera <a href="../introduction/cookies.md" format="dita" scope="local">cookies och Experience Cloud Identity Service</a> samt för ID-synkroniseringar. Se även <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE" format="https" scope="external">Förstå anrop till Demdex-domänen</a>.</p>
    </td>
   </tr>
   <tr>
