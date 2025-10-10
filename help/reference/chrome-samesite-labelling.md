@@ -121,4 +121,4 @@ Endast vanliga cookies för besökarstandard listas i tabellen nedan. Om du vill
 >
 >Adobe cookies från tredje part är inställda på serversidan.
 
-Mer information finns i dokumentet om [Target&#39;s Google Chrome SameSite policies](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/google-chrome-samesite-cookie-policies.html).
+Mer information finns i dokumentet om [Target&#39;s Google Chrome SameSite policies](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/google-chrome-samesite-cookie-policies.html?lang=sv-SE).

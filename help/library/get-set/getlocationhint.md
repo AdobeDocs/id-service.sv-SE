@@ -16,7 +16,7 @@ Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller 
 
 **Syntax:** `var *`variabelnamn`* = visitor.getLocationHint()`
 
-En lista över region-ID:n och motsvarande platser finns i [DCS-region-ID:n, platser och värdnamn](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
+En lista över region-ID:n och motsvarande platser finns i [DCS-region-ID:n, platser och värdnamn](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=sv-SE).
 
 **Kodexempel**
 

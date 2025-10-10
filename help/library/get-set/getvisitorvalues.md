@@ -99,7 +99,7 @@ I följande tabell visas och definieras svarsparametrarna. Detta är också alla
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCAAMLH </span> </p> </td> 
-   <td colname="col2"> <p>Datainsamlingens region-ID. Detta är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. </p> <p>Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> ID:n för DCS-regionen, platser och värdnamn </a> och <a href="../../library/get-set/getlocationhint.md#reference-a761030ff06c4439946bb56febf42d4c" format="dita" scope="local"> getLocationHint </a>. </p> </td> 
+   <td colname="col2"> <p>Datainsamlingens region-ID. Detta är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. </p> <p>Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=sv-SE" format="https" scope="external"> ID:n för DCS-regionen, platser och värdnamn </a> och <a href="../../library/get-set/getlocationhint.md#reference-a761030ff06c4439946bb56febf42d4c" format="dita" scope="local"> getLocationHint </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCAID </span> </p> </td> 

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 **Syfte**
 
-Vanligtvis gör ID-tjänsten [!DNL Experience Cloud] anrop till [!DNL Adobe] vid `dpm.demdex.net`. Ibland kanske du inte vill ringa anrop till den här destinationen eftersom den ser för generisk ut eller &quot;från tredje part&quot;. Använd dessa konfigurationer för att lägga till ditt [!DNL Audience Manager]-underdomännamn i `demdex.net` så att ID-tjänstanropet ser mer ut som ett förstahandsanrop. Mer information om `dpm.demdex.net`-anropet finns i [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html).
+Vanligtvis gör ID-tjänsten [!DNL Experience Cloud] anrop till [!DNL Adobe] vid `dpm.demdex.net`. Ibland kanske du inte vill ringa anrop till den här destinationen eftersom den ser för generisk ut eller &quot;från tredje part&quot;. Använd dessa konfigurationer för att lägga till ditt [!DNL Audience Manager]-underdomännamn i `demdex.net` så att ID-tjänstanropet ser mer ut som ett förstahandsanrop. Mer information om `dpm.demdex.net`-anropet finns i [Förstå anrop till Demdex-domänen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=sv-SE).
 
 **Krav**
 
