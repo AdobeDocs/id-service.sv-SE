@@ -1,9 +1,9 @@
 ---
-description: Med den här funktionen kan du dela en besökares Experience Cloud-ID över domäner när webbläsare blockerar cookies från tredje part. Om du vill använda den här funktionen måste du ha implementerat ID-tjänsten och äga käll- och måldomänerna. Finns i VisitorAPI.js version 1.7.0 eller senare.
+description: Med den här funktionen kan du dela en besökares Experience Cloud ID över domäner när webbläsare blockerar cookies från tredje part. Om du vill använda den här funktionen måste du ha implementerat ID-tjänsten och äga käll- och måldomänerna. Finns i VisitorAPI.js version 1.7.0 eller senare.
 keywords: ID-tjänst
 title: appendVisitorIDsTo (spårning mellan domäner)
 exl-id: 3e4f4e2c-e658-4124-bd0e-59c63127bdde
-source-git-commit: f185ae10dac686b6986b171aef8a46a574484283
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >Spårning av domäner fungerar inte som avsett om ECID avvisas från början (eller tidigare). Den kontrollerar inte befintliga ID:n som antingen skickades via URL eller som tidigare fanns i cookien, med tanke på att dessa var ID:n när medgivandet var inställt på&quot;NO&quot;.
 
-Med den här funktionen kan du dela en besökares Experience Cloud-ID över domäner när webbläsare blockerar cookies från tredje part. Om du vill använda den här funktionen måste du ha implementerat ID-tjänsten och äga käll- och måldomänerna. Finns i VisitorAPI.js version 1.7.0 eller senare.
+Med den här funktionen kan du dela en besökares Experience Cloud ID över domäner när webbläsare blockerar cookies från tredje part. Om du vill använda den här funktionen måste du ha implementerat ID-tjänsten och äga käll- och måldomänerna. Finns i VisitorAPI.js version 1.7.0 eller senare.
 
 Innehåll:
 
@@ -35,10 +35,10 @@ ID-tjänsten skriver en cookie från första och tredje part till webbläsaren n
 * Generera om det unika ID:t för besökaren när de navigerar till en annan domän.
 * Spåra besökare i olika domäner som ägs av organisationen.
 
-Implementera ` Visitor.appendVisitorIDsTo( *`url`*)` om du vill ha hjälp med att lösa det här problemet. Med den här egenskapen kan ID-tjänsten spåra webbplatsbesökare i flera domäner även när deras webbläsare blockerar cookies från tredje part. Så här fungerar det:
+Implementera `Visitor.appendVisitorIDsTo( *`url`*)` om du vill ha hjälp med att lösa det här problemet. Med den här egenskapen kan ID-tjänsten spåra webbplatsbesökare i flera domäner även när deras webbläsare blockerar cookies från tredje part. Så här fungerar det:
 
-* När en besökare bläddrar till dina andra domäner lägger ` Visitor.appendVisitorIDsTo( *`url`*)` till MID som en frågeparameter i URL-omdirigeringen från den ursprungliga domänen till måldomänen.
-* ID-tjänstkoden på måldomänen extraherar MID från URL:en i stället för att skicka en begäran till Adobe för besökarens ID. Denna begäran innehåller cookie-ID från tredje part, som inte är tillgängligt i det här fallet.
+* När en besökare bläddrar till dina andra domäner lägger `Visitor.appendVisitorIDsTo( *`url`*)` till MID som en frågeparameter i URL-omdirigeringen från den ursprungliga domänen till måldomänen.
+* ID-tjänstkoden på måldomänen extraherar MID från URL:en i stället för att skicka en begäran till Adobe om besökarens ID. Denna begäran innehåller cookie-ID från tredje part, som inte är tillgängligt i det här fallet.
 * ID-tjänstkoden på målsidan använder det MID som skickades för att spåra besökaren.
 
 Mer information finns i kodexemplet.
@@ -49,7 +49,7 @@ Följande exempelkod kan hjälpa dig att komma igång med funktionen `appendVisi
 
 >[!TIP]
 >
->Den här koden kan placeras i den anpassade kodredigeraren som är en del av Adobe Analytics-tillägget eller högst upp i [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE).
+>Den här koden kan placeras i den anpassade kodredigeraren som är en del av Adobe Analytics-tillägget eller högst upp i [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html).
 
 ```js
 var adbeDomains = ["marketo.com", "figma.com", "workfront.com"];
@@ -77,7 +77,7 @@ adbeDomains.forEach(function(domain) {
 >
 >In order for the values passed in the URL via appendVisitorsIDsTo to be picked up, the [ovewriteCrossDomainMCIDAndAID](../function-vars/overwrite-visitor-id.md) variable must be set to true.
 
-The following example can help you get started with ` Visitor.appendVisitorIDsTo( *`url`*)`. When implemented properly, your JavaScript code could look similar to the following example.
+The following example can help you get started with `Visitor.appendVisitorIDsTo( *`url`*)`. When implemented properly, your JavaScript code could look similar to the following example.
 
 ```js
 //Code on Domain A 
@@ -111,8 +111,8 @@ var destinationURLWithVisitorIDs = visitor.appendVisitorIDsTo(destinationURL);
    <td colname="col1"> <p> <b>SDK</b> </p> </td> 
    <td colname="col2"> 
     <ul id="ul_9D7933FF68EE4C71BAE999B3747F8398"> 
-     <li id="li_9036C76AAECC4E639C23020C0C9F2AF8"> <a href="https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html?lang=sv-SE" format="https" scope="external"> Android ID Service Methods </a> </li> 
-     <li id="li_E49D357905584674BFDFE348345B3849"> <a href="https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html?lang=sv-SE" format="https" scope="external"> iOS ID Service Methods </a> </li> 
+     <li id="li_9036C76AAECC4E639C23020C0C9F2AF8"> <a href="https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html" format="https" scope="external"> Android ID Service Methods </a> </li> 
+     <li id="li_E49D357905584674BFDFE348345B3849"> <a href="https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html" format="https" scope="external"> iOS ID Service Methods </a> </li> 
     </ul> </td> 
   </tr> 
  </tbody> 

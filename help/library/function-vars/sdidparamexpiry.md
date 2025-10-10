@@ -3,7 +3,7 @@ description: Med den här konfigurationen kan du åsidosätta standardintervalle
 keywords: ID-tjänst
 title: sdidParamExpiry
 exl-id: 5458ffa5-03d1-4c52-907d-c50fe00ce35d
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Med den här konfigurationen kan du åsidosätta standardintervallet för SDID (
 
 Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` i funktionen `Visitor.getInstance` med följande syntax:
 
-**Syntax:** ` sdidParamExpiry: *`tid i sekunder`*`
+**Syntax:** `sdidParamExpiry: *`tid i sekunder`*`
 
 **Kodexempel**
 

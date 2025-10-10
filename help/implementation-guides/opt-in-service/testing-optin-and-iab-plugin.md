@@ -2,9 +2,9 @@
 description: När du har aktiverat Anmäl dig på webbplatsen använder du valideringsmetoderna för att testa att tjänsten fungerar som förväntat med hjälp av utvecklarverktygen i webbläsaren.
 title: Validerar anmälningstjänst
 exl-id: f0bcb32a-ccad-40a4-b031-2584e4136ace
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
 
 Rensa cacheminnet och cookies innan du läser in sidan.
 
-I Chrome högerklickar du på webbsidan och väljer Inspect. På samma sätt som i skärmbilden ovan väljer du fliken *Nätverk* för att visa begäranden som gjorts från webbläsaren.
+I Chrome högerklickar du på webbsidan och väljer Inspektera. På samma sätt som i skärmbilden ovan väljer du fliken *Nätverk* för att visa begäranden som gjorts från webbläsaren.
 
 I exemplet ovan har vi följande Adobe JS-taggar installerade på sidan: ECID, AAM, Analytics och Target.
 
 **Så här bevisar du att Opt-in fungerar som förväntat:**
 
-Du ska inte se några begäranden till Adobe-servrar:
+Du ska inte se några förfrågningar till Adobe servrar:
 
 * demdex.net/id
 * demdex.net/event
@@ -43,7 +43,7 @@ Du ska inte se några begäranden till Adobe-servrar:
 >
 >Du kan se ett anrop till `http://dpm.demdex.net/optOutStatus`, som är en READ ONLY-slutpunkt som används för att hämta besökarens avanmälningsstatus. Den här slutpunkten resulterar inte i att några cookies från tredje part skapas, och ingen information samlas in från sidan.
 
-Du ska inte se några cookies som har skapats av Adobe-taggarna: (AMCV_{{YOUR_ORG_ID}}, mbox, demdex, s_cc, s_sq, everest_g_v2, everest_session_v2)
+Du ska inte se några cookies som har skapats av Adobe-taggarna: (`AMCV_{{YOUR_ORG_ID}}`, `mbox`, `demdex`, `s_cc`, `s_sq`, `everest_g_v2`, `everest_session_v2`)
 
 I Chrome går du till fliken *Program*, expanderar avsnittet *Cookies* under *Lagring* och väljer domännamnet för din webbplats:
 
@@ -101,15 +101,15 @@ Visitor.getInstance({{YOUR_ORG_ID}}, {
   
 ```
 
-Här visas ett exempel på utdata när syften 1, 2 och 5 godkänns och Audience Manager leverantörs-ID godkänns:
+Här visas ett exempel på utdata när syften 1, 2 och 5 godkänns och Audience Manager försäljar-ID godkänns:
 
 * demdex.net/id: Detta anrop bevisar att ECID har begärt ett ID från demdex.net
-* demdex.net/event: Detta anrop visar att datainsamlingsanropet från DIL fungerar som förväntat.
+* demdex.net/event: Detta anrop bevisar att DIL datainsamlingsanrop fungerar som förväntat.
 * demdex.net/dest5.html: Detta anrop visar att ID-synkronisering aktiveras.
 
 ![](assets/use_case_4_1.png)
 
-Om något av följande inte är giltigt visas inga begäranden till Adobe-servrar och inga Adobe-cookies:
+Om något av följande inte är giltigt visas inga förfrågningar till Adobe-servrar och inga Adobe-cookies:
 
 * Syfte 1, 2 ELLER 5 godkänns inte.
 * Audience Manager-leverantörs-ID:t har inte godkänts.

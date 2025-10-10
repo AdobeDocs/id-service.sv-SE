@@ -3,7 +3,7 @@ description: Den här egenskapen anger det ID för datakällans behållare som d
 keywords: ID-tjänst
 title: idSyncContainerID
 exl-id: 6c4cd41b-902b-4872-8c3f-475a834b76f4
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Innehåll:
 
 ## Exempel på syntax och kod {#section-b0c50732b1c84bed8616e82e8e83d58c}
 
-**Syntax:** ` idSyncContainerID: *`värde för behållar-ID`*`
+**Syntax:** `idSyncContainerID: *`värde för behållar-ID`*`
 
 **Kodexempel:**
 
@@ -83,5 +83,5 @@ Beroende på din situation kan du behöva lägga till den här konfigurationen i
 
 Om du har distribuerat [!UICONTROL DIL]*och* VisitorAPI.js på samma sida:
 
-* Tjänstkoden för besökar-ID har företräde framför DIL för ID-synkroniseringar.
+* Tjänstkoden för besökar-ID har företräde framför DIL för ID-synkronisering.
 * Ange endast konfigurationen `idSyncContainerID` i ID-tjänstkoden.

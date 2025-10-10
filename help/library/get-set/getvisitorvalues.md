@@ -3,7 +3,7 @@ description: Detta är ett asynkront API som returnerar identifierare för Analy
 keywords: ID-tjänst
 title: getVisitorValues
 exl-id: bd023e8d-a804-4205-989f-e1e58080b63c
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -25,12 +25,12 @@ Innehåll:
 
 ## Syntax {#section-5aebe3907b2b46e997f45a1d1ed35c09}
 
-Den här funktionen använder följande syntax (kursiv stil representerar en platshållare för en variabel): ` var *`värden`* = visitor.getVisitorValues (callback, [visitor.FIELDS. *`ID-typ`*, visitor.FIELDS. *`ID-typ`*]);`
+Den här funktionen använder följande syntax (kursiv stil representerar en platshållare för en variabel): `var *`värden`* = visitor.getVisitorValues (callback, [visitor.FIELDS. *`ID-typ`*, visitor.FIELDS. *`ID-typ`*]);`
 
 I funktionsparametrarna:
 
-* ` *`callback`*` representerar din egen callback-kod som tar emot returnerade ID:n.
-* *(Valfritt)* ` visitor.FIELDS. *`ID-typ `*` är en uppräkning som gör att du kan ange vilka [ID-värden](../../library/get-set/getvisitorvalues.md#section-4c4c300167694c6fbff1d6c612f372b5) som den här funktionen ska returnera.
+* `*`callback`*` representerar din egen callback-kod som tar emot returnerade ID:n.
+* *(Valfritt)* `visitor.FIELDS. *`ID-typ `*` är en uppräkning som gör att du kan ange vilka [ID-värden](../../library/get-set/getvisitorvalues.md#section-4c4c300167694c6fbff1d6c612f372b5) som den här funktionen ska returnera.
 
 Mer information finns i följande användningsexempel och definitioner.
 
@@ -99,7 +99,7 @@ I följande tabell visas och definieras svarsparametrarna. Detta är också alla
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCAAMLH </span> </p> </td> 
-   <td colname="col2"> <p>Datainsamlingens region-ID. Detta är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. </p> <p>Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=sv-SE" format="https" scope="external"> ID:n för DCS-regionen, platser och värdnamn </a> och <a href="../../library/get-set/getlocationhint.md#reference-a761030ff06c4439946bb56febf42d4c" format="dita" scope="local"> getLocationHint </a>. </p> </td> 
+   <td colname="col2"> <p>Datainsamlingens region-ID. Detta är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. </p> <p>Se <a href="https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html" format="https" scope="external"> ID:n för DCS-regionen, platser och värdnamn </a> och <a href="../../library/get-set/getlocationhint.md#reference-a761030ff06c4439946bb56febf42d4c" format="dita" scope="local"> getLocationHint </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCAID </span> </p> </td> 
@@ -107,7 +107,7 @@ I följande tabell visas och definieras svarsparametrarna. Detta är också alla
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCMID </span> </p> </td> 
-   <td colname="col2"> <p>Besökarens Experience Cloud-ID. </p> <p>Se <a href="../../introduction/cookies.md" format="dita" scope="local"> Cookies och Experience Cloud Identity Service </a>. </p> </td> 
+   <td colname="col2"> <p>Besökarens Experience Cloud-ID. </p> <p>Se <a href="../../introduction/cookies.md" format="dita" scope="local"> cookies och Experience Cloud identitetstjänst </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> MCOPTOUT </span> </p> </td> 

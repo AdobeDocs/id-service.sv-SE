@@ -1,28 +1,28 @@
 ---
-description: De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda identitetstjänsten i Experience Cloud och som inte använder datainsamlingstaggar. Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+description: De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda Experience Cloud Identity Service och som inte använder datainsamlingstaggar. Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 keywords: ID-tjänst
-title: Implementera identitetstjänsten Experience Cloud för analys och Audience Manager
+title: Implementera Experience Cloud Identity Service för Analytics och Audience Manager
 exl-id: e31720a1-5c89-4084-88f6-443994dbb2f4
-source-git-commit: 26152f559150f5bd67d4802b8464446482f2e9a1
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 0%
 
 ---
 
-# Implementera identitetstjänsten Experience Cloud för analys och Audience Manager{#implement-the-experience-cloud-id-service-for-analytics-and-audience-manager}
+# Implementera Experience Cloud Identity Service för Analytics och Audience Manager{#implement-the-experience-cloud-id-service-for-analytics-and-audience-manager}
 
-De här instruktionerna är till för Analytics- och Audience Manager-kunder som vill använda identitetstjänsten Experience Cloud och som inte använder [datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
+De här instruktionerna gäller för Analytics- och Audience Manager-kunder som vill använda Experience Cloud identitetstjänst och som inte använder [datainsamlingstaggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en). Vi rekommenderar dock att du använder taggar för att implementera ID-tjänsten. Taggar effektiviserar implementeringsarbetsflödet och säkerställer automatiskt korrekt kodplacering och sekvensering.
 
 >[!IMPORTANT]
 >
 >* [Läs kraven](../reference/requirements.md) innan du börjar.
->* Den här proceduren kräver AppMeasurement. Kunder som använder s_code kan inte slutföra den här proceduren.
+>* För den här proceduren krävs AppMeasurement. Kunder som använder s_code kan inte slutföra den här proceduren.
 >* Konfigurera och testa koden i en utvecklingsmiljö innan den implementeras i produktionen.
 
 ## Steg 1: Planera för vidarebefordran på serversidan {#section-880797cc992d4755b29cada7b831f1fc}
 
-Utöver de steg som beskrivs här bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] migrera till vidarebefordran på serversidan. Med hjälp av vidarebefordran på serversidan kan du ta bort DIL (Audience Manager data collection code) och ersätta den med [Audience Management Module](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html?lang=sv-SE). Mer information finns i [vidarebefordringsdokumentationen på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html?lang=sv-SE).
+Utöver de steg som beskrivs här bör kunder som använder [!DNL Analytics] och [!DNL Audience Manager] migrera till vidarebefordran på serversidan. Med vidarebefordran på serversidan kan du ta bort DIL (Audience Manager datainsamlingskod) och ersätta den med [Audience Management Module](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-other-solutions/audience-management-module.html). Mer information finns i [vidarebefordringsdokumentationen på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html).
 
 Migrering till vidarebefordran på serversidan kräver planering och samordning. Den här processen innebär externa ändringar av webbplatskoden och interna åtgärder som Adobe måste vidta för att etablera ditt konto. Många av dessa migreringsprocedurer måste faktiskt ske parallellt och släppas ut tillsammans. Din implementeringsväg ska följa den här händelsesekvensen:
 
@@ -88,9 +88,9 @@ var visitor = Visitor.getInstance("INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE",
 }); 
 ```
 
-## Steg 4: Lägg till ditt organisations-ID för Experience Cloud i Visitor.getInstance {#section-e2947313492546789b0c3b2fc3e897d8}
+## Steg 4: Lägg till ditt Experience Cloud Organization ID i Visitor.getInstance {#section-e2947313492546789b0c3b2fc3e897d8}
 
-Ersätt `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE` med ditt företags-ID i funktionen `Visitor.getInstance`. Om du inte känner till ditt organisations-ID kan du hitta det på administrationssidan för Experience Cloud. Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
+Ersätt `Visitor.getInstance` med ditt Experience Cloud-organisations-ID i funktionen `INSERT-MARKETING-CLOUD-ORGANIZATION ID-HERE`. Om du inte känner till ditt företags-ID kan du hitta det på Experience Cloud administrationssida. Den redigerade funktionen kan se ut ungefär som i exemplet nedan.
 
 `var visitor = Visitor.getInstance("1234567ABC@AdobeOrg", { ...`
 
@@ -115,7 +115,7 @@ Så här tar du reda på vilka spårningsservervariabler som ska användas:
 
 1. Besvara frågorna i beslutsmatrisen nedan. Använd de variabler som motsvarar dina svar.
 1. Ersätt platshållarna för spårningsservern med URL:erna för spårningsservern.
-1. Ta bort oanvända spårningsserver- och Experience Cloud-servervariabler från koden.
+1. Ta bort oanvända spårningsservrar och Experience Cloud-servervariabler från koden.
 
 ![](assets/tracking-server-matrix.png)
 
@@ -126,7 +126,7 @@ Så här tar du reda på vilka spårningsservervariabler som ska användas:
 * URL för Experience Cloud-server = URL för spårningsserver
 * Säker URL för Experience Cloud-server = spårningsserverns säkra URL
 
-Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure](https://helpx.adobe.com/se/analytics/kb/determining-data-center.html#) korrekt.
+Om du är osäker på hur du hittar spårningsservern kan du läsa [Vanliga frågor](../faq-intro/faq.md) och [Fylla i variablerna trackingServer och trackingServerSecure](https://helpx.adobe.com/analytics/kb/determining-data-center.html#) korrekt.
 
 ## Steg 6: Uppdatera filen AppMeasurement.js {#section-5517e94a09bc44dfb492ebca14b43048}
 
@@ -138,9 +138,9 @@ Lägg till funktionen `Visitor.getInstance` som visas nedan i din `AppMeasuremen
 
 >[!IMPORTANT]
 >
->Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html?lang=sv-SE).
+>Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
 
-***(Valfritt, men rekommenderas)* Skapa en anpassad prop &#x200B;**
+***(Valfritt, men rekommenderas)* Skapa en anpassad prop **
 
 Ange en anpassad prop i `AppMeasurement.js` för att mäta täckning. Lägg till den här anpassade proppen i funktionen `doPlugins` i din `AppMeasurement.js`-fil:
 
@@ -151,14 +151,14 @@ s.prop1 = (typeof(Visitor) != "undefined" ? "VisitorAPI Present" : "VisitorAPI M
 
 ## Steg 7: Lägg till API-kod för besökare på sidan {#section-c2bd096a3e484872a72967b6468d3673}
 
-Placera ` [!UICONTROL VisitorAPI.js]`-filen i `<head>` -taggarna på varje sida. När du skickar filen `VisitorAPI.js` till sidan:
+Placera `[!UICONTROL VisitorAPI.js]`-filen i `<head>` -taggarna på varje sida. När du skickar filen `VisitorAPI.js` till sidan:
 
 * Placera det i början av avsnittet `<head>` så att det visas före andra lösningstaggar.
-* Den måste köras före AppMeasurementet och koden för andra [!DNL Experience Cloud]-lösningar.
+* Den måste köras före AppMeasurement och koden för andra [!DNL Experience Cloud]-lösningar.
 
 ## Steg 8: (Valfritt) Konfigurera en respitperiod {#section-aceacdb7d5794f25ac6ff46f82e148e1}
 
-Om något av dessa användningsfall gäller din situation ber du [kundtjänst](https://helpx.adobe.com/se/marketing-cloud/contact-support.html) att ställa in en tillfällig [respitperiod](../reference/analytics-reference/grace-period.md). Gränsperioder kan vara upp till 180 dagar. Du kan förnya en respitperiod om det behövs.
+Om något av dessa användningsfall gäller din situation ber du [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) att ställa in en tillfällig [respitperiod](../reference/analytics-reference/grace-period.md). Gränsperioder kan vara upp till 180 dagar. Du kan förnya en respitperiod om det behövs.
 
 **Partiell implementering**
 
@@ -180,7 +180,7 @@ Du behöver en respitperiod om du skickar data till ett internt system från en 
 
 Avbryt respitperioden efter att dataöverföringsprocessen kan använda kolumnerna `post_visid_high` och `post_visid_low`.
 
-Se även [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html?lang=sv-SE).
+Se även [Referens för Clickstream-datakolumn](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html).
 
 ## Steg 9: Testa och distribuera ID-tjänstkoden {#section-f857542bfc70496dbb9f318d6b3ae110}
 
@@ -191,10 +191,10 @@ Du kan testa och distribuera enligt följande.
 Om du vill testa implementeringen av din ID-tjänst ska du kontrollera följande:
 
 * [AMCV-cookie](../introduction/cookies.md) i domänen där du har sidor.
-* MID-värde i Analytics-bildbegäran med [Adobe-felsökaren](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html?lang=sv-SE).
-* Se även [Testa och verifiera identitetstjänsten Experience Cloud](../implementation-guides/test-verify.md).
+* MID-värde i Analytics-bildbegäran med [Adobe-felsökaren](https://experienceleague.adobe.com/docs/analytics/implementation/validate/debugger.html).
+* Se även [Testa och verifiera Experience Cloud identitetstjänst](../implementation-guides/test-verify.md).
 
-Information om hur du verifierar vidarebefordran på serversidan finns i [Så här verifierar du implementeringen av vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf-verify.html?lang=sv-SE).
+Information om hur du verifierar vidarebefordran på serversidan finns i [Så här verifierar du implementeringen av vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf-verify.html).
 
 **Distribuera**
 

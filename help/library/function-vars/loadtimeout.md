@@ -1,9 +1,9 @@
 ---
-description: Anger ett tidsgränsintervall i millisekunder. Används för att berätta om andra lösningar (t.ex. Analytics, Audience Manager, Target osv.) hur länge du ska vänta på ett svar från ID-tjänsten.
+description: Anger ett tidsgränsintervall i millisekunder. Används för att ange för andra lösningar (t.ex. Analytics, Audience Manager, Target osv.) hur lång tid det tar att vänta på ett svar från ID-tjänsten.
 keywords: ID-tjänst
 title: loadTimeout
 exl-id: 485264f4-ee24-4042-8be3-259e70462110
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # loadTimeout{#loadtimeout}
 
-Anger ett tidsgränsintervall i millisekunder. Används för att berätta om andra lösningar (t.ex. Analytics, Audience Manager, Target osv.) hur länge du ska vänta på ett svar från ID-tjänsten.
+Anger ett tidsgränsintervall i millisekunder. Används för att ange för andra lösningar (t.ex. Analytics, Audience Manager, Target osv.) hur lång tid det tar att vänta på ett svar från ID-tjänsten.
 
-**Syntax:** ` loadTimeout: *`intervall i millisekunder`*`
+**Syntax:** `loadTimeout: *`intervall i millisekunder`*`
 
 Standardvärdet är 30 000 millisekunder (30 sekunder). Vi rekommenderar att du *inte* ändrar standardvärdet.
 

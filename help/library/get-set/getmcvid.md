@@ -1,9 +1,9 @@
 ---
-description: getMarketingCloudVisitorID returnerar besökar-ID:t för Experience Cloud.
+description: getMarketingCloudVisitorID returnerar besökar-ID för Experience Cloud.
 keywords: ID-tjänst
 title: getMarketingCloudVisitorID
 exl-id: bd81cc0b-0511-492d-beb8-8ba2fe5d4323
-source-git-commit: 06e935a4ba4776baa900d3dc91e294c92b873c0f
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # getMarketingCloudVisitorID{#getmarketingcloudvisitorid}
 
-getMarketingCloudVisitorID returnerar besökar-ID:t för Experience Cloud.
+getMarketingCloudVisitorID returnerar besökar-ID för Experience Cloud.
 
-**Syntax:** ` var *`variabelnamn`* = visitor.getMarketingCloudVisitorID()`
+**Syntax:** `var *`variabelnamn`* = visitor.getMarketingCloudVisitorID()`
 
 Den här metoden används vanligtvis med anpassade lösningar som kräver att besökar-ID läses. Den används inte av en standardimplementering. `getMarketingCloudVisitorID` fungerar även med återanropsfunktioner för att läsa [!DNL Analytics]-ID:n och hämta dem till ditt system eller ditt program.
 

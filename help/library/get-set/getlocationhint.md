@@ -1,9 +1,9 @@
 ---
-description: Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller platstips) är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. Du måste ange region-ID för att kunna göra API-anrop på serversidan till Audience Manager.
+description: Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller platstips) är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. Du behöver region-ID för att kunna göra serversides-API-anrop till Audience Manager.
 keywords: ID-tjänst
 title: getLocationHint
 exl-id: 0213f828-a985-4201-8a38-0a4b170ed057
-source-git-commit: cb89ac70e37f35d5e4e2b971f2df9645304522f8
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # getLocationHint{#getlocationhint}
 
-Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller platstips) är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. Du måste ange region-ID för att kunna göra API-anrop på serversidan till Audience Manager.
+Returnerar Experience Cloud Identity Service-regionens ID. Ett region-ID (eller platstips) är en numerisk identifierare för den geografiska platsen för ett visst ID-tjänstdatacenter. Du behöver region-ID för att kunna göra serversides-API-anrop till Audience Manager.
 
-**Syntax:** ` var *`variabelnamn`* = visitor.getLocationHint()`
+**Syntax:** `var *`variabelnamn`* = visitor.getLocationHint()`
 
-En lista över region-ID:n och motsvarande platser finns i [DCS-region-ID:n, platser och värdnamn](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=sv-SE).
+En lista över region-ID:n och motsvarande platser finns i [DCS-region-ID:n, platser och värdnamn](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
 
 **Kodexempel**
 

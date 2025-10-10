@@ -2,7 +2,7 @@
 title: Google Chrome SameSite-etikettändringar
 description: Dokumentation för Adobe ECID-bibliotek (ID Service).
 exl-id: f20b25a4-c9bc-41b9-8e49-79b8424e62a0
-source-git-commit: ee4b7f8df5766372034da2a76e7acb81ba2a65f0
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 1%
@@ -45,13 +45,13 @@ Så länge cookies är korrekt märkta kommer webbläsarna inte att vidta några
 
 Cookies från tredje part som skapades innan Chrome 80 började använda inställningarna för SameSite=`none` och säkra flaggor ignoreras av Chrome 80 om dessa flaggor inte finns.
 
-Många av de befintliga cookies från tredje part från Adobe har inte dessa flaggor och måste uppdateras av Edge-servrar innan användare uppgraderar till Chrome 80, annars går dessa cookies förlorade. Edge-servrarna uppdateras automatiskt när användare besöker en webbplats där cookien används.
+Många av Adobe cookies från tredje part har inte dessa flaggor och måste uppdateras av Edge-servrar innan användare uppgraderar till Chrome 80, annars går cookies förlorade. Edge-servrarna uppdateras automatiskt när användare besöker en webbplats där cookien används.
 
 De flesta Adobe-produkter har redan rätt flaggor för cookies. Undantaget är analysimplementationer som använder datainsamling från tredje part och inte använder ECID. Kunderna kan uppleva en liten tillfällig ökning av antalet nya besökare som annars skulle ha varit återkommande besökare.
 
 **Möjlig minskning av cookie-matchning för mål- och marknadspartners (endast Audience Manager)**
 
-Adobe har kontroll över uppdateringen av cookies, men Adobe kan inte tvinga sina partner att göra nödvändiga ändringar. Cookie-matchning kan minska för Audience Manager-kunder som använder målpartners eller marknadspartners som inte har gjort dessa uppdateringar.
+Adobe har kontroll över uppdateringen av cookies, men Adobe kan inte tvinga partners att göra nödvändiga ändringar. Cookie-matchning kan minska för Audience Manager-kunder som använder målpartners eller marknadspartners som inte har gjort dessa uppdateringar.
 
 **Analysvänlig cookies från tredje part (endast analyser `s_vi` cookies)**
 
@@ -65,9 +65,9 @@ För att kunna hantera ändringen anger Analytics nu explicit värdet `s_vi`-coo
 >
 >Den här åtgärden krävs inte för Analytics-kunder som använder ECID, kunder som använder en separat CNAME för var och en av sina domäner eller kunder som bara använder datainsamling från tredje part.
 
-## Cookies för Adobe standardbesökare
+## Adobe Standard Visitor Cookies
 
-Endast vanliga cookies för besökarstandard listas i tabellen nedan. Om du vill ha fler cookie-konfigurationer läser du produktspecifik dokumentation eller kontaktar din Adobe-representant.
+Endast vanliga cookies för besökarstandard listas i tabellen nedan. Om du vill ha fler cookie-konfigurationer läser du produktspecifik dokumentation eller kontaktar Adobe.
 
 ### ECID
 
@@ -117,6 +117,8 @@ Endast vanliga cookies för besökarstandard listas i tabellen nedan. Om du vill
 | ------ | ---- | ------------------ | ---------------- |
 | _mkto_trk | Förste part på klientsidan | Inget mervärde tillagt *Chrome har som standard `lax` inställning | Kan konfigureras för externa sidor |
 
->  cookies från tredje part från Adobe har angetts på serversidan.
+>
+>
+>Adobe cookies från tredje part är inställda på serversidan.
 
-Mer information finns i dokumentet om [Target&#39;s Google Chrome SameSite policies](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/google-chrome-samesite-cookie-policies.html?lang=sv-SE).
+Mer information finns i dokumentet om [Target&#39;s Google Chrome SameSite policies](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/google-chrome-samesite-cookie-policies.html).

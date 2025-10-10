@@ -3,7 +3,7 @@ description: Med den här hjälpmetoden kan du lägga till ett SDID (Supplementa
 keywords: ID-tjänst
 title: appendSupplementalDataIDTo
 exl-id: 7f0e7fca-4551-4165-a12b-c7e5514d6818
-source-git-commit: 5710539b45a81394061cd4af2ef3edc27b49092e
+source-git-commit: 7ef084bc1add5a4ea8c7be738055b0c21e247eea
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Innehåll:
 
 ## Exempel på syntax och kod {#section-cbb0b2f73bcc418386796c24c01b2365}
 
-**Syntax:** ` appendSupplementalDataIDTo( *`URL`*, *`SDID`*)`
+**Syntax:** `appendSupplementalDataIDTo( *`URL`*, *`SDID`*)`
 
 **Kodexempel**
 
@@ -54,7 +54,7 @@ Med konfigurationen [sdidParamExpiry](../../library/function-vars/sdidparamexpir
 
 Om du behöver ändra SDID-standardtidsgränsen lägger du till `sdidParamExpiry` i funktionen `Visitor.getInstance` med följande syntax:
 
-**Syntax:** ` sdidParamExpiry: *`tid i sekunder`*`
+**Syntax:** `sdidParamExpiry: *`tid i sekunder`*`
 
 **Kodexempel**
 
