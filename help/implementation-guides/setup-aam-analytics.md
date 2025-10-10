@@ -140,7 +140,7 @@ Lägg till funktionen `Visitor.getInstance` som visas nedan i din `AppMeasuremen
 >
 >Nu bör du ta bort DIL-koden [!DNL Audience Manager] och ersätta den med Audience Management Module. Mer information finns i [Implementera vidarebefordran på serversidan](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html).
 
-***(Valfritt, men rekommenderas)* Skapa en anpassad prop **
+***(Valfritt, men rekommenderas)* Skapa en anpassad prop &#x200B;**
 
 Ange en anpassad prop i `AppMeasurement.js` för att mäta täckning. Lägg till den här anpassade proppen i funktionen `doPlugins` i din `AppMeasurement.js`-fil:
 
